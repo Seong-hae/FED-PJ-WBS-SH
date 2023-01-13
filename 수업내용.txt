@@ -1,0 +1,5 @@
+● 1월 13일
+- 인라인 일 경우는 transform 이 적용이 안된다.
+- text-shadow 는 spread 값이 없다.
+- a태그는 예외로 블록요소를 감쌀 수 있다.
+- overflow:hidden 은 부모자격에 먹힌다. 포지션값이 있을때 
