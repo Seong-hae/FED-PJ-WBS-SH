@@ -308,7 +308,12 @@ const qsa = x => document.querySelectorAll(x);
             예) 요소.classList.remove("bb","ee")
 
 
-- 
+===============================================
+
+
+● 2월 13일
+
+- top값은 기본값이 auto이므로 애니메이션 하려면 top:0을 초기값 필요하다
 
 
 
