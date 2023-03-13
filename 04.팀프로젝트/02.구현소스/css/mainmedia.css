@@ -146,6 +146,7 @@
     h1.logo {
         width: 250px;
         height: 45px;
+        margin-top: 10px;
     }
     .top.active .gnb{
         top: 8vh;
