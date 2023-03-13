@@ -5,17 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SOLAR SYSTEM-EARTH</title>
         <!-- Favicon -->
-        <link href="./img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+        <link href='./subimg/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
         <!-- 폰트어썸 CDN CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <!-- swiper jQuery -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <!-- 외부CSS 불러오기 -->
-        <link rel="stylesheet" href="./css/sub_earth.css" />
+        <link rel="stylesheet" href="./subcss/earth.css" />
         <!-- 외부 미디어쿼리 CSS 불러오기 -->
-        <link rel="stylesheet" href="./css/mainmedia.css" />
+        <link rel="stylesheet" href="./subcss/mainmedia.css" />
         <!-- 외부JS삽입 -->
         <!-- <script src="./js/linksys.js"></script> -->
-        <script src="./js/main.js"></script>
-        <script src="./js/sub_earth.js"></script>
+        <script src="./subjs/main.js"></script>
+        <script src="./subjs/earth.js"></script>
     </head>
     <body>
         <!-- 1. 상단영역 -->
@@ -24,7 +28,7 @@
                 <!-- 1-1.로고 -->
                 <h1 class="logo">
                     <a href="main.html">
-                        <img src="./img/logo.png" alt="로고이미지" />
+                        <img src="../img/logo.png" alt="로고이미지" />
                     </a>
                 </h1>
                 <!-- 1-2.GNB메뉴 -->
@@ -32,7 +36,7 @@
                     <ul>
                         <li><a href="#">Jupiter</a></li>
                         <li><a href="#">Mercury</a></li>
-                        <li><a href="#">Sun</a></li>
+                        <li><a href="./sun.html">Sun</a></li>
                         <li><a href="./earth.html">Earth</a></li>
                         <li><a href="#">Mars</a></li>
                         <li><a href="#">Saturn</a></li>
@@ -78,7 +82,7 @@
                 <!-- (4)지구 동영상 -->
                 <div class="Wrap">
                     <div class="screen">
-                        <video id="earthVid" src="../00.자료수집/video/earth.mp4" loop autoplay muted playsinline></video>
+                        <video id="earthVid" src="../sub/subimg/earth.mp4" loop autoplay muted playsinline></video>
                     </div>
                 </div>
             </section>
@@ -161,7 +165,7 @@
                     </div>
                     <!-- (3)이미지 -->
                     <figure class="figimg1">
-                        <img class="expansion" src="../00.자료수집/sub_img/earth08.jpg" alt="우주왕복선에서 촬영한 지구와 달">
+                        <img class="expansion" src="../sub/subimg/earth08.jpg" alt="우주왕복선에서 촬영한 지구와 달">
                     </figure>
                 </article>
             </section>
@@ -188,7 +192,7 @@
                     </div>
                     <!-- (3)이미지 -->
                     <figure class="figimg3">
-                        <img class="appearance" src="../00.자료수집/sub_img/earth04.jpg" alt="나사의 지구 관측소가 촬영한 북대서양 식물성 플랑크톤의 확산 사진">
+                        <img class="appearance" src="../sub/subimg/earth04.jpg" alt="나사의 지구 관측소가 촬영한 북대서양 식물성 플랑크톤의 확산 사진">
                     </figure>
                 </article>
             </section>
@@ -201,73 +205,70 @@
                 <!-- 3-1. More Destinations -->
                 <div class="more">
                     <h3>More Destinations</h3>
-
-                    <div class="mbx">
-                        <ul id="mslide">
-                            <li>
+                    
+                    <div class="swiper2">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/jupiter_new.png" alt="Jupiter" />
+                                    <img src="../img/jupiter_new.png" alt="Jupiter">
                                     <span>Jupiter</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="./earth.html">
-                                    <img src="./img/earth.png" alt="Earth" />
+                                    <img src="../img/earth.png" alt="Earth">
                                     <span>Earth</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/mercury_new.png" alt="Mercury" />
+                                    <img src="../img/mercury_new.png" alt="Mercury">
                                     <span>Mercury</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/mars.png" alt="Mars" />
+                                    <img src="../img/mars.png" alt="Mars">
                                     <span>Mars</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/venus_jg.png" alt="Venus" />
+                                    <img src="../img/venus_jg.png" alt="Venus">
                                     <span>Venus</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/saturn.png" alt="Saturn" />
+                                    <img src="../img/saturn.png" alt="Saturn">
                                     <span>Saturn</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/uranus.png" alt="Uranus" />
+                                    <img src="../img/uranus.png" alt="Uranus">
                                     <span>Uranus</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/neptune.png" alt="Neptune" />
+                                    <img src="../img/neptune.png" alt="Neptune">
                                     <span>Neptune</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="swiper-slide">
                                 <a href="#">
-                                    <img src="./img/earth_moon.png" alt="Earth's Moon" />
+                                    <img src="../img/earth_moon.png" alt="Earth's Moon">
                                     <span>Earth's Moon</span>
                                 </a>
                             </li>
                         </ul>
+
+                        <!--이동버튼-->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
 
-                    <!--이동버튼-->
-                    <div href="#" class="mbtn mb1">
-                        <img src="./img/arrow_left_slim.png" alt="왼쪽이동버튼" />
-                    </div>
-                    <div href="#" class="mbtn mb2">
-                        <img src="./img/arrow_right_slim.png" alt="오른쪽이동버튼" />
-                    </div>
                 </div>
 
                 <!-- 3-2. SNS -->
@@ -316,5 +317,6 @@
                 </div>
             </footer>
         </div>
+
     </body>
 </html>

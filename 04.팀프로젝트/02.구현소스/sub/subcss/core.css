@@ -52,4 +52,6 @@ html{
     overflow: hidden;
 }
 
-
+:root{
+    --swiper-theme-color: #c9d5f7;
+}
