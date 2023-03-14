@@ -446,6 +446,12 @@ h3 >a {
     font-weight: bold;
     font-size: min(19px,3.6vw);
 }
+.p2_5_top ul li:first-child a{
+    color: #3a3a3a;
+}
+.p2_5_top a:last-child{
+    padding-left: 10px;
+}
 .p2_5_top ul{
     display: flex;
     font-size: min(20px,2vw);
@@ -724,7 +730,7 @@ h3 >a {
     .p2indepth h2 ,
     .p2exploration h2{
         font-size: min(30px,9vw);
-        margin: 10px 0 15px;
+        margin: 10px 0 30px;
     }
     .p2exploration h2{
         margin-bottom: 30px;
@@ -787,6 +793,23 @@ h3 >a {
     .p1txtbx a {
         font-size: min(30px, 8vw);
     }
+    .p2_3_main .w-50 span {
+        margin-left: 5px;
+        font-size: min(14px,4vw);
+        display: block;
+    }
+    .p3grid>div:first-child{
+        border-top: none;
+    }
+    .p3grid>div:nth-child(2){
+        border-top: none;
+    }
+    .bdbx {
+        border-bottom: none;
+    }
+    .p2_5_gridbx ul a {
+        font-size: 25px;
+    }
     
 }
 @media screen and (max-width:650px) {
@@ -818,10 +841,15 @@ h3 >a {
     .bdrx {
         border-right: 1px solid #dcbfbf;
     }
-    .bdbx {
-        border-bottom: 1px solid #dcbfbf;
-    }
     .ptn {
         padding: 33px;
+    }
+    .p3grid div:nth-child(10){
+        border-bottom: 1px solid #dcbfbf;
+    }
+    .p3grid div:nth-child(4),
+    .p3grid div:last-child
+    {
+        border-bottom: none;
     }
 }
