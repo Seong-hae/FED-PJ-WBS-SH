@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* SOLAR SYSTEM PJ [ mercury ] 서브 페이지  CSS - mercury.css */
+
+/* 외부 공통 CSS */
+@import url(./common.css);
+@import url(./core.css);
+@import url(./reset.css);
+
+
+html{
+    overflow-x: hidden;
+}
+
+.mercury {
+    font-family: "Kanit", sans-serif;
+}
+
+/* 수성01 */
+.mercury01 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url(../subimg/Mercury01.jpg) no-repeat center/cover;
+}
+.mercury01_text {
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+.mercury01_text>h2 {
+    font-size: 130px;
+    line-height: 1;
+    text-shadow: 1px 1px 0 #000;
+}
+.mercury01_text>p {
+    width: 560px;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* 수성02 */
+.mercury02{
+    padding: 50px;
+}
+
+.mercury02 table{
+    width: max(100%,1000px);
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.mercury02 tr{
+    height: 100px;
+}
+.mercury02 td{
+    padding: 10px;
+}
+.mercury02 tr h2{
+    font-size: 25px;
+}
+
+.mercury02 tr:nth-child(odd){
+    background-color: #bef0ffcc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.small{
+    width: 800px;
+}
+
+/* 780px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 780px){
+    .mercury01 {
+        width: 100%;
+    }
+    .mercury01_text {
+        top: 70%;
+        left: 5%;
+    }
+    .mercury01_text>h2 {
+        font-size: 100px;
+        line-height: 1;
+        text-shadow: 1px 1px 0 #000;
+    }
+    .mercury01_text>p {
+        width: 460px;
+        font-size: 20px;
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    .mercury02{
+        padding: 0;
+    }
+
+    .mercury02 table{
+        width: auto;
+        border-collapse: collapse;
+        font-size: 18px;
+    }
+
+    .mercury02 tr{
+        height: 100px;
+    }
+    .mercury02 td{
+        padding: 10px;
+    }
+    .mercury02 tr h2{
+        font-size: 25px;
+    }
+
+    img{
+        width: 90%;
+    }
+    .small{
+        width: 600px;
+    }
+}
+/* 780px 사이즈 이하 미디어쿼리 끝 */
