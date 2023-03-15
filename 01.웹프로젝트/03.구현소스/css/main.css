@@ -8,86 +8,8 @@
 @import url(common.css);
 
 
-/************************* 초기화 *************************/
-html, body, h1, h2, h3, h4, h5, h6, p, figure,
-ul, ol, dl, dt, dd{
-    margin: 0;
-    padding: 0;
-}
-ul, ol{
-    list-style: none;
-    /* 블릿,숫자없앰 */
-}
-a{
-    text-decoration: none;
-    color: #333;
-}
-
 
 /********************* 헤더 영역 *********************/
-#top{
-    width: 100%;
-    height: 94px;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    padding: 0 50px 0 30px;
-    box-sizing: border-box;
-}
-.top{
-    display: flex;
-    justify-content: space-between;
-}
-.top .logo{
-    width: 213px;
-    height: 32px;
-    margin-top: 48px;
-}
-.top .logo a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.top .gnb{
-    margin: 50px 0 0 -120px;
-    font-size: 14px;
-    font-weight: bold;
-}
-.top .gnb ul{
-    display: flex;
-}
-.top .gnb ul li{
-    padding: 10px 20px;
-}
-.top .gnb ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    white-space: nowrap;
-}
-.top .gnb ul li:first-child a{
-    color: #dfbf9f;
-}
- .top .logbx{
-    margin-top: 10px;
- }
- .top .logbx ul{
-    display: flex;
- }
- .top .logbx ul li{
-    padding: 10px;
- }
- .top .logbx ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    font-size: 12px;
-    white-space: nowrap;
- }
 
 
 
@@ -96,169 +18,166 @@ a{
 #cont{
     width: 100%;
     box-sizing: border-box;
-}
-#cont .cont{
     position: relative;
 }
-#cont .cbx ul{
+#cont .cbx{
+    position: absolute;
     display: flex;
-}
-#cont .cbx ul li{
-    width: 20%;
+    width: 100%;
     height: 90vh;
-    position: relative;
     overflow: hidden;
+}
+#cont li{
+    flex: 1;
+    height: 100%;
     border-right: 1px solid rgba(204, 204, 204, 0.2);
-    transition: top .3s;
 }
-#cont .cbx1 ul li:last-child{
+#cont .cbx2 li:nth-child(1){
+    background: url(../img/main_small01.jpg) no-repeat center/cover;
+}
+#cont .cbx2 li:nth-child(2){
+    background: url(../img/main_small02.jpg) no-repeat center/cover;
+}
+#cont .cbx2 li:nth-child(3){
+    background: url(../img/main_small03.jpg) no-repeat center/cover;
+}
+#cont .cbx2 li:nth-child(4){
+    background: url(../img/main_small04.jpg) no-repeat center/cover;
+}
+#cont .cbx2 li:nth-child(5){
     border-right: none;
+    background: url(../img/main_small05.jpg) no-repeat center/cover;
 }
-#cont .cbx2 ul li:nth-child(1){
-    background: url(./images/main1-1.jpg) no-repeat center/cover;
-}
-#cont .cbx2 ul li:nth-child(2){
-    background: url(./images/main2-2.jpg) no-repeat center/cover;
-}
-#cont .cbx2 ul li:nth-child(3){
-    background: url(./images/main3-3.jpg) no-repeat center/cover;
-}
-#cont .cbx2 ul li:nth-child(4){
-    background: url(./images/main4-4.jpg) no-repeat center/cover;
-}
-#cont .cbx2 ul li:nth-child(5){
-    background: url(./images/main5-5.jpg) no-repeat center/cover;
-}
-
-#cont .cbx2{
+#cont .cbx2 .accordion{
     position: absolute;
     top: 0;
+    width: 20%;
+    height: 100%;
+    opacity: 0;
+}
+
+#cont .cbx2 li:nth-child(1) .accordion{
     left: 0;
-    width: 100%;
-    outline: 1px dotted red;
+    background: url(../img/main_big01.jpg) no-repeat fixed center/cover;
 }
-#cont .cbx2 ul li{
-    outline: 1px dotted red;
+#cont .cbx2 li:nth-child(2) .accordion{
+    left: 20%;
+    right: 40%;
+    background: url(../img/main_big02.jpg) no-repeat fixed center/cover;
+}
+#cont .cbx2 li:nth-child(3) .accordion{
+    left: 40%;
+    right: 60%;
+    background: url(../img/main_big03.jpg) no-repeat fixed center/cover;
+}
+#cont .cbx2 li:nth-child(4) .accordion{
+    left: 60%;
+    right: 80%;
+    background: url(../img/main_big04.jpg) no-repeat fixed center/cover;
+}
+#cont .cbx2 li:nth-child(5) .accordion{
+    left: 80%;
+    right: 100%;
+    background: url(../img/main_big05.jpg) no-repeat fixed center/cover;
+}
+#cont .cbx1 li:nth-child(1) .accordion{
+    left: 0;
+}
+#cont .cbx1 li:nth-child(2) .accordion{
+    left: 20%;
+    right: 40%;
 }
 
-
-
-/* 연습공간 */
-#cont .cbx2 ul li:hover{
-    background: none;
+#cont .cbx1 li:nth-child(3) .accordion{
+    left: 40%;
+    right: 60%;
 }
-#cont .cbx1 ul li:nth-child(1){
-    background: url(./images/main1.jpg) no-repeat center/cover;
+#cont .cbx1 li:nth-child(4) .accordion{
+    left: 60%;
+    right: 80%;
 }
-#cont .cbx1 ul li:nth-child(2){
-    background: url(./images/main2.jpg) no-repeat center/cover;
-}
-#cont .cbx1 ul li:nth-child(3){
-    background: url(./images/main3.jpg) no-repeat center/cover;
-}
-#cont .cbx1 ul li:nth-child(4){
-    background: url(./images/main4.jpg) no-repeat center/cover;
-}
-#cont .cbx1 ul li:nth-child(5){
-    background: url(./images/main5.jpg) no-repeat center/cover;
+#cont .cbx1 li:nth-child(5) .accordion{
+    left: 80%;
+    right: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 연습공간 */
-
-
-
-
-#cont .tbx{
+#cont .cont_tbx{
     width: 65%;
     margin: 300px 0 0 30px;
 }
-#cont .tbx h3{
+#cont .cont_tbx h3{
     color: #fff;
     margin-bottom: 13px;
     font: bold 22px 'roboto';
 }
-#cont .tbx h3::before{
+#cont .cont_tbx h3::before{
     content:'';
     display: block;
     width: 25px;
     height: 25px;
     margin-bottom: 22px;
 }
-#cont li:nth-child(1) .tbx h3::before{
-    background: url(./images/W_icon_Hospitality.svg) no-repeat center/cover;
+#cont li:nth-child(1) .cont_tbx h3::before{
+    background: url(../img/W_icon_Hospitality.svg) no-repeat center/cover;
 }
-#cont li:nth-child(2) .tbx h3::before{
-    background: url(./images/W_icon_Cimer.svg) no-repeat center/cover;
+#cont li:nth-child(2) .cont_tbx h3::before{
+    background: url(../img//W_icon_Cimer.svg) no-repeat center/cover;
 }
-#cont li:nth-child(3) .tbx h3::before{
-    background: url(./images/W_icon_Wonderbox.svg) no-repeat center/cover;
+#cont li:nth-child(3) .cont_tbx h3::before{
+    background: url(../img//W_icon_Wonderbox.svg) no-repeat center/cover;
 }
-#cont li:nth-child(4) .tbx h3::before{
-    background: url(./images/W_icon_Casino.svg) no-repeat center/cover;
+#cont li:nth-child(4) .cont_tbx h3::before{
+    background: url(../img//W_icon_Casino.svg) no-repeat center/cover;
 }
-#cont li:nth-child(5) .tbx h3::before{
-    background: url(./images/W_icon_Inspiration.svg) no-repeat center/cover;
+#cont li:nth-child(5) .cont_tbx h3::before{
+    background: url(../img//W_icon_Inspiration.svg) no-repeat center/cover;
 }
-#cont .tbx p{
+#cont .cont_tbx p{
     color: #fff;
     font-size: 12px;
 }
-
-#cont .sbx{
-    width: 100%;
+#cont .cont_sbx{
+    width: 20%;
     height: 200px;
     position: absolute;
     bottom: -200px;
     box-sizing: border-box;
     transition: .5s;
 }
-#cont li:nth-child(1) .sbx{ background-color: #0a78b1; }
-#cont li:nth-child(2) .sbx{ background-color: #b69be2; }
-#cont li:nth-child(3) .sbx{ background-color: #98319d; }
-#cont li:nth-child(4) .sbx{ background-color: #94140a; }
+#cont li:nth-child(1) .cont_sbx{ background-color: #0a78b1; }
+#cont li:nth-child(2) .cont_sbx{ background-color: #b69be2; }
+#cont li:nth-child(3) .cont_sbx{ background-color: #98319d; }
+#cont li:nth-child(4) .cont_sbx{ background-color: #94140a; }
 
-#cont ul li:hover .sbx{
+#cont ul li:hover .cont_sbx{
     bottom: 0;
 }
-#cont .sbx a{
+#cont .cont_sbx a{
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     padding: 25px;
 }
-#cont .sbx a h4{
+#cont .cont_sbx a h4{
     color: #fff;
     font-size: 14px;
     margin-bottom: 50px;
 }
-#cont .sbx a span{
+#cont .cont_sbx a span{
     color: #fff;
     font-size: 14px;
 }
-#cont .sbx span::after{
+#cont .cont_sbx span::after{
     content: '';
     display: block;
     width: 40px;
     height: 15px;
-    background: url(./images/btn_quick_arrow.png) no-repeat center/100%;
+    background: url(../img/btn_quick_arrow.png) no-repeat center/100%;
     margin-top: 15px;
     transition: .5s;
 }
-#cont .sbx:hover span::after{
+#cont .cont_sbx:hover span::after{
     margin-left: 35px;
 }
 
