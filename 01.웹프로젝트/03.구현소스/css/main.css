@@ -18,13 +18,16 @@
 #cont{
     width: 100%;
     box-sizing: border-box;
+}
+#cont .cont{
+    height: 90vh;
     position: relative;
 }
 #cont .cbx{
     position: absolute;
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     overflow: hidden;
 }
 #cont li{
@@ -181,14 +184,7 @@
     margin-left: 35px;
 }
 
-
-
-
-
-
-
-
-
+/* 예약파트 */
 #cont .select{
     width: 100%;
     height: 10vh;
