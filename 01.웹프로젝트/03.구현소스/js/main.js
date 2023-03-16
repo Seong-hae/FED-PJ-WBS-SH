@@ -23,8 +23,9 @@ window.addEventListener("DOMContentLoaded",()=>{
             tg.style.left = "0";
             tg.style.width = "100%";
             tg.style.opacity = "1";
-            tg.style.transition =' 1s ease-in-out, opacity 0s'
-            tg.style.animation ="big 5s ease 2s forwards"
+            tg.style.transition =' 1s ease-in-out, opacity 0s';
+            setTimeout(()=>tg.style.animation ="big 5s ease forwards",2000);
+            
         
 
             qwe.forEach((ele)=>{
