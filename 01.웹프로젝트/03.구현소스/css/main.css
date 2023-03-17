@@ -7,7 +7,9 @@
 @import url(core.css);
 @import url(common.css);
 
-
+body{
+    height: 3000px;
+}
 
 /********************* 헤더 영역 *********************/
 
@@ -20,9 +22,11 @@
     color: #fff;
 }
 #cont{
+    position: relative;
     width: 100%;
     box-sizing: border-box;
 }
+
 #cont .cont{
     height: 90vh;
     position: relative;
@@ -197,20 +201,69 @@
 }
 
 /* 예약파트 */
-#cont .select{
+#cont .reservation{
     width: 100%;
     height: 10vh;
     background-color: rgb(240, 240, 240);
     box-sizing: border-box;
 }
-#cont .select .selbx{
+#cont .select{
     width: 1200px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#cont .select .selbx div{
-    width: 33.3%;
+#cont .select .selbx{
+    flex: 1;
     height: 10vh;
     border: 1px solid #000;
     box-sizing: border-box;
+}
+#cont .select .select_btn{
+    width: 160px;
+    height: 56px;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #9c836a;
+    text-align: center;
+}
+
+.strong{
+    display: block;
+    font-size: 14px;
+    color: #9c836a;
+    margin-bottom: 7px;
+}
+.selbx01 div{
+    font-size: 18px;
+    border-bottom: solid 2px #9c836a;
+}
+.selbx02 ul{
+    display: flex;
+}
+.selbx03 ul{
+    display: flex;
+}
+
+/************** footer 영역 *************/
+.footer{
+    background-color: #21201e;;
+}
+.footer .f_section:first-child{
+    border-bottom: 1px solid rgba(94, 94, 94, 0.3);
+}
+.footer .f_sec{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 5vh 0;
+    display: flex;
+}
+.footer .f_sec>div{
+    flex: 1;
+}
+.footer .f_sec h3{
+    color: #9c836a;
+    font-size: 1.6rem;
+    margin-bottom: 2vh;
 }
