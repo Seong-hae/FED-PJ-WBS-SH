@@ -28,7 +28,7 @@ body{
 }
 
 #cont .cont{
-    height: 90vh;
+    height: 88vh;
     position: relative;
 }
 #cont .cbx{
@@ -200,26 +200,92 @@ body{
     margin-left: 35px;
 }
 
-/* 예약파트 */
+/***** 예약파트 *****/
 #cont .reservation{
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     background-color: rgb(240, 240, 240);
+    padding: 2vh 0;
     box-sizing: border-box;
 }
 #cont .select{
     width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    outline: 1px dotted red;
 }
 #cont .select .selbx{
-    flex: 1;
-    height: 10vh;
-    border: 1px solid #000;
-    box-sizing: border-box;
+    height: 8vh;
 }
+#cont .select .selbx01{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#cont .select .selbx+.selbx{
+    border-left: 1px solid rgba(204, 204, 204, 0.5);
+}
+#cont .selbx01 .hotel_sel{
+    position: relative;
+    width: 15vw;
+    font-size: 1.8rem;
+    line-height: 2;
+    cursor: pointer;
+    font-weight: 600;
+    border-bottom: solid 2px #9c836a;
+}
+#cont .selbx01 .hotel_sel img{
+    position: absolute;
+    right: 0;
+    bottom: 1.5vh;
+}
+#cont .select .strong{
+    display: block;
+    font-size: 1.4rem;
+    color: #9c836a;
+}
+#cont .selbx02 ul,.selbx03 ul{
+    display: flex;
+}
+#cont .selbx02 li{
+    display: flex;
+    flex-wrap: wrap;
+    border-right: none;
+}
+#cont .selbx02 li+li{
+    margin-left: 5vw;
+}
+#cont .selbx02 li .strong{
+    margin-bottom: 17px;
+    width: 100%;
+}
+
+#cont .selbx02 p,
+#cont .selbx02 em{
+    display: inline-block;
+}
+#cont .selbx02 p{
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+#cont .selbx02 em{
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #cont .select .select_btn{
     width: 160px;
     height: 56px;
@@ -227,23 +293,6 @@ body{
     color: #fff;
     background-color: #9c836a;
     text-align: center;
-}
-
-.strong{
-    display: block;
-    font-size: 14px;
-    color: #9c836a;
-    margin-bottom: 7px;
-}
-.selbx01 div{
-    font-size: 18px;
-    border-bottom: solid 2px #9c836a;
-}
-.selbx02 ul{
-    display: flex;
-}
-.selbx03 ul{
-    display: flex;
 }
 
 /************** footer 영역 *************/

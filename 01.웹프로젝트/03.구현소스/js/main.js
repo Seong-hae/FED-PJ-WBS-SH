@@ -50,11 +50,11 @@ function loadFn() {
             // transition과 animation이 충돌이나서 화면이 흔들려서 
             // animation만 따로 setTimeout에 담아서 실행되게 해주었다.
             clearTimeout(aniSetT);
-            aniSetT = setTimeout(() => (tg.style.animation = "big 5s ease forwards"), 1200);
+            aniSetT = setTimeout(() => (tg.style.animation = "big 5s ease forwards"), 2000);
 
             // 글자박스들 투명도 조절
             qwe.forEach((ele) => {
-                ele.style.opacity = 0.7;
+                ele.style.opacity = 0.5;
             });
             console.log(ele);
             ele.querySelector(".cont_tbx").style.opacity = 1;
