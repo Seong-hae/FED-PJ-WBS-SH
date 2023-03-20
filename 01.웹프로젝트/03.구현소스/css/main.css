@@ -7,9 +7,32 @@
 @import url(core.css);
 @import url(common.css);
 
-body{
-    height: 3000px;
+
+/********************* 공통 영역 *********************/
+section{
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 15vh 0;
 }
+section .sec_title{
+    font-family: 'Ledger', serif;
+    font-weight: 400;
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+section .sec_cont{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+
+
+
 
 /********************* 헤더 영역 *********************/
 
@@ -38,7 +61,7 @@ body{
     height: 100%;
     overflow: hidden;
 }
-#cont li{
+#cont .cbx li{
     flex: 1;
     height: 100%;
     border-right: 1px solid rgba(204, 204, 204, 0.2);
@@ -209,15 +232,17 @@ body{
     box-sizing: border-box;
 }
 #cont .select{
-    width: 1200px;
+    width: 65vw;
     margin: 0 auto;
     display: flex;
-    outline: 1px dotted red;
+    /* outline: 1px dotted red; */
 }
 #cont .select .selbx{
     height: 8vh;
+    box-sizing: border-box;
 }
 #cont .select .selbx01{
+    padding-right: 3vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -228,7 +253,7 @@ body{
 }
 #cont .selbx01 .hotel_sel{
     position: relative;
-    width: 15vw;
+    width: 12vw;
     font-size: 1.8rem;
     line-height: 2;
     cursor: pointer;
@@ -245,22 +270,32 @@ body{
     font-size: 1.4rem;
     color: #9c836a;
 }
-#cont .selbx02 ul,.selbx03 ul{
+#cont .selbx02{
+    padding: 0 3vw;
+}
+#cont .selbx02 ul,#cont .selbx03 ul{
     display: flex;
+    cursor: pointer;
 }
 #cont .selbx02 li{
     display: flex;
     flex-wrap: wrap;
-    border-right: none;
+    width: 6vw;
 }
-#cont .selbx02 li+li{
-    margin-left: 5vw;
+#cont .selbx02 li:nth-child(2){
+    margin-left: 3vw;
+}
+#cont .selbx02 li:nth-child(n+3){
+    width: 3vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1vw;
 }
 #cont .selbx02 li .strong{
     margin-bottom: 17px;
     width: 100%;
 }
-
 #cont .selbx02 p,
 #cont .selbx02 em{
     display: inline-block;
@@ -274,26 +309,142 @@ body{
     font-weight: 500;
     font-style: normal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+#cont .selbx02 .night_icon{
+    display: block;
+    margin-bottom: 15px;
+    width: 18px;
+}
+#cont .selbx02 .trip{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+#cont .selbx03 ul{
+    padding-left: 3vw;
+    align-items: center;
+}
+#cont .selbx03 li{
+    text-align: center;
+    width: 3vw;
+}
+#cont .selbx03 .adult,
+#cont .selbx03 .children{
+    margin-top: 17px;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+#cont .selbx03 li:last-child{
+    width: 8vw;
+    margin-left: 4vw;
+}
 #cont .select .select_btn{
-    width: 160px;
-    height: 56px;
+    width: 100%;
+    height: 6vh;
     font-size: 1.8rem;
     color: #fff;
     background-color: #9c836a;
     text-align: center;
+
 }
+
+/************** 2. promotion Section 영역 *************/
+.promotion{
+    background-color: #FBF9F6;
+}
+.promotion .pro_wrap{
+    display: flex;
+}
+/* 왼쪽박스 */
+.promotion .pro_wrap .pro_leftbx{
+    width: 40vw;
+    box-sizing: border-box;
+    padding-left: 7.5vw;
+}
+.promotion .pro_leftbx h2,
+.promotion .pro_leftbx p{
+    text-align: left;
+}
+.promotion .pro_leftbx p{
+    margin-bottom: 5vh;
+}
+.promotion .pro_leftbx .pro_btn{
+    font-size: 1.5rem;
+    font-family: 'Ledger', serif;
+    color: #D6A884;
+    
+}
+.promotion .pro_leftbx .pro_btn:nth-of-type(2){
+    margin-left: 5vw;
+}
+.promotion .pro_leftbx svg{
+    margin-bottom: 3px;
+    margin-left: 15px;
+    transition: .3s ease-in-out;
+}
+.promotion .pro_leftbx .pro_btn:hover svg{
+    transform: translateX(20px);
+}
+/* 오른쪽박스 */
+.promotion .pro_wrap .pro_rightbx{
+    width: 60vw;
+    outline: 1px dotted red;
+}
+
+
+
+
+
+/************** 3. event Section 영역 *************/
+
+
+
+
+/************** 4. gallery Section 영역 *************/
+.gallery{
+    background-color: #FBF9F6;
+    padding: 0;
+}
+.gallery .gal_wrap{
+    width: 100%;
+    display: flex;
+}
+.gallery .gal_leftbx{
+    width: 50%;
+    height: 100vh;
+    background: url(../img/imagegallery_left.jpg) no-repeat center/cover;
+}
+.gallery .gal_rightbx{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 15vh 0;
+}
+
+
+
+
+/************** 5. membership Section 영역 *************/
+.membership{}
+
+
+
+
+/************** 6. landmark Section 영역 *************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /************** footer 영역 *************/
 .footer{
