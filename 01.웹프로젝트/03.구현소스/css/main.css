@@ -386,7 +386,60 @@ section .sec_cont{
 /* 오른쪽박스 */
 .promotion .pro_wrap .pro_rightbx{
     width: 60vw;
-    outline: 1px dotted red;
+    /* outline: 1px dotted red; */
+}
+.promotion .pro_rightbx .pro_slider{
+    display: flex;
+}
+.promotion .pro_rightbx .slide{
+    flex-shrink: 0;
+    width: 380px;
+    margin-right: 3vw;
+}
+.promotion .pro_rightbx .slide a{
+    display: block;
+    width: 100%;
+}
+.promotion .pro_rightbx .pro_imgbx{
+    position: relative;
+}
+.promotion .pro_rightbx .pro_imgbx img{
+    width: 100%;
+    height: 275px;
+}
+.promotion .pro_rightbx .pro_imgbx .pro_date{
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.promotion .pro_rightbx .pro_txt{
+    box-sizing: border-box;
+    padding: 10px;
+}
+.promotion .pro_rightbx .pro_txt .pro_hashtag{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.promotion .pro_rightbx .pro_txt h3{
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+.promotion .pro_rightbx .pro_txt .pro_cont{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.promotion .pro_rightbx .pro_txt .pro_price{
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 
