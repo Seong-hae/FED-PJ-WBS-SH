@@ -355,9 +355,9 @@ section .sec_cont{
 }
 /* 왼쪽박스 */
 .promotion .pro_wrap .pro_leftbx{
-    width: 40vw;
+    width: 40%;
     box-sizing: border-box;
-    padding-left: 7.5vw;
+    padding: 0 3vw 0 7.5vw;
 }
 .promotion .pro_leftbx h2,
 .promotion .pro_leftbx p{
@@ -373,7 +373,7 @@ section .sec_cont{
     
 }
 .promotion .pro_leftbx .pro_btn:nth-of-type(2){
-    margin-left: 5vw;
+    margin-left: 4vw;
 }
 .promotion .pro_leftbx svg{
     margin-bottom: 3px;
@@ -385,18 +385,19 @@ section .sec_cont{
 }
 /* 오른쪽박스 */
 .promotion .pro_wrap .pro_rightbx{
-    width: 60vw;
+    width: 60%;
+    overflow: hidden;
     /* outline: 1px dotted red; */
 }
 .promotion .pro_rightbx .pro_slider{
     display: flex;
+    gap: 0 3vw;
 }
-.promotion .pro_rightbx .slide{
+.promotion .pro_rightbx .pro_slide{
     flex-shrink: 0;
     width: 380px;
-    margin-right: 3vw;
 }
-.promotion .pro_rightbx .slide a{
+.promotion .pro_rightbx .pro_slide a{
     display: block;
     width: 100%;
 }
@@ -447,6 +448,33 @@ section .sec_cont{
 
 
 /************** 3. event Section 영역 *************/
+.event .eventbox{
+    width: 100%;
+    display: flex;
+    margin-top: 15vh;
+    gap: 0 3vw;
+    overflow: hidden;
+}
+.event .eventbox .eventlist{
+    width: 500px;
+    height: 300px;
+    flex-shrink: 0;
+}
+.event .eventbox .eventlist:nth-child(odd){
+    transform: translateY(-5vh);
+}
+.event .eventbox .eventlist:nth-child(even){
+    transform: translateY(5vh);
+}
+.event .eventbox .eventlist a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.event .eventbox .eventlist a img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -468,9 +496,39 @@ section .sec_cont{
 .gallery .gal_rightbx{
     width: 50%;
     box-sizing: border-box;
-    padding: 15vh 0;
+    padding-top: 15vh;
 }
-
+.gallery .gal_rightbx .gal_slider{
+    margin: 10vh 0 0 5vw;
+    display: flex;
+    gap: 0 3vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.gallery .gal_rightbx .gal_slide{
+    width: 350px;
+}
+.gallery .gal_rightbx .gal_slide a{
+    display: block;
+    width: 100%;
+}
+.gallery .gal_rightbx .gal_slide .gal_imgbx{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 2vh;
+}
+.gallery .gal_rightbx .gal_slide .gal_imgbx img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.gallery .gal_rightbx .gal_slide h4{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Ledger', serif;
+    letter-spacing: -2px;
+    text-align: center;
+}
 
 
 
@@ -481,7 +539,26 @@ section .sec_cont{
 
 
 /************** 6. landmark Section 영역 *************/
-
+.landmark{
+    padding: 10vh 0;
+    width: 100%;
+    height: 65vh;
+    background: url(../img/footer.jpg) no-repeat 0 -2vh/cover;
+}
+.landmark .land_txt p{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+.landmark .land_txt h1{
+    width: 13vw;
+    margin: 0 auto;
+}
+.landmark .land_txt h1 img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
 
 
 
