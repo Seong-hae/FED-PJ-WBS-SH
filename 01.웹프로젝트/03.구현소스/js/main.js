@@ -46,7 +46,7 @@ function loadFn() {
             // tg.style.width = "100%";
             tg.style.clipPath = "polygon(0% 0%,100% 0%,100% 100%, 0% 100%)";
             tg.style.opacity = "1";
-            tg.style.transform = "scale(1.2)";
+            tg.style.transform = "scale(1.1)";
             tg.style.transition = " 1s ease-in-out, opacity 0s,transform 5s 1s";
             // 타임아웃매번 지운다!
             // transition과 animation이 충돌이나서 화면이 흔들려서 
@@ -70,47 +70,70 @@ function loadFn() {
 
 
 
-
-
-    /* 글은 어떻게 하느냐?
-    배열로 설정을해줍니다.
-    글내용 = [ , , , , , ]
-    li마다 번호를 줍니다. 지정번호 
-    6 1 2 3 4 5 
-    현재 보이는 페이지는 1
-    
+    const by1 = ['Paradise Signature','Paradise Casino','Paradise Club']
+    const by2 = ['시그니쳐라떼는 맛있어','카지노는 딜러가 힘들어','관악구클럽죽순이']
 
 
     // 멤버쉽 구역 슬라이드 설계
+    // 기능 li가 3개가있고 그안에 배열데이터 0,1,2 를 넣어준다.
+    // 버튼을 누르면 데이터넣는곳 opacity 0 해주고 데이터의 순서를 바꿔준 후 opacity를 1해서 보여준다.
     // 이벤트 대상 .mbtns 
     const mbtns = document.querySelectorAll('.mbtns');
-    그거 광클 변수 하나놓고
-    let 어쩌구 그거
+    // 출력대상 
+    // memberbox h4
+    let membx = document.querySelectorAll('.memberbox li');
+    // memtxt
+    const mtxt = document.querySelector('.memtxt');
+    // 초기상태 셋팅
+    membx.forEach((ele,idx)=>{
+        ele.innerHTML = `
+        <h4>${by1[idx]}</h4>
+        `;
+    })
+    mtxt.innerHTML = by2[1];
 
-    함수 이름 () {
-        if(함수가 1일때){
-            작성
-            1. ul이 먼저 왼쪽으로 가!
-            2. 맨왼쪽 li를 짤라서 맨 오른족에 가져다 넣어
-            그거에 맞는 내용 출력 될대 오퍼시티 1되게 
-
-
-        else(함수가 0 일때){
-            오파서티 사라져 
-            먼저 짤라 맨오른쪽거를 맨왼쪽으로
-            그다음에 li를 보내!
-            그다음에 오파서티 1해줘!
+    // 광클방지 변수
+    // let a = 1; 알아서 해주시고..
+    function cby (seq) { // seq는 순번 0은 왼쪽 1은오른쪽
+        // 광클방지.
+        membx.forEach((ele)=>{
+            ele.style.opacity = 0;
+        })
+        if(seq){ // seq = 1 = true 오른쪽 기능구현
+            console.log('오른')
+            // 어쩌구.splic(배열에서자를값 , 자를개수 , 넣을데이터 )
+            // by1.splice(1,0,by[1])
+            console.log(by[0])
+            // membx.forEach((ele,idx)=>{
+            //     ele.innerHTML = `
+            //     <h4>${by1[idx]}</h4>
+            //     `;
+            // })
+            mtxt.innerHTML = by2[1];
         }
-
+        else { // else = 0 = false 왼쪽기능 구현
+            let membx = document.querySelectorAll('.memberbox li');
         }
-    } 
+        setTimeout(()=>{
+            membx.forEach((ele)=>{
+                ele.style.opacity = 1;
+            })
+        },1000)
+    }
+
+    // 버튼을 누르면 h4가 opacity 0 + 배열을 짤라서 붙이기 
+
+    mbtns.forEach((ele,idx)=>{
+        ele.onclick = (idx) => { //seq 는 순번
+            // ele - 버튼을 누르면 순번을 넘어가게 해준다.
+            // 왼쪽은 0 오른쪽은 1
+            cby(idx);
+        }
+    })
+
+    
+    
 
 
-    // true 1 false 0 
-    // 버튼을 누를때
-    // 기능구현해줘
-    mbtns.onclick = (순번) => {
-        누르면 함수를 실행시켜줘;
-    }; */
-
+    
 }; ////////// load ////////////////////////
