@@ -27,7 +27,7 @@ function loadFn() {
 
             // 타임아웃매번 지운다!
             // 지우지 않으면 마우스가 떠났어도 계속 animation이 style에 들어가게 되어서 이미지 흔들림
-            clearTimeout(aniSetT);
+            // clearTimeout(aniSetT);
 
             // 원래 글자박스는 투명도 1
             qwe.forEach((ele) => {
@@ -42,15 +42,17 @@ function loadFn() {
             // bottomArea의 스타일을 줘서 사진이 펼쳐지게 함
             let tg = bottomArea[idx];
 
-            tg.style.left = "0";
-            tg.style.width = "100%";
+            // tg.style.left = "0";
+            // tg.style.width = "100%";
+            tg.style.clipPath = "polygon(0% 0%,100% 0%,100% 100%, 0% 100%)";
             tg.style.opacity = "1";
-            tg.style.transition = " 1s ease-in-out, opacity 0s";
+            tg.style.transform = "scale(1.2)";
+            tg.style.transition = " 1s ease-in-out, opacity 0s,transform 5s 1s";
             // 타임아웃매번 지운다!
             // transition과 animation이 충돌이나서 화면이 흔들려서 
             // animation만 따로 setTimeout에 담아서 실행되게 해주었다.
-            clearTimeout(aniSetT);
-            aniSetT = setTimeout(() => (tg.style.animation = "big 5s ease forwards"), 2000);
+            // clearTimeout(aniSetT);
+            // aniSetT = setTimeout(() => (tg.style.animation = "big 5s ease forwards"), 2000);
 
             // 글자박스들 투명도 조절
             qwe.forEach((ele) => {
