@@ -655,6 +655,7 @@ section .sec_cont{
     margin: 0 auto;
     padding: 5vh 0;
     display: flex;
+    outline: 1px dotted red;
 }
 .footer .f_sec>div{
     flex: 1;
@@ -663,4 +664,60 @@ section .sec_cont{
     color: #9c836a;
     font-size: 1.6rem;
     margin-bottom: 2vh;
+}
+.footer .fbx01_1 ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .fbx01_1 li{
+    width: 60%;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.footer .fbx01_1 li+li{
+    margin-top: 10px;
+}
+.footer .fbx01_1 li:nth-child(odd){
+    font-weight: 800;
+    width: 40%;
+}
+.footer .fbx01_2 p{
+    color: rgba(255,255,255,0.8);
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.footer .fbx01_2 img+img{
+    margin-left: 10px;
+}
+.footer .fbx01_3 .family{
+}
+.footer .fbx01_3 .sns{
+    display: flex;
+}
+.footer .fbx01_3 .sns h3{
+    color: rgba(255,255,255,0.8);
+    font-size: 1.4rem;
+}
+.footer .fbx01_3 .sns ul{
+    display: flex;
+}
+.footer .fbx01_3 .sns li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    background: url(../img/sns_list.svg) no-repeat;
+}
+.footer .fbx01_3 .sns li:nth-child(1) a{
+    background-position: 0 0;
+}
+.footer .fbx01_3 .sns li:nth-child(2) a{
+    margin-left: 24px;
+    background-position: -48px 0;
+}
+.footer .fbx01_3 .sns li:nth-child(3) a{
+    margin-left: 24px;
+    background-position: -96px 0;
 }
