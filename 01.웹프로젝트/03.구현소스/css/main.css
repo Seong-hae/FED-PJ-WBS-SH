@@ -694,7 +694,7 @@ section .sec_cont{
 .footer .fbx01_3{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 }
 .footer .fbx01_3 .family{
     position: relative;
