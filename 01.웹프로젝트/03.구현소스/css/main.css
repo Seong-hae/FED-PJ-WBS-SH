@@ -446,28 +446,73 @@ section .sec_cont{
 /************** 3. event Section 영역 *************/
 .event .eventbox{
     width: 100%;
-    display: flex;
-    margin-top: 15vh;
-    gap: 0 3vw;
     overflow: hidden;
+    margin-top: 15vh;
+    padding: 5vh 0;
 }
+.event .eventbox .event_flow{
+    box-sizing: border-box;
+    width: 7140px;
+    display: flex;
+    gap: 0 60px;
+    animation: eventmove 40s linear infinite;
+}
+/* 흐르는 이미지박스 키프레임 */
+@keyframes eventmove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+  }
 .event .eventbox .eventlist{
-    width: 500px;
-    height: 300px;
+    box-sizing: border-box;
+    width: 450px;
+    aspect-ratio: 1120/610;
     flex-shrink: 0;
 }
 .event .eventbox .eventlist:nth-child(odd){
     transform: translateY(-5vh);
+    animation: eventmoveDOWN 10s linear infinite;
 }
 .event .eventbox .eventlist:nth-child(even){
     transform: translateY(5vh);
+    animation: eventmoveUP 10s linear infinite;
 }
+/* 흐르는 이미지박스 UP 키프레임 */
+@keyframes eventmoveUP {
+    0% {
+        transform: translateY(5vh);
+    }
+    50% {
+        transform: translateY(-5vh);
+    }
+    100% {
+        transform: translateY(5vh);
+    }
+}
+/* 흐르는 이미지박스 DOWN 키프레임 */
+@keyframes eventmoveDOWN {
+    0% {
+        transform: translateY(-5vh);
+    }
+    50% {
+        transform: translateY(5vh);
+    }
+    100% {
+        transform: translateY(-5vh);
+    }
+}
+
+
 .event .eventbox .eventlist a{
     display: block;
     width: 100%;
     height: 100%;
 }
 .event .eventbox .eventlist a img{
+    /* aspect-ratio: 1120/610; */
     width: 100%;
     height: 100%;
 }
