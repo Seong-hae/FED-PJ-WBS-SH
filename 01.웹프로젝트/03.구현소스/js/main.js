@@ -109,10 +109,10 @@ function loadFn() {
     
     // // 잘라내기로 li순번이 뒤섞이므로 블릿변경 매칭을 위한
     // // 고유순번을 사용자정의 속성(data-)으로 만들어준다!
-    // slist.forEach((ele,idx)=>{
-    //     // data-seq라는 사용자정의 속성 넣기
-    //     ele.setAttribute("data-seq",idx);
-    // }); ////// forEach ///////////
+    slist.forEach((ele,idx)=>{
+        // data-seq라는 사용자정의 속성 넣기
+        ele.setAttribute("data-seq",idx);
+    }); ////// forEach ///////////
 
     // 1. 대상선정
     // 1-1. 이벤트 대상: .arr_btn
@@ -156,7 +156,7 @@ function loadFn() {
             // (1) 오른쪽 버튼 클릭시 다음 슬라이드가
             //     나타나도록 슬라이드 박스의 left값을
             //     -330%로 변경시킨다.
-            slide.style.left = "-330%";
+            slide.style.left = "-1290px";
             slide.style.transition = "left .4s ease-in-out";
     
             // (2) 슬라이드 이동후!!! (0.4초후)
@@ -165,7 +165,7 @@ function loadFn() {
                 //       li를 잘라서 맨뒤로 보낸다!
                 slide.appendChild(clist[0]);
                 // (2-2) 동시에 left값을 -220%으로 변경한다!
-                slide.style.left = "-220%";
+                slide.style.left = "-860px";
                 // (2-3) 트랜지션 없애기!
                 slide.style.transition = "none";
             },400); //// 타임아웃 //////
@@ -183,7 +183,7 @@ function loadFn() {
             slide.insertBefore(clist[clist.length-1],clist[0]);
 
             // (2) 동시에 left값을 -330%로 변경한다.
-            slide.style.left = "-330%"
+            slide.style.left = "-1290px"
             // 이때 트랜지션을 없앤다(한 번 실행 후 부터 생기므로!)
             slide.style.transition = "none";
 
@@ -193,7 +193,7 @@ function loadFn() {
             // 이것을 분리해야 효과가 있다
             // setTimeout을 사용한다!
             setTimeout(()=>{
-                slide.style.left = "-220%";
+                slide.style.left = "-860px";
                 slide.style.transition = "left .4s ease-in-out";
             },0); ////// 타임아웃 ///////
             
@@ -210,9 +210,6 @@ function loadFn() {
         // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
         let cseq = clist[seq].getAttribute("data-seq")
         // console.log("현재순번:",cseq);
-
-        
-
 
     }; ////////// goSlide함수 ///////////
 
@@ -255,7 +252,7 @@ function loadFn() {
     function autoSlide(){
         console.log("인터발시작!");
         // 인터발함수로 슬라이드함수 호출하기
-        autoI = setInterval(()=>goSlide(1),3000);
+        autoI = setInterval(()=>goSlide(1),4000);
     } ////////////// autoSlide함수 ///////////////
 
     // 자동넘김 최초호출!
