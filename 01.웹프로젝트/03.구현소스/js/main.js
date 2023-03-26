@@ -6,6 +6,11 @@ window.addEventListener("DOMContentLoaded", loadFn);
 ******************************************/
 function loadFn() {
 
+
+
+    /****************************************** 
+        메인영역 - 페이지 열리는 기능 구현
+    ******************************************/
     // 1. 대상선정
     // 1-1. 이벤트 대상: .cbx1 li
     const topArea = document.querySelectorAll(".cbx1 li");
@@ -68,68 +73,40 @@ function loadFn() {
 
 
 
+    
+    /******************************************************** 
+        EVENT SECTION 영역 
+        - 흘러가는 이미지박스 mouseenter시 멈추게 하기
+    ********************************************************/
+   const flowBox = document.querySelector(".event_flow");
+   const flowList = document.querySelectorAll(".eventlist");
 
+   flowBox.onmouseenter = x => {
+        // console.log("마우스오버!");
 
-    const by1 = ['Paradise Signature','Paradise Casino','Paradise Club']
-    const by2 = ['시그니쳐라떼는 맛있어','카지노는 딜러가 힘들어','관악구클럽죽순이']
+        flowBox.style.animationPlayState = "paused";
 
+        for(var i=0; i<flowList.length; i++){
+            flowList[i].style.animationPlayState = "paused"
+        } 
+   }; ///////////////////////// mouseenter
+   
+   flowBox.onmouseleave = x => {
+        // console.log("마우스리브!");
 
-    // 멤버쉽 구역 슬라이드 설계
-    // 기능 li가 3개가있고 그안에 배열데이터 0,1,2 를 넣어준다.
-    // 버튼을 누르면 데이터넣는곳 opacity 0 해주고 데이터의 순서를 바꿔준 후 opacity를 1해서 보여준다.
-    // 이벤트 대상 .mbtns 
-    const mbtns = document.querySelectorAll('.mbtns');
-    // 출력대상 
-    // memberbox h4
-    let membx = document.querySelectorAll('.memberbox li');
-    // memtxt
-    const mtxt = document.querySelector('.memtxt');
-    // 초기상태 셋팅
-    membx.forEach((ele,idx)=>{
-        ele.innerHTML = `
-        <h4>${by1[idx]}</h4>
-        `;
-    })
-    mtxt.innerHTML = by2[1];
-
-    // 광클방지 변수
-    // let a = 1; 알아서 해주시고..
-    function cby (seq) { // seq는 순번 0은 왼쪽 1은오른쪽
-        // 광클방지.
-        membx.forEach((ele)=>{
-            ele.style.opacity = 0;
-        })
-        if(seq){ // seq = 1 = true 오른쪽 기능구현
-            console.log('오른')
-            // 어쩌구.splic(배열에서자를값 , 자를개수 , 넣을데이터 )
-            // by1.splice(1,0,by[1])
-            console.log(by[0])
-            // membx.forEach((ele,idx)=>{
-            //     ele.innerHTML = `
-            //     <h4>${by1[idx]}</h4>
-            //     `;
-            // })
-            mtxt.innerHTML = by2[1];
+        flowBox.style.animationPlayState = "running";
+        for(var i=0; i<flowList.length; i++){
+            flowList[i].style.animationPlayState = "running"
         }
-        else { // else = 0 = false 왼쪽기능 구현
-            let membx = document.querySelectorAll('.memberbox li');
-        }
-        setTimeout(()=>{
-            membx.forEach((ele)=>{
-                ele.style.opacity = 1;
-            })
-        },1000)
-    }
+        
+    }; ///////////////////////// mouseleave
 
-    // 버튼을 누르면 h4가 opacity 0 + 배열을 짤라서 붙이기 
 
-    mbtns.forEach((ele,idx)=>{
-        ele.onclick = (idx) => { //seq 는 순번
-            // ele - 버튼을 누르면 순번을 넘어가게 해준다.
-            // 왼쪽은 0 오른쪽은 1
-            cby(idx);
-        }
-    })
+
+
+    
+
+    
 
     
     
