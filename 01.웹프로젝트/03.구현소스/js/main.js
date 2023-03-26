@@ -99,7 +99,7 @@ function loadFn() {
     }; ///////////////////////// mouseleave
 
 
-
+    /////////////////////////////////////////////////////////////////////////
     /******************************************************** 
         PROMOTION SECTION 영역 
         - 슬라이드 박스 구현
@@ -134,8 +134,6 @@ function loadFn() {
     const goSlide = (seq) => {
         // console.log("슬고우!",seq);
 
-        // console.log("못들어갔어!!!!!");
-
         // 광클금지 설정하기 //////
         if(prot) return;
         prot = 1; // 잠금!
@@ -153,20 +151,14 @@ function loadFn() {
         // 1-1. 오른쪽버튼 클릭시 ////////////////
         if(seq){            
             // console.log("오른!");
-            // (1) 오른쪽 버튼 클릭시 다음 슬라이드가
-            //     나타나도록 슬라이드 박스의 left값을
-            //     -330%로 변경시킨다.
             slide.style.left = "-1290px";
             slide.style.transition = "left .4s ease-in-out";
     
             // (2) 슬라이드 이동후!!! (0.4초후)
             setTimeout(()=>{
-                // (2-1) 바깥에 나가있는 첫번째 슬라이드
-                //       li를 잘라서 맨뒤로 보낸다!
+                // 바깥에 나가있는 첫번째 슬라이드 li를 잘라서 맨뒤로 보낸다!
                 slide.appendChild(clist[0]);
-                // (2-2) 동시에 left값을 -220%으로 변경한다!
                 slide.style.left = "-860px";
-                // (2-3) 트랜지션 없애기!
                 slide.style.transition = "none";
             },400); //// 타임아웃 //////
 
@@ -175,20 +167,12 @@ function loadFn() {
         else{
             // console.log("왼쪽!");
 
-            // (1) 왼쪽버튼 클릭시 이전 슬라이드가
-            // 나타나도록 하기위해 우선 맨뒤 li를
-            // 맨앞으로 이동한다.
             // slide.insertBefore(넣을놈,넣을놈전놈)
             // slide.insertBefore(맨끝li,맨앞li)
             slide.insertBefore(clist[clist.length-1],clist[0]);
-
-            // (2) 동시에 left값을 -330%로 변경한다.
             slide.style.left = "-1290px"
-            // 이때 트랜지션을 없앤다(한 번 실행 후 부터 생기므로!)
             slide.style.transition = "none";
 
-            // (3) 그 후 left값을 -220%으로 애니메이션하여
-            // 슬라이드가 왼쪽에서 들어온다.
             // 동일 속성인 left가 같은 코딩처리 공간에 동시에 있으므로
             // 이것을 분리해야 효과가 있다
             // setTimeout을 사용한다!
@@ -200,7 +184,7 @@ function loadFn() {
         } ////////////else : 왼쪽클릭시 /////////
 
         // 2. 현재 슬라이드 순번과 같은 블릿표시하기
-        // 대상 : .indic li -> indic변수
+        // 대상 : .move_bar -> indic변수
         // 2-1. 현재 배너리스트 업데이트
         clist = slide.querySelectorAll("li");
         // 오른쪽 클릭시(seq===1) 두번째 슬라이드[1]
@@ -209,7 +193,12 @@ function loadFn() {
 
         // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
         let cseq = clist[seq].getAttribute("data-seq")
-        // console.log("현재순번:",cseq);
+
+        // 2-3. 블릿초기화
+        for(let x of indic) x.classList.remove("on");
+
+        // 2-4. 읽어온 슬라이드 순번의 블릿에 클라스 "on"넣기
+        indic[cseq].classList.add("on")
 
     }; ////////// goSlide함수 ///////////
 
@@ -223,22 +212,8 @@ function loadFn() {
         }; ///// click함수 //////
     }); /////// forEach //////////
 
-
     //////////////////////////////////
     // 자동넘김 설정하기 //////////////
-
-    // 일정시간 간격으로 넘어가기
-    // -> setInterval(함수,시간)
-
-    // [ 인터발함수의 함수전달값 사용 예(타임아웃 함수도 동일함) ]
-    // 1. 함수에 전달값이 없으면 함수명만 사용가능
-    // setInterval(goSlide,3000);
-    // 2. 전달값이 있다면 익명함수구역에 코딩
-    // setInterval(function(){goSlide(1)},3000);
-    // 3. 화살표함수 사용가능
-    // setInterval(()=>{goSlide(1)},3000);
-    // 4. 화살표함수에서 중괄호 생략가능
-    // setInterval(()=>goSlide(1),3000);
 
     // 인터발함수 지우기위한 변수설정
     let autoI;
@@ -257,7 +232,6 @@ function loadFn() {
 
     // 자동넘김 최초호출!
     autoSlide();
-
 
     /*******************************************
         함수명: clearAuto
@@ -278,6 +252,8 @@ function loadFn() {
         autoT = setTimeout(autoSlide,5000);
 
    } ///////////clearAuto 함수 /////////////////
+
+   /////////////////////// promotion section /////////////////////////////////////
 
 
 
