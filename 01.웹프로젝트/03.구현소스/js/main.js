@@ -63,7 +63,7 @@ function loadFn() {
             qwe.forEach((ele) => {
                 ele.style.opacity = 0.5;
             });
-            console.log(ele);
+            // console.log(ele);
             ele.querySelector(".cont_tbx").style.opacity = 1;
 
         }; ///////// mouseenter ///////////
@@ -128,12 +128,12 @@ function loadFn() {
 
     // 광클금지변수 : 0 - 허용, 1- 불허용
     let prot = 0;
-
+    let a = 0;
     // 2. 슬라이드 변경함수 만들기
     // 호출시 seq에 들어오는 값 중 1은 오른쪽, 0은 왼쪽
     const goSlide = (seq) => {
         // console.log("슬고우!",seq);
-
+        
         // 광클금지 설정하기 //////
         if(prot) return;
         prot = 1; // 잠금!
@@ -149,11 +149,12 @@ function loadFn() {
 
         // 1. 방향에 따른 분기
         // 1-1. 오른쪽버튼 클릭시 ////////////////
-        if(seq){            
+        if(seq){          
+            a++;  
             // console.log("오른!");
             slide.style.left = "-1290px";
             slide.style.transition = "left .4s ease-in-out";
-    
+            
             // (2) 슬라이드 이동후!!! (0.4초후)
             setTimeout(()=>{
                 // 바깥에 나가있는 첫번째 슬라이드 li를 잘라서 맨뒤로 보낸다!
@@ -165,6 +166,7 @@ function loadFn() {
         }
         // 1-2. 왼쪽버튼 클릭시 /////////////
         else{
+            a--;
             // console.log("왼쪽!");
 
             // slide.insertBefore(넣을놈,넣을놈전놈)
@@ -194,11 +196,38 @@ function loadFn() {
         // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
         let cseq = clist[seq].getAttribute("data-seq")
 
-        // 2-3. 블릿초기화
-        for(let x of indic) x.classList.remove("on");
+        // 2-3. 블릿초기화 잠시주석 -동호
+        // for(let x of indic) x.classList.remove("on");
 
-        // 2-4. 읽어온 슬라이드 순번의 블릿에 클라스 "on"넣기
-        indic[cseq].classList.add("on")
+        // // 2-4. 읽어온 슬라이드 순번의 블릿에 클라스 "on"넣기
+        // indic[cseq].classList.add("on")
+
+
+
+        //  바 움직이기
+        if(a === -1){
+            a = 5;
+            document.querySelector('.move_bar').style.opacity = 0
+            document.querySelector('.move_bar').style.transition = 'none';
+            setTimeout(()=>{
+            document.querySelector('.move_bar').style.opacity = 1;
+            document.querySelector('.move_bar').style.transition = '.4s ease-in-out';
+            },10)
+        }
+        else if( a === 6){
+            a = 0;
+            document.querySelector('.move_bar').style.opacity = 0
+            document.querySelector('.move_bar').style.transition = 'none';
+            setTimeout(()=>{
+            document.querySelector('.move_bar').style.opacity = 1;
+            document.querySelector('.move_bar').style.transition = '.4s ease-in-out';
+            },10)
+        }
+        // move_bar 위치 조정
+        console.log(a)
+        console.log(document.querySelector('.move_bar'))
+        document.querySelector('.move_bar').style.transform ='translateX(' + a*100 + '%)';
+        
 
     }; ////////// goSlide함수 ///////////
 

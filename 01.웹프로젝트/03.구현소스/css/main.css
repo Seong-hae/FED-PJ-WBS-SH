@@ -39,10 +39,7 @@ section .sec_cont{
 
 
 /************************ 메인영역 ************************/
-.cbx1_tbx {
-    opacity: 1;
-    color: #fff;
-}
+
 #cont{
     position: relative;
     width: 100%;
@@ -137,10 +134,14 @@ section .sec_cont{
     left: 80%;
     right: 100%;
 }
-
+#cont .cbx1 .accordion{
+    
+}
 #cont .cont_tbx{
-    width: 65%;
-    margin: 300px 0 0 30px;
+    width: 100%;
+    padding: 0 8%;
+    margin-top: 28vh;
+    box-sizing: border-box;
 }
 #cont .cont_tbx h3{
     color: #fff;
@@ -172,6 +173,7 @@ section .sec_cont{
 #cont .cont_tbx p{
     color: #fff;
     font-size: 12px;
+    word-break: keep-all;
 }
 #cont .cont_sbx{
     width: 20%;
@@ -489,11 +491,11 @@ section .sec_cont{
     width: calc(100%/6);
     height: 2px;
     background-color: #c1c1c1;
-    display: none;
+    display: block;
 }
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(1){
+/* .promotion .pro_rightbx .slide_bar .move_bar:nth-child(1){
     left: 0;
-}
+} */
 .promotion .pro_rightbx .slide_bar .move_bar:nth-child(2){
     left: calc(100%/6);
 }
@@ -513,7 +515,10 @@ section .sec_cont{
 .promotion .pro_rightbx .slider_btnbox .slide_bar .move_bar.on{
     display: block;
 }
-
+.move_bar{
+    transition:  .2s ease-in-out;
+    transform: translateX(0%);
+}
 
 
 
