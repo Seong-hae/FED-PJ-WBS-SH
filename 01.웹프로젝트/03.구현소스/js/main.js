@@ -72,32 +72,7 @@ function loadFn() {
 
 
 
-
     
-    
-   const flowBox = document.querySelector(".event_flow");
-   const flowList = document.querySelectorAll(".eventlist");
-
-   flowBox.onmouseenter = x => {
-        // console.log("마우스오버!");
-
-        flowBox.style.animationPlayState = "paused";
-
-        for(var i=0; i<flowList.length; i++){
-            flowList[i].style.animationPlayState = "paused"
-        } 
-   }; ///////////////////////// mouseenter
-
-   flowBox.onmouseleave = x => {
-        // console.log("마우스리브!");
-
-        flowBox.style.animationPlayState = "running";
-        for(var i=0; i<flowList.length; i++){
-            flowList[i].style.animationPlayState = "running"
-        }
-        
-    }; ///////////////////////// mouseleave
-
 
     /////////////////////////////////////////////////////////////////////////
     /******************************************************** 
@@ -109,10 +84,10 @@ function loadFn() {
     
     // // 잘라내기로 li순번이 뒤섞이므로 블릿변경 매칭을 위한
     // // 고유순번을 사용자정의 속성(data-)으로 만들어준다!
-    slist.forEach((ele,idx)=>{
-        // data-seq라는 사용자정의 속성 넣기
-        ele.setAttribute("data-seq",idx);
-    }); ////// forEach ///////////
+    // slist.forEach((ele,idx)=>{
+    //     // data-seq라는 사용자정의 속성 넣기
+    //     ele.setAttribute("data-seq",idx);
+    // }); ////// forEach ///////////
 
     // 1. 대상선정
     // 1-1. 이벤트 대상: .arr_btn
@@ -194,16 +169,9 @@ function loadFn() {
         // seq순번과 읽어올 슬라이드 순번이 일치한다!
 
         // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
-        let cseq = clist[seq].getAttribute("data-seq")
+        // let cseq = clist[seq].getAttribute("data-seq")
 
-        // 2-3. 블릿초기화 잠시주석 -동호
-        // for(let x of indic) x.classList.remove("on");
-
-        // // 2-4. 읽어온 슬라이드 순번의 블릿에 클라스 "on"넣기
-        // indic[cseq].classList.add("on")
-
-
-
+        
         //  바 움직이기
         if(a === -1){
             a = 5;
@@ -224,8 +192,6 @@ function loadFn() {
             },10)
         }
         // move_bar 위치 조정
-        console.log(a)
-        console.log(document.querySelector('.move_bar'))
         document.querySelector('.move_bar').style.transform ='translateX(' + a*100 + '%)';
         
 
@@ -249,10 +215,10 @@ function loadFn() {
     // 타임아웃함수 지우기위한 변수설정
     let autoT;
 
-    /*************************************************
-        함수명: autoSlide
-        기능: 인터발함수로 슬라이드함수 호출
-    *************************************************/
+    ////////////////////////////////////////////////
+    //    함수명: autoSlide
+    //    기능: 인터발함수로 슬라이드함수 호출
+    ////////////////////////////////////////////////
     function autoSlide(){
         console.log("인터발시작!");
         // 인터발함수로 슬라이드함수 호출하기
@@ -262,10 +228,10 @@ function loadFn() {
     // 자동넘김 최초호출!
     autoSlide();
 
-    /*******************************************
-        함수명: clearAuto
-        기능: 인터발함수를 지우고 다시셋팅
-    *******************************************/
+    ////////////////////////////////////////////////
+    //    함수명: clearAuto
+    //    기능: 인터발함수를 지우고 다시셋팅
+    ////////////////////////////////////////////////
    function clearAuto(){
         console.log("인터발멈춤!");
         // 1. 인터발 지우기
@@ -285,6 +251,43 @@ function loadFn() {
    /////////////////////// promotion section /////////////////////////////////////
 
 
+
+   /******************************************************** 
+        EVENTS SECTION 영역 
+        - 슬라이드 박스 구현
+    ********************************************************/
+    const flowBox = document.querySelector(".event_flow");
+    const flowList = document.querySelectorAll(".eventlist");
+    
+    flowBox.onmouseenter = x => {
+            // console.log("마우스오버!");
+    
+            flowBox.style.animationPlayState = "paused";
+    
+            for(var i=0; i<flowList.length; i++){
+                flowList[i].style.animationPlayState = "paused"
+            } 
+    }; ///////////////////////// mouseenter
+    
+    flowBox.onmouseleave = x => {
+            // console.log("마우스리브!");
+    
+            flowBox.style.animationPlayState = "running";
+            for(var i=0; i<flowList.length; i++){
+                flowList[i].style.animationPlayState = "running"
+            }
+            
+    }; ///////////////////////// mouseleave
+    ////////////////////// EVENTS SECTION ////////////////////
+
+
+
+    
+
+    /******************************************************** 
+        MEMBERSHIP SECTION 영역 
+        - 슬라이드 박스 구현
+    ********************************************************/
 
 
     

@@ -12,6 +12,7 @@
 section{
     box-sizing: border-box;
     padding: 10vw 0;
+    position: relative;
 }
 section .sec_title{
     font-family: 'Ledger', serif;
@@ -491,35 +492,10 @@ section .sec_cont{
     width: calc(100%/6);
     height: 2px;
     background-color: #c1c1c1;
-    display: block;
-}
-/* .promotion .pro_rightbx .slide_bar .move_bar:nth-child(1){
-    left: 0;
-} */
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(2){
-    left: calc(100%/6);
-}
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(3){
-    left: calc(100%/6*2);
-}
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(4){
-    left: calc(100%/6*3);
-}
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(5){
-    left: calc(100%/6*4);
-}
-.promotion .pro_rightbx .slide_bar .move_bar:nth-child(6){
-    left: calc(100%/6*5);
-}
-/* 블릿에 .on 붙었을때 */
-.promotion .pro_rightbx .slider_btnbox .slide_bar .move_bar.on{
-    display: block;
-}
-.move_bar{
     transition:  .2s ease-in-out;
     transform: translateX(0%);
+    display: block;
 }
-
 
 
 
@@ -655,77 +631,52 @@ section .sec_cont{
 
 
 /************** 5. membership Section 영역 *************/
-.membership *{
-    outline: 1px dashed red;
-}
-.membership{
-    position: relative;
-}
-.membership::after{
-    content: "";
-    width: 100%;
-    height: 50vh;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #FBF9F6;
-}
 .memberbox{
-    position: absolute;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 80%;
-    overflow: hidden;
-    margin: 0 auto;
-    z-index: 33;
+    border: 1px solid #000;
 }
-.membership ul{
+.memberbox .memslider{
     display: flex;
     justify-content: center;
-    column-gap:  5%;
-    width: 100%;
-    height: 100px;
-    align-items: center;
 }
-.membership ul h4{
-    font-size: 30px;
-}
-.membership ul p {
-    font-size: 15px;
-}
-.membership li{
-    text-align: center;
+.memberbox .memslider .memlist{
     width: 20%;
-
-}
-.membership li:nth-child(2){
-    width: 50%;
-    transform: translate(0,-50%);
-    /* transform: scaleX(1.2); */
-}
-.memtxt{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,110%);
-}
-.mbtns{
-    top: 50%;
     display: flex;
-    font-size: 40px;
+    flex-direction: column;
 }
-/* 버튼 왼쪽 */
-.mbtns div:first-child{
-    position: absolute;
-    top: 23%;
-    left: 21%;
+.memberbox .memslider .memlist.memcenter{
+    width: 35%;
 }
-/* 버튼 오른족 */
-.mbtns div:last-child{
+.memberbox .memslider .memlist .cardbox{
+    position: relative;
+    height: 40vh;
+    border: 1px solid red;
+}
+.memberbox .memslider .memlist .cardbox ul{
+    
+}
+.memberbox .memlist .cardbox .cardlist{
+    /* display: none; */
     position: absolute;
-    top: 26%;
-    right: 21%;
+}
+.memberbox .memlist .cardbox .cardlist img{}
+.memberbox .memslider .memlist .memtxtbox{
+    text-align: center;
+}
+.memberbox .memslider .memlist .memname{
+    font-family: 'Ledger', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: rgba(184, 184, 184, 0.5);
+}
+.memberbox .memslider .memlist.memcenter .memname{
+    font-size: 2.5rem;
+    font-family: 'Ledger', serif;
+    color: #333;
+    margin-bottom: 45px;
+}
+.memberbox .memslider .memlist.memcenter .memcontent{
+    font-size: 1.4rem;
+    line-height: 1.6;
 }
 
 
