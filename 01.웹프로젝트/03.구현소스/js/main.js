@@ -288,7 +288,150 @@ function loadFn() {
         MEMBERSHIP SECTION 영역 
         - 슬라이드 박스 구현
     ********************************************************/
+    // 배열데이터
+    let memname = ["CASINO POINT","PARADISE<br class='br'> SIGNATURE","CASINO CLUB"]
+    let memcont = 
+    [
+        "K-Style 프리미엄 외국인 전용 카지노의 회원만을 위해 다양한 혜택으로 구성된 카지노 전용 멤버십입니다. 카지노 포인트 고객에게만 제공되는 차별화된 회원 특전을 경험하세요.",
+        "파라다이스 시그니처는 고객님의 가치를 더욱 돋보이게 하는 연간 회원 멤버십입니다.<br> 파라다이스시티만의 시그니처 멤버십으로 품격있는 라이프스타일을 경험하세요.",
+        "다채로운 파라다이스시티 시설 뿐만 아니라, 카지노 VIP를 위한 전용 라운지 및 프라이빗 게임 룸, 다양한 이벤트 및 공연 초청 등 파라다이스 카지노 클럽 고객만의 특별한 서비스를 경험하세요."
+    ]
 
+    // 1. 대상선정
+    // (1) 멤버십 이름 : .memname
+    const mlist = document.querySelectorAll('.memlist .memname');
+    // (2) 멤버십 내용 : .memcontent
+    const mcontent = document.querySelectorAll('.memlist .memcontent');
+    // (3) 버튼 : .mem_btn
+    const mbtns = document.querySelectorAll('.mem_btn');
+
+
+    // 최초출력
+    mlist.forEach((ele,idx)=>{
+        ele.innerHTML = memname[idx]; 
+    })
+
+    mcontent.forEach((ele,idx)=>{
+        ele.innerHTML = memcont[idx]; 
+    })
+    
+    // 배열에서 자른값을 넣을 데이터변수
+    let bs;
+    let cont
+
+    console.log(memname)
+
+    // bnts[1] 오른쪽버튼 을 누르면 함수실행
+    // li의 각요소들에게 트랜지션을 먼저 없애고 투명하게
+    mbtns[1].onclick = () =>{
+        mlist.forEach((ele)=>{
+            ele.style.transition = 'none';
+            ele.style.opacity = 0;
+        })
+        mcontent.forEach((ele)=>{
+            ele.style.transition = 'none';
+            ele.style.opacity = 0;
+        })
+
+        // 배열의 값을 담을 변수
+        let ba;
+        let cnt
+
+        // ba는 배열의 맨처음값
+        ba = memname[0];
+        cnt = memcont[0];
+        // by의 맨앞을 삭제해!
+        memname.shift();
+        memcont.shift();
+        // by에 맨뒤에 ba값을 추가해!
+        memname.push(ba);
+        memcont.push(cnt);
+        // li업데이트
+        // li의 각요소들에게 배열데이터를 순번에 맞게 출력
+        mlist.forEach((ele,idx)=>{
+            ele.innerHTML = memname[idx]; 
+        })
+        mcontent.forEach((ele,idx)=>{
+            ele.innerHTML = memcont[idx]; 
+        })
+
+        let aqe = "PARADISE<br class='br'> SIGNATURE"
+        if(memname[1] == aqe){
+            document.querySelector('.br').remove();
+        } 
+
+        // 업데이트후 시간차를 주기위해 셋타임아웃 사용
+        // 각li요소 들에게 트랜지션을 선 부여 후 투명도 1
+        setTimeout(()=>{
+            mlist.forEach((ele)=>{
+                ele.style.transition = '.5s'
+                ele.style.opacity = 1;
+            })
+            mcontent.forEach((ele)=>{
+                ele.style.transition = '.5s'
+                ele.style.opacity = 1;
+            })
+        },500)
+    }
+
+    let aqe = "PARADISE<br class='br'> SIGNATURE"
+        if(memname[1] == aqe){
+            document.querySelector('.br').remove();
+        } 
+
+        
+
+    // 버튼[0] 왼쪽을 누르면 함수실행
+    // li의 각요소들에게 트랜지션을 먼저 없애고 투명하게
+    mbtns[0].onclick = () => {
+        mlist.forEach((ele)=>{
+            ele.style.transition = 'none';
+            ele.style.opacity = 0;
+        })
+
+        mcontent.forEach((ele)=>{
+            ele.style.transition = 'none';
+            ele.style.opacity = 0;
+        })
+         
+        //  배열에 값을 담을 변수
+        bs = memname[2];
+        cont = memcont[2];
+
+        // 맨뒤에 요소를 제거! by배열의
+        memname.pop();
+        memcont.pop();
+        // console.log('by',by,'bs',bs);
+
+        // 배열에 맨앞에 추가해! bs값을
+        memname.unshift(bs);
+        memcont.unshift(cont);
+        // console.log(by)
+        // mlist 업데이트
+        mlist.forEach((ele,idx)=>{
+            ele.innerHTML = memname[idx]; 
+        })
+        mcontent.forEach((ele,idx)=>{
+            ele.innerHTML = memcont[idx]; 
+        })
+        console.log(memname[1])
+        let aqe = "PARADISE<br class='br'> SIGNATURE"
+        if(memname[1] == aqe){
+            document.querySelector('.br').remove();
+        } 
+        // 시간차를 주기위해 셋타임아웃 사용 
+        // li의 각요소들에게 트랜지션을 먼저 부여후 투명도 1
+        setTimeout(()=>{
+            mlist.forEach((ele)=>{
+                ele.style.transition = '.5s'
+                ele.style.opacity = 1;
+            })
+            mcontent.forEach((ele)=>{
+                ele.style.transition = '.5s'
+                ele.style.opacity = 1;
+            })
+        },500)
+    }
 
     
 
