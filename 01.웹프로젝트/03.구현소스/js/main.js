@@ -314,6 +314,24 @@ function loadFn() {
     mcontent.forEach((ele,idx)=>{
         ele.innerHTML = memcont[idx]; 
     })
+
+    // 성해 - 일단만들어보자...
+    function cardUp(){
+
+        if(memname[0].innerHTML = "CASINO POINT"){
+            document.querySelector(".cardbox01").classList.remove("up")
+            document.querySelector(".cardbox01").classList.add("up")
+        }
+        else if(memname[1].innerHTML = "PARADISE<br class='br'> SIGNATURE"){
+            document.querySelector(".cardbox02").classList.remove("up")
+            document.querySelector(".cardbox02").classList.add("up")
+        }
+        else if(memname[2].innerHTML = "CASINO CLUB"){
+            document.querySelector(".cardbox03").classList.remove("up")
+            document.querySelector(".cardbox03").classList.add("up")
+        }
+
+    }
     
     // 배열에서 자른값을 넣을 데이터변수
     let bs;
@@ -358,21 +376,24 @@ function loadFn() {
         let aqe = "PARADISE<br class='br'> SIGNATURE"
         if(memname[1] == aqe){
             document.querySelector('.br').remove();
-        } 
+        }
+
+        // 함수실행
+        cardUp()
 
         // 업데이트후 시간차를 주기위해 셋타임아웃 사용
         // 각li요소 들에게 트랜지션을 선 부여 후 투명도 1
         setTimeout(()=>{
             mlist.forEach((ele)=>{
-                ele.style.transition = '.5s'
+                ele.style.transition = '.3s'
                 ele.style.opacity = 1;
             })
             mcontent.forEach((ele)=>{
-                ele.style.transition = '.5s'
+                ele.style.transition = '.3s'
                 ele.style.opacity = 1;
             })
         },500)
-    }
+    } //////////// click 
 
     let aqe = "PARADISE<br class='br'> SIGNATURE"
         if(memname[1] == aqe){
@@ -423,15 +444,15 @@ function loadFn() {
         // li의 각요소들에게 트랜지션을 먼저 부여후 투명도 1
         setTimeout(()=>{
             mlist.forEach((ele)=>{
-                ele.style.transition = '.5s'
+                ele.style.transition = '.3s'
                 ele.style.opacity = 1;
             })
             mcontent.forEach((ele)=>{
-                ele.style.transition = '.5s'
+                ele.style.transition = '.3s'
                 ele.style.opacity = 1;
             })
         },500)
-    }
+    } //////////// click 
 
     
 

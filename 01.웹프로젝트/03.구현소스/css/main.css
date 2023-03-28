@@ -657,7 +657,8 @@ section .sec_cont{
     height: 100%;
     margin: 0 auto;
     position: relative;
-
+    opacity: 0;
+    display: none;
 }
 .memberbox .cardcontainer .cardbox .cardlist{
     position: absolute;
@@ -666,32 +667,61 @@ section .sec_cont{
     transform: translate(-50%, -50%);
     width: 260px;
 }
-.memberbox .cardcontainer .card_02 .cardlist:nth-child(1){
+
+/* 클래스 .up 을 줬을때 */
+.memberbox .cardcontainer .cardbox01.up{
+    opacity: 1;
+    display: block;
+}
+.memberbox .cardcontainer .cardbox02.up{
+    opacity: 1;
+    display: block;
+}
+.memberbox .cardcontainer .cardbox03.up{
+    opacity: 1;
+    display: block;
+}
+.memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(1){
+    animation:
+    cardup .6s ease-out forwards,
+    card03spreadback .6s ease-in .5s forwards;
+} 
+.memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(2){
+    animation:
+    cardup .6s ease-out forwards;
+}
+.memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(3){
+    animation:
+    cardup .6s ease-out forwards,
+    card03spreadFront .6s ease-in .5s forwards;
+}
+.memberbox .cardcontainer .cardbox02.up .cardlist:nth-child(1){
     animation:
     cardup .6s ease-out forwards,
     card02spreadback .6s ease-in .5s forwards ;
     /* left: 65%; */
 }
-.memberbox .cardcontainer .card_02 .cardlist:nth-child(2){
+.memberbox .cardcontainer .cardbox02.up .cardlist:nth-child(2){
     animation:
     cardup .6s ease-out forwards,
     card02spreadFront .6s ease-in .5s forwards ;
     /* left: 35%; */
 }
-.memberbox .cardcontainer .card_03 .cardlist:nth-child(1){
+.memberbox .cardbox03.up .cardlist:nth-child(1){
     animation:
     cardup .6s ease-out forwards,
-    card03spreadback .6s ease-in .5s forwards;
-} 
-.memberbox .cardcontainer .card_03 .cardlist:nth-child(2){
-    animation:
-    cardup .6s ease-out forwards;
+    card02spreadback .6s ease-in .5s forwards ;
+    /* left: 65%; */
 }
-.memberbox .cardcontainer .card_03 .cardlist:nth-child(3){
+.memberbox .cardcontainer .cardbox03.up .cardlist:nth-child(2){
     animation:
     cardup .6s ease-out forwards,
-    card03spreadFront .6s ease-in .5s forwards;
+    card02spreadFront .6s ease-in .5s forwards ;
+    /* left: 35%; */
 }
+
+
+
 @keyframes cardup {
     0%{
         opacity: 0;
@@ -737,12 +767,6 @@ section .sec_cont{
         left: 80%;
     }
 }
-
-
-.memberbox .cardcontainer .cardbox03,
-.memberbox .cardcontainer .cardbox02{
-    display: none;
-}
 .memberbox .cardcontainer .cardbox .cardlist img{
     width: 100%;
 }
@@ -764,11 +788,6 @@ section .sec_cont{
 .memberbox .memslider .memlist.memcenter{
     width: 35%;
     position: relative;
-}
-.memberbox .memslider .memlist .cardbox{
-    position: relative;
-    height: 30vh;
-    border: 1px solid red;
 }
 .memberbox .memslider .memlist .memtxtbox{
     text-align: center;
@@ -793,6 +812,7 @@ section .sec_cont{
     line-height: 1.6;
     height: 100px;
     padding: 0 50px;
+    word-break: keep-all;
 }
 /* 버튼 */
 .memberbox .mem_btn{
