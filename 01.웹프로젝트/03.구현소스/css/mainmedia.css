@@ -5,14 +5,28 @@
 /* 1300px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1300px) {
 
+    /*************** 공통영역 **************/
+    section {
+        padding: 20vw 0;
+    }
 
+
+
+    /****************** 메인영역 ****************/
+    .cont{
+        opacity: 0;
+    }
+
+
+
+    /************** 2. promotion Section 영역 *************/
     .promotion .pro_wrap{
         flex-direction: column;
         padding-left: 7.5vw;
         box-sizing: border-box;
     }
     .promotion .pro_wrap .pro_leftbx{
-        width: 100%;
+        width: calc(100% - 7.5vw);
         padding: 0;
         margin-bottom: 60px;
     }
@@ -22,16 +36,23 @@
     .promotion .pro_rightbx .slider_btnbox{
         width: 92%;
     }
+    .promotion .pro_rightbx .slider_btnbox{
+        padding: 40px 0 10px;
+    }
+
+    /************** 6. landmark Section 영역 *************/
 
 
 }
 
-/* 768px 사이즈 이하 미디어쿼리 시작 */
-@media screen and (max-width: 768px) {
 
-    /****************** 메인영역 ****************/
-    .cont{
-        /* display: none; */
-    }
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+    
 
 }
