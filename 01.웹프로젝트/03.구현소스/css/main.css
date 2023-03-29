@@ -666,6 +666,8 @@ section .sec_cont{
     top: 130%;
     transform: translate(-50%, -50%);
     width: 260px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(87, 87, 87, 0.712);
 }
 
 /* 클래스 .up 을 줬을때 */
@@ -685,6 +687,7 @@ section .sec_cont{
     animation:
     cardup .6s ease-out forwards,
     card03spreadback .6s ease-in .5s forwards;
+    
 } 
 .memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(2){
     animation:

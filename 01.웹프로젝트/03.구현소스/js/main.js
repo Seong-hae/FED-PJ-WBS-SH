@@ -304,6 +304,10 @@ function loadFn() {
     const mcontent = document.querySelectorAll('.memlist .memcontent');
     // (3) 버튼 : .mem_btn
     const mbtns = document.querySelectorAll('.mem_btn');
+    // (4) 카드박스들 
+    const cardbox1 = document.querySelector(".cardbox01");
+    const cardbox2 = document.querySelector(".cardbox02");
+    const cardbox3 = document.querySelector(".cardbox03");
 
 
     // 최초출력
@@ -315,23 +319,6 @@ function loadFn() {
         ele.innerHTML = memcont[idx]; 
     })
 
-    // 성해 - 일단만들어보자...
-    function cardUp(){
-
-        if(memname[0].innerHTML = "CASINO POINT"){
-            document.querySelector(".cardbox01").classList.remove("up")
-            document.querySelector(".cardbox01").classList.add("up")
-        }
-        else if(memname[1].innerHTML = "PARADISE<br class='br'> SIGNATURE"){
-            document.querySelector(".cardbox02").classList.remove("up")
-            document.querySelector(".cardbox02").classList.add("up")
-        }
-        else if(memname[2].innerHTML = "CASINO CLUB"){
-            document.querySelector(".cardbox03").classList.remove("up")
-            document.querySelector(".cardbox03").classList.add("up")
-        }
-
-    }
     
     // 배열에서 자른값을 넣을 데이터변수
     let bs;
@@ -378,8 +365,22 @@ function loadFn() {
             document.querySelector('.br').remove();
         }
 
-        // 함수실행
-        cardUp()
+        // 카드에 클래스 up 넣어주기
+        if(memname[1] == "CASINO POINT"){
+            cardbox2.classList.remove("up")
+            cardbox3.classList.remove("up")
+            cardbox1.classList.add("up")
+        }
+        else if(memname[1] == "PARADISE<br class='br'> SIGNATURE"){
+            cardbox1.classList.remove("up")
+            cardbox3.classList.remove("up")
+            cardbox2.classList.add("up")
+        }
+        else if(memname[1] == "CASINO CLUB"){
+            cardbox1.classList.remove("up")
+            cardbox2.classList.remove("up")
+            cardbox3.classList.add("up")
+        }
 
         // 업데이트후 시간차를 주기위해 셋타임아웃 사용
         // 각li요소 들에게 트랜지션을 선 부여 후 투명도 1
@@ -440,6 +441,23 @@ function loadFn() {
         if(memname[1] == aqe){
             document.querySelector('.br').remove();
         } 
+
+        // 카드에 클래스 up 넣어주기
+        if(memname[1] == "CASINO POINT"){
+            cardbox2.classList.remove("up")
+            cardbox3.classList.remove("up")
+            cardbox1.classList.add("up")
+        }
+        else if(memname[1] == "PARADISE<br class='br'> SIGNATURE"){
+            cardbox1.classList.remove("up")
+            cardbox3.classList.remove("up")
+            cardbox2.classList.add("up")
+        }
+        else if(memname[1] == "CASINO CLUB"){
+            cardbox1.classList.remove("up")
+            cardbox2.classList.remove("up")
+            cardbox3.classList.add("up")
+        }
         // 시간차를 주기위해 셋타임아웃 사용 
         // li의 각요소들에게 트랜지션을 먼저 부여후 투명도 1
         setTimeout(()=>{
