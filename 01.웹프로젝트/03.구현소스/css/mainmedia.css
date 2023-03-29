@@ -2,44 +2,23 @@
 
 /* 파라다이스시티 PJ 메인 미디어쿼리 - mainmedia.css */
 
-/* 1000px 사이즈 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1000px) {
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
 
 
-    /************************ 메인영역 ************************/
-    /* .cont .cbx li:last-child{
-        display: none;
+    .promotion .pro_wrap{
+        flex-direction: column;
+        padding-left: 7.5vw;
+        box-sizing: border-box;
     }
-    #cont .cbx2 li:nth-child(1) .accordion{
-        clip-path: polygon(0% 0%,25% 0%,25% 100%, 0% 100%);
+    .promotion .pro_wrap .pro_leftbx{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 60px;
     }
-    #cont .cbx2 li:nth-child(2) .accordion{
-        clip-path: polygon(25% 0%,50% 0%,50% 100%, 25% 100%);
+    .promotion .pro_wrap .pro_rightbx{
+        width: 100%;
     }
-    #cont .cbx2 li:nth-child(3) .accordion{
-        clip-path: polygon(50% 0%,75% 0%,75% 100%, 50% 100%);
-    }
-    #cont .cbx2 li:nth-child(4) .accordion{
-        clip-path: polygon(75% 0%,100% 0%,100% 100%, 75% 100%);
-    }
-    #cont .cbx1 li:nth-child(1) .accordion{
-        left: 0;
-    }
-    #cont .cbx1 li:nth-child(2) .accordion{
-        left: 25%;
-        right: 50%;
-    }
-    #cont .cbx1 li:nth-child(3) .accordion{
-        left: 50%;
-        right: 75%;
-    }
-    #cont .cbx1 li:nth-child(4) .accordion{
-        left: 75%;
-        right: 100%;
-    }
-    #cont .cont_sbx{
-        width: 25%;
-    } */
 
 
 }

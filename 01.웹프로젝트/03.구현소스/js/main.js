@@ -282,7 +282,240 @@ function loadFn() {
 
 
 
+
+
+    /////////////////////////////////////////////////////////////////////////
+    /******************************************************** 
+        GALLERY SECTION 영역 
+        - 슬라이드 박스 구현
+    ********************************************************/
+    // 슬라이드 li리스트
+    let glist = document.querySelectorAll(".gal_list");
     
+    // // 잘라내기로 li순번이 뒤섞이므로 블릿변경 매칭을 위한
+    // // 고유순번을 사용자정의 속성(data-)으로 만들어준다!
+    // slist.forEach((ele,idx)=>{
+    //     // data-seq라는 사용자정의 속성 넣기
+    //     ele.setAttribute("data-seq",idx);
+    // }); ////// forEach ///////////
+
+    // 1. 대상선정
+    // 1-1. 이벤트 대상: .garr_btn
+    const gbtn = document.querySelectorAll(".garr_btn");
+    // console.log(abtn);
+
+    // 1-2. 변경 대상: .gal_slide
+    const gslide = document.querySelector(".gal_slide");
+
+    // 1-3. 블릿 대상: .gmove_bar
+    const gbar = document.querySelectorAll(".gmove_bar");
+    // console.log(indic);
+
+    // 광클금지변수 : 0 - 허용, 1- 불허용
+    let pro = 0;
+    let b = 0;
+    // 2. 슬라이드 변경함수 만들기
+    // 호출시 seq에 들어오는 값 중 1은 오른쪽, 0은 왼쪽
+    const galSlide = (seq) => {
+        // console.log("슬고우!",seq);
+        
+        // 광클금지 설정하기 //////
+        if(pro) return;
+        pro = 1; // 잠금!
+        setTimeout(()=>{
+            pro = 0; // 해제!
+        }, 400); /// 0.4초후 해제! ///
+
+        // console.log("나,들어왔어!!!!");
+
+        // 0. 현재의 슬라이드 li수집하기
+        let clist = gslide.querySelectorAll("li");
+        // clist -> current list 현재 리스트
+
+        // 1. 방향에 따른 분기
+        // 1-1. 오른쪽버튼 클릭시 ////////////////
+        if(seq){          
+            b++;  
+            // console.log("오른!");
+            gslide.style.left = "-1200px";
+            gslide.style.transition = "left .4s ease-in-out";
+            
+            // (2) 슬라이드 이동후!!! (0.4초후)
+            setTimeout(()=>{
+                // 바깥에 나가있는 첫번째 슬라이드 li를 잘라서 맨뒤로 보낸다!
+                gslide.appendChild(clist[0]);
+                gslide.style.left = "-800px";
+                gslide.style.transition = "none";
+            },400); //// 타임아웃 //////
+
+        }
+        // 1-2. 왼쪽버튼 클릭시 /////////////
+        else{
+            b--;
+            // console.log("왼쪽!");
+
+            // slide.insertBefore(넣을놈,넣을놈전놈)
+            // slide.insertBefore(맨끝li,맨앞li)
+            gslide.insertBefore(clist[clist.length-1],clist[0]);
+            gslide.style.left = "-1200px"
+            gslide.style.transition = "none";
+
+            // 동일 속성인 left가 같은 코딩처리 공간에 동시에 있으므로
+            // 이것을 분리해야 효과가 있다
+            // setTimeout을 사용한다!
+            setTimeout(()=>{
+                gslide.style.left = "-800px";
+                gslide.style.transition = "left .4s ease-in-out";
+            },0); ////// 타임아웃 ///////
+            
+        } ////////////else : 왼쪽클릭시 /////////
+
+        // 2. 현재 슬라이드 순번과 같은 블릿표시하기
+        // 대상 : .move_bar -> indic변수
+        // 2-1. 현재 배너리스트 업데이트
+        clist = gslide.querySelectorAll("li");
+        // 오른쪽 클릭시(seq===1) 두번째 슬라이드[1]
+        // 왼쪽클릭시(seq===0) 첫번째 슬라이드[0]
+        // seq순번과 읽어올 슬라이드 순번이 일치한다!
+
+        // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
+        // let cseq = clist[seq].getAttribute("data-seq")
+
+        
+        //  바 움직이기
+        if(b === -1){
+            b = 6;
+            document.querySelector('.gmove_bar').style.opacity = 0
+            document.querySelector('.gmove_bar').style.transition = 'none';
+            setTimeout(()=>{
+            document.querySelector('.gmove_bar').style.opacity = 1;
+            document.querySelector('.gmove_bar').style.transition = '.4s ease-in-out';
+            },10)
+        }
+        else if( b === 7){
+            b = 0;
+            document.querySelector('.gmove_bar').style.opacity = 0
+            document.querySelector('.gmove_bar').style.transition = 'none';
+            setTimeout(()=>{
+            document.querySelector('.gmove_bar').style.opacity = 1;
+            document.querySelector('.gmove_bar').style.transition = '.4s ease-in-out';
+            },10)
+        }
+        // gmove_bar 위치 조정
+        document.querySelector('.gmove_bar').style.transform ='translateX(' + b*100 + '%)';
+        
+
+    }; ////////// goSlide함수 ///////////
+
+    // 3. 대상에 이벤트 설정하기
+    gbtn.forEach((ele, idx) => {
+        ele.onclick = () => {
+            // 1. 인터발 지우기함수 호출!
+            clearAuto2();
+            // 2. 슬라이드 함수 호출!
+            galSlide(idx);
+        }; ///// click함수 //////
+    }); /////// forEach //////////
+
+    //////////////////////////////////
+    // 자동넘김 설정하기 //////////////
+
+    // 인터발함수 지우기위한 변수설정
+    let autoIi;
+    // 타임아웃함수 지우기위한 변수설정
+    let autoTi;
+
+    ////////////////////////////////////////////////
+    //    함수명: autoSlide
+    //    기능: 인터발함수로 슬라이드함수 호출
+    ////////////////////////////////////////////////
+    function autoSlide2(){
+        console.log("인터발시작!");
+        // 인터발함수로 슬라이드함수 호출하기
+        autoIi = setInterval(()=>galSlide(1),4000);
+    } ////////////// autoSlide함수 ///////////////
+
+    // 자동넘김 최초호출!
+    autoSlide2();
+
+    ////////////////////////////////////////////////
+    //    함수명: clearAuto
+    //    기능: 인터발함수를 지우고 다시셋팅
+    ////////////////////////////////////////////////
+   function clearAuto2(){
+        console.log("인터발멈춤!");
+        // 1. 인터발 지우기
+        clearInterval(autoIi);
+
+        // 2. 타임아웃도 지우지 않으면 
+        // 쌓여서 타임아웃 쓰나미실행이 발생한다!
+        clearTimeout(autoTi);
+
+        // 3. 잠시후 다시 작동하도록 타임아웃으로
+        // 인터발함수를 호출한다!
+        // 5초후(인터발은 3초후, 토탈 8초후 작동시작)
+        autoTi = setTimeout(autoSlide2,5000);
+
+   } ///////////clearAuto 함수 /////////////////
+
+   /////////////////////// gallery section /////////////////////////////////////
+
+
+
+    
+
+    
+    /**********************************************************************************************/
+    /******************************************************** 
+        MEMBERSHIP SECTION 영역 
+        - 스크롤 액션  구현
+    ********************************************************/
+   // 1. 대상선정
+    // (1) 멤버십 이름 : .memname
+    const mlist = document.querySelectorAll('.memlist .memname');
+    // (2) 멤버십 내용 : .memcontent
+    const mcontent = document.querySelectorAll('.memlist .memcontent');
+    // (3) 버튼 : .mem_btn
+    const mbtns = document.querySelectorAll('.mem_btn');
+    // (4) 카드박스들 
+    const memberSection = document.querySelector(".membership");
+    const cardbox1 = document.querySelector(".cardbox01");
+    const cardbox2 = document.querySelector(".cardbox02");
+    const cardbox3 = document.querySelector(".cardbox03");
+
+
+    // 기능 : MEMBERSHIP SECTION 섹션에 진입하기 전에는 card가 안보였다가
+    // 스크롤되어 특정 위치 진입하면 등장하도록 만들기
+    // 등장액션 대상 - .cardbox2 => cardbox2
+
+    // 화면높이값의 2/3구하기
+    const hv = window.innerHeight/3*2;
+    // console.log("2/3높이:",hv);
+
+    // 등장액션 대상 위치값 리턴 함수
+        const retVal = (ele) => ele.getBoundingClientRect().top;
+
+    // .on클래스를 넣을 함수 만들기
+        const showIt = (x) => {
+            // 대상 요소의 현재 스크롤 위치 구하기
+            let xval = retVal(x);
+
+            // 구간 적용 여부 검사하기
+            if (xval < hv && xval > 0) {
+                // console.log("작동!!");
+                cardbox2.classList.add("up");
+            }
+        };
+
+    // 스크롤 액션 세팅하기
+        window.addEventListener("scroll", () => {
+
+            showIt(memberSection);
+
+        });
+
+
+
 
     /******************************************************** 
         MEMBERSHIP SECTION 영역 
@@ -297,18 +530,7 @@ function loadFn() {
         "다채로운 파라다이스시티 시설 뿐만 아니라, 카지노 VIP를 위한 전용 라운지 및 프라이빗 게임 룸, 다양한 이벤트 및 공연 초청 등 파라다이스 카지노 클럽 고객만의 특별한 서비스를 경험하세요."
     ]
 
-    // 1. 대상선정
-    // (1) 멤버십 이름 : .memname
-    const mlist = document.querySelectorAll('.memlist .memname');
-    // (2) 멤버십 내용 : .memcontent
-    const mcontent = document.querySelectorAll('.memlist .memcontent');
-    // (3) 버튼 : .mem_btn
-    const mbtns = document.querySelectorAll('.mem_btn');
-    // (4) 카드박스들 
-    const cardbox1 = document.querySelector(".cardbox01");
-    const cardbox2 = document.querySelector(".cardbox02");
-    const cardbox3 = document.querySelector(".cardbox03");
-
+    
 
     // 최초출력
     mlist.forEach((ele,idx)=>{
@@ -471,6 +693,7 @@ function loadFn() {
             })
         },500)
     } //////////// click 
+
 
     
 
