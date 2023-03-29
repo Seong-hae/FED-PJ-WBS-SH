@@ -19,6 +19,9 @@
     .promotion .pro_wrap .pro_rightbx{
         width: 100%;
     }
+    .promotion .pro_rightbx .slider_btnbox{
+        width: 92%;
+    }
 
 
 }
