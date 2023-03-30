@@ -28,6 +28,7 @@ section .sec_cont{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -1px;
+    word-break: keep-all;
 }
 
 
@@ -513,7 +514,7 @@ section .sec_cont{
     width: 8160px;
     display: flex;
     gap: 0 60px;
-    animation: eventmove 20s linear infinite;
+    animation: eventmove 40s linear infinite;
 }
 /* 흐르는 이미지박스 키프레임 */
 @keyframes eventmove {
