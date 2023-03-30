@@ -77,10 +77,13 @@
         width: 70%;
     }
 
-
-
-    /************** 6. landmark Section 영역 *************/
-
+    /************** footer 영역 *************/
+    .footer .f_sec{
+        padding: 5vh 7.5vw;
+    }
+    .footer .fbx01_3 {
+        align-items: flex-start;
+    }
 
 }
 
@@ -138,6 +141,11 @@
         padding: 0 50px 50px;
     }
 
+    /************** 6. landmark Section 영역 *************/
+    .landmark .land_txt p {
+        padding: 0 7.5vw;
+        word-break: keep-all;
+    }
 
 }
 
@@ -182,11 +190,23 @@
     .gallery .sec_cont{
         text-align: left;
     }
+    .gallery .gal_rightbx .gal_btnbox .gview {
+        font-size: 1.3rem;
+    }
 
     /************** 5. membership Section 영역 *************/
     .membership .sec_title,
     .membership .sec_cont{
         text-align: left;
+    }
+    .memberbox .memslider .memlist.memcenter{
+        width: 80%;
+    }
+    .memberbox .memslider .memlist.memcenter .memcontent {
+        padding: 0 50px 130px;
+    }
+    .memberbox .mem_btn {
+        height: 100px;
     }
 
     .memberbox .cardcontainer .cardbox .cardlist{
@@ -200,56 +220,58 @@
     }
 
     /* 클래스 .up 을 줬을때 */
-    .memberbox .cardcontainer .cardbox01.up{
-        opacity: 1;
-        display: block;
+    .memberbox .cardcontainer {
+        height: 600px;
     }
-    .memberbox .cardcontainer .cardbox02.up{
-        opacity: 1;
-        display: block;
+    @keyframes cardup {
+        0%{
+            opacity: 0;
+            top: 130%;
+        }
+        40%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            top: 50%;
+        }
     }
-    .memberbox .cardcontainer .cardbox03.up{
-        opacity: 1;
-        display: block;
+    @keyframes card02spreadFront {
+        0%{
+            top: 50%;
+        }
+        100%{
+            top: 30%;
+        }
     }
-    .memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(1){
-        animation:
-        cardup .6s ease-out forwards,
-        card03spreadback .6s ease-in .5s forwards;
-        
-    } 
-    .memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(2){
-        animation:
-        cardup .6s ease-out forwards;
+    @keyframes card02spreadback {
+        0%{
+            top: 50%;
+        }
+        100%{
+            top: 70%;
+        }
     }
-    .memberbox .cardcontainer .cardbox01.up .cardlist:nth-child(3){
-        animation:
-        cardup .6s ease-out forwards,
-        card03spreadFront .6s ease-in .5s forwards;
+    @keyframes card03spreadFront {
+        0%{
+            top: 50%;
+        }
+        100%{
+            top: 18%;
+        }
     }
-    .memberbox .cardcontainer .cardbox02.up .cardlist:nth-child(1){
-        animation:
-        cardup .6s ease-out forwards,
-        card02spreadback .6s ease-in .5s forwards ;
-        /* left: 65%; */
+    @keyframes card03spreadback {
+        0%{
+            top: 50%;
+        }
+        100%{
+            top: 82%;
+        }
     }
-    .memberbox .cardcontainer .cardbox02.up .cardlist:nth-child(2){
-        animation:
-        cardup .6s ease-out forwards,
-        card02spreadFront .6s ease-in .5s forwards ;
-        /* left: 35%; */
-    }
-    .memberbox .cardbox03.up .cardlist:nth-child(1){
-        animation:
-        cardup .6s ease-out forwards,
-        card02spreadback .6s ease-in .5s forwards ;
-        /* left: 65%; */
-    }
-    .memberbox .cardcontainer .cardbox03.up .cardlist:nth-child(2){
-        animation:
-        cardup .6s ease-out forwards,
-        card02spreadFront .6s ease-in .5s forwards ;
-        /* left: 35%; */
+
+    /************** 6. landmark Section 영역 *************/
+    .landmark .land_txt p {
+        font-size: min(3.5vw,2rem);
     }
 
 
