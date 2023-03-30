@@ -510,10 +510,10 @@ section .sec_cont{
 }
 .event .eventbox .event_flow{
     box-sizing: border-box;
-    width: 7140px;
+    width: 8160px;
     display: flex;
     gap: 0 60px;
-    animation: eventmove 60s linear infinite;
+    animation: eventmove 20s linear infinite;
 }
 /* 흐르는 이미지박스 키프레임 */
 @keyframes eventmove {
@@ -533,11 +533,11 @@ section .sec_cont{
 }
 .event .eventbox .eventlist:nth-child(odd){
     transform: translateY(-5vh);
-    animation: eventmoveDOWN 20s linear infinite;
+    animation: eventmoveDOWN 10s linear infinite;
 }
 .event .eventbox .eventlist:nth-child(even){
     transform: translateY(5vh);
-    animation: eventmoveUP 20s linear infinite;
+    animation: eventmoveUP 10s linear infinite;
 }
 /* 흐르는 이미지박스 UP 키프레임 */
 @keyframes eventmoveUP {
