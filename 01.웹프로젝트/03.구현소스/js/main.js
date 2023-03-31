@@ -695,7 +695,77 @@ function loadFn() {
     } //////////// click 
 
 
+    // 이벤트대상 selbx03  
+    const selbx03 = document.querySelector('.selbx03')
+    // 변경대상 selbx03_pop 은 성인 어린이 인구수 체크 박스
+    const selbx03pop = document.querySelector('.selbx03_pop')
+
+    // 가운데 줄을 누르면 가운데로 오기 scrollTo
+    //  가운데줄에서 날짜나 호텔시설 누르면 darkbg 효과 on
+    // darkbg - 까만화면 display block되야 가림막
+    // 변수 가운데줄 
+    const reservation = document.querySelector('.reservation');
+    // 변수 다크화면
+    const darkbg = document.querySelector('.darkbg');
+    // darkbg.classList.add('on')
+    // 높이값
+    const hh = document.querySelector('#cont').clientHeight; // 957px
+    console.log('hh',hh)
+
+    // 예약 바를 클릭하면 ... 
+    reservation.onclick = (e) => {
+        e.preventDefault();
+        // 가줘! hh의 높이값의 절반으로 - 937 / 2 px
+        scrollTo(0,hh/2)
+    }
+
+    // 변수 
+    // 호텔/시설 선택 , 체크인아웃 , 성인어린이 3개 합친 클래스 selbx
+    const selbx = document.querySelectorAll('.selbx');
+    console.log(selbx)
+    selbx.forEach((ele,idx)=>{
+        ele.onclick = () => {
+            console.log('ele',ele,'\nidx',idx)
+            darkon();
+            // for(let x of selbx){
+            //     x.classList.remove('on');
+            //     console.log('x',x)
+            // }
+            selbxpopoff();
+            setTimeout(()=>{
+                selbx[idx].classList.add('on');
+            },10)
+        }
+    })
+
+    // 암흑화면 켜기 함수
+    function darkon() {
+        darkbg.classList.add('on')
+    }
+    // 암흑화면 끄기 함수
+    function darkoff() {
+        darkbg.classList.remove('on')
+        selbxpopoff();
+    }
     
+    // selbx03을 클릭하면 성인어린이 인구수 박스를 켜주며 그위치로 이동
+    
+    console.log(selbx03)
+    
+    function selbxpopoff(){
+        for(let x of selbx){
+            x.style.transition = 'none';
+            x.classList.remove('on');
+            console.log('x',x)
+        }
+    }
+
+
+    // 초기화 
+    darkbg.onclick = () => {
+        darkoff();
+    }
+    // selbx에 on을줘야함
 
     
 

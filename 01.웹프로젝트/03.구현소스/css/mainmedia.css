@@ -78,11 +78,33 @@
     }
 
     /************** footer 영역 *************/
-    .footer .f_sec{
-        padding: 5vh 7.5vw;
+    .footer .fbx02 .fbx02_1 ul{
+        justify-content: center;
     }
-    .footer .fbx01_3 {
-        align-items: flex-start;
+    .footer .fbx02 .fbx02_1{
+        width: 100%;
+        
+    }
+    .footer .fbx02 .fbx02_2{
+        display: none;
+    }
+    .footer .fbx02 .fbx02_1 address{
+        text-align: center;
+    }
+    .footer .f_sec{
+        flex-wrap: wrap;
+    }
+    .footer .fbx01_1{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_2{
+        order: 2;
+        width: 100%;
+    }
+    .footer .fbx01_3{
+        width: 30%;
+        padding-top: 30px;
     }
 
 }
@@ -146,6 +168,34 @@
         padding: 0 7.5vw;
         word-break: keep-all;
     }
+
+
+    /************** footer 영역 *************/
+    .footer .fbx01_1{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_2{
+        order: 0;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_3{
+        margin: 0;
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    .footer .fbx01_3 .sns h3 {
+        line-height: 45px;
+    }
+    .footer .fbx01_3 .sns {
+        align-items: center;
+    }
+
+
+
+
 
 }
 
@@ -272,6 +322,26 @@
     /************** 6. landmark Section 영역 *************/
     .landmark .land_txt p {
         font-size: min(3.5vw,2rem);
+    }
+
+
+    /************** footer 영역 *************/
+    .footer .fbx01_2 img{
+        display: block;
+        margin: 0 auto;
+    }
+    .footer .fbx01_2 img+img{
+        margin: 20px auto 0;
+    }
+    .footer .fbx01_3{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .fbx01_3 .family {
+        width: 100%;
+    }
+    .footer .fbx01_3 .family img {
+        right: 15px;
     }
 
 
