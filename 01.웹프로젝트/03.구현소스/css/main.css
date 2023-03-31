@@ -326,7 +326,7 @@ section .sec_cont{
     align-items: center;
     width: 100%;
 }
-#cont .selbx03 li{
+#cont .selbx03 >li{
     text-align: center;
     width: 3vw;
 }
@@ -410,13 +410,23 @@ section .sec_cont{
 /* on줘서 펼쳐질때 */
 #cont .selbx.on .selbx03_pop{
     /* 수정하세요 */
-    height: 292px;
+    height: 500px;
     opacity: 1;
+    width: 300px;
 }
 #cont .selbx .selbx03_pop button{
     font-size: 2rem;
 }
-
+.selbx03_pop ul{
+} 
+.selbx03_pop ul>li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+.adultline{
+    padding-bottom: 15px;
+}
 /************** 2. promotion Section 영역 *************/
 .promotion{
     background-color: #FBF9F6;
