@@ -6,10 +6,17 @@
     <title>파라다이스시티 홈페이지</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+    <!-- swiper css & Js 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- 외부 css 연결 -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- 미디어쿼리 css 연결 -->
     <link rel="stylesheet" href="./css/mainmedia.css">
+
     <!-- 외부 JS 연결 -->
     <script src="./js/main.js"></script>
 </head>
@@ -19,8 +26,8 @@
     <!-- 헤더 영역 끝 -->
 
     <!-- 1. 메인영역 시작 -->
-    <div id="cont">
-        <main class="cont">
+    <main id="cont">
+        <section class="cont">
                 <ul class="cbx cbx2">
                     <li>
                         <div class="accordion"></div>
@@ -114,7 +121,84 @@
                        </div>
                     </li>
                 </ul>
-        </main>
+        </section>
+
+
+
+
+        <!-- 모바일버전 메인영역 시작 -->
+        <section class="m_cont">
+
+            <div class="m_contbox moswiper">
+                <ul class="m_slider swiper-wrapper">
+                    <li class="m_list swiper-slide">
+                        <img src="./img/main_big01.jpg" alt="메인이미지1">
+                        <div class="mcont_tbx">
+                            <h3>CLEAN<br>PARADISE</h3>
+                            <P>세계적으로 인증 받은 파라다이스시티!<br>
+                                GBAC STAR™과 Sharecare Health<br>
+                                Security VERIFIED™인증획득
+                            </P>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="m_list swiper-slide">
+                        <img src="./img/main_big02.jpg" alt="메인이미지2">
+                        <div class="mcont_tbx">
+                            <h3>SPA<br>CIMER</h3>
+                            <P>4계절 온수풀이 가득<br>
+                                이국적인 낭만을 더하는 인생샷 힐링스파
+                            </P>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="m_list swiper-slide">
+                        <img src="./img/main_big03.jpg" alt="메인이미지3">
+                        <div class="mcont_tbx">
+                            <h3>THEME PARK<br>WONDERBOX</h3>
+                                <P>환상적인 공연과 어트랙션이 가득<br>
+                                    꿈이 현실로 이루어지는 곳
+                                </P>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="m_list swiper-slide">
+                        <img src="./img/main_big04.jpg" alt="메인이미지4">
+                        <div class="mcont_tbx">
+                            <h3>SATURDAY LUCKY<br>CHIPS EVENT</h3>
+                            <P>오직 파라다이스시티에서만 즐길 수 있는<br> 100% 당첨 스크래치 이벤트
+                            </P>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="m_list swiper-slide">
+                        <img src="./img/main_big05.jpg" alt="메인이미지5">
+                        <div class="mcont_tbx">
+                            <h3>INSPIRATION</h3>
+                            <P>발 딛는 순간, 내 안에 잠재해 있던<br>
+                                예술적 영감이 살아납니다.
+                            </P>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <!--블릿버튼-->
+                <div class="swiper-pagination"></div>
+
+                <!--이동버튼-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+
+
+            </div>
+            
+        </section>
+
+
+
+
 
         <article class="reservation">
             <div class="select">
@@ -263,9 +347,9 @@
             </div>
         </article>
         <div class="darkbg"></div>
+
         
-        
-    </div>
+    </main>
      <!-- 1. 메인영역 끝 -->
 
      <!-- 2. promotion Section 시작 -->
