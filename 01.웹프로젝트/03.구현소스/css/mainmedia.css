@@ -6,6 +6,9 @@
 @media screen and (max-width: 1300px) {
 
     /*************** 공통영역 **************/
+    section.cont, section.m_cont {
+        padding: 0;
+    }
     section {
         padding: 20vw 0;
     }
@@ -13,8 +16,11 @@
 
 
     /****************** 메인영역 ****************/
-    .cont{
-        opacity: 0;
+    #cont .cont{
+        display: none;
+    }
+    #cont .m_cont{
+        display: block;
     }
 
 
@@ -203,6 +209,24 @@
 
 /* 500px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 500px) {
+
+
+
+    .m_cont .m_contbox .m_list .mcont_tbx{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .m_cont .m_contbox .m_list .mcont_tbx h3{
+        font-size: min(6vw,3.2rem);
+    }
+    .m_cont .m_contbox .m_list .mcont_tbx p{
+        font-size: min(4vw,1.5rem);
+    }
+    .m_cont .m_contbox .m_list .mcont_tbx button{
+        font-size: min(3vw,1.5rem);
+    }
 
 
     /************** 2. promotion Section 영역 *************/

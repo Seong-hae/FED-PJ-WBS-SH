@@ -12,10 +12,16 @@ html{
 }
 
 /********************* 공통 영역 *********************/
+:root{
+    --swiper-theme-color: #f9f9f9;
+}
 section{
     box-sizing: border-box;
     padding: 10vw 0;
     position: relative;
+}
+section.cont, section.m_cont {
+    padding: 0;
 }
 section .sec_title{
     font-family: 'Ledger', serif;
@@ -427,6 +433,101 @@ section .sec_cont{
 .adultline{
     padding-bottom: 15px;
 }
+
+
+
+/************* 메인영역 모바일버전 *************/
+#cont .m_cont{
+    width: 100%;
+    height: 88vh;
+    position: relative;
+    display: none;
+}
+.m_cont .m_contbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.m_cont .m_contbox .m_slider{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.m_cont .m_contbox .m_list{
+    width: 100%;
+    position: relative;
+}
+.m_cont .m_contbox .m_list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m_cont .m_contbox .m_list .mcont_tbx{
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.m_cont .m_contbox .m_list .mcont_tbx h3{
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+}
+.m_cont .m_contbox .m_list .mcont_tbx p{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.m_cont .m_contbox .m_list .mcont_tbx button{
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    transition: .3s;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.m_cont .m_contbox .m_list .mcont_tbx button:hover{
+    background-color: #fff;
+    color: #9c836a;
+}
+.m_cont .m_contbox .m_list .mcont_tbx h3::before{
+    content:'';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 22px;
+}
+.m_cont .m_contbox .m_list:nth-child(1) .mcont_tbx h3::before{
+    background: url(../img/W_icon_Hospitality.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(2) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Cimer.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(3) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Wonderbox.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(4) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Casino.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(5) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Inspiration.svg) no-repeat center/cover;
+}
+
+
+
+
+
+
+
+
+
+
+
 /************** 2. promotion Section 영역 *************/
 .promotion{
     background-color: #FBF9F6;
