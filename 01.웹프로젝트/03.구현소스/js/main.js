@@ -25,6 +25,9 @@ function loadFn() {
     });
 
 
+    /****************************************** 
+        HEADER 영역 - 햄버거버튼
+    ******************************************/
     const hambtn = document.querySelector(".hambtn");
     const menuT = document.querySelector(".menu-trigger");
 
@@ -32,8 +35,7 @@ function loadFn() {
     hambtn.addEventListener("click", function() {
         event.preventDefault();
         menuT.classList.toggle("active");
-        gnbBar.classList.toggle("open");
-        hTop.classList.toggle("open");
+        headerArea.classList.toggle("open");
     });
 
     
@@ -771,6 +773,12 @@ function loadFn() {
     } //////////// click 
 
 
+
+
+
+    /******************************************************** 
+        MAIN 예약 영역 
+    ********************************************************/
     // 이벤트대상 selbx03  
     const selbx03 = document.querySelector('.selbx03')
 

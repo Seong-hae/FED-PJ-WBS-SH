@@ -12,6 +12,9 @@ html{
 }
 
 /********************* 공통 영역 *********************/
+body{
+    overflow-x: hidden;
+}
 :root{
     --swiper-theme-color: #f9f9f9;
 }
@@ -157,7 +160,7 @@ section .sec_cont{
     color: #9c836a;
 }
 
-/* 햄버거 */
+/********* 햄버거 *************/
 .hambtn{
     position: absolute;
     right: 30px;
@@ -394,6 +397,93 @@ section .sec_cont{
     margin-left: 35px;
 }
 
+
+/************* 메인영역 모바일버전 *************/
+#cont .m_cont{
+    width: 100%;
+    height: 88vh;
+    position: relative;
+    display: none;
+}
+.m_cont .m_contbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.m_cont .m_contbox .m_slider{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.m_cont .m_contbox .m_list{
+    width: 100%;
+    position: relative;
+}
+.m_cont .m_contbox .m_list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m_cont .m_contbox .m_list .mcont_tbx{
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.m_cont .m_contbox .m_list .mcont_tbx h3{
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+}
+.m_cont .m_contbox .m_list .mcont_tbx p{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.m_cont .m_contbox .m_list .mcont_tbx button{
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    transition: .3s;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.m_cont .m_contbox .m_list .mcont_tbx button:hover{
+    background-color: #fff;
+    color: #9c836a;
+}
+.m_cont .m_contbox .m_list .mcont_tbx h3::before{
+    content:'';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 22px;
+}
+.m_cont .m_contbox .m_list:nth-child(1) .mcont_tbx h3::before{
+    background: url(../img/W_icon_Hospitality.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(2) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Cimer.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(3) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Wonderbox.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(4) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Casino.svg) no-repeat center/cover;
+}
+.m_cont .m_contbox .m_list:nth-child(5) .mcont_tbx h3::before{
+    background: url(../img//W_icon_Inspiration.svg) no-repeat center/cover;
+}
+
+
+
+
+
 /***** 예약파트 *****/
 #cont .reservation{
     width: 100%;
@@ -404,9 +494,12 @@ section .sec_cont{
     position: relative;
 }
 #cont .select{
-    width: 65vw;
+    box-sizing: border-box;
+    width: 70%;
     margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     /* outline: 1px dotted red; */
 }
 #cont .select .selbx{
@@ -415,7 +508,6 @@ section .sec_cont{
     position: relative;
 }
 #cont .select .selbx01{
-    padding-right: 3vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -426,7 +518,7 @@ section .sec_cont{
 }
 #cont .selbx01 .hotel_sel{
     position: relative;
-    width: 12vw;
+    width: 15vw;
     font-size: 1.8rem;
     line-height: 2;
     cursor: pointer;
@@ -444,10 +536,11 @@ section .sec_cont{
     font-size: 1.4rem;
     color: #9c836a;
 }
-#cont .selbx02{
-    padding: 0 3vw;
+#cont .selbx02,
+#cont .selbx03{
+    padding-left: 3vw;
 }
-#cont .selbx02 ul,#cont .selbx03>ul{
+#cont .selbx02>ul,#cont .selbx03>ul{
     display: flex;
     cursor: pointer;
 }
@@ -493,31 +586,36 @@ section .sec_cont{
     font-size: 1.8rem;
     font-weight: 500;
 }
-#cont .selbx03 ul{
+#cont .selbx03>ul{
     align-items: center;
-    width: 100%;
 }
-#cont .selbx03 >li{
+#cont .selbx03>li{
     text-align: center;
-    width: 3vw;
 }
-#cont .selbx03 .adult,
-#cont .selbx03 .children{
+#cont .selbx03>ul>li:last-child{
+    margin-left: 2vw;
+}
+#cont .selbx03 .selbx03_adult,
+#cont .selbx03 .selbx03_children{
     margin-top: 17px;
     font-size: 3.2rem;
     font-weight: 500;
-}
-#cont .selbx03 li:last-child{
-    width: 8vw;
+    text-align: center;
 }
 #cont .select .select_btn{
-    width: 100%;
+    width: 150px;
     height: 6vh;
     font-size: 1.8rem;
     color: #fff;
     background-color: #9c836a;
     text-align: center;
 }
+
+
+
+
+
+
 /* article 영역이 활성화되었을때 */
 .darkbg{
     width: 100%;
@@ -601,87 +699,6 @@ section .sec_cont{
 
 
 
-/************* 메인영역 모바일버전 *************/
-#cont .m_cont{
-    width: 100%;
-    height: 88vh;
-    position: relative;
-    display: none;
-}
-.m_cont .m_contbox{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.m_cont .m_contbox .m_slider{
-    display: flex;
-    width: 500%;
-    height: 100%;
-}
-.m_cont .m_contbox .m_list{
-    width: 100%;
-    position: relative;
-}
-.m_cont .m_contbox .m_list img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.m_cont .m_contbox .m_list .mcont_tbx{
-    color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-.m_cont .m_contbox .m_list .mcont_tbx h3{
-    font-size: 3.2rem;
-    letter-spacing: 1px;
-}
-.m_cont .m_contbox .m_list .mcont_tbx p{
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-.m_cont .m_contbox .m_list .mcont_tbx button{
-    font-size: 1.5rem;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    transition: .3s;
-    font-weight: 600;
-    white-space: nowrap;
-}
-.m_cont .m_contbox .m_list .mcont_tbx button:hover{
-    background-color: #fff;
-    color: #9c836a;
-}
-.m_cont .m_contbox .m_list .mcont_tbx h3::before{
-    content:'';
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-bottom: 22px;
-}
-.m_cont .m_contbox .m_list:nth-child(1) .mcont_tbx h3::before{
-    background: url(../img/W_icon_Hospitality.svg) no-repeat center/cover;
-}
-.m_cont .m_contbox .m_list:nth-child(2) .mcont_tbx h3::before{
-    background: url(../img//W_icon_Cimer.svg) no-repeat center/cover;
-}
-.m_cont .m_contbox .m_list:nth-child(3) .mcont_tbx h3::before{
-    background: url(../img//W_icon_Wonderbox.svg) no-repeat center/cover;
-}
-.m_cont .m_contbox .m_list:nth-child(4) .mcont_tbx h3::before{
-    background: url(../img//W_icon_Casino.svg) no-repeat center/cover;
-}
-.m_cont .m_contbox .m_list:nth-child(5) .mcont_tbx h3::before{
-    background: url(../img//W_icon_Inspiration.svg) no-repeat center/cover;
-}
 
 
 

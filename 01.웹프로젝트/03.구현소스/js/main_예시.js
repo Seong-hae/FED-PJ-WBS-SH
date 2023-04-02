@@ -418,3 +418,202 @@ function loadFn() {
 
     
 }; ////////// load ////////////////////////
+
+
+
+
+// <!-- <div class="sel_pop selbx03_pop">
+//         <h3>투숙인원 선택</h3>
+//         <ul>
+//             <li class="adultline">
+//                 <div class="bx03_tit">
+//                     <strong>성인</strong> 만 13세 이상
+//                 </div>
+//                 <div class="bx03_selbx">
+//                     <button class="aminus">-</button>
+//                     <span class="realadult">2</span>
+//                     <button class="aplus">+</button>
+//                 </div>
+//             </li>
+//             <li class="childrenline">
+//                 <div class="bx03_tit">
+//                     <strong>어린이</strong> 37개월~만 12세
+//                 </div>
+//                 <div class="bx03_selbx">
+//                     <button class="cminus">-</button>
+//                     <span class="realchildren">2</span>
+//                     <button class="cplus">+</button>
+//                 </div>
+//             </li>
+//         </ul>
+
+//         <button class="btn_complete">인원 선택 완료</button>
+        
+//     </div> -->
+
+
+
+
+// 우리 성해누나 숙제
+
+// acnum 업데이트 위치를 잘 넣어서
+// ㄴ 현재 acnum 정상 작동
+
+// 만약에 acnum이 6이면 anum이나 cnum이 올라가지 않게 한다.
+// 어떻게?
+// 누르면 ++ 또는 -- 
+// 만약 acnum = 6
+//   anum = anum-1 , cnum = cnum-1; 
+
+
+
+
+// 이벤트대상 selbx03  
+const selbx03 = document.querySelector('.selbx03')
+
+// 가운데 줄을 누르면 가운데로 오기 scrollTo
+//  가운데줄에서 날짜나 호텔시설 누르면 darkbg 효과 on
+// darkbg - 까만화면 display block되야 가림막
+// 변수 가운데줄 
+const reservation = document.querySelector('.reservation');
+// 변수 다크화면
+const darkbg = document.querySelector('.darkbg');
+// darkbg.classList.add('on')
+// 높이값
+const hh = document.querySelector('#cont').clientHeight; // 957px
+console.log('hh',hh)
+
+// 예약 바를 클릭하면 ... 
+reservation.onclick = (e) => {
+    // 광클방지 넣어주세요~
+    // e.preventDefault();
+    // 가줘! hh의 높이값의 절반으로 - 937 / 2 px
+    scrollTo(0,hh/2)
+}
+
+// 변수 
+// 호텔/시설 선택 , 체크인아웃 , 성인어린이 3개 합친 클래스 selbx
+const selbx = document.querySelectorAll('.selbx');
+console.log(selbx)
+selbx.forEach((ele,idx)=>{
+    ele.onclick = () => {
+        console.log('ele',ele,'\nidx',idx)
+        event.preventDefault();
+        darkon();
+        // for(let x of selbx){
+        //     x.classList.remove('on');
+        //     console.log('x',x)
+        // }
+        selbxpopoff();
+        setTimeout(()=>{
+            selbx[idx].classList.add('on');
+        },10)
+    }
+})
+
+// 암흑화면 켜기 함수
+function darkon() {
+    // 광클방지 넣어주세요~
+    scrollTo(0,hh/2)
+    darkbg.classList.add('on')
+}
+// 암흑화면 끄기 함수
+function darkoff() {
+    darkbg.classList.remove('on')
+    // 모든 셀bx의 
+    selbxpopoff();
+}
+
+function selbxpopoff(){
+    for(let x of selbx){
+        x.style.transition = 'none';
+        x.classList.remove('on');
+    }
+}
+
+// 초기화 
+darkbg.onclick = () => {
+    darkoff();
+}
+
+
+
+// selbx03 에 인원 체크하는거 그거 
+// cminus 는 애기 - cplus 애기 +
+// aminus 성인 - aplus 성인 +
+const aplus = document.querySelector('.aplus')
+const aminus = document.querySelector('.aminus')
+const cplus = document.querySelector('.cplus')
+const cminus = document.querySelector('.cminus')
+
+// 성인인원 적히는 박스
+const abx = document.querySelector('.realadult')
+console.log(abx)
+// 애기인원 적히는 박스
+const cbx = document.querySelector('.realchildren')
+// 변수 성인변수 담을거
+let anum = 2;
+// 변수 애기변수 담을거
+let cnum = 0;
+// 변수 성인변수 + 애기변수
+let acnum = anum + cnum;
+
+// 만들어야할거 성인 + - 버튼을 눌럿을때 - 시 성인변수 -- +시 성인변수 ++;
+aplus.onclick = () => {
+    console.log('되라')
+
+        anum++;
+        if(anum === 7){
+            anum = 6;
+        }
+        anumreset();
+        acnum = anum + cnum;
+        console.log('acnum',acnum)
+        console.log('anum',anum)
+    }
+aminus.onclick = () => {
+    console.log('되라')
+    anum--;
+    if(anum === 0){
+        anum = 1;
+    }
+    console.log(anum)
+    anumreset();
+    acnum = anum + cnum;
+    console.log('acnum',acnum)
+}
+
+// 만들어야할거 애기 + - 버튼을 눌럿을때 -시 애기변수 -- +시 애기변수 --;
+cplus.onclick = () => {
+    console.log('되라')
+
+        cnum++;
+        if(cnum === 7){
+            cnum = 6;
+        }
+        cnumreset();
+        acnum = anum + cnum;
+        console.log('acnum',acnum)
+}
+cminus.onclick = () => {
+    console.log('되라')
+    cnum--;
+    if(cnum === -1){
+        cnum = 0;
+    }
+    console.log(cnum)
+    cnumreset();
+    acnum = anum + cnum;
+    console.log('acnum',acnum)
+}
+
+function anumreset(){
+    abx.innerHTML = `<p class="adult">${anum}</p>`
+}
+// 최초실행
+anumreset();
+function cnumreset(){
+    cbx.innerHTML = `<p class="children">${cnum}</p>`  
+}
+// 최초실행
+cnumreset();

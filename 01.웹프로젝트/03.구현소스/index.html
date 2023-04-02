@@ -446,7 +446,7 @@
 
 
 
-
+        <!-- 예약영역 -->
         <article class="reservation">
             <div class="select">
                 <div class="selbx selbx01">
@@ -455,32 +455,34 @@
                         호텔 파라다이스
                         <img src="./img/arrow_open.svg" alt="화살표이미지">
                     </div>
+                    <!-- 팝업창 -->
                     <div class="sel_pop selbx01_pop">
-                        <h3>투숙인원 선택</h3>
+                        <div class="firstline">
+                            <h3>호텔/시설 선택</h3>
+                            <button class="closebtn">
+                                <img src="./img/btn_pop_close.png" alt="닫기버튼">
+                            </button>
+                        </div>
                         <ul>
-                            <li class="adultline">
-                                <div class="bx03_tit">
-                                    <strong>성인</strong> 만 13세 이상
-                                </div>
-                                <div class="bx03_selbx">
-                                    <button class="minus">-</button>
-                                    <span class="adult">2</span>
-                                    <button class="plus">+</button>
+                            <li>HOTEL
+                                <div class="sel01_imgbx">
+                                    <img src="./img/Paradise_HotelnResort.svg" alt="호텔 파라다이스">
+                                    호텔 파라다이스
                                 </div>
                             </li>
-                            <li class="childrenline">
-                                <div class="bx03_tit">
-                                    <strong>어린이</strong> 37개월~만 12세
+                            <li>FUNCITY
+                                <div class="sel01_imgbx">
+                                    <img src="./img/Cimer_new.svg" alt="씨메르">
+                                    씨메르
                                 </div>
-                                <div class="bx03_selbx">
-                                    <button class="minus">-</button>
-                                    <span class="children">2</span>
-                                    <button class="plus">+</button>
+                                <div class="sel01_imgbx">
+                                    <img src="./img/W_icon_Wonderbox.svg" alt="원더박스">
+                                    원더박스
                                 </div>
                             </li>
                         </ul>
 
-                        <button class="btn_complete">인원 선택 완료</button>
+                        <button class="btn_complete">호텔/시설 선택 완료</button>
                     </div>
                 </div>
 
@@ -513,32 +515,11 @@
                             <img src="./img/calendar_icon.svg" alt="calendar_icon" class="calendar_icon">
                         </li>
                     </ul>
+                    <!-- 팝업창 -->
                     <div class="sel_pop selbx02_pop">
-                        <h3>투숙인원 선택</h3>
-                        <ul>
-                            <li class="adultline">
-                                <div class="bx03_tit">
-                                    <strong>성인</strong> 만 13세 이상
-                                </div>
-                                <div class="bx03_selbx">
-                                    <button class="minus">-</button>
-                                    <span class="adult">2</span>
-                                    <button class="plus">+</button>
-                                </div>
-                            </li>
-                            <li class="childrenline">
-                                <div class="bx03_tit">
-                                    <strong>어린이</strong> 37개월~만 12세
-                                </div>
-                                <div class="bx03_selbx">
-                                    <button class="minus">-</button>
-                                    <span class="children">2</span>
-                                    <button class="plus">+</button>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <button class="btn_complete">인원 선택 완료</button>
+                        <h3>달력이 있을 예정</h3>
+                        
+                        <button class="btn_complete">날짜 선택 완료</button>
                     </div>
                 </div>
 
@@ -547,22 +528,25 @@
                         <li>
                             <div>
                                 <strong class="strong">성인</strong>
-                                <p class="adult">2</p>
+                                <p class="adult selbx03_adult">2</p>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <strong class="strong">어린이</strong>
-                                <p class="children">0</p>
+                                <p class="children selbx03_children">0</p>
                             </div>
-                        </li>
-                        <li>
-                            <button class="select_btn">상품 검색</button>
                         </li>
                     </ul>
 
+                    <!-- 팝업창 -->
                     <!-- <div class="sel_pop selbx03_pop">
-                        <h3>투숙인원 선택</h3>
+                        <div class="firstline">
+                            <h3>투숙인원 선택</h3>
+                            <button class="closebtn">
+                                <img src="./img/btn_pop_close.png" alt="닫기버튼">
+                            </button>
+                        </div>
                         <ul>
                             <li class="adultline">
                                 <div class="bx03_tit">
@@ -590,6 +574,8 @@
                         
                     </div> -->
                 </div>
+
+                <button class="select_btn">상품 검색</button>
                 
             </div>
         </article>

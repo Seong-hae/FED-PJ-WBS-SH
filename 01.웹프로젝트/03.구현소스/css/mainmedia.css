@@ -35,25 +35,31 @@
     }
 
     /* .open 클래스가 붙을때 */
-    .header .h_top.open{
+    .header.open{ 
+        position: absolute;
+     }
+    .header.open .h_top{
         display: block;
     }
-    .header .h_bottom .gnb.open .mainmenubox{
+    .header.open .h_bottom .gnb .mainmenubox{
         display: block;
     }
-    .header .h_bottom .gnb.open .mainmenubox::before{
+    .header.open .h_bottom .gnb .mainmenubox::before{
         content: "";
         position: absolute;
         top: -121px;
         left: -30px;
         width: 100vw;
-        height: 1000px;
+        height: 1500px;
         z-index: -1;
         background-color: #21201ef2;
     }
 
     .header .h_bottom .logo{
         padding: 15px 0;
+    }
+    .header .gnb .mainmenubox .mainmenu{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     .header .gnb .mainmenubox .mainmenu::after{
         display: none;
@@ -76,20 +82,48 @@
 
 
 
-
-
-
-
-
-
-
-
     /****************** 메인영역 ****************/
     #cont .cont{
         display: none;
     }
     #cont .m_cont{
         display: block;
+    }
+
+    /************* 예약영역 **************/
+    #cont .reservation{
+        height: auto;
+    }
+    #cont .select{
+        width: 50%;
+        flex-direction: column;
+    }
+    #cont .select .selbx{
+        width: 100%;
+        /* align-items: center; */
+        margin-bottom: 20px;
+    }
+    #cont .select .selbx+.selbx{
+        border-left: none;
+    }
+    #cont .selbx01 .hotel_sel {
+        width: 100%;
+    }
+    #cont .selbx02,
+    #cont .selbx03{
+        padding-left: 0;
+    }
+    #cont .selbx02>ul, #cont .selbx03>ul {
+        justify-content: space-evenly;
+    }
+    #cont .selbx02 li{
+        width: auto;
+    }
+    #cont .selbx02 li:nth-child(n+3){
+        width: auto;
+    }
+    #cont .select .select_btn{
+        width: 100%;
     }
 
 
@@ -200,6 +234,11 @@
         font-size: min(4vw,2rem);
     }
 
+    /************* 예약영역 **************/
+    #cont .select {
+        width: 100%;
+        padding: 0 30px;
+    }
 
 
     /************** 2. promotion Section 영역 *************/
