@@ -14,6 +14,72 @@
     }
 
 
+    /******************* HEADER 영역 *******************/
+    .header .h_top{
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        display: none;
+    }
+    .header .h_top>ul{
+        justify-content: center;
+    }
+    .header .h_bottom .gnb .mainmenubox{
+        position: absolute;
+        left: 0;
+        top: 120px;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    /* .open 클래스가 붙을때 */
+    .header .h_top.open{
+        display: block;
+    }
+    .header .h_bottom .gnb.open .mainmenubox{
+        display: block;
+    }
+    .header .h_bottom .gnb.open .mainmenubox::before{
+        content: "";
+        position: absolute;
+        top: -121px;
+        left: -30px;
+        width: 100vw;
+        height: 1000px;
+        z-index: -1;
+        background-color: #21201ef2;
+    }
+
+    .header .h_bottom .logo{
+        padding: 15px 0;
+    }
+    .header .gnb .mainmenubox .mainmenu::after{
+        display: none;
+    }
+    .header .gnb .mainmenubox .mainmenu:hover .submenu{
+        position: static;
+        flex-wrap: wrap;
+    }
+    .header .gnb .mainmenubox .mainmenu:nth-child(5):hover .submenu,
+    .header .gnb .mainmenubox .mainmenu:nth-child(7):hover .submenu{
+        left: 200px;
+    }
+    .header .mainmenu .submenu .submenubox h3{
+        margin-top: 30px;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     /****************** 메인영역 ****************/
     #cont .cont{

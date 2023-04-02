@@ -45,6 +45,171 @@ section .sec_cont{
 
 
 /********************* 헤더 영역 *********************/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 0 30px;
+    transition: .3s;
+}
+
+.header .h_top>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.header .h_top>ul>li{
+    padding: 15px 10px;
+}
+.header .h_top>ul>li>a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.header .h_top>ul>li:hover>a{
+    color: #9c836a;
+}
+
+.header .h_bottom{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.header .h_bottom .logo{
+    margin-right: 30px;
+    padding-bottom: 15px;
+}
+.header .h_bottom .gnb .mainmenubox{
+    display: flex;
+}
+.header .gnb .mainmenubox .mainmenu{
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+    position: relative;
+    transition: .3s;
+    box-sizing: border-box;
+}
+.header .gnb .mainmenubox .mainmenu:hover{
+    color: #9c836a;
+}
+.header .gnb .mainmenubox .brown{
+    color: #DFBF9F;
+    font-weight: 600;
+}
+.header .gnb .mainmenubox .mainmenu:nth-child(5):hover .submenu{
+    left: -350px;
+}
+.header .gnb .mainmenubox .mainmenu:nth-child(7):hover .submenu{
+    left: -170px;
+}
+.header .gnb .mainmenubox .mainmenu .submenu{
+    display: none;
+}
+.header .gnb .mainmenubox .mainmenu::after{
+    content: '';
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0px;
+    width: 100vw;
+    height: 0;
+    background-color: #21201ef2;
+}
+.header .gnb .mainmenubox .mainmenu:hover::after{
+    height: 400px;
+}
+.header .gnb .mainmenubox .mainmenu:hover .submenu{
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 70px;
+    color: #fff;
+    display: flex;
+    gap: 0 50px;
+}
+.header .mainmenu .submenu .submenubox h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.header .mainmenu .submenu .submenubox h3 span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #9c836a;
+    margin-bottom: 10px;
+}
+.header .mainmenu .submenu .submenubox>ul>li{
+    margin-bottom: 5px;
+}
+.header .mainmenu .submenu .submenubox>ul>li>a{
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.header .mainmenu .submenu .submenubox>ul>li>a:hover{
+    color: #9c836a;
+}
+
+/* 햄버거 */
+.hambtn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.menu-trigger,
+.menu-trigger span {
+	display : inline-block;
+	transition : all .4s;
+	box-sizing : border-box;
+}
+.menu-trigger {
+    position: relative;
+    width: 35px;
+    height: 20px;
+}
+
+.menu-trigger  span {
+    width : 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.menu-trigger  span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger  span:nth-of-type(2) {
+    top: 9px;
+}
+
+.menu-trigger  span:nth-of-type(3) {
+    bottom: 0;
+}
+
+/* 중앙라인투명화, 상,하라인 x자 변형 */
+.menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
+}
+
 
 
 
@@ -236,7 +401,6 @@ section .sec_cont{
     padding: 2vh 0;
     box-sizing: border-box;
     position: relative;
-    z-index: 99;
 }
 #cont .select{
     width: 65vw;
