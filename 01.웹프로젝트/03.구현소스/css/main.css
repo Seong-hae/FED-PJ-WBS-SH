@@ -565,11 +565,12 @@ section .sec_cont{
 
 /* on줘서 켜진상태 */
 #cont .selbx.on .selbx01_pop{
-    height: 224px;
+    overflow: inherit;
     padding: 40px;
+    height: 224px;
     opacity: 1;
 }
-/* on주기전 꺼져이씅ㄹ때 */
+/* on주기전 꺼져있을때 */
 #cont .selbx .selbx02_pop{
     overflow: hidden;
     height: 0;
@@ -596,12 +597,6 @@ section .sec_cont{
     height: 230px;
     padding: 40px;
     opacity: 1;
-}
-#cont .selbx .selbx03_pop button{
-    font-size: 2rem;
-}
-.adultline{
-    padding-bottom: 15px;
 }
 
 
