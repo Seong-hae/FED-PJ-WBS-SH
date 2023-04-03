@@ -350,7 +350,7 @@ section .sec_cont{
     font-weight: 600;
     border-bottom: solid 2px #9c836a;
 }
-#cont .selbx01 .hotel_sel img{
+#cont .selbx01 .selbttn{
     position: absolute;
     right: 0;
     bottom: 1.5vh;
@@ -442,7 +442,6 @@ section .sec_cont{
     left: 0;
     top: calc(100% + 2vh);
     z-index: 1;
-    padding: 40px;
     border-radius: 8px;
     background-color: #fff;
 }
@@ -567,6 +566,7 @@ section .sec_cont{
 /* on줘서 켜진상태 */
 #cont .selbx.on .selbx01_pop{
     height: 224px;
+    padding: 40px;
     opacity: 1;
 }
 /* on주기전 꺼져이씅ㄹ때 */
@@ -579,8 +579,8 @@ section .sec_cont{
 }
 /* on줘서 켜진상태 */
 #cont .selbx.on .selbx02_pop{
-    /* 수정하세요 */
-    height: 150px;
+    padding: 40px;
+    height: 380px;
     opacity: 1;
 }
 /* on주기전 꺼져있을때 */
@@ -594,6 +594,7 @@ section .sec_cont{
 /* on줘서 펼쳐질때 */
 #cont .selbx.on .selbx03_pop{
     height: 230px;
+    padding: 40px;
     opacity: 1;
 }
 #cont .selbx .selbx03_pop button{
