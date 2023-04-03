@@ -464,7 +464,10 @@ section .sec_cont{
 }
 
 #cont .select .selbx01_pop{
-    /* display: none; */
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
 }
 #cont .select .selbx01_pop ul{
     display: flex;
@@ -507,9 +510,7 @@ section .sec_cont{
     height: 40px;
 }
 
-#cont .select .selbx03_pop{
-    /* display: none; */
-}
+
 #cont .select .selbx03_pop>ul{
     margin: 30px 0;
 }
@@ -548,15 +549,7 @@ section .sec_cont{
 
 
 
-#cont .select .selbx02_pop{
-    /* display: none; */
-}
-
-
-
-
 /* article 영역이 활성화되었을때 */
-
 .darkbg{
     width: 100%;
     height: 100%;
@@ -570,32 +563,14 @@ section .sec_cont{
 .darkbg.on{
     display: block;
 }
-#cont .selbx .sel_pop{
-    position: absolute;
-    background-color: #fff;
-    z-index: 1;
-    border-radius: 5px;
-}
-/* on주기전 꺼져이씅ㄹ때 */
 
-#cont .selbx .selbx01_pop{
-    top: 100%;
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    font-size: 2rem;
-    transition: 0.4s ease-in-out;
-}
 /* on줘서 켜진상태 */
 #cont .selbx.on .selbx01_pop{
-    top: 100%;
-    /* 수정하세요 */
-    height: 150px;
+    height: 224px;
     opacity: 1;
 }
 /* on주기전 꺼져이씅ㄹ때 */
 #cont .selbx .selbx02_pop{
-    top: 100%;
     overflow: hidden;
     height: 0;
     opacity: 0;
@@ -604,7 +579,6 @@ section .sec_cont{
 }
 /* on줘서 켜진상태 */
 #cont .selbx.on .selbx02_pop{
-    top: 100%;
     /* 수정하세요 */
     height: 150px;
     opacity: 1;
@@ -619,19 +593,12 @@ section .sec_cont{
 }
 /* on줘서 펼쳐질때 */
 #cont .selbx.on .selbx03_pop{
-    /* 수정하세요 */
-    height: 500px;
+    height: 230px;
     opacity: 1;
-    width: 300px;
 }
 #cont .selbx .selbx03_pop button{
     font-size: 2rem;
 }
-.selbx03_pop ul>li{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-} 
 .adultline{
     padding-bottom: 15px;
 }

@@ -844,6 +844,7 @@ function loadFn() {
             x.classList.remove('on');
         }
     }
+    // selbxpopoff();
 
     // 초기화 
     darkbg.onclick = () => {
@@ -873,8 +874,10 @@ function loadFn() {
     let acnum = anum + cnum;
 
     // 만들어야할거 성인 + - 버튼을 눌럿을때 - 시 성인변수 -- +시 성인변수 ++;
+    // acnum - 성이변수 + 애기변수 의 합이 6이넘으면 안올라가게
     aplus.onclick = () => {
         console.log('되라')
+        if(acnum === 6) return;
 
             anum++;
             if(anum === 7){
@@ -896,10 +899,21 @@ function loadFn() {
         acnum = anum + cnum;
         console.log('acnum',acnum)
     }
-    
+    // 우리 성해누나 숙제
+
+    // acnum 업데이트 위치를 잘 넣어서
+    // ㄴ 현재 acnum 정상 작동
+
+    // 만약에 acnum이 6이면 anum이나 cnum이 올라가지 않게 한다.
+    // 어떻게?
+    // 누르면 ++ 또는 -- 
+    // 만약 acnum = 6
+    //   anum = anum-1 , cnum = cnum-1; 
+
     // 만들어야할거 애기 + - 버튼을 눌럿을때 -시 애기변수 -- +시 애기변수 --;
     cplus.onclick = () => {
         console.log('되라')
+        if(acnum === 6) return;
 
             cnum++;
             if(cnum === 7){
@@ -921,13 +935,21 @@ function loadFn() {
         console.log('acnum',acnum)
     }
 
+    // 그.. 위에 숫자랑 연동하기 위함. - 연동성공.
+
+    // 대상 selbx03_adult
+    const selbx03adult = document.querySelector('.selbx03_adult');
+    console.log(selbx03adult)
+    const selbx03children = document.querySelector('.selbx03_children');
     function anumreset(){
         abx.innerHTML = `<p class="adult">${anum}</p>`
+        selbx03adult.innerHTML = `<p class="adult">${anum}</p>`
     }
     // 최초실행
     anumreset();
     function cnumreset(){
         cbx.innerHTML = `<p class="children">${cnum}</p>`  
+        selbx03children.innerHTML = `<p class="children">${cnum}</p>`  
     }
     // 최초실행
     cnumreset();
@@ -987,13 +1009,3 @@ function loadFn() {
 }; ////////// load ////////////////////////
 
 
-// 우리 성해누나 숙제
-
-// acnum 업데이트 위치를 잘 넣어서
-// ㄴ 현재 acnum 정상 작동
-
-// 만약에 acnum이 6이면 anum이나 cnum이 올라가지 않게 한다.
-// 어떻게?
-// 누르면 ++ 또는 -- 
-// 만약 acnum = 6
-//   anum = anum-1 , cnum = cnum-1; 
