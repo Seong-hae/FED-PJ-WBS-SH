@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* 파라다이스시티 PJ 메인 미디어쿼리 - commonmidea.css */
+
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
+
+    
+
+
+    /******************* HEADER 영역 *******************/
+    .header .h_top{
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        display: none;
+    }
+    .header .h_top>ul{
+        justify-content: center;
+    }
+    .header .h_bottom .gnb .mainmenubox{
+        position: absolute;
+        left: 0;
+        top: 120px;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    /* .open 클래스가 붙을때 */
+    .header.open{ 
+        position: absolute;
+     }
+    .header.open .h_top{
+        display: block;
+    }
+    .header.open .h_bottom .gnb .mainmenubox{
+        display: block;
+    }
+    .header.open .h_bottom .gnb .mainmenubox::before{
+        content: "";
+        position: absolute;
+        top: -121px;
+        left: -30px;
+        width: 100vw;
+        height: 1500px;
+        z-index: -1;
+        background-color: #21201ef2;
+    }
+
+    .header .h_bottom .logo{
+        padding: 15px 0;
+    }
+    .header .gnb .mainmenubox .mainmenu{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .header .gnb .mainmenubox .mainmenu::after{
+        display: none;
+    }
+    .header .gnb .mainmenubox .mainmenu:hover .submenu{
+        position: static;
+        flex-wrap: wrap;
+    }
+    .header .gnb .mainmenubox .mainmenu:nth-child(5):hover .submenu,
+    .header .gnb .mainmenubox .mainmenu:nth-child(7):hover .submenu{
+        left: 200px;
+    }
+    .header .mainmenu .submenu .submenubox h3{
+        margin-top: 30px;
+    }
+    .hambtn{
+        display: block;
+    }
+
+
+
+
+    /************** footer 영역 *************/
+    .footer .fbx02 .fbx02_1 ul{
+        justify-content: center;
+    }
+    .footer .fbx02 .fbx02_1{
+        width: 100%;
+        
+    }
+    .footer .fbx02 .fbx02_2{
+        display: none;
+    }
+    .footer .fbx02 .fbx02_1 address{
+        text-align: center;
+    }
+    .footer .f_sec{
+        flex-wrap: wrap;
+    }
+    .footer .fbx01_1{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_2{
+        order: 2;
+        width: 100%;
+    }
+    .footer .fbx01_3{
+        width: 30%;
+        padding-top: 30px;
+    }
+
+}
+
+
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+    /************** 6. landmark Section 영역 *************/
+    .landmark .land_txt p {
+        padding: 0 7.5vw;
+        word-break: keep-all;
+    }
+
+
+    /************** footer 영역 *************/
+    .footer .fbx01_1{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_2{
+        order: 0;
+        margin-bottom: 50px;
+    }
+    .footer .fbx01_3{
+        margin: 0;
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    .footer .fbx01_3 .sns h3 {
+        line-height: 45px;
+    }
+    .footer .fbx01_3 .sns {
+        align-items: center;
+    }
+
+
+
+
+
+}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+
+    
+
+    /************** 6. landmark Section 영역 *************/
+    .landmark .land_txt p {
+        font-size: min(3.5vw,2rem);
+    }
+
+
+    /************** footer 영역 *************/
+    .footer .fbx01_2 img{
+        display: block;
+        margin: 0 auto;
+    }
+    .footer .fbx01_2 img+img{
+        margin: 20px auto 0;
+    }
+    .footer .fbx01_3{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .fbx01_3 .family {
+        width: 100%;
+    }
+    .footer .fbx01_3 .family img {
+        right: 15px;
+    }
+
+
+
+
+
+}
