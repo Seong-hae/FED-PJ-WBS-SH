@@ -46,11 +46,12 @@
     }
     .header.open .h_bottom .gnb .mainmenubox::before{
         content: "";
-        position: absolute;
+        position: fixed;
         top: -121px;
         left: -30px;
-        width: 100vw;
-        height: 1500px;
+        width: calc(100% + 30px);
+        height: calc(100vh + 121px);
+        overflow-y: scroll;
         z-index: -1;
         background-color: #21201ef2;
     }
