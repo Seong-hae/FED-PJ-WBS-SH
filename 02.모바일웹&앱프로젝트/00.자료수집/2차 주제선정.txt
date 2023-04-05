@@ -1,0 +1,8 @@
+2차 주제선정
+
+=> 데이터패턴분석, 디자인적으로 카피는 하되 구성은 리뉴얼 하는 것이 좋음.
+
+
+=> 예시 사이트 후보
+- 젠틀몬스터 콜라보레이션 부분
+https://www.gentlemonster.com/kr/shop/list/collaborations/alexander-wang
