@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 베르판 PJ 메인 페이지 CSS - main.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+
+/********************* 공통 영역 *********************/
+
+:root{
+    --swiper-theme-color: #f9f9f9;
+}
+
+
+
+
+
+/************************ 메인영역 ************************/
+
+
+
+

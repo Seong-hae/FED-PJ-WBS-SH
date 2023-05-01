@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* 베르판 PJ 메인 미디어쿼리 - mainmedia.css */
+
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {}
+
+
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {}
