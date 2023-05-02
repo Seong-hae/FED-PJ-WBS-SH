@@ -12,6 +12,111 @@ body{
 
 
 /********************* 헤더 영역 *********************/
+.header{
+    outline: 1px dotted red;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 40px;
+    transition: .3s;
+}
+.header .logo{
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .logo a{
+    display: inline-block;
+}
+.header .logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* pc버전 */
+.header .pcmenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .pcmenu .leftmenu{
+    display: flex;
+    gap: 0 30px;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Heebo', sans-serif;
+}
+.header .pcmenu .leftmenu>li{
+}
+
+.header .pcmenu .rightmenu{
+    display: flex;
+    font-size: 1.6rem;
+    gap: 0 25px;
+    font-family: 'EB Garamond', serif;
+}
+.header .pcmenu .rightmenu .r_menu{
+    display: flex;
+    gap: 0 25px;
+}
+.header .pcmenu .rightmenu .r_menu>li{}
+.header .pcmenu .rightmenu .r_menu .pro{}
+.header .pcmenu .rightmenu .r_menu .promenu{
+    display: none;
+}
+.header .pcmenu .rightmenu .r_menu .promenu>li{}
+
+.header .pcmenu .rightmenu .iconbox{}
+.header .pcmenu .rightmenu .iconbox .sicon{
+    margin-right: 15px;
+}
+.header .pcmenu .rightmenu .iconbox .basket{}
 
 
 /************** footer 영역 *************/
+.footer{
+    background-color: #f7f6f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer .ftop{
+    display: flex;
+    gap: 0 100px;
+    padding: 60px 0;
+    /* outline: 1px dotted red; */
+}
+.footer .f_box .fmenu{
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 10px;
+}
+.footer .f_box li{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 3px;
+}
+
+.footer .fbottom{
+    /* outline: 1px dotted red; */
+    height: 45vh;
+    overflow-y: hidden;
+}
+.footer .fbottom .flogo{
+    width: 100%;
+    /* outline: 1px dotted orange; */
+}
+.footer .fbottom .flogo a{
+    display: inline-block;
+}
+.footer .fbottom .flogo img{
+    object-fit: cover;
+    transform: translateY(-110px);
+}

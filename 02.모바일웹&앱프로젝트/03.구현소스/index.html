@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내가 만든 베르판</title>
+    <!-- 파비콘 -->
     <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0513/1829/2651/files/Artboard96_96x.png?v=1614302366" type="image/png">
+
+    <!-- 폰트어썸 CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
     <!-- 외부 css 연결 -->
     <link rel="stylesheet" href="./css/main.css">
@@ -28,32 +32,50 @@
         </h1>
 
         <!-- pc 버전 -->
-        <nav>
-            <ul>
+        <nav class="pcmenu">
+            <ul class="leftmenu">
                 <li><a href="#">Lighting</a></li>
                 <li><a href="#">Furniture</a></li>
                 <li><a href="#">Accessories</a></li>
             </ul>
 
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Editorial</a></li>
-                <li><a href="#">Catalogues</a></li>
-                <li>
-                    <a href="#">Professionals</a>
-                    <ul>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">References</a></li>
-                        <li><a href="#">PCON</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Find dealer</a></li>
-            </ul>
+            <div class="rightmenu">
+                <ul class="r_menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Editorial</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                    <li class="pro">
+                        <a href="#">Professionals</a>
+                        <ul class="promenu">
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Downloads</a></li>
+                            <li><a href="#">References</a></li>
+                            <li><a href="#">PCON</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Find dealer</a></li>
+                </ul>
+
+                <div class="iconbox">
+                    <label for="searchbx" class="fa-solid fa-magnifying-glass sicon"></label>
+                    <i class="fa-solid fa-basket-shopping basket"></i>
+                </div>
+
+                <!-- 서치 박스 -->
+                <!-- <div class="sbx">
+                    <input type="text" id="searchbx" class="searchbx">
+                </div> -->
+                <!-- 장바구니 박스 -->
+                <!-- <div class="basketbox">
+                    
+                </div> -->
+
+            </div>
         </nav>
 
         <!-- 모바일 버전 -->
+        <!-- <nav class="momenu"></nav> -->
 
 
 
@@ -61,14 +83,22 @@
     <!-- 헤더 영역 끝 -->
 
 
-
-
-
-
-
     
-    <!-- 1. 메인영역 시작 -->
-    <main class="cont"></main>
+    <!-- 1. 메인영상 영역 시작 -->
+    <section class="main">
+
+        <div class="mbox">
+            <video src="./img/mainvideo.mp4" class="bgvideo" autoplay loop muted></video>
+        </div>
+
+        <div class="mtxt">
+            <h2>Pantop Portable - Chrome & Brass</h2>
+
+            <button class="btn white">Explore the two new colours</button>
+        </div>
+        
+
+    </section>
 
     <!-- 2. pantop Section 시작 -->
     <section class="pantop"></section> 
@@ -96,7 +126,71 @@
 
 
     <!-- FOOTER 영역 시작 -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+
+        <div class="ftop">
+
+            <div class="f_box">
+                <h2 class="fmenu">STORE</h2>
+                <ul>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">EXPLORE</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">References</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">MORE</h2>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Find dealer</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">INFO</h2>
+                <ul>
+                    <li><a href="#">Terms of Sale</a></li>
+                    <li><a href="#">Terms of Sales & Delivery - B2B</a></li>
+                    <li><a href="#">Shipping and Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">SOCIAL</h2>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">COMPANY</h2>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Be Original™</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="fbottom">
+            <h1 class="flogo">
+                <a href="#"><img src="./img/logo.webp" alt="로고이미지"></a>
+            </h1>
+        </div>
+    </footer>
 
 
 </body>
