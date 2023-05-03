@@ -13,7 +13,7 @@ body{
 
 /********************* 헤더 영역 *********************/
 .header{
-    outline: 1px dotted red;
+    position: relative;
     position: fixed;
     z-index: 999;
     top: 0;
@@ -23,15 +23,15 @@ body{
     padding: 25px 40px;
     transition: .3s;
 }
+.header:hover{
+    /* background-color: #fff; */
+}
 .header .logo{
     width: 150px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-.header .logo a{
-    display: inline-block;
 }
 .header .logo img{
     width: 100%;
@@ -44,14 +44,12 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.header .pcmenu .leftmenu{
+.header .pcmenu .l_menu{
     display: flex;
     gap: 0 30px;
     font-size: 2rem;
-    font-weight: 300;
-    font-family: 'Heebo', sans-serif;
-}
-.header .pcmenu .leftmenu>li{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header .pcmenu .rightmenu{
@@ -78,35 +76,259 @@ body{
 .header .pcmenu .rightmenu .iconbox .basket{}
 
 
+
+/* 햄버거버튼 */
+.header .leftmenu .ham{
+    display: none;
+}
+/* 모바일버전 메뉴 */
+.header .momenu{
+    display: none;
+}
+
+
+
+
+
+
 /************** footer 영역 *************/
 .footer{
     background-color: #f7f6f4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 30px;
 }
 .footer .ftop{
     display: flex;
+    flex-wrap: wrap;
     gap: 0 100px;
     padding: 60px 0;
-    /* outline: 1px dotted red; */
+}
+.footer .ftop .f_box{
+    margin-bottom: 30px;
 }
 .footer .f_box .fmenu{
     font-size: 1.6rem;
     font-weight: 700;
     font-family: 'EB Garamond', serif;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .footer .f_box li{
     font-size: 1.4rem;
     font-weight: 300;
-    font-family: 'Heebo', sans-serif;
-    margin-bottom: 3px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+}
+.footer .f_box li+li{
+    margin-top: 10px;
 }
 
 .footer .fbottom .flogo{
     width: 100%;
 }
 .footer .fbottom .flogo img{
+    width: 100%;
     object-fit: cover;
+}
+
+
+
+
+
+
+/* 베르판 PJ 미디어쿼리 */
+
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
+    /************* header 영역 ***************/
+    .header .pcmenu .l_menu,
+    .header .pcmenu .rightmenu .r_menu{
+        display: none;
+    }
+
+    /*  햄버거 버튼 */
+    .header .leftmenu .ham{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px 0;
+        cursor: pointer;
+    }
+    
+    .header .leftmenu .ham div{
+        width: 30px;
+        height: 1px;
+        background-color: #555;
+    }
+    /* 모바일버전 메뉴 */
+    .header .momenu{
+        display: block;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: -100%;
+        background-color: #fff;
+        width: 30vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: .5s;
+    }
+    /* 닫기버튼 */
+    .header .momenu .close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px 0;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .header .momenu .close div{
+        position: absolute;
+        top: 15px;
+        width: 100%;
+        height: 1px;
+        background-color: #555;
+    }
+    .header .momenu .close .close_top{
+        transform: rotate(45deg);
+    }
+    .header .momenu .close .close_bottom{
+        transform: rotate(-45deg);
+    }
+
+
+    .header .momenu .menubox{
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+    .header .momenu .menubox .mbx_top{
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+    .header .momenu .menubox .mbx_top>li{
+        border-bottom: 1px solid rgb(119, 119, 119, .5);
+        padding: 10px 0;
+    }
+    .header .momenu .menubox .mbx_bottom{
+        margin-top: 30px;
+        font-size: 1.8rem;
+        font-family: 'EB Garamond', serif;
+    }
+    .header .momenu .menubox .mbx_bottom a{
+        color: rgb(119, 119, 119, .5);
+        transition: .3s;
+    }
+    .header .momenu .menubox .mbx_bottom a:hover{
+        color: #555;
+    }
+    .header .momenu .menubox .mbx_bottom>li+li{
+        margin-top: 10px;
+    }
+    .header .momenu .snsbox{
+        border-top: 1px solid rgb(119, 119, 119, .5);
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .header .momenu .snsbox .fa-brands{
+        font-size: 2rem;
+        color: #666;
+        width: 50%;
+    }
+    /* 검정화면 */
+    .header .black{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(34, 34, 34, .7);
+        opacity: 0;
+        transition: .3s;
+    }
+
+
+
+
+
+
+
+
+
+    /************** footer 영역 *************/
+    .footer{
+        align-items: start;
+    }
+    .footer .ftop{
+        gap: 0;
+        width: 100%;
+    }
+    .footer .ftop .f_box{
+        width: 50%;
+    }
+    
+}
+
+
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+
+    /************* header 영역 ***************/
+    .header .logo{
+        width: min(30vw,150px);
+    }
+
+    /* 모바일버전 메뉴 */
+    .header .momenu{
+        width: 70vw;
+    }
+
+
+
+
+}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+    /************* header 영역 ***************/
+    .header{
+        padding: 25px 20px;
+    }
+
+
+
+
+
+
+
+
+
+    /************** footer 영역 *************/
+    .footer .ftop{
+        padding: 60px 0 10px;
+    }
+    .footer .ftop .f_box{
+        width: 100%;
+    }
+    .footer .fbottom{
+        margin-bottom: 30px;
+    }
 }

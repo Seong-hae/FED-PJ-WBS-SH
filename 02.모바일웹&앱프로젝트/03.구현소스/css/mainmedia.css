@@ -2,8 +2,12 @@
 
 /* 베르판 PJ 메인 미디어쿼리 - mainmedia.css */
 
-/* 1300px 사이즈 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1300px) {}
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+
+    
+}
 
 
 

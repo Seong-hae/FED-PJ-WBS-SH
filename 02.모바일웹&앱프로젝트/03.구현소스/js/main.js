@@ -23,18 +23,46 @@ function loadFn() {
     });
 
 
-    /****************************************** 
-        HEADER 영역 - 햄버거버튼
-    ******************************************/
-    // const hambtn = document.querySelector(".hambtn");
-    // const menuT = document.querySelector(".menu-trigger");
 
-    // // 햄버거
-    // hambtn.addEventListener("click", function() {
-    //     event.preventDefault();
-    //     menuT.classList.toggle("active");
-    //     headerArea.classList.toggle("open");
-    // });
+    /***************************************************
+        HEADER 영역 - 메뉴 보이기/숨기기
+    ***************************************************/
+    // 햄버거버튼요소
+    const viewBtn = document.querySelector(".ham");
+    const closeBtn = document.querySelector(".close");
+    const black = document.querySelector(".black");
+    // console.log("버튼있니?",viewBtn);
+
+    // 이벤트 설정하기 //////
+    viewBtn.onclick = videoView;
+    function videoView(){
+        // 1. 호출확인
+        console.log("나야나!");
+        
+        // 2. 대상선정 : .momenu
+        const videoBox = document.querySelector(".momenu");
+        
+        // 3. 변경내용 : 화면에 보이기
+        videoBox.style.left = "0";
+        black.style.opacity = "1";
+        
+        
+    } /////////////////// videoView 함수 ///////////////
+
+    // 이벤트 설정하기 //////
+    closeBtn.onclick = videoClose;
+    function videoClose(){
+        // 1. 호출확인
+        console.log("나야나!");
+        
+        // 2. 대상선정 : .momenu
+        const videoBox = document.querySelector(".momenu");
+        
+        // 3. 변경내용 : 화면에 보이기
+        videoBox.style.left = "-100%";
+        black.style.opacity = "0";
+        
+    } /////////////////// videoView 함수 ///////////////
 
     
 
