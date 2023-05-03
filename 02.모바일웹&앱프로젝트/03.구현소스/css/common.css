@@ -104,19 +104,9 @@ body{
     margin-bottom: 3px;
 }
 
-.footer .fbottom{
-    /* outline: 1px dotted red; */
-    height: 45vh;
-    overflow-y: hidden;
-}
 .footer .fbottom .flogo{
     width: 100%;
-    /* outline: 1px dotted orange; */
-}
-.footer .fbottom .flogo a{
-    display: inline-block;
 }
 .footer .fbottom .flogo img{
     object-fit: cover;
-    transform: translateY(-110px);
 }
