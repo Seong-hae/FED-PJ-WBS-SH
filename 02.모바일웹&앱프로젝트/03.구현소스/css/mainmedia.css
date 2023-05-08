@@ -15,7 +15,25 @@
 
 
 /* 800px 사이즈 이하 미디어쿼리 시작 */
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+
+
+
+
+    /************ 9. sketch Section 시작 *************/
+    .sketch .sketchbox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sketch .sketchbox li{
+        width: min(50vw,400px);
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
 
 
 
