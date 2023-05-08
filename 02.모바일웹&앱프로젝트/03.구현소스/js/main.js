@@ -74,7 +74,7 @@ function loadFn() {
 
 
 
-    const swiper = new Swiper(".mySwiper", {
+    const swiper1 = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 50,
         centeredSlides: false,
@@ -90,6 +90,30 @@ function loadFn() {
             },
             1400: {
               slidesPerView: 3,
+            }
+          },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    const swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        centeredSlides: false,
+        breakpoints: { //반응형 조건 속성
+            0: {
+                slidesPerView: 1,
+            },
+            500: {
+              slidesPerView: 1,
+            },
+            800: {
+                slidesPerView: 2,
+            },
+            1400: {
+              slidesPerView: 2,
             }
           },
         pagination: {
