@@ -16,6 +16,68 @@
 }
 
 
+/* 버튼 공통 */
+.btn{
+    position: relative;
+    color: #333;
+    border: 1px solid #000;
+    padding: 15px 25px;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 0%;
+    margin-left: 50%;
+    background-color: #000;
+    height: 100%;
+    
+    transition:  
+    width .3s,
+    margin-left .3s,
+    color .3s;
+}
+.btn:hover::before{
+    width: 100%;
+    margin-left: 0%;
+}
+/* 파란색버튼 */
+.btn.blue{
+    color: #0a39cf;
+    border: 1px solid #0a39cf;
+}
+.btn.blue::before{
+    background-color: #0a38cf;
+}
+.btn.blue:hover{
+    color: #fff;
+}
+.btn.blue:hover::before{
+    background-color: #0a39cf;
+}
+/* 하얀버튼 */
+.btn.white{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.btn.white::before{
+    background-color: #fff;
+}
+.btn.white:hover{
+    color: #333;
+}
+.btn.white:hover::before{
+    background-color: #fff;
+}
+
+
 
 
 
@@ -34,6 +96,7 @@
     object-fit: cover;
 }
 .main .mtxt{
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,19 +108,157 @@
     color: #fff;
     margin-bottom: 25px;
 }
-.main .mtxt .btn{
+
+
+/************ 3. globe Section  시작 *************/
+.globe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ecd6b2;
+    padding: 0 60px;
     color: #fff;
-    border: 1px solid #fff;
-    padding: 15px 20px;
 }
+.globe .gtxtbx{
+    padding: 20px 0;
+    width: 40%;
+}
+.globe .svgbx .signature{
+    width: 70%;
+    margin-bottom: 25px;
+}
+.globe .gtxtbx h2{
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.globe .gtxtbx h2 span{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.globe .gtxtbx p{
+    width: 80%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.globe .gimgbx{
+    width: 50%;
+}
+.globe .gimgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/************ 4. globe slide Section 시작 *************/
+.s-section{
+    /* padding: 70px 0 70px 70px; */
+    padding: 70px 60px;
+    display: flex;
+    gap: 0 60px;
+    align-items: flex-end;
+}
+.s-section .txtbx{
+    width: 100%;
+}
+.s-section .txtbx .slide_tit{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.s-section .txtbx .slide_tit span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.s-section .txtbx .slide_con{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+/* 슬라이드 */
+.swiper .swiper-slide .imgbox img{
+    width: 100%;
+    object-fit: cover;
+}
+.swiper .swiper-slide .txtbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.swiper .swiper-slide .txtbox .lighting{
+    width: 100%;
+    font-size: 1.2rem;
+    color: #09080a;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+.swiper .swiper-slide .txtbox .name{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.swiper .swiper-slide .txtbox .price{
+    font-size: 1.4rem;
+}
+
+
+
+
+/************ 5. furniture Section 시작 *************/
+.furniture{
+    display: flex;
+    align-items: flex-end;
+    padding: 130px 100px;
+    color: #0a39cf;
+    gap: 0 50px;
+}
+.furniture .fimgbx{
+    width: 50%;
+}
+.furniture .fimgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+.furniture .ftxtbx{
+    width: 30%;
+}
+.furniture .ftxtbx h2{
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.furniture .ftxtbx h2 span{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 
 /************ 8. designer Section 시작 *************/
 .designer{
     display: flex;
     align-items: center;
-    gap: 0 7vw;
-    padding: min(20vw,80px) min(25vw,200px);
+    justify-content: center;
+    gap: 0 5vw;
+    padding: 80px 150px;
     background-color: #ffab00;
     color: #fff;
 }
@@ -67,6 +268,7 @@
 .designer .dtxtbx h2{
     font-size: 4rem;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 .designer .dtxtbx h2 span{
     display: block;
@@ -80,9 +282,8 @@
     line-height: 1.5;
     margin-bottom: 30px;
 }
-.designer .dtxtbx .btn{}
 .designer .dimgbx{
-    width: 70%;
+    width: 55%;
 }
 .designer .dimgbx img{
     width: 100%;

@@ -5,6 +5,42 @@
 /* 1200px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1200px) {
 
+    /************ 3. globe Section  시작 *************/
+    .globe .gtxtbx{
+        width: 50%;
+    }
+
+    /************ 4. globe slide Section 시작 *************/
+    .s-section{
+        display: block;
+    }
+    .s-section .txtbx{
+        margin-bottom: 50px;
+    }
+
+    /************ 5. furniture Section 시작 *************/
+    .furniture{
+        padding: 100px 60px; 
+    }
+    .furniture .ftxtbx{
+        width: 50%;
+    }
+
+
+    /************ 8. designer Section 시작 *************/
+    .designer{
+        flex-direction: column;
+        padding: 80px 0;
+    }
+    .designer .dtxtbx,
+    .designer .dimgbx{
+        width: 80%;
+    }
+    .designer .dtxtbx{
+        order: 1;
+        margin-top: 30px;
+    }
+
 
     
 }
@@ -17,7 +53,37 @@
 /* 800px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 800px) {
 
+    /************ 1. 메인영상 영역 시작 *************/
+    .main .mtxt{
+        width: 90%;
+    }
 
+    /************ 3. globe Section  시작 *************/
+    .globe{
+        flex-direction: column;
+        padding: 100px 60px;
+    }
+    .globe .gtxtbx{
+        width: 100%;
+    }
+    .globe .gtxtbx p{
+        width: 100%;
+    }
+    .globe .gimgbx{
+        width: 100%;
+    }
+
+    /************ 5. furniture Section 시작 *************/
+    .furniture{
+        flex-direction: column;
+    }
+    .furniture .fimgbx{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .furniture .ftxtbx{
+        width: 100%;
+    }
 
 
     /************ 9. sketch Section 시작 *************/

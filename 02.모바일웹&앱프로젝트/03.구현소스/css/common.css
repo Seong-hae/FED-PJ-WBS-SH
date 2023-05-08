@@ -24,7 +24,7 @@ body{
     transition: .3s;
 }
 .header:hover{
-    /* background-color: #fff; */
+    background-color: #fff;
 }
 .header .logo{
     width: 150px;
@@ -170,7 +170,7 @@ body{
         top: 0;
         left: -100%;
         background-color: #fff;
-        width: 30vw;
+        width: 30%;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -245,8 +245,8 @@ body{
         width: 50%;
     }
     /* 검정화면 */
-    .header .black{
-        position: absolute;
+    .black{
+        position: fixed;
         z-index: -1;
         top: 0;
         left: 0;
@@ -295,7 +295,7 @@ body{
 
     /* 모바일버전 메뉴 */
     .header .momenu{
-        width: 70vw;
+        width: 70%;
     }
 
 

@@ -16,9 +16,13 @@ function loadFn() {
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 80) {
-            headerArea.style=('background-color: #fff;');
+            headerArea.style=(
+                'background-color: #fff; border-bottom: 1px solid #ccc;'
+                );
         } else {
-            headerArea.style=('background-color: none;');
+            headerArea.style=(
+                'background-color: none; border-bottom: none;'
+                );
         }
     });
 
@@ -45,6 +49,7 @@ function loadFn() {
         // 3. 변경내용 : 화면에 보이기
         videoBox.style.left = "0";
         black.style.opacity = "1";
+        black.style.zIndex = "99";
         
         
     } /////////////////// videoView 함수 ///////////////
@@ -61,8 +66,37 @@ function loadFn() {
         // 3. 변경내용 : 화면에 보이기
         videoBox.style.left = "-100%";
         black.style.opacity = "0";
+        black.style.zIndex = "-1";
         
     } /////////////////// videoView 함수 ///////////////
+
+
+
+
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        centeredSlides: false,
+        breakpoints: { //반응형 조건 속성
+            0: {
+                slidesPerView: 1,
+            },
+            500: {
+              slidesPerView: 1,
+            },
+            800: {
+                slidesPerView: 2,
+            },
+            1400: {
+              slidesPerView: 3,
+            }
+          },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 
     
 
