@@ -73,8 +73,11 @@ function loadFn() {
 
 
 
-
-    const swiper1 = new Swiper(".mySwiper", {
+    /***************************************************
+        Slide 영역 - 갯수별 슬라이드 박스
+    ***************************************************/
+    // 3개일때
+    const swiper3 = new Swiper(".mySwiper3", {
         slidesPerView: 3,
         spaceBetween: 50,
         centeredSlides: false,
@@ -88,7 +91,7 @@ function loadFn() {
             800: {
                 slidesPerView: 2,
             },
-            1400: {
+            1200: {
               slidesPerView: 3,
             }
           },
@@ -97,7 +100,7 @@ function loadFn() {
             clickable: true,
         },
     });
-
+    // 2개일때
     const swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 2,
         spaceBetween: 50,

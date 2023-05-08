@@ -5,6 +5,14 @@
 /* 1200px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1200px) {
 
+    /************ 2. pantop slide Section 시작 *************/
+    .pantop .txtbx{
+        width: 100%;
+    }
+    .pantop .txtbx .slide_con{
+        width: 100%;
+    }
+
     /************ 3. globe Section  시작 *************/
     .globe .gtxtbx{
         width: 50%;

@@ -162,21 +162,12 @@
 
 
 /************ 2. pantop slide Section 시작 *************/
-.pantop{
-    justify-content: space-between;
-}
 .pantop .txtbx{
     width: 60%;
-    border: 1px solid #000;
 }
 .pantop .txtbx .slide_con{
-    width: 60%;
+    width: 50%;
 }
-.pantop .pswiper{}
-
-
-
-
 
 
 /************ 3. globe Section  시작 *************/
