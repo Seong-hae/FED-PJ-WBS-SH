@@ -127,15 +127,11 @@ function loadFn() {
 
     // fadeout되는 슬라이드
     const swiperFade = new Swiper('.swiper-container', {
-        spaceBetween: 30,
         effect: 'fade',
+        loop : true, // 무한 반복
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
         },
       });
 
