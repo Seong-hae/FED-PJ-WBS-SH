@@ -226,17 +226,32 @@
 .sofa{
     position: relative;
 }
-/* .sofa .swiper-container {
+
+.sofa .swiper-container {
     width: 100%;
+}
+.sofa .swiper-slide {
     position: relative;
 }
-.sofa .swiper-wrapper{
-    position: relative;
+.sofa .swiper-slide .imgbox img{
+    width: 100%;
+    object-fit: cover;
 }
-.sofa .swiper-slide{
-    /* position: absolute;
-} 
-*/
+.sofa .swiper-slide .txtbox{
+    position: absolute;
+    left: 80px;
+    bottom: 100px;
+    color: #fff;
+}
+.sofa .swiper-slide .txtbox h3{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.sofa .swiper-slide .txtbox h3 span{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
 
 
 
