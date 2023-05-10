@@ -21,7 +21,7 @@ body{
     width: 100%;
     box-sizing: border-box;
     padding: 25px 40px;
-    transition: .3s;
+    transition: background-color .3s;
 }
 .header:hover{
     background-color: #fff;
@@ -62,12 +62,27 @@ body{
     display: flex;
     gap: 0 25px;
 }
-.header .pcmenu .rightmenu .r_menu>li{}
-.header .pcmenu .rightmenu .r_menu .pro{}
-.header .pcmenu .rightmenu .r_menu .promenu{
-    display: none;
+.header .pcmenu li{
+    position: relative;
 }
-.header .pcmenu .rightmenu .r_menu .promenu>li{}
+.header .pcmenu li::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    height: 1px;
+    width: 100%;
+    background-color: #333;
+    opacity: 0;
+    transition: .3s;
+}
+.header .pcmenu .rightmenu li::after{
+    bottom: -27px;
+}
+.header .pcmenu li:hover::after{
+    opacity: 1;
+}
 
 .header .pcmenu .rightmenu .iconbox{}
 .header .pcmenu .rightmenu .iconbox .sicon{

@@ -129,13 +129,14 @@
 .swiper .swiper-slide .txtbox .price{
     font-size: 1.4rem;
 }
-.s-section .swiper-pagination{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border: 1px solid #000;
-}
 
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgba(63, 63, 63, 0.281);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
 
 
 

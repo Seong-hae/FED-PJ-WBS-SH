@@ -99,6 +99,10 @@ function loadFn() {
             el: ".swiper-pagination",
             clickable: true,
         },
+        navigation: {   // 버튼
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
     });
     // 2개일때
     const swiper2 = new Swiper(".mySwiper2", {

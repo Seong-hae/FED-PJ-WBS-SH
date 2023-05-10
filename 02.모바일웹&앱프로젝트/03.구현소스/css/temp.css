@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 temp CSS - temp.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
