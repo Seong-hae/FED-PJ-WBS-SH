@@ -7,9 +7,6 @@
 @import url(core.css);
 @import url(common.css);
 
-header.header{
-    background-color: #ffc;
-}
 
 /* 메인영역 시작 */
 #cont{
@@ -26,7 +23,7 @@ header.header{
     gap: 0 25px;
     border-bottom: 1px solid rgba(104, 104, 104, 0.301);
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 #cont .ctop .lnb ul li a{
     letter-spacing: 1px;
@@ -37,10 +34,9 @@ header.header{
 /* 2-2. 카테고리 페이지 컨텐츠영역 */
 #cont .cate_grid{
     display: grid;
-    gap: 0 30px;
+    grid-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
 }
-#cont .cate_grid .cate_box{}
 #cont .cate_box .imgbox{
     aspect-ratio: 1;
 }
@@ -52,8 +48,21 @@ header.header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 10px;
+}
+#cont .cate_box .txtbox li{
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 #cont .cate_box .txtbox .type{
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgba(104, 104, 104, 0.5);
+    margin-bottom: 5px;
+}
+#cont .cate_box .txtbox .price{
+    font-weight: 300;
+    font-size: 1.4rem;
 }
