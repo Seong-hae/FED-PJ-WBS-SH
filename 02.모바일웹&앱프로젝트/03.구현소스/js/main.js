@@ -137,6 +137,13 @@ function loadFn() {
             
       });
 
+
+
+
+
+      // 스크롤리빌 플러그인 적용호출!
+      $.fn.scrollReveal(); 
+
     
 
 
