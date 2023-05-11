@@ -48,6 +48,7 @@ function loadFn() {
         
         // 3. 변경내용 : 화면에 보이기
         videoBox.style.left = "0";
+        black.style.transition = ".3s";
         black.style.opacity = "1";
         black.style.zIndex = "99";
         
@@ -131,7 +132,7 @@ function loadFn() {
 
     // fadeout되는 슬라이드
     const swiperFade = new Swiper('.swiper-container', {
-        spaceBetween: 30,
+        // spaceBetween: 30,
         effect: 'fade',
         pagination: {
             el: '.swiper-pagination',

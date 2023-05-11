@@ -93,6 +93,22 @@
         width: 100%;
     }
 
+    /************ 6. sofa slide Section 시작 ************/
+    .sofa .swiper-slide .txtbox{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sofa .swiper-slide .txtbox h3{
+        font-size: min(5vw,4rem);
+        white-space: nowrap;
+    }
+    .sofa .swiper-slide .txtbox h3 span{
+        font-size: min(3vw,1.4rem);
+        margin-bottom: min(1vw,10px);
+    }
+
 
     /************ 9. sketch Section 시작 *************/
     .sketch .sketchbox{
