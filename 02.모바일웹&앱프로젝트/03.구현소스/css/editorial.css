@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 temp CSS - editorial.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/* 서브페이지일때 헤더영역 */
+.header{
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+
+/******************* 메인영역 시작  *******************/
+.editorial{
+  padding: 100px 20px;
+}
+.editorial .edit_box{
+  display: flex;
+  gap: 30px 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.editorial .edit_box li{
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.editorial .edit_box .imgbox img{
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.editorial .edit_box h3{
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.editorial .edit_box p{
+  font-size: 1.4rem;
+  margin: 20px 0;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+}
+.editorial .edit_box .btn{
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+  .editorial{
+    padding: 100px 50px;
+  }
+  .editorial .edit_box li{
+    width: 100%;
+  }
+
+}

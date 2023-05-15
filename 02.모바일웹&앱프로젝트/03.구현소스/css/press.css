@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 temp CSS - press.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 서브페이지일때 헤더영역 */
+.header{
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/********************** 메인영역 ***********************/
+.press{
+  padding: 100px 80px;
+}
+.press ul .press_list{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  align-items: flex-end;
+  justify-self: center;
+}
+.press ul .press_list .imgbox{
+  width: 70%;
+}
+.press ul .press_list .imgbox img{
+  width: 100%;
+  object-fit: cover;
+}
+.press ul .press_list .txtbox{
+  width: 30%;
+}
+.press ul .press_list .txtbox .tit{
+  font-size: 3rem;
+}
+.press ul .press_list .txtbox .tit span{
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.press ul .press_list .txtbox .cont{
+  width: 80%;
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+
+
+
+
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+  .press{
+    padding: 100px 30px;
+  }
+  .press ul .press_list{
+    flex-direction: column;
+    align-items: start;
+  }
+  .press ul .press_list .imgbox{
+    width: 100%;
+  }
+  .press ul .press_list .txtbox{
+    width: 100%;
+  }
+
+}

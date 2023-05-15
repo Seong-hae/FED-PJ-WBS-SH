@@ -9,7 +9,136 @@ html{
 body{
     overflow-x: hidden;
 }
+/********************* 공통 영역 *********************/
 
+:root{
+    --swiper-theme-color: #f9f9f9;
+}
+
+
+
+
+/************** 버튼 공통 **************/
+.btn{
+    position: relative;
+    color: #333;
+    border: 1px solid #000;
+    padding: 15px 25px;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 0%;
+    margin-left: 50%;
+    background-color: #000;
+    height: 100%;
+    
+    transition:  
+    width .3s,
+    margin-left .3s,
+    color .3s;
+}
+.btn:hover::before{
+    width: 100%;
+    margin-left: 0%;
+}
+/* 파란색버튼 */
+.btn.blue{
+    color: #0a39cf;
+    border: 1px solid #0a39cf;
+}
+.btn.blue::before{
+    background-color: #0a38cf;
+}
+.btn.blue:hover{
+    color: #fff;
+}
+.btn.blue:hover::before{
+    background-color: #0a39cf;
+}
+/* 하얀버튼 */
+.btn.white{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.btn.white::before{
+    background-color: #fff;
+}
+.btn.white:hover{
+    color: #333;
+}
+.btn.white:hover::before{
+    background-color: #fff;
+}
+
+/**************** 슬라이드 공통영역 *****************/
+.s-section{
+    /* padding: 70px 0 70px 70px; */
+    padding: 70px 60px;
+    display: flex;
+    gap: 0 60px;
+    align-items: flex-end;
+    position: relative;
+}
+.s-section .txtbx{
+    width: 100%;
+}
+.s-section .txtbx .slide_tit{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.s-section .txtbx .slide_tit span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.s-section .txtbx .slide_con{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+/* 슬라이드 */
+.swiper .swiper-slide .imgbox img{
+    width: 100%;
+    object-fit: cover;
+}
+.swiper .swiper-slide .txtbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.swiper .swiper-slide .txtbox .type{
+    width: 100%;
+    font-size: 1.2rem;
+    color: #09080a;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+.swiper .swiper-slide .txtbox .name{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.swiper .swiper-slide .txtbox .price{
+    font-size: 1.4rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgba(63, 63, 63, 0.281);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
 
 /********************* 헤더 영역 *********************/
 .header{
@@ -271,10 +400,14 @@ body{
         opacity: 0;
     }
 
-
-
-
-
+    
+    /************ 공통슬라이드 영역 시작 *************/
+    .s-section{
+        display: block;
+    }
+    .s-section .txtbx{
+        margin-bottom: 50px;
+    }
 
 
 
