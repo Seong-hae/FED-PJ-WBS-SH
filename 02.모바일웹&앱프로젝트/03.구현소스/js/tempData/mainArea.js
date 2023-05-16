@@ -1,8 +1,13 @@
 // 메인영역 컨텐츠 템플릿
 
-const imData = `
+const imData = {"main":`
 
 <div>    
+
+<!-- 외부 css 연결 -->
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/mainmedia.css">
+
 <!-- 1. 메인영상 영역 시작 -->
 <section class="main">
 
@@ -298,6 +303,109 @@ const imData = `
 
 </div>
 
-`;
+`, //////// main //////
+
+"about":`
+    <div>
+        
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="./css/about.css">
+    
+    <!-- 1. 메인 영역 시작 -->
+    <main class="about js-reveal">
+
+        <div class="about_imgbox">
+            <img src="./img/about_main.webp" alt="sofa image">
+        </div>
+
+        <div class="txtbox js-reveal">
+
+            <h2>
+                <span>OUR LEGACY</span>
+                About Verpan
+            </h2>
+
+            <div>
+                <p>Verpan is - much like Verner Panton - a product of the Danish design tradition,<br> which have put Denmark on the world map for functional, modern and unique design.</p>
+                <p>The story of Verpan began in 2003, when the first production of Verner Panton lighting was initiated. In 2010 a furniture range was added. Today, Verpan offers a carefully curated selection of Verner Panton’s timeless designs. Our product range include iconic furniture and lighting pieces that offers extraordinary user experiences and facilitate new ways of living, working and interacting.</p>
+                <p>Verpan is proud to carry on the legacy of Verner Panton as an official licensee of Verner Panton Design AG - the exclusive owner of all Verner Panton designs.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- 2. designer section 시작 -->
+    <section class="designer">
+
+        <div class="imgbox js-reveal">
+            <img src="./img/about_designer.webp" alt="designer">
+        </div>
+
+        <div class="txtbox right js-reveal">
+            <h2>
+                <span>THE NAME BEHIND THE BRAND</span>
+                Verner Panton
+            </h2>
+
+            <p>Among the giants of Danish design, Verner Panton (1926-1998) established a unique reputation for his exuberant originality and tireless experimentation. Panton created lamps, furniture and textiles – and was also a sought-after interior designer. Although he was at the forefront of mid-century Danish Modern, Panton’s contribution was anything but mainstream. He enthusiastically embraced new materials, he splashed with a bold colour palette, and he playfully imbued many of his sculptural creations with a strong graphical expression – without ever compromising on quality or workmanship. Panton’s iconic designs have emerged as contemporary design classics – as strikingly inventive now as they were 50 years ago.</p>
+        </div>
+
+    </section>
+
+
+    <!-- 3. sketch Section 시작 -->
+    <section class="sketch js-reveal">
+
+        <ul class="sketchbox">
+            <li>
+                <div class="simgbox">
+                    <img src="./img/sketch01.webp" alt="sketch image">
+                </div>
+                <h3>LIGHTING</h3>
+            </li>
+            <li>
+                <div class="simgbox">
+                    <img src="./img/sketch02.webp" alt="sketch image">
+                </div>
+                <h3>FURNITURE</h3>
+            </li>
+            <li>
+                <div class="simgbox">
+                    <img src="./img/sketch03.webp" alt="sketch image">
+                </div>
+                <h3>ACCESSORIES</h3>
+            </li>
+        </ul>
+
+    </section> 
+
+
+    <!-- 4. Sustainability section 시작 -->
+    <section class="sustainability">
+
+        <div class="txtbox js-reveal">
+            <h2>
+                <span>THE NAME BEHIND THE BRAND</span>
+                Verner Panton
+            </h2>
+
+            <p>Among the giants of Danish design, Verner Panton (1926-1998) established a unique reputation for his exuberant originality and tireless experimentation. Panton created lamps, furniture and textiles – and was also a sought-after interior designer. Although he was at the forefront of mid-century Danish Modern, Panton’s contribution was anything but mainstream. He enthusiastically embraced new materials, he splashed with a bold colour palette, and he playfully imbued many of his sculptural creations with a strong graphical expression – without ever compromising on quality or workmanship. Panton’s iconic designs have emerged as contemporary design classics – as strikingly inventive now as they were 50 years ago.</p>
+
+            <button class="btn white">Learn more about our focus on sustainability</button>
+        </div>
+
+        <div class="imgbox right js-reveal">
+            <img src="./img/about_sofa.webp" alt="sofa image">
+        </div>
+
+    </section>
+
+
+    
+    </div>
+`,
+
+};
 
 export default imData;

@@ -12,8 +12,13 @@
 
     <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
     <!-- 뷰JS vuex CDN -->
     <script src="https://unpkg.com/vuex@3.0.0"></script>
+
+    <!-- 뷰JS 라우터 CDN -->
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+
 
     <!-- 제이쿼리 라이브러리 -->
     <script src="./js/jquery-3.6.0.min.js"></script>
@@ -31,19 +36,22 @@
     <script src="./js/jquery.scroll-reveal.js"></script>
     
     <!-- 외부 css 연결 -->
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <!-- 미디어쿼리 css 연결 -->
-    <link rel="stylesheet" href="./css/mainmedia.css">
+    <!-- <link rel="stylesheet" href="./css/mainmedia.css"> -->
 
     <!-- 외부 JS 연결 -->
     <script src="./js/main-vue.js" type="module"></script>
 </head>
 <body>
-
+<div class="wrap">
+    
     <!-- 헤더 영역 시작 -->
     <header class="header">
         <h1 class="logo">
-            <a href="#"><img src="./img/logo.png" alt="로고이미지"></a>
+            <router-link to="main">
+                <img src="./img/logo.png" alt="로고이미지">
+            </router-link>
         </h1>
 
         <!-- pc 버전 -->
@@ -64,7 +72,11 @@
 
             <div class="rightmenu">
                 <ul class="r_menu">
-                    <li><a href="#">About</a></li>
+                    <li>
+                        <router-link to="about">
+                            About
+                        </router-link>
+                    </li>
                     <li><a href="#">Editorial</a></li>
                     <li><a href="#">Catalogues</a></li>
                     <li><a href="#">Press</a></li>
@@ -137,7 +149,9 @@
 
     <!-- 메인 영역 -->
     <main class="mcont">
-        <mcont-comp></mcont-comp>
+        <!-- 라우터 컨텐츠영역 -->
+        <router-view></router-view>
+        <!-- <mcont-comp></mcont-comp> -->
     </main>
 
     <!-- FOOTER 영역 시작 -->
@@ -207,6 +221,7 @@
         </div>
     </footer>
 
+</div>
 
 </body>
 </html>
