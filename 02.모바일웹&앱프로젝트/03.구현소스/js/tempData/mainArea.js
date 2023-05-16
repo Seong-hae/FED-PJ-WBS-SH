@@ -1,6 +1,124 @@
 // 메인영역 컨텐츠 템플릿
 
-const imData = {"main":`
+import mdata from '../data.js'
+
+
+
+
+const imData = {
+    
+    "top":`<div>
+        
+        <!-- 헤더 영역 시작 -->
+        <header class="header">
+            <h1 class="logo">
+                <router-link to="main">
+                    <img src="./img/logo.png" alt="로고이미지">
+                </router-link>
+            </h1>
+            <!-- pc 버전 -->
+            <nav class="pcmenu">
+                <div class="leftmenu">
+                    <ul class="l_menu">
+                        <li><a href="#">Lighting</a></li>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                    <!-- 모바일 햄버거버튼 -->
+                    <div class="ham">
+                        <div class="ham_top"></div>
+                        <div class="ham_bottom"></div>
+                    </div>
+                </div>
+                <div class="rightmenu">
+                    <ul class="r_menu">
+                        <li>
+                            <router-link to="about">
+                                About
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="editorial">
+                                Editorial
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="catalogues">
+                                Catalogues
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="press">
+                                Press
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="contact">
+                                Contact
+                            </router-link>
+                        </li>
+                    </ul>
+                    <div class="iconbox">
+                        <label for="searchbx" class="fa-solid fa-magnifying-glass sicon"></label>
+                        <i class="fa-solid fa-basket-shopping basket"></i>
+                    </div>
+                    <!-- 서치 박스 -->
+                    <!-- <div class="sbx">
+                        <input type="text" id="searchbx" class="searchbx">
+                    </div> -->
+                    <!-- 장바구니 박스 -->
+                    <!-- <div class="basketbox">
+        
+                    </div> -->
+                </div>
+            </nav>
+            <!-- 모바일 버전 -->
+            <nav class="momenu">
+                <button class="close">
+                    <div class="close_top"></div>
+                    <div class="close_bottom"></div>
+                </button>
+                <div class="menubox">
+                    <ul class="mbx_top">
+                        <li><a href="#">Lighting</a></li>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                    <ul class="mbx_bottom">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Editorial</a></li>
+                        <li><a href="#">Catalogues</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <ul class="snsbox">
+                    <li>
+                        <a href="https://www.facebook.com/verpancom/" target="
+                        _blank">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/verpancom/" target="
+                        _blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+        
+        
+        </header>
+        <!-- 헤더 영역 끝 -->
+        <div class="black"></div>
+        
+        
+    </div>`,
+    
+    "main":`
 
 <div>    
 
@@ -303,7 +421,7 @@ const imData = {"main":`
 
 </div>
 
-`, //////// main //////
+`, ///////////////////////////////////////////////////////////////////////////// main //////
 
 "about":`
     <div>
@@ -402,10 +520,226 @@ const imData = {"main":`
     </section>
 
 
-    
     </div>
-`,
+`, ///////////////////////////////////////////////////////////////////////////// about //////
+
+"editorial":`
+    <div>
+        <!-- 외부 css 연결 -->
+        <link rel="stylesheet" href="./css/editorial.css">
+
+        <main class="editorial">
+
+            <ul class="edit_box">
+                <li class="js-reveal" v-for="(v, i) in ${mdata.editorial.length}">
+                    <div class="imgbox">
+                        <img :src="'./img/editorial/ed'+v+'.jpg'" alt="editorial">
+                    </div>
+                    <h3>{{$store.state.mdata.editorial[i].title}}</h3>
+                    <p>{{$store.state.mdata.editorial[i].desc}}</p>
+                    <button class="btn">Read more</button>
+                </li>
+            </ul>
+
+        </main>
+    </div>
+`,/////////////////////////////////////// Editorial /////////////
+"catalogues":`
+<!-- 메인영역 시작 -->
+    <div>
+
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="./css/catalogues.css">
+
+    <main class="catalogues">
+
+        <ul class="cata_box">
+            <li>
+                <div class="imgbox">
+                    <img src="./img/catalogues01.webp" alt="catalogues01">
+                </div>
+                <h3>Brand Book</h3>
+                <p>Browse the latest Verpan brand book and get inspired by Verner Panton's amazing furniture and lighting designs.</p>
+                <button class="btn">Browse Catalogue</button>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <img src="./img/catalogues02.webp" alt="catalogues02">
+                </div>
+                <h3>Contract Catalogue</h3>
+                <p>For Professionals. Discover our complete range of contract certified furniture and lighting.</p>
+                <button class="btn">Browse Catalogue</button>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <img src="./img/catalogues03.webp" alt="catalogues03">
+                </div>
+                <h3>The WorkPlace. Redefined.</h3>
+                <p>Disrupting the office spave and re-imagining how and where we work. This our take on the modern office space.</p>
+                <button class="btn">Browse Catalogue</button>
+            </li>
+        </ul>
+
+    </main>
+    </div>
+`,/////////////////////////////////////// Catalogues /////////////
+"press":`
+    <div>
+
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="./css/press.css">
+
+    <!-- 메인영역 시작 -->
+    <main class="press">
+
+        <ul>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press1.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press2.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press3.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press4.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press5.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press6.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press7.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            <li class="press_list left js-reveal">
+                <div class="imgbox">
+                    <img src="./img/press/press8.jpg" alt="press">
+                </div>
+
+                <div class="txtbox">
+                    <h2 class="tit">
+                        <span>APRIL 19, 2022</span>
+                        NEW VP Globe Brushed Alu
+                    </h2>
+                    <p class="cont">
+                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                    </p>
+                    <button class="btn">Read more</button>
+                </div>
+            </li>
+            
+
+        </ul>
+
+    </main>
+        
+
+    </div>
+`,/////////////////////////////////////// press /////////////
+"contact":`
+    <div>
+    
+
+
+    </div>
+`,////////////////////////////////////// contact ///////////
 
 };
+
+
 
 export default imData;
