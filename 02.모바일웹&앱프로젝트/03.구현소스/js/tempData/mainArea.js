@@ -12,7 +12,7 @@ const imData = {
         <!-- 헤더 영역 시작 -->
         <header class="header">
             <h1 class="logo">
-                <router-link to="main">
+                <router-link to="/main">
                     <img src="./img/logo.png" alt="로고이미지">
                 </router-link>
             </h1>
@@ -20,9 +20,21 @@ const imData = {
             <nav class="pcmenu">
                 <div class="leftmenu">
                     <ul class="l_menu">
-                        <li><a href="#">Lighting</a></li>
-                        <li><a href="#">Furniture</a></li>
-                        <li><a href="#">Accessories</a></li>
+                        <li>
+                            <router-link :to="{name:'light',params:{cat:'Lighting'}}">
+                                Lighting
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'light',params:{cat:'Furniture'}}">
+                                Furniture
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'light',params:{cat:'Accessories'}}">
+                                Accessories
+                            </router-link>
+                        </li>
                     </ul>
                     <!-- 모바일 햄버거버튼 -->
                     <div class="ham">
@@ -136,7 +148,7 @@ const imData = {
         <div class="black"></div>
         
         
-    </div>`,
+    </div>`,///////////////////////////////// top area /////////////////
     
     "main":`
 
@@ -537,8 +549,8 @@ const imData = {
             <img src="./img/about_sofa.webp" alt="sofa image">
         </div>
 
-    </section>
 
+    </section>
 
     </div>
 `, ///////////////////////////////////////////////////////////////////////////// about //////
@@ -643,6 +655,55 @@ const imData = {
 
     </div>
 `,////////////////////////////////////// contact ///////////
+"lighting":`
+    <div>
+    
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="./css/category.css">
+
+    <!-- 2. 메인영역 시작 -->
+    <div id="cont">{{$route.params.cat}}
+        <main class="ibx cont">
+            <!-- 2-1. 카테고리 페이지 상단영역 -->
+            <header class="ctop">
+                <!-- 2-1-1. 서브타이틀 -->
+                <h2 class="stit">{{$route.params.cat}}</h2>
+                <!-- 2-1-2. 서브메뉴 -->
+                <nav class="lnb">
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Floor Lamps</a></li>
+                        <li><a href="#">Pendants</a></li>
+                        <li><a href="#">Table Lamps</a></li>
+                        <li><a href="#">Wall Lamps</a></li>
+                        <li><a href="#">XL Pendants</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 2-2. 카테고리 페이지 컨텐츠영역 -->
+            <section class="cate_grid">
+
+                <div class="cate_box">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide01.webp" alt="조명이미지" class="up">
+                        <img src="./img/globe_slide02.webp" alt="조명이미지" class="down">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+
+    </div>
+`,////////////////////////////////////// lighting ///////////
 
 };
 

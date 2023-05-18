@@ -76,74 +76,6 @@ function mainFn(){
 
 
 
-    /***************************************************
-        Slide 영역 - 갯수별 슬라이드 박스
-    ***************************************************/
-    // 3개일때
-    const swiper3 = new Swiper(".mySwiper3", {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        centeredSlides: false,
-        breakpoints: { //반응형 조건 속성
-            0: {
-                slidesPerView: 1,
-            },
-            500: {
-              slidesPerView: 1,
-            },
-            800: {
-                slidesPerView: 2,
-            },
-            1200: {
-              slidesPerView: 3,
-            }
-          },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {   // 버튼
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-    });
-    // 2개일때
-    const swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 2,
-        spaceBetween: 50,
-        centeredSlides: false,
-        breakpoints: { //반응형 조건 속성
-            0: {
-                slidesPerView: 1,
-            },
-            500: {
-              slidesPerView: 1,
-            },
-            800: {
-                slidesPerView: 2,
-            },
-            1400: {
-              slidesPerView: 2,
-            }
-          },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
-
-    // fadeout되는 슬라이드
-    const swiperFade = new Swiper('.swiper-container', {
-        // spaceBetween: 30,
-        effect: 'fade',
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: true,
-            
-      });
-
 
 
 
@@ -153,7 +85,7 @@ function mainFn(){
 
     
 
-
+    actSwiper();
 
     
 
@@ -205,4 +137,79 @@ function mainFn(){
     } ////////////////// mainFn ////////////////////////
 
 
-    export default mainFn;
+
+    
+
+    /***************************************************
+        Slide 영역 - 갯수별 슬라이드 박스
+    ***************************************************/
+    // 3개일때
+    function actSwiper(){
+
+        const swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            centeredSlides: false,
+            breakpoints: { //반응형 조건 속성
+                0: {
+                    slidesPerView: 1,
+                },
+                500: {
+                  slidesPerView: 1,
+                },
+                800: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                  slidesPerView: 3,
+                }
+              },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {   // 버튼
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+        });
+        // 2개일때
+        const swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            centeredSlides: false,
+            breakpoints: { //반응형 조건 속성
+                0: {
+                    slidesPerView: 1,
+                },
+                500: {
+                  slidesPerView: 1,
+                },
+                800: {
+                    slidesPerView: 2,
+                },
+                1400: {
+                  slidesPerView: 2,
+                }
+              },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    
+        // fadeout되는 슬라이드
+        const swiperFade = new Swiper('.swiper-container', {
+            // spaceBetween: 30,
+            effect: 'fade',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: true,
+                
+          });
+    } //////////// actSwiper //////////////////
+
+
+    export {actSwiper,mainFn};

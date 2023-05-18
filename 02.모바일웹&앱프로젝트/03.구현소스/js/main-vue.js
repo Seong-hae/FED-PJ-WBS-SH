@@ -1,4 +1,4 @@
-import mainFn from "./main-center.js";
+import  {actSwiper,mainFn} from "./main-center.js";
 import store from "./store.js";
 import router from "./router.js";
 import imData from "./tempData/mainArea.js";
@@ -7,6 +7,7 @@ import imData from "./tempData/mainArea.js";
 // 메인 함수실행
 $(()=>{///////// jQB //////////////
     mainFn();
+    actSwiper();
 
 }); //////////// jQB //////////////
 

@@ -17,6 +17,9 @@ const store = new Vuex.Store({
     mutations:{
         test(state,pm){
             state.test = pm.test
+        },
+        myFn(dt,pm){
+            console.log(22);
         }
     },
     // (3) 백엔관련 코딩 비동기처리 메서드 구역 : 

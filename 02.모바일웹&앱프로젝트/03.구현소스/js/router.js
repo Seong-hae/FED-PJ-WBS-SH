@@ -1,6 +1,6 @@
 // 뷰라우터 인스턴스 설정파일 - router.js
 import imData from "./tempData/mainArea.js";
-
+import  {actSwiper,mainFn} from "./main-center.js";
 
 // 라우터 템플릿 만들기
 let MainCont = {
@@ -21,6 +21,9 @@ let PressCont = {
 };
 let ContactCont = {
     template: imData.contact,
+};
+let Lighting = {
+    template: imData.lighting,
 };
 
 
@@ -58,8 +61,36 @@ const router = new VueRouter({
             path: "/contact",
             component: ContactCont,
         },
+        // contact 페이지
+        {
+            name: "light", 
+            path: "/lighting:cat",
+            component: Lighting,
+        },
+        // contact 페이지
+        
+        // lighting 페이지
         
     ],
+    
+    // 라우터 호출시 스크롤위치 최상단 자동이동코드!!!
+    // 새로 라우팅을 할때마다 이 스크롤 메서드가 호출되어 실행됨!
+    scrollBehavior (to, from, savedPosition) {
+
+        
+
+        setTimeout(()=>{
+            $.fn.scrollReveal(); 
+        },500);
+
+         actSwiper();
+      // 스크롤리빌 플러그인 적용호출!
+    
+        return { y: 0 }
+
+
+    }
+
 });
 
 // 내보내기
