@@ -22,9 +22,10 @@ let PressCont = {
 let ContactCont = {
     template: imData.contact,
 };
-let Lighting = {
-    template: imData.lighting,
+let Category = {
+    template: imData.category,
 };
+
 
 
 
@@ -63,9 +64,9 @@ const router = new VueRouter({
         },
         // contact 페이지
         {
-            name: "light", 
-            path: "/lighting:cat",
-            component: Lighting,
+            name: "category", 
+            path: "/:cat",
+            component: Category,
         },
         // lighting, Furniture, Accessories 페이지
         

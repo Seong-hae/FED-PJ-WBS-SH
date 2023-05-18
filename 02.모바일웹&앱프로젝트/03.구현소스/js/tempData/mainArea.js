@@ -1,6 +1,7 @@
 // 메인영역 컨텐츠 템플릿
 
 import mdata from '../data.js'
+import pro_data from '../data_product.js';
 
 
 
@@ -21,17 +22,17 @@ const imData = {
                 <div class="leftmenu">
                     <ul class="l_menu">
                         <li>
-                            <router-link :to="{name:'light',params:{cat:'Lighting'}}">
+                            <router-link :to="{name:'category',params:{cat:'Lighting'}}">
                                 Lighting
                             </router-link>
                         </li>
                         <li>
-                            <router-link :to="{name:'light',params:{cat:'Furniture'}}">
+                            <router-link :to="{name:'category',params:{cat:'Furniture'}}">
                                 Furniture
                             </router-link>
                         </li>
                         <li>
-                            <router-link :to="{name:'light',params:{cat:'Accessories'}}">
+                            <router-link :to="{name:'category',params:{cat:'Accessories'}}">
                                 Accessories
                             </router-link>
                         </li>
@@ -667,7 +668,7 @@ const imData = {
 
     </div>
 `,////////////////////////////////////// contact ///////////
-"lighting":`
+"category":`
     <div>
     
     <!-- 외부 css 연결 -->
@@ -683,19 +684,26 @@ const imData = {
                 <!-- 2-1-2. 서브메뉴 -->
                 <nav class="lnb">
                     <ul>
-                        <!-- 라우터 lnb -->
-                        <router-view></router-view>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Floor Lamps</a></li>
+                        <li><a href="#">Pendants</a></li>
+                        <li><a href="#">Table Lamps</a></li>
+                        <li><a href="#">Wall Lamps</a></li>
+                        <li><a href="#">XL Pendants</a></li>
+
+                        
+
                     </ul>
+
                     <!-- 
-                    <ul>
-                    <li v-for="(v,i) in $store[$route.params.cat].menu"><a href="#">{{v}}</a></li>
-                    <li><a href="#">All</a></li>
-                    <li><a href="#">Floor Lamps</a></li>
-                    <li><a href="#">Pendants</a></li>
-                    <li><a href="#">Table Lamps</a></li>
-                    <li><a href="#">Wall Lamps</a></li>
-                    <li><a href="#">XL Pendants</a></li>
-                    </ul>
+                        <li>
+                            <router-link :to="{name:'category',params:{cat:'Lighting'}}">
+                                Lighting
+                            </router-link>
+                        </li>
+                        <ul>
+                        <li v-for="(v,i) in $store[$route.params.cat].menu"><a href="#">{{v}}</a></li>
+                        </ul>
                      -->
                 </nav>
             </header>
