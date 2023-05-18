@@ -92,9 +92,21 @@ const imData = {
                 </button>
                 <div class="menubox">
                     <ul class="mbx_top">
-                        <li><a href="#">Lighting</a></li>
-                        <li><a href="#">Furniture</a></li>
-                        <li><a href="#">Accessories</a></li>
+                        <li>
+                        <router-link :to="{name:'light',params:{cat:'Lighting'}}">
+                            Lighting
+                        </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'light',params:{cat:'Furniture'}}">
+                                Furniture
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'light',params:{cat:'Accessories'}}">
+                                Accessories
+                            </router-link>
+                        </li>
                     </ul>
                     <ul class="mbx_bottom">
                         <li>
@@ -662,7 +674,7 @@ const imData = {
     <link rel="stylesheet" href="./css/category.css">
 
     <!-- 2. 메인영역 시작 -->
-    <div id="cont">{{$route.params.cat}}
+    <div id="cont">
         <main class="ibx cont">
             <!-- 2-1. 카테고리 페이지 상단영역 -->
             <header class="ctop">
@@ -671,13 +683,20 @@ const imData = {
                 <!-- 2-1-2. 서브메뉴 -->
                 <nav class="lnb">
                     <ul>
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Floor Lamps</a></li>
-                        <li><a href="#">Pendants</a></li>
-                        <li><a href="#">Table Lamps</a></li>
-                        <li><a href="#">Wall Lamps</a></li>
-                        <li><a href="#">XL Pendants</a></li>
+                        <!-- 라우터 lnb -->
+                        <router-view></router-view>
                     </ul>
+                    <!-- 
+                    <ul>
+                    <li v-for="(v,i) in $store[$route.params.cat].menu"><a href="#">{{v}}</a></li>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Floor Lamps</a></li>
+                    <li><a href="#">Pendants</a></li>
+                    <li><a href="#">Table Lamps</a></li>
+                    <li><a href="#">Wall Lamps</a></li>
+                    <li><a href="#">XL Pendants</a></li>
+                    </ul>
+                     -->
                 </nav>
             </header>
 

@@ -67,17 +67,13 @@ const router = new VueRouter({
             path: "/lighting:cat",
             component: Lighting,
         },
-        // contact 페이지
-        
-        // lighting 페이지
+        // lighting, Furniture, Accessories 페이지
         
     ],
     
     // 라우터 호출시 스크롤위치 최상단 자동이동코드!!!
     // 새로 라우팅을 할때마다 이 스크롤 메서드가 호출되어 실행됨!
     scrollBehavior (to, from, savedPosition) {
-
-        
 
         setTimeout(()=>{
             $.fn.scrollReveal(); 
