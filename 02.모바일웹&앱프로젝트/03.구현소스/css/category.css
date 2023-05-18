@@ -47,10 +47,21 @@
 }
 #cont .cate_box .imgbox{
     aspect-ratio: 1;
+    position: relative;
 }
 #cont .cate_box .imgbox img{
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity .2s;
+}
+#cont .cate_box .imgbox .down{
+    opacity: 0;
+}
+#cont .cate_box .imgbox:hover .down{
+    opacity: 1;
 }
 #cont .cate_box .txtbox{
     display: flex;

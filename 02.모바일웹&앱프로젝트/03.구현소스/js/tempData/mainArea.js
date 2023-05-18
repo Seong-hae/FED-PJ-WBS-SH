@@ -85,11 +85,31 @@ const imData = {
                         <li><a href="#">Accessories</a></li>
                     </ul>
                     <ul class="mbx_bottom">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Editorial</a></li>
-                        <li><a href="#">Catalogues</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li>
+                        <router-link to="about">
+                            About
+                        </router-link>
+                        </li>
+                        <li>
+                            <router-link to="editorial">
+                                Editorial
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="catalogues">
+                                Catalogues
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="press">
+                                Press
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="contact">
+                                Contact
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
         
@@ -593,136 +613,22 @@ const imData = {
     <main class="press">
 
         <ul>
-            <li class="press_list left js-reveal">
+            <li class="press_list left js-reveal" v-for="(v, i) in ${mdata.press.length}">
                 <div class="imgbox">
-                    <img src="./img/press/press1.jpg" alt="press">
+                    <img :src="'./img/press/press'+v+'.jpg'" alt="press">
                 </div>
 
                 <div class="txtbox">
                     <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
+                        <span>{{$store.state.mdata.press[i].date}}</span>
+                        {{$store.state.mdata.press[i].title}}
                     </h2>
                     <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
+                        {{$store.state.mdata.press[i].desc}}
                     </p>
                     <button class="btn">Read more</button>
                 </div>
             </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press2.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press3.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press4.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press5.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press6.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press7.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            <li class="press_list left js-reveal">
-                <div class="imgbox">
-                    <img src="./img/press/press8.jpg" alt="press">
-                </div>
-
-                <div class="txtbox">
-                    <h2 class="tit">
-                        <span>APRIL 19, 2022</span>
-                        NEW VP Globe Brushed Alu
-                    </h2>
-                    <p class="cont">
-                        NEW VP GLOBE. New metal finish and colour adds a brand new expression to the iconic VP Globe design.      DOWNLOAD PRESS KIT Conceived in 1969 by V...
-                    </p>
-                    <button class="btn">Read more</button>
-                </div>
-            </li>
-            
-
         </ul>
 
     </main>
