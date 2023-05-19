@@ -21,17 +21,17 @@ const imData = {
             <nav class="pcmenu">
                 <div class="leftmenu">
                     <ul class="l_menu">
-                        <li>
+                        <li @click="$store.state.subcat='floorlamps'">
                             <router-link :to="{name:'category',params:{cat:'Lighting'}}">
                                 Lighting
                             </router-link>
                         </li>
-                        <li>
+                        <li @click="$store.state.subcat='seating'">
                             <router-link :to="{name:'category',params:{cat:'Furniture'}}">
                                 Furniture
                             </router-link>
                         </li>
-                        <li>
+                        <li @click="$store.state.subcat='decor'">
                             <router-link :to="{name:'category',params:{cat:'Accessories'}}">
                                 Accessories
                             </router-link>
@@ -684,7 +684,9 @@ const imData = {
                 <!-- 2-1-2. 서브메뉴 -->
                 <nav class="lnb">
                     <ul>
-                        <li v-for="(v,i) in $store.state[$route.params.cat]"><a href="#">{{v}}</a></li>
+                        <li v-for="(v,i) in $store.state[$route.params.cat]">
+                            <a href="#" @click="$store.commit('chgSub',v)">{{v}}</a>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -692,10 +694,23 @@ const imData = {
             <!-- 2-2. 카테고리 페이지 컨텐츠영역 -->
             <section class="cate_grid">
 
-                <div class="cate_box">
+                <div class="cate_box" 
+                v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat].length">
                     <div class="imgbox">
-                        <img src="./img/globe_slide01.webp" alt="조명이미지" class="up">
-                        <img src="./img/globe_slide02.webp" alt="조명이미지" class="down">
+                        <img :src="
+                        './subimg/'+
+                        $route.params.cat.toLowerCase()+
+                        '/'+
+                        $store.state.subcat+
+                        '/front/item'+v+'.jpg'
+                        " alt="조명이미지" class="up">
+                        <img :src="
+                        './subimg/'+
+                        $route.params.cat.toLowerCase()+
+                        '/'+
+                        $store.state.subcat+
+                        '/back/item'+v+'.jpg'
+                        " alt="조명이미지" class="down">
                     </div>
                     <ul class="txtbox">
                         <li class="type">Lighting</li>

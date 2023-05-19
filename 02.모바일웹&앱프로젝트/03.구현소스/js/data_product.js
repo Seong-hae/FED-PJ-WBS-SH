@@ -1,6 +1,6 @@
 const pro_data = {
     lighting:{
-        floor:[
+        floorlamps:[
             {   
                 idx: 1,
                 title:`WIRE FLOOR LAMP`,

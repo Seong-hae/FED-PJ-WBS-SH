@@ -1,5 +1,6 @@
 // 뷰엑스 스토어 - 전역뷰데이터 저장소!
 import mdata from "./data.js";
+import pro_data from "./data_product.js";
 
 /////////////// 뷰엑스 스토어를 활용한 변수 셋팅하기 ////////////
 // 1. 뷰엑스 스토어 인스턴스를 생성한다!
@@ -8,6 +9,7 @@ const store = new Vuex.Store({
     // (1) 데이터 셋팅구역 :
     state:{
         mdata:mdata,
+        pdata:pro_data,
         test:"",
         li1:"",
         li2:"",
@@ -16,7 +18,8 @@ const store = new Vuex.Store({
         li5:"",
         Lighting:["All", "Floor Lamps", "Pendants", "Table Lamps", "Wall Lamps", "XL Pendants"],
         Furniture:["All", "Seating", "Sofa & Lounge", "Storage & Wardrobe", "Table",],
-        Accessories:["All", "Decor", "Rugs", "Throws",]
+        Accessories:["All", "Decor", "Rugs", "Throws",],
+        subcat:"floorlamps",
 
 
     }, /////// state 구역 ///////////
@@ -30,6 +33,9 @@ const store = new Vuex.Store({
         myFn(dt,pm){
            
         },
+        chgSub(dt,pm){
+            dt.subcat = pm.replace(" ","").toLowerCase();
+        }
 
     },
     // (3) 백엔관련 코딩 비동기처리 메서드 구역 : 
