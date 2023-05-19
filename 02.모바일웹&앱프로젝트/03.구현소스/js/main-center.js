@@ -74,6 +74,12 @@ function mainFn(){
     } /////////////////// videoView 함수 ///////////////
 
 
+    
+    // $(".cate_box").click(function(){
+    //     $(this).location.href=`./product.html`;
+    // });
+
+
 
 
 
