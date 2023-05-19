@@ -24,7 +24,7 @@ new Vue({
     mounted(){
         // 처음시작시 메인페이지 라우터실행!
         this.$router.push('/main');
-        
+        store.commit('myFn')
     },
     methods:{
         myFn(pm){

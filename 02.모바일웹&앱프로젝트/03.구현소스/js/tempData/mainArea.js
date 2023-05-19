@@ -684,27 +684,8 @@ const imData = {
                 <!-- 2-1-2. 서브메뉴 -->
                 <nav class="lnb">
                     <ul>
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Floor Lamps</a></li>
-                        <li><a href="#">Pendants</a></li>
-                        <li><a href="#">Table Lamps</a></li>
-                        <li><a href="#">Wall Lamps</a></li>
-                        <li><a href="#">XL Pendants</a></li>
-
-                        
-
+                        <li v-for="(v,i) in $store.state[$route.params.cat]"><a href="#">{{v}}</a></li>
                     </ul>
-
-                    <!-- 
-                        <li>
-                            <router-link :to="{name:'category',params:{cat:'Lighting'}}">
-                                Lighting
-                            </router-link>
-                        </li>
-                        <ul>
-                        <li v-for="(v,i) in $store[$route.params.cat].menu"><a href="#">{{v}}</a></li>
-                        </ul>
-                     -->
                 </nav>
             </header>
 

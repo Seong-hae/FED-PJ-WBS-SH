@@ -8,7 +8,16 @@ const store = new Vuex.Store({
     // (1) 데이터 셋팅구역 :
     state:{
         mdata:mdata,
-        test:""
+        test:"",
+        li1:"",
+        li2:"",
+        li3:"",
+        li4:"",
+        li5:"",
+        Lighting:["All", "Floor Lamps", "Pendants", "Table Lamps", "Wall Lamps", "XL Pendants"],
+        Furniture:["All", "Seating", "Sofa & Lounge", "Storage & Wardrobe", "Table",],
+        Accessories:["All", "Decor", "Rugs", "Throws",]
+
 
     }, /////// state 구역 ///////////
 
@@ -19,8 +28,9 @@ const store = new Vuex.Store({
             state.test = pm.test
         },
         myFn(dt,pm){
-            console.log(22);
-        }
+           
+        },
+
     },
     // (3) 백엔관련 코딩 비동기처리 메서드 구역 : 
     // 호출시 dispatch()사용
