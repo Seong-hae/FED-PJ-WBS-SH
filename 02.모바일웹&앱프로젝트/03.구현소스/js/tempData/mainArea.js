@@ -93,18 +93,18 @@ const imData = {
                 </button>
                 <div class="menubox">
                     <ul class="mbx_top">
-                        <li>
-                        <router-link :to="{name:'light',params:{cat:'Lighting'}}">
+                        <li @click="$store.state.subcat='floorlamps'">
+                        <router-link :to="{name:'category',params:{cat:'Lighting'}}">
                             Lighting
                         </router-link>
                         </li>
-                        <li>
-                            <router-link :to="{name:'light',params:{cat:'Furniture'}}">
+                        <li @click="$store.state.subcat='seating'">
+                            <router-link :to="{name:'category',params:{cat:'Furniture'}}">
                                 Furniture
                             </router-link>
                         </li>
-                        <li>
-                            <router-link :to="{name:'light',params:{cat:'Accessories'}}">
+                        <li @click="$store.state.subcat='decor'">
+                            <router-link :to="{name:'category',params:{cat:'Accessories'}}">
                                 Accessories
                             </router-link>
                         </li>
@@ -723,7 +723,7 @@ const imData = {
 
         </main>
     </div>
-    
+
 
     </div>
 `,////////////////////////////////////// lighting ///////////
