@@ -17,7 +17,7 @@ const store = new Vuex.Store({
         li4:"",
         li5:"",
         Lighting:["All", "Floor Lamps", "Pendants", "Table Lamps", "Wall Lamps", "XL Pendants"],
-        Furniture:["All", "Seating", "Sofa & Lounge", "Storage & Wardrobe", "Table",],
+        Furniture:["All", "Seating", "Sofa Lounge", "Storage Wardrobe", "Table",],
         Accessories:["All", "Decor", "Rugs", "Throws",],
         subcat:"floorlamps",
 

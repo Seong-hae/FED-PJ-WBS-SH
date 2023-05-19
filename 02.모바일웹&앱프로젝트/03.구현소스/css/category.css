@@ -48,6 +48,7 @@
 #cont .cate_box .imgbox{
     aspect-ratio: 1;
     position: relative;
+    overflow: hidden;
 }
 #cont .cate_box .imgbox img{
     width: 100%;

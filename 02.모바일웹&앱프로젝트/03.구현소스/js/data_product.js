@@ -81,7 +81,7 @@ const pro_data = {
                 price:`€220,00`,
             },
         ], //////////////////////// table ///////////
-        wall:[
+        walllamps:[
             {   
                 idx: 16,
                 title:`SPIEGEL`,
@@ -93,7 +93,7 @@ const pro_data = {
                 price:`€744,00`,
             },
         ], //////////////////// wall //////////////
-        xl:[
+        xlpendants:[
             {   
                 idx: 18,
                 title:`SPIRAL SP2 SILVER`,
@@ -129,7 +129,7 @@ const pro_data = {
                 price:`€2.125`,
             },
         ],//////////////// seating /////////
-        sofa:[
+        sofalounge:[
             {   
                 idx: 24,
                 title:`CLOVERLEAF SOFA IN & OUTDOOR`,
@@ -146,7 +146,7 @@ const pro_data = {
                 price:`€3.550,00`,
             },
         ],//////////////// sofa /////////
-        storage:[
+        storagewardrobe:[
             {   
                 idx: 27,
                 title:`BARBOY BLACK`,
