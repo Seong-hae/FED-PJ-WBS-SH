@@ -713,8 +713,8 @@ const imData = {
                         " alt="조명이미지" class="down">
                     </div>
                     <ul class="txtbox">
-                        <li class="type">Lighting</li>
-                        <li class="name">MOON WHITE</li>
+                        <li class="type">{{$route.params.cat}}</li>
+                        <li class="name" >MOON WHITE</li>
                         <li class="price">FROM €678,00</li>
                     </ul>
                 </div>
