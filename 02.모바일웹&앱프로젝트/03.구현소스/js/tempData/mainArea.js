@@ -1,14 +1,10 @@
 // 메인영역 컨텐츠 템플릿
 
-import mdata from '../data.js'
-import pro_data from '../data_product.js';
-
-
-
+import mdata from "../data.js";
+import pro_data from "../data_product.js";
 
 const imData = {
-    
-    "top":`<div>
+    top: `<div>
         
         <!-- 헤더 영역 시작 -->
         <header class="header">
@@ -161,9 +157,9 @@ const imData = {
         <div class="black"></div>
         
         
-    </div>`,///////////////////////////////// top area /////////////////
-    
-    "main":`
+    </div>`, ///////////////////////////////// top area /////////////////
+
+    main: `
 
 <div>    
 
@@ -468,7 +464,7 @@ const imData = {
 
 `, ///////////////////////////////////////////////////////////////////////////// main //////
 
-"about":`
+    about: `
     <div>
         
     <!-- 외부 css 연결 -->
@@ -568,7 +564,7 @@ const imData = {
     </div>
 `, ///////////////////////////////////////////////////////////////////////////// about //////
 
-"editorial":`
+    editorial: `
     <div>
         <!-- 외부 css 연결 -->
         <link rel="stylesheet" href="./css/editorial.css">
@@ -588,8 +584,8 @@ const imData = {
 
         </main>
     </div>
-`,/////////////////////////////////////// Editorial /////////////
-"catalogues":`
+`, /////////////////////////////////////// Editorial /////////////
+    catalogues: `
 <!-- 메인영역 시작 -->
     <div>
 
@@ -627,8 +623,8 @@ const imData = {
 
     </main>
     </div>
-`,/////////////////////////////////////// Catalogues /////////////
-"press":`
+`, /////////////////////////////////////// Catalogues /////////////
+    press: `
     <div>
 
     <!-- 외부 css 연결 -->
@@ -660,15 +656,15 @@ const imData = {
         
 
     </div>
-`,/////////////////////////////////////// press /////////////
-"contact":`
+`, /////////////////////////////////////// press /////////////
+    contact: `
     <div>
     
 
 
     </div>
-`,////////////////////////////////////// contact ///////////
-"category":`
+`, ////////////////////////////////////// contact ///////////
+    category: `
     <div>
     
     <!-- 외부 css 연결 -->
@@ -695,7 +691,8 @@ const imData = {
             <section class="cate_grid">
 
                 <div class="cate_box" 
-                v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat].length">
+                v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat].length"
+                v-if="$store.state.subcat!=='all'">
                     <div class="imgbox">
                         <img :src="
                         './subimg/'+
@@ -714,10 +711,39 @@ const imData = {
                     </div>
                     <ul class="txtbox">
                         <li class="type">{{$route.params.cat}}</li>
-                        <li class="name" >MOON WHITE</li>
-                        <li class="price">FROM €678,00</li>
+                        <li class="name" >{{$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].title}}</li>
+                        <li class="price">FROM {{$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].price}}</li>
                     </ul>
                 </div>
+                
+                <div class="cate_box" 
+                v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()]['all'].length" 
+                v-if="$store.state.subcat==='all'">{{v}}
+                    <div class="imgbox">
+                        <img :src="
+                        './subimg/'+
+                        $route.params.cat.toLowerCase()+
+                        '/'+
+                        $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].mid+
+                        '/front/item'+$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].idx+'.jpg'
+                        " alt="조명이미지" class="up">
+                        <img :src="
+                        './subimg/'+
+                        $route.params.cat.toLowerCase()+
+                        '/'+
+                        $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].mid+
+                        '/back/item'+$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].idx+'.jpg'
+                        " alt="조명이미지" class="down">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">{{$route.params.cat}}</li>
+                        <li class="name" >{{$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].title}}</li>
+                        <li class="price">FROM {{$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].price}}</li>
+                    </ul>
+                </div>
+
+
+               
 
             </section>
 
@@ -726,10 +752,7 @@ const imData = {
 
 
     </div>
-`,////////////////////////////////////// lighting ///////////
-
+`, ////////////////////////////////////// lighting ///////////
 };
-
-
 
 export default imData;

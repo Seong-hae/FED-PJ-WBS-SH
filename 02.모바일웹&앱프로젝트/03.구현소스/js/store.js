@@ -35,6 +35,7 @@ const store = new Vuex.Store({
         },
         chgSub(dt,pm){
             dt.subcat = pm.replace(" ","").toLowerCase();
+            console.log("서브메뉴:",dt.subcat);
         }
 
     },
