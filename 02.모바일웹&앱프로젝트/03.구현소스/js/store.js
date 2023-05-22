@@ -19,7 +19,7 @@ const store = new Vuex.Store({
         Lighting:["All", "Floor Lamps", "Pendants", "Table Lamps", "Wall Lamps", "XL Pendants"],
         Furniture:["All", "Seating", "Sofa Lounge", "Storage Wardrobe", "Table",],
         Accessories:["All", "Decor", "Rugs", "Throws",],
-        subcat:"floorlamps",
+        subcat:"all",
 
 
     }, /////// state 구역 ///////////

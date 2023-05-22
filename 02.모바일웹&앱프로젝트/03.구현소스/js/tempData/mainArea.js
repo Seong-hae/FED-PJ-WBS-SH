@@ -17,17 +17,17 @@ const imData = {
             <nav class="pcmenu">
                 <div class="leftmenu">
                     <ul class="l_menu">
-                        <li @click="$store.state.subcat='floorlamps'">
+                        <li>
                             <router-link :to="{name:'category',params:{cat:'Lighting'}}">
                                 Lighting
                             </router-link>
                         </li>
-                        <li @click="$store.state.subcat='seating'">
+                        <li>
                             <router-link :to="{name:'category',params:{cat:'Furniture'}}">
                                 Furniture
                             </router-link>
                         </li>
-                        <li @click="$store.state.subcat='decor'">
+                        <li>
                             <router-link :to="{name:'category',params:{cat:'Accessories'}}">
                                 Accessories
                             </router-link>
@@ -89,17 +89,17 @@ const imData = {
                 </button>
                 <div class="menubox">
                     <ul class="mbx_top">
-                        <li @click="$store.state.subcat='floorlamps'">
+                        <li>
                         <router-link :to="{name:'category',params:{cat:'Lighting'}}">
                             Lighting
                         </router-link>
                         </li>
-                        <li @click="$store.state.subcat='seating'">
+                        <li>
                             <router-link :to="{name:'category',params:{cat:'Furniture'}}">
                                 Furniture
                             </router-link>
                         </li>
-                        <li @click="$store.state.subcat='decor'">
+                        <li>
                             <router-link :to="{name:'category',params:{cat:'Accessories'}}">
                                 Accessories
                             </router-link>
@@ -690,6 +690,7 @@ const imData = {
             <!-- 2-2. 카테고리 페이지 컨텐츠영역 -->
             <section class="cate_grid">
 
+                <!-- all이 아닐때 영역 -->
                 <div class="cate_box" 
                 v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat].length"
                 v-if="$store.state.subcat!=='all'">
@@ -716,9 +717,10 @@ const imData = {
                     </ul>
                 </div>
                 
+                <!-- all이 맞을때 영역 -->
                 <div class="cate_box" 
                 v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()]['all'].length" 
-                v-if="$store.state.subcat==='all'">{{v}}
+                v-if="$store.state.subcat==='all'">
                     <div class="imgbox">
                         <img :src="
                         './subimg/'+
