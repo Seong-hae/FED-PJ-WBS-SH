@@ -25,6 +25,9 @@ let ContactCont = {
 let Category = {
     template: imData.category,
 };
+let Product = {
+    template: imData.product,
+};
 
 
 
@@ -69,6 +72,12 @@ const router = new VueRouter({
             component: Category,
         },
         // lighting, Furniture, Accessories 페이지
+        {
+            name: "product",
+            path: "/:pro",
+            component: Product,
+        },
+        // Product 페이지
         
     ],
     

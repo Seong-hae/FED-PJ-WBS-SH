@@ -81,11 +81,6 @@ function mainFn(){
 
 
 
-
-
-
-
-
       // 스크롤리빌 플러그인 적용호출!
       $.fn.scrollReveal(); 
 
@@ -215,6 +210,32 @@ function mainFn(){
             autoplay: true,
                 
           });
+
+
+        /****************************************** 
+            기능: 상세상품 세부 이미지 슬라이드
+        ******************************************/
+        const swiperPro1 = new Swiper(".product_slide1", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        const swiperPro2 = new Swiper(".product_slide2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+
+
     } //////////// actSwiper //////////////////
 
 

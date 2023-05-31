@@ -6,18 +6,62 @@ const pro_data = {
                 idx: 1,
                 title: `WIRE FLOOR LAMP`,
                 price: `€946,00`,
+                etc: {
+                    year: `VERNER PANTON, 1972`,
+                    color: ``,
+                    material: `Frame is made from chrome plated steel <br />
+                    Shade is made from white plastic`,
+                    lightsource: `E27 (230V)
+                    E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 250 cm (98.4”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Ø40 cm (15.8”) <br />
+                    H: 120 cm (47.3”)`,
+                    boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
+                    weight: `8,3 Kg.`,
+                },
             },
             {
                 mid: "floorlamps",
                 idx: 2,
                 title: `FUN 1 STM BRASS`,
                 price: `€1.488,00`,
+                etc: {
+                    year: `VERNER PANTON, 1964`,
+                    color: `BRASS`,
+                    material: `Seashell discs
+                    Brass plated metal frame
+                    Stainless steel rings`,
+                    lightsource: `E27 (230V) 
+                    E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 220 cm (86.6”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `H: 120 cm (47.2”)
+                    Ø40 cm (15.8”)`,
+                    boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
+                    weight: `10 kg`,
+                }
             },
             {
                 mid: "floorlamps",
                 idx: 3,
                 title: `FUN 1 STM`,
                 price: `€1.285,00`,
+                etc: {
+                    year: `VERNER PANTON, 1964`,
+                    color: ``,
+                    material: `Seashell discs
+                    Brass plated metal frame
+                    Stainless steel rings`,
+                    lightsource: `E27 (230V) 
+                    E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 220 cm (86.6”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `H: 120 cm (47.2”)
+                    Ø40 cm (15.8”)`,
+                    boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
+                    weight: `10 kg`,
+                },
             }, ///////////////////////////////// floorlamps
             {
                 mid: "pendants",
@@ -120,21 +164,6 @@ const pro_data = {
                 idx: 3,
                 title: `FUN 7DM`,
                 price: `€9.437,00`,
-                etc: {
-                    year: `VERNER PANTON, 1972`,
-                    color: ``,
-
-                    material: `Frame is made from chrome plated steel <br />
-                Shade is made from white plastic`,
-                    lightsource: `E27 (230V)
-                E26 (120V) max. 60W`,
-                    cord: `Transparent with on/off switch. 250 cm (98.4”)`,
-                    certifications: `CE, UL.`,
-                    productdimensions: `Ø40 cm (15.8”) <br />
-                H: 120 cm (47.3”)`,
-                    boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
-                    weight: `8,3 Kg.`,
-                },
             }, ///////////////////////////////// xlpendants
         ],
         floorlamps: [
@@ -145,15 +174,14 @@ const pro_data = {
                 etc: {
                     year: `VERNER PANTON, 1972`,
                     color: ``,
-
                     material: `Frame is made from chrome plated steel <br />
-                Shade is made from white plastic`,
+                    Shade is made from white plastic`,
                     lightsource: `E27 (230V)
-                E26 (120V) max. 60W`,
+                    E26 (120V) max. 60W`,
                     cord: `Transparent with on/off switch. 250 cm (98.4”)`,
                     certifications: `CE, UL.`,
                     productdimensions: `Ø40 cm (15.8”) <br />
-                H: 120 cm (47.3”)`,
+                    H: 120 cm (47.3”)`,
                     boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
                     weight: `8,3 Kg.`,
                 },
@@ -162,37 +190,42 @@ const pro_data = {
                 idx: 2,
                 title: `FUN 1 STM BRASS`,
                 price: `€1.488,00`,
-                year: `VERNER PANTON, 1964`,
-                color: `BRASS`,
-                material: `Seashell discs
-                Brass plated metal frame
-                Stainless steel rings`,
-                lightsource: `E27 (230V) 
-                E26 (120V) max. 60W`,
-                cord: `Transparent with on/off switch. 220 cm (86.6”)`,
-                certifications: `CE, UL.`,
-                productdimensions: `H: 120 cm (47.2”)
-                Ø40 cm (15.8”)`,
-                boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
-                weight: `10 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1964`,
+                    color: `BRASS`,
+                    material: `Seashell discs
+                    Brass plated metal frame
+                    Stainless steel rings`,
+                    lightsource: `E27 (230V) 
+                    E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 220 cm (86.6”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `H: 120 cm (47.2”)
+                    Ø40 cm (15.8”)`,
+                    boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
+                    weight: `10 kg`,
+                }
+                    
             },
             {
                 idx: 3,
                 title: `FUN 1 STM`,
                 price: `€1.285,00`,
-                year: `VERNER PANTON, 1964`,
-                color: ``,
-                material: `Seashell discs
-                Brass plated metal frame
-                Stainless steel rings`,
-                lightsource: `E27 (230V) 
-                E26 (120V) max. 60W`,
-                cord: `Transparent with on/off switch. 220 cm (86.6”)`,
-                certifications: `CE, UL.`,
-                productdimensions: `H: 120 cm (47.2”)
-                Ø40 cm (15.8”)`,
-                boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
-                weight: `10 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1964`,
+                    color: ``,
+                    material: `Seashell discs
+                    Brass plated metal frame
+                    Stainless steel rings`,
+                    lightsource: `E27 (230V) 
+                    E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 220 cm (86.6”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `H: 120 cm (47.2”)
+                    Ø40 cm (15.8”)`,
+                    boxdimensions: `48x50x131 cm (18.9x19.7x51.6”)`,
+                    weight: `10 kg`,
+                },
             },
         ], ////////////// floor
         pendants: [
@@ -200,100 +233,114 @@ const pro_data = {
                 idx: 4,
                 title: `MOON WHITE`,
                 price: `€678,00`,
-                year: `VERNER PANTON, 1960`,
-                color: `WHITE`,
-                material: `Lamellae and canopy is made from lacquered metal.`,
-                lightsource: `E27 (230V)
-                E26 (120V) max. 60W`,
-                cord: `250 cm (98.4”) White fabric.`,
-                certifications: `CE, UL.`,
-                productdimensions: `Small: Ø34 cm (13.4”)
-                Large: Ø44.5 cm (17.5”)`,
-                boxdimensions: `Small: 42x51x11 cm (16.5x20x4.3”)
-                Large: 56x55x10 cm (22x21.7x3.9”)`,
-                weight: `Small: 4,5 kg.
-                Large: 8 kg.`,
+                etc: {
+                    year: `VERNER PANTON, 1960`,
+                    color: `WHITE`,
+                    material: `Lamellae and canopy is made from lacquered metal.`,
+                    lightsource: `E27 (230V)
+                    E26 (120V) max. 60W`,
+                    cord: `250 cm (98.4”) White fabric.`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Small: Ø34 cm (13.4”)
+                    Large: Ø44.5 cm (17.5”)`,
+                    boxdimensions: `Small: 42x51x11 cm (16.5x20x4.3”)
+                    Large: 56x55x10 cm (22x21.7x3.9”)`,
+                    weight: `Small: 4,5 kg.
+                    Large: 8 kg.`,
+                },
             },
             {
                 idx: 5,
                 title: `HIVE YELLOW`,
                 price: `€946,00`,
-                year: `VERNER PANTON`,
-                color: `YELLOW`,
-                material: `Aluminium shades
-                Polished aluminium (alu) or powder coated finish (yellow)
-                Ceiling canopy in same colour/finish as lamp.`,
-                lightsource: `E27 (230V) max. 60W`,
-                cord: `300 cm (118”) Black fabric. `,
-                certifications: `CE, UL.`,
-                productdimensions: `Ø: 48 cm (19”)
-                H: 27 cm (10.6”)`,
-                boxdimensions: `54x53,5x36,5 cm (21x21x14”)`,
-                weight: `4,7 kg.`,
+                etc: {
+                    year: `VERNER PANTON`,
+                    color: `YELLOW`,
+                    material: `Aluminium shades
+                    Polished aluminium (alu) or powder coated finish (yellow)
+                    Ceiling canopy in same colour/finish as lamp.`,
+                    lightsource: `E27 (230V) max. 60W`,
+                    cord: `300 cm (118”) Black fabric. `,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Ø: 48 cm (19”)
+                    H: 27 cm (10.6”)`,
+                    boxdimensions: `54x53,5x36,5 cm (21x21x14”)`,
+                    weight: `4,7 kg.`,
+                },
             },
             {
                 idx: 6,
                 title: `SPIRAL SP01 SILVER`,
                 price: `€1.690,00`,
-                year: `VERNER PANTON, 1969`,
-                color: `SILVER`,
-                material: `Cast ABS plastic spirals
-                Stainless steel rings
-                Chrome plated metal canopy
-                Transparent plastic cord`,
-                lightsource: `E27 (230V) 
-                E26 (120V) max. 60W`,
-                cord: `Black fabric. 400 cm (157.5”)`,
-                certifications: `CE, UL.`,
-                productdimensions: `Ø45 cm (17.7”)
-                H: 65 cm (23.6”)`,
-                boxdimensions: `53x70x23 cm (20.9x27.5x9”)`,
-                weight: `7 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1969`,
+                    color: `SILVER`,
+                    material: `Cast ABS plastic spirals
+                    Stainless steel rings
+                    Chrome plated metal canopy
+                    Transparent plastic cord`,
+                    lightsource: `E27 (230V) 
+                    E26 (120V) max. 60W`,
+                    cord: `Black fabric. 400 cm (157.5”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Ø45 cm (17.7”)
+                    H: 65 cm (23.6”)`,
+                    boxdimensions: `53x70x23 cm (20.9x27.5x9”)`,
+                    weight: `7 kg`,
+                },
             },
             {
                 idx: 7,
                 title: `PANTOP Ø23 PENDANT CLASSIC BLUE`,
                 price: `€149,00`,
-                year: `VERNER PANTON, 1980`,
-                color: `CLASSIC BLUE`,
-                material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
-                lightsource: `E14 (220V) max. 25W`,
-                cord: `250 cm (98”) Black fabric cord.`,
-                certifications: `CE.`,
-                productdimensions: `H: 16,6 cm (6.5”)
-                Ø23 cm (9”)`,
-                boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
-                weight: `1.25 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1980`,
+                    color: `CLASSIC BLUE`,
+                    material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
+                    lightsource: `E14 (220V) max. 25W`,
+                    cord: `250 cm (98”) Black fabric cord.`,
+                    certifications: `CE.`,
+                    productdimensions: `H: 16,6 cm (6.5”)
+                    Ø23 cm (9”)`,
+                    boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
+                    weight: `1.25 kg`,
+                },
             },
             {
                 idx: 8,
                 title: `PANTOP Ø23 PENDANT CLASSIC GREEN`,
                 price: `€149,00`,
-                year: `VERNER PANTON, 1980`,
-                color: `DARK GREEN`,
-                material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
-                lightsource: `E14 (220V) max. 25W`,
-                cord: `250 cm (98”) Black fabric cord.`,
-                certifications: `CE.`,
-                productdimensions: `H: 16,6 cm (6.5”)
-                Ø23 cm (9”)`,
-                boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
-                weight: `1.25 kg`,
+                etc: {
+                    
+                    year: `VERNER PANTON, 1980`,
+                    color: `DARK GREEN`,
+                    material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
+                    lightsource: `E14 (220V) max. 25W`,
+                    cord: `250 cm (98”) Black fabric cord.`,
+                    certifications: `CE.`,
+                    productdimensions: `H: 16,6 cm (6.5”)
+                    Ø23 cm (9”)`,
+                    boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
+                    weight: `1.25 kg`,
+                },
             },
             {
                 idx: 9,
                 title: `PANTOP Ø23 PENDANT MATTE METALLIC`,
                 price: `€220,00`,
-                year: `VERNER PANTON, 1980`,
-                color: `MATTE METALLIC`,
-                material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
-                lightsource: `E14 (220V) max. 25W`,
-                cord: `250 cm (98”) Black fabric cord.`,
-                certifications: `CE.`,
-                productdimensions: `H: 16,6 cm (6.5”)
-                Ø23 cm (9”)`,
-                boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
-                weight: `1.25 kg`,
+                etc: {
+                    
+                    year: `VERNER PANTON, 1980`,
+                    color: `MATTE METALLIC`,
+                    material: `Shade is made of metal. Canopy is made of PVC (black/white).`,
+                    lightsource: `E14 (220V) max. 25W`,
+                    cord: `250 cm (98”) Black fabric cord.`,
+                    certifications: `CE.`,
+                    productdimensions: `H: 16,6 cm (6.5”)
+                    Ø23 cm (9”)`,
+                    boxdimensions: `31x29x26 cm (12.2x11.4x10.2”)`,
+                    weight: `1.25 kg`,
+                },
             },
         ], ////////////////// PENDANTS ///////////
         tablelamps: [
@@ -301,31 +348,35 @@ const pro_data = {
                 idx: 10,
                 title: `PANTOP Ø23 TABLE LAMP DARK GREEN`,
                 price: `€220,00`,
-                year: `VERNER PANTON, 1980`,
-                color: `DARK GREEN`,
-                material: `Base, stem, and shade is made of metal. Glossy versions have a chrome top bolt.`,
-                lightsource: `E14 (220V) max. 25W`,
-                cord: `250 cm (98”) Clear PVC with on/off switch.`,
-                certifications: `CE.`,
-                productdimensions: `H: 38 cm (14.9”)
-                Ø23 cm (9”)`,
-                boxdimensions: `32x30x22 cm (12.6x11.8x8.6”)`,
-                weight: `2.3 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1980`,
+                    color: `DARK GREEN`,
+                    material: `Base, stem, and shade is made of metal. Glossy versions have a chrome top bolt.`,
+                    lightsource: `E14 (220V) max. 25W`,
+                    cord: `250 cm (98”) Clear PVC with on/off switch.`,
+                    certifications: `CE.`,
+                    productdimensions: `H: 38 cm (14.9”)
+                    Ø23 cm (9”)`,
+                    boxdimensions: `32x30x22 cm (12.6x11.8x8.6”)`,
+                    weight: `2.3 kg`,
+                },
             },
             {
                 idx: 11,
                 title: `PANTOP PORTABLE WARM YELLOW`,
                 price: `€149,00`,
-                year: `VERNER PANTON, 1980`,
-                color: `WARM YELLOW`,
-                material: `Base, stem, and shade is made of metal. Glossy versions have a chrome top bolt.`,
-                lightsource: `E14 (220V) max. 25W`,
-                cord: `250 cm (98”) Clear PVC with on/off switch.`,
-                certifications: `CE.`,
-                productdimensions: `H: 38 cm (14.9”)
-                Ø23 cm (9”)`,
-                boxdimensions: `32x30x22 cm (12.6x11.8x8.6”)`,
-                weight: `2.3 kg`,
+                etc: {
+                    year: `VERNER PANTON, 1980`,
+                    color: `WARM YELLOW`,
+                    material: `Base, stem, and shade is made of metal. Glossy versions have a chrome top bolt.`,
+                    lightsource: `E14 (220V) max. 25W`,
+                    cord: `250 cm (98”) Clear PVC with on/off switch.`,
+                    certifications: `CE.`,
+                    productdimensions: `H: 38 cm (14.9”)
+                    Ø23 cm (9”)`,
+                    boxdimensions: `32x30x22 cm (12.6x11.8x8.6”)`,
+                    weight: `2.3 kg`,
+                },
             },
             {
                 idx: 12,
