@@ -21,10 +21,13 @@ new Vue({
     el:".wrap",
     store, // 스토어등록
     router, // 라우터등록
-    mounted(){
+    created(){
         // 처음시작시 메인페이지 라우터실행!
         this.$router.push('/main');
         store.commit('myFn')
+
+    },
+    mounted(){
     },
     methods:{
         myFn(pm){

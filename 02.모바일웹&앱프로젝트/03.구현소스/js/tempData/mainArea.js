@@ -163,9 +163,6 @@ const imData = {
 
 <div>    
 
-<!-- 외부 css 연결 -->
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="./css/mainmedia.css">
 
 <!-- 1. 메인영상 영역 시작 -->
 <section class="main">

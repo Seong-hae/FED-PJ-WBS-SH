@@ -2,144 +2,161 @@ const pro_data = {
     lighting: {
         all: [
             {
-                mid:"floorlamps",
+                mid: "floorlamps",
                 idx: 1,
                 title: `WIRE FLOOR LAMP`,
                 price: `€946,00`,
             },
             {
-                mid:"floorlamps",
+                mid: "floorlamps",
                 idx: 2,
                 title: `FUN 1 STM BRASS`,
                 price: `€1.488,00`,
             },
             {
-                mid:"floorlamps",
+                mid: "floorlamps",
                 idx: 3,
                 title: `FUN 1 STM`,
                 price: `€1.285,00`,
             }, ///////////////////////////////// floorlamps
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 1,
                 title: `MOON WHITE`,
                 price: `€678,00`,
             },
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 2,
                 title: `HIVE YELLOW`,
                 price: `€946,00`,
             },
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 3,
                 title: `SPIRAL SP01 SILVER`,
                 price: `€1.690,00`,
             },
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 4,
                 title: `PANTOP Ø23 PENDANT CLASSIC BLUE`,
                 price: `€149,00`,
             },
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 5,
                 title: `PANTOP Ø23 PENDANT CLASSIC GREEN`,
                 price: `€149,00`,
             },
             {
-                mid:"pendants",
+                mid: "pendants",
                 idx: 6,
                 title: `PANTOP Ø23 PENDANT MATTE METALLIC`,
                 price: `€220,00`,
             }, ///////////////////////////////// pendants
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 1,
                 title: `PANTOP Ø23 TABLE LAMP DARK GREEN`,
                 price: `€220,00`,
             },
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 2,
                 title: `PANTOP PORTABLE WARM YELLOW`,
                 price: `€149,00`,
             },
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 3,
                 title: `PANTOP PORTABLE MATT WHITE`,
                 price: `€149,00`,
             },
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 4,
                 title: `PANTOP PORTABLE MATT CLASSIC BLUE`,
                 price: `€149,00`,
             },
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 5,
                 title: `PANTOP PORTABLE MATT BLACK`,
                 price: `€149,00`,
             },
             {
-                mid:"tablelamps",
+                mid: "tablelamps",
                 idx: 6,
                 title: `PANTOP PORTABLE LIGHT BLUE`,
                 price: `€220,00`,
             }, ///////////////////////////////// tablelamps
             {
-                mid:"walllamps",
+                mid: "walllamps",
                 idx: 1,
                 title: `SPIEGEL`,
                 price: `€1.618,00`,
             },
             {
-                mid:"walllamps",
+                mid: "walllamps",
                 idx: 2,
                 title: `FUN 1WM`,
                 price: `€744,00`,
             }, ///////////////////////////////// walllamps
             {
-                mid:"xlpendants",
+                mid: "xlpendants",
                 idx: 1,
                 title: `SPIRAL SP2 SILVER`,
                 price: `€3.600,00`,
             },
             {
-                mid:"xlpendants",
+                mid: "xlpendants",
                 idx: 2,
                 title: `FUN 8DM`,
                 price: `€18.867,00`,
             },
             {
-                mid:"xlpendants",
+                mid: "xlpendants",
                 idx: 3,
                 title: `FUN 7DM`,
                 price: `€9.437,00`,
-            },///////////////////////////////// xlpendants
+                etc: {
+                    year: `VERNER PANTON, 1972`,
+                    color: ``,
+
+                    material: `Frame is made from chrome plated steel <br />
+                Shade is made from white plastic`,
+                    lightsource: `E27 (230V)
+                E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 250 cm (98.4”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Ø40 cm (15.8”) <br />
+                H: 120 cm (47.3”)`,
+                    boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
+                    weight: `8,3 Kg.`,
+                },
+            }, ///////////////////////////////// xlpendants
         ],
         floorlamps: [
             {
                 idx: 1,
                 title: `WIRE FLOOR LAMP`,
                 price: `€946,00`,
-                year: `VERNER PANTON, 1972`,
-                color: ``,
-                material: `Frame is made from chrome plated steel <br />
-                Shade is made from white plastic`,
-                lightsource: `E27 (230V)
-                E26 (120V) max. 60W`,
-                cord: `Transparent with on/off switch. 250 cm (98.4”)`,
-                certifications: `CE, UL.`,
-                productdimensions: `Ø40 cm (15.8”) <br />
-                H: 120 cm (47.3”)`,
-                boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
-                weight: `8,3 Kg.`,
+                etc: {
+                    year: `VERNER PANTON, 1972`,
+                    color: ``,
 
+                    material: `Frame is made from chrome plated steel <br />
+                Shade is made from white plastic`,
+                    lightsource: `E27 (230V)
+                E26 (120V) max. 60W`,
+                    cord: `Transparent with on/off switch. 250 cm (98.4”)`,
+                    certifications: `CE, UL.`,
+                    productdimensions: `Ø40 cm (15.8”) <br />
+                H: 120 cm (47.3”)`,
+                    boxdimensions: `132x48x48 cm (52x18,9x18,9’’)`,
+                    weight: `8,3 Kg.`,
+                },
             },
             {
                 idx: 2,
@@ -473,7 +490,7 @@ const pro_data = {
                 Box 2: 36 Kg.`,
             },
         ], //////////////////// xl //////////////
-    },////////////////////////////////////////////////////////////////////////////////// lighting
+    }, ////////////////////////////////////////////////////////////////////////////////// lighting
     furniture: {
         all: [
             {
@@ -531,13 +548,13 @@ const pro_data = {
                 price: `€1.012,00`,
             }, //////////////////////////////////// storagewardrobe
             {
-                mid : "table",
+                mid: "table",
                 idx: 1,
                 title: `PANTON MOVE BLACK`,
                 price: `€2.160,00`,
             },
             {
-                mid : "table",
+                mid: "table",
                 idx: 2,
                 title: `PANTON MOVE WHITE`,
                 price: `€2.160,00`,
@@ -606,7 +623,7 @@ const pro_data = {
                 price: `€2.160,00`,
             },
         ], //////////////// table /////////
-    },/////////////////////////////////////////////////////////////// furniture
+    }, /////////////////////////////////////////////////////////////// furniture
     accessories: {
         all: [
             {
@@ -620,7 +637,7 @@ const pro_data = {
                 idx: 2,
                 title: `MIRROR SCULPTURES 4 PYRAMIDS`,
                 price: `€286,00`,
-            },///////////////////////////////// decor
+            }, ///////////////////////////////// decor
             {
                 mid: "rugs",
                 idx: 1,
@@ -644,8 +661,8 @@ const pro_data = {
                 idx: 2,
                 title: `MIRROR THROW SAND`,
                 price: `€274,00`,
-            },//////////////////////////////////// throws
-        ], ///////////////////////////////////////// all 
+            }, //////////////////////////////////// throws
+        ], ///////////////////////////////////////// all
         decor: [
             {
                 idx: 32,
