@@ -376,29 +376,38 @@ const pro_data = {
                 idx: 16,
                 title: `SPIEGEL`,
                 price: `€1.618,00`,
-                year: ``,
+                year: `VERNER PANTON, 1969`,
                 color: ``,
-                material: ``,
-                lightsource: ``,
-                cord: ``,
-                certifications: ``,
-                productdimensions: ``,
-                boxdimensions: ``,
-                weight: ``,
+                material: `Brushed aluminum`,
+                lightsource: `E14 (220V)
+                E12 (110V) max. 60W`,
+                cord: `Black fabric cord with on/off switch. 250 cm (98.4”)`,
+                certifications: `CE, UL.`,
+                productdimensions: `W: 62,5 cm (24.6”)
+                H: 62,5 cm (24.6”)
+                D: 20 cm (7.9”) Dimensions can vary with up
+                to 3mm.`,
+                boxdimensions: `68,5 x 68 x 18 cm (26.9 x 26.7 x 20.9”)`,
+                weight: `4,6 kg`,
             },
             {
                 idx: 17,
                 title: `FUN 1WM`,
                 price: `€744,00`,
-                year: ``,
+                year: `VERNER PANTON, 1964`,
                 color: ``,
-                material: ``,
-                lightsource: ``,
-                cord: ``,
-                certifications: ``,
-                productdimensions: ``,
-                boxdimensions: ``,
-                weight: ``,
+                material: `Seashell discs
+                Chrome plated metal frame
+                Stainless steel rings`,
+                lightsource: `E27 (220V) 
+                E26 (110V) max. 60W`,
+                cord: `Transparent with on/off switch. 220 cm (86.6”)`,
+                certifications: `CE, UL.`,
+                productdimensions: `Ø40 cm (15.7”)
+                H: 58 cm (22.8”)
+                D: 22 cm (8.7”)`,
+                boxdimensions: `37x37x30 cm (14.6x14.6x11.8”)`,
+                weight: `4 kg`,
             },
         ], //////////////////// wall //////////////
         xlpendants: [
@@ -406,43 +415,62 @@ const pro_data = {
                 idx: 18,
                 title: `SPIRAL SP2 SILVER`,
                 price: `€3.600,00`,
-                year: ``,
-                color: ``,
-                material: ``,
-                lightsource: ``,
-                cord: ``,
-                certifications: ``,
-                productdimensions: ``,
-                boxdimensions: ``,
-                weight: ``,
+                year: `VERNER PANTON, 1969`,
+                color: `SILVER`,
+                material: `Cast ABS plastic spirals
+                Nylon string
+                Ceiling canopy is made from cast ABS plastic
+                Transparent plastic cord`,
+                lightsource: `E27 (230V) 
+                E26 (120V) max. 60W`,
+                cord: `Clear PVC cord.`,
+                certifications: `CE, UL.`,
+                productdimensions: `Ø48 cm (18.9”)
+                H: 180 cm (70.9”)`,
+                boxdimensions: `60x60x79 cm (23.6x23.6x31.1”)`,
+                weight: `14 kg.`,
             },
             {
                 idx: 19,
                 title: `FUN 8DM`,
                 price: `€18.867,00`,
-                year: ``,
+                year: `VERNER PANTON, 1964`,
                 color: ``,
-                material: ``,
-                lightsource: ``,
-                cord: ``,
-                certifications: ``,
-                productdimensions: ``,
-                boxdimensions: ``,
-                weight: ``,
+                material: `Seashell discs
+                Stainless steel rings
+                Ceiling plate is made of MDF (white lacquered).
+                Transparent plastic cord.`,
+                lightsource: `E27 (230V) 
+                E26 (120V) max. 60W`,
+                cord: `Transparent PVC cord.`,
+                certifications: `CE, UL.`,
+                productdimensions: `Ø100 cm (39.4”)
+                H: 200 cm (78.7”)`,
+                boxdimensions: `Box 1: 58x58x67 cm (22.8x22.8x26.4”)
+                Box 2: 113x113x18 cm (44.5x44.5x7”)`,
+                weight: `Box 1: 30 Kg.
+                Box 2: 36 Kg.`,
             },
             {
                 idx: 20,
                 title: `FUN 7DM`,
                 price: `€9.437,00`,
-                year: ``,
+                year: `VERNER PANTON, 1964`,
                 color: ``,
-                material: ``,
-                lightsource: ``,
-                cord: ``,
-                certifications: ``,
-                productdimensions: ``,
-                boxdimensions: ``,
-                weight: ``,
+                material: `Seashell discs
+                Stainless steel rings
+                Ceiling plate is made of MDF (white lacquered).
+                Transparent plastic cord.`,
+                lightsource: `E27 (230V) 
+                E26 (120V) max. 60W`,
+                cord: `Transparent PVC cord.`,
+                certifications: `CE, UL.`,
+                productdimensions: `Ø100 cm (39.4”)
+                H: 110 cm (43.3”)`,
+                boxdimensions: `Box 1: 59x59x35 cm (23.2x23.2x13.8”)
+                Box 2: 113x113x18 cm (44.5x44.5x7”)`,
+                weight: `Box 1: 14 Kg.
+                Box 2: 36 Kg.`,
             },
         ], //////////////////// xl //////////////
     },////////////////////////////////////////////////////////////////////////////////// lighting
