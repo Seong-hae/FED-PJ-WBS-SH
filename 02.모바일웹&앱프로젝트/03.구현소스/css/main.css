@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+/* 베르판 PJ 메인 페이지 CSS - main.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+
+
+/************************ 메인영역 ************************/
+
+/************ 1. 메인영상 영역 시작 *************/
+.main{
+    position: relative;  
+}
+.main .mbox{
+    height: 75vh;
+}
+.main .mbox .bgvideo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .mtxt{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.main .mtxt h2{
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+
+/************ 2. pantop slide Section 시작 *************/
+.pantop .txtbx{
+    width: 60%;
+}
+.pantop .txtbx .slide_con{
+    width: 50%;
+}
+
+
+/************ 3. globe Section  시작 *************/
+.globe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ecd6b2;
+    padding: 0 60px;
+    color: #fff;
+}
+.globe .gtxtbx{
+    padding: 20px 0;
+    width: 40%;
+}
+.globe .svgbx .signature{
+    width: 70%;
+    margin-bottom: 25px;
+}
+.globe .gtxtbx h2{
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.globe .gtxtbx h2 span{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.globe .gtxtbx p{
+    width: 80%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.globe .gimgbx{
+    width: 50%;
+}
+.globe .gimgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/************ 4. globe slide Section 시작 *************/
+
+
+
+
+/************ 5. furniture Section 시작 *************/
+.furniture{
+    display: flex;
+    align-items: flex-end;
+    padding: 130px 100px;
+    color: #0a39cf;
+    gap: 0 50px;
+}
+.furniture .fimgbx{
+    width: 50%;
+}
+.furniture .fimgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+.furniture .ftxtbx{
+    width: 30%;
+}
+.furniture .ftxtbx h2{
+    font-size: 4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.furniture .ftxtbx h2 span{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+/************ 6. sofa slide Section 시작 ************/
+.sofa{
+    position: relative;
+}
+
+.sofa .swiper-container {
+    width: 100%;
+}
+.sofa .swiper-slide {
+    position: relative;
+}
+.sofa .swiper-slide .imgbox img{
+    width: 100%;
+    object-fit: cover;
+}
+.sofa .swiper-slide .txtbox{
+    position: absolute;
+    left: 80px;
+    bottom: 100px;
+    color: #fff;
+}
+.sofa .swiper-slide .txtbox h3{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.sofa .swiper-slide .txtbox h3 span{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+
+
+/************ 8. designer Section 시작 *************/
+.designer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 5vw;
+    padding: 80px 150px;
+    background-color: #ffab00;
+    color: #fff;
+}
+.designer .dtxtbx{
+    width: 30%;
+}
+.designer .dtxtbx h2{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+.designer .dtxtbx h2 span{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.designer .dtxtbx p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.designer .dimgbx{
+    width: 55%;
+}
+.designer .dimgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/************ 9. sketch Section 시작 *************/
+.sketch{
+    padding: min(20vw,100px) 0;
+}
+.sketch .sketchbox{
+    display: flex;
+    gap: 0 min(5vw,50px);
+    justify-content: center;
+}
+.sketch .sketchbox li{
+    width: min(20vw,400px);
+}
+.sketch .sketchbox li .simgbox{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.sketch .sketchbox li .simgbox img{
+    width: 100%;
+    object-fit: cover;
+    transition: 5s;
+}
+.sketch .sketchbox li .simgbox:hover img{
+    transform: scale(1.3);
+}
+.sketch .sketchbox li h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+
+
+

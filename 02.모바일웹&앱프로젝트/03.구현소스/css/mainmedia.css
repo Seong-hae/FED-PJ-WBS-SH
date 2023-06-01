@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 베르판 PJ 메인 미디어쿼리 - mainmedia.css */
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+    /************ 2. pantop slide Section 시작 *************/
+    .pantop .txtbx{
+        width: 100%;
+    }
+    .pantop .txtbx .slide_con{
+        width: 100%;
+    }
+
+    /************ 3. globe Section  시작 *************/
+    .globe .gtxtbx{
+        width: 50%;
+    }
+
+    
+
+    /************ 5. furniture Section 시작 *************/
+    .furniture{
+        padding: 100px 60px; 
+    }
+    .furniture .ftxtbx{
+        width: 50%;
+    }
+
+
+    /************ 8. designer Section 시작 *************/
+    .designer{
+        flex-direction: column;
+        padding: 80px 0;
+    }
+    .designer .dtxtbx,
+    .designer .dimgbx{
+        width: 80%;
+    }
+    .designer .dtxtbx{
+        order: 1;
+        margin-top: 30px;
+    }
+
+
+    
+}
+
+
+
+
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+    /************ 1. 메인영상 영역 시작 *************/
+    .main .mtxt{
+        width: 90%;
+    }
+
+    /************ 3. globe Section  시작 *************/
+    .globe{
+        flex-direction: column;
+        padding: 100px 60px;
+    }
+    .globe .gtxtbx{
+        width: 100%;
+    }
+    .globe .gtxtbx p{
+        width: 100%;
+    }
+    .globe .gimgbx{
+        width: 100%;
+    }
+
+    /************ 5. furniture Section 시작 *************/
+    .furniture{
+        flex-direction: column;
+    }
+    .furniture .fimgbx{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .furniture .ftxtbx{
+        width: 100%;
+    }
+
+    /************ 6. sofa slide Section 시작 ************/
+    .sofa .swiper-slide .txtbox{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sofa .swiper-slide .txtbox h3{
+        font-size: min(5vw,4rem);
+        white-space: nowrap;
+    }
+    .sofa .swiper-slide .txtbox h3 span{
+        font-size: min(3vw,1.4rem);
+        margin-bottom: min(1vw,10px);
+    }
+
+
+    /************ 9. sketch Section 시작 *************/
+    .sketch .sketchbox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sketch .sketchbox li{
+        width: min(50vw,400px);
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {}

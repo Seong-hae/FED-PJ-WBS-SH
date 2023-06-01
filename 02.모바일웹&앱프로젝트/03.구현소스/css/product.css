@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 상품 상세페이지 CSS - product.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/* 상세페이지일때 헤더영역 */
+.header{
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+
+/************ 2.메인영역 : 제품 상세정보 영역 ************/
+#cont{
+  padding: 130px 50px 100px;
+  border-bottom: 1px solid #ccc;
+}
+#cont .cont{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0 50px;
+}
+/************ 2-1. 제품이미지 ************/
+#cont .product_imgbox{
+  width: 40%;
+}
+#cont .product_imgbox .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cont .product_imgbox .swiper-slide img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+#cont .product_imgbox .product_slide2 {
+  width: 100%;
+}
+#cont .product_imgbox .product_slide1 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+#cont .product_imgbox .product_slide1 .swiper-slide{
+  aspect-ratio: 1;
+}
+#cont .product_imgbox .product_slide1 .swiper-slide img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+#cont .product_imgbox .swiper-button-next,
+#cont .product_imgbox .swiper-button-prev {
+  background-color: rgba(63, 63, 63, 0.281);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+/************ 2-2. 제품 상세내용 ************/
+#cont .product_content{
+  padding: 100px 0;
+}
+#cont .product_content h2{
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+#cont .product_content h2 span{
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+#cont .product_content .color{
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: 'EB Garamond', serif;
+}
+#cont .product_content .price{
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 20px 0 30px;
+}
+#cont .product_content .cart{
+  padding: 15px 50px;
+}
+
+/* 상세내용 */
+#cont .product_content .detail{
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+  padding: 50px 0;
+}
+
+#cont .product_content .detail ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 20px;
+}
+#cont .product_content .detail li{
+  width: 30%;
+}
+#cont .product_content .detail .detail_first{
+  width: 100%;
+}
+#cont .product_content .detail li h3{
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+#cont .product_content .detail li div{
+  font-size: 1.2rem;
+}
+
+
+/************** 같은 계열 상품 슬라이드 **************/
+.gslide .txtbx .btn{
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+  #cont .cont{
+    flex-direction: column;
+  }
+  #cont .product_imgbox{
+    width: 100%;
+  }
+
+
+}
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+  #cont .product_content .detail li{
+    width: 100%;
+  }
+
+}

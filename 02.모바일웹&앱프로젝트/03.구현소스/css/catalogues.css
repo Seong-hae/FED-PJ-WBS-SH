@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 temp CSS - temp.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/* 서브페이지일때 헤더영역 */
+.header{
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/******************* 메인영역 시작  *******************/
+.catalogues{
+  padding: 100px;
+}
+.catalogues .cata_box{
+  display: flex;
+  gap: 30px 30px;
+  justify-content: center;
+  align-items: center;
+}
+.catalogues .cata_box li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.catalogues .cata_box .imgbox img{
+  width: 100%;
+  object-fit: cover;
+}
+.catalogues .cata_box h3{
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.catalogues .cata_box p{
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+.catalogues .cata_box .btn{
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
+
+  .catalogues .cata_box{
+    flex-direction: column;
+  }
+
+}
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+  .catalogues{
+    padding: 100px 50px;
+  }
+
+}
+
+
+

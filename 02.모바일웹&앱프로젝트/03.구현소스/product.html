@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 상품상세잇츠미 - VERPAN International</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0513/1829/2651/files/Artboard96_96x.png?v=1614302366" type="image/png">
+
+    <!-- 폰트어썸 CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- 뷰JS vuex CDN -->
+    <script src="https://unpkg.com/vuex@3.0.0"></script>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
+    <!-- 모바일 이벤트 처리 터치펀치 -->
+    <script src="./js/jquery-touch-punch.min.js"></script>
+    
+    <!-- swiper css & Js 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 스크롤리빌 플러그인 JS -->
+    <script src="./js/jquery.scroll-reveal.js"></script>
+    
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="./css/product.css">
+
+    <!-- 외부 JS 연결 -->
+    <script src="./js/main.js"></script>
+</head>
+<body>
+
+    <!-- 헤더 영역 시작 -->
+    <header class="header">
+        <h1 class="logo">
+            <a href="#"><img src="./img/logo.png" alt="로고이미지"></a>
+        </h1>
+
+        <!-- pc 버전 -->
+        <nav class="pcmenu">
+            <div class="leftmenu">
+                <ul class="l_menu">
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+
+                <!-- 모바일 햄버거버튼 -->
+                <div class="ham">
+                    <div class="ham_top"></div>
+                    <div class="ham_bottom"></div>
+                </div>
+            </div>
+
+            <div class="rightmenu">
+                <ul class="r_menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Editorial</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="iconbox">
+                    <label for="searchbx" class="fa-solid fa-magnifying-glass sicon"></label>
+                    <i class="fa-solid fa-basket-shopping basket"></i>
+                </div>
+
+                <!-- 서치 박스 -->
+                <!-- <div class="sbx">
+                    <input type="text" id="searchbx" class="searchbx">
+                </div> -->
+                <!-- 장바구니 박스 -->
+                <!-- <div class="basketbox">
+                    
+                </div> -->
+
+            </div>
+        </nav>
+
+        <!-- 모바일 버전 -->
+        <nav class="momenu">
+
+            <button class="close">
+                <div class="close_top"></div>
+                <div class="close_bottom"></div>
+            </button>
+
+            <div class="menubox">
+                <ul class="mbx_top">
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+                <ul class="mbx_bottom">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Editorial</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            
+            <ul class="snsbox">
+                <li>
+                    <a href="https://www.facebook.com/verpancom/" target="
+                    _blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/verpancom/" target="
+                    _blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        
+        
+        
+    </header>
+    <div class="black"></div>
+    <!-- 헤더 영역 끝 -->
+
+    
+    <!-- 2.메인영역 : 제품 상세정보 영역 -->
+    <main id="cont">
+        <section class="ibx cont">
+
+            <!-- 2-1. 제품이미지 -->
+            <div class="product_imgbox">
+
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper product_slide2">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/조명01.webp" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/조명01_hide.webp" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                  <div thumbsSlider="" class="swiper product_slide1">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/조명01.webp" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/조명01_hide.webp" />
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+            <!-- 2-2. 제품 상세내용 -->
+            <div class="product_content">
+                
+                <h2>
+                    <span>VERNER PANTON, 1980</span>
+                    Pantop Portable
+                </h2>
+
+                <div class="color">DUSTY ROSE</div>
+                <div class="price">€149,00</div>
+                <button class="btn cart">Add to cart</button>
+
+
+                <div class="detail">
+                    <ul>
+                        <li class="detail_first">
+                            <h3>MATERIAL</h3>
+                            <div>
+                                Base, stem and shade is made from painted polycarbonate.
+                                <br>Dimmer/top bolt is made from brushed metal.
+                            </div>
+                        </li>
+                        <li>
+                            <h3>LIGHT SOURCE</h3>
+                            <div>
+                                1.5W LED Board 
+                            </div>
+                        </li>
+                        <li>
+                            <h3>CORD</h3>
+                            <div>
+                                2 m Micro USB charging cable 5.0 1A
+                            </div>
+                        </li>
+                        <li>
+                            <h3>CERTIFICATIONS</h3>
+                            <div>
+                                CE, UKCA, Class III, IP44. 
+                            </div>
+                        </li>
+                        <li>
+                            <h3>PRODUCT DIMENSIONS</h3>
+                            <div>
+                                H: 30 cm (11.8”)<br>Ø18 cm (7”)
+                            </div>
+                        </li>
+                        <li>
+                            <h3>BOX DIMENSIONS</h3>
+                            <div>
+                                22 x 20 x 34,5 cm (8.6 x 7.8 x 13.6”)
+                            </div>
+                        </li>
+                        <li>
+                            <h3>WEIGHT</h3>
+                            <div>
+                                1.5 kg
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    
+
+
+    <!-- 같은 계열 상품 슬라이드 -->
+    <section class="gslide s-section">
+
+        <div class="txtbx left js-reveal">
+            <h3 class="slide_tit">
+                <span>PANTOP PORTABLE</span>
+                You might also like
+            </h3>
+            <button class="btn">View all products</button>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide01.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide02.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide03.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide01.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide02.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide03.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide01.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide02.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgbox">
+                        <img src="./img/globe_slide03.webp" alt="조명이미지">
+                    </div>
+                    <ul class="txtbox">
+                        <li class="type">Lighting</li>
+                        <li class="name">MOON WHITE</li>
+                        <li class="price">FROM €678,00</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    
+    </section> 
+
+
+    <!-- FOOTER 영역 시작 -->
+    <footer class="footer">
+
+        <div class="ftop">
+
+            <div class="f_box">
+                <h2 class="fmenu">STORE</h2>
+                <ul>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">EXPLORE</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">References</a></li>
+                    <li><a href="#">Catalogues</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">MORE</h2>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Find dealer</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">INFO</h2>
+                <ul>
+                    <li><a href="#">Terms of Sale</a></li>
+                    <li><a href="#">Terms of Sales & Delivery - B2B</a></li>
+                    <li><a href="#">Shipping and Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">SOCIAL</h2>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="f_box">
+                <h2 class="fmenu">COMPANY</h2>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Be Original™</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="fbottom">
+            <h1 class="flogo">
+                <a href="#"><img src="./img/logo.png" alt="로고이미지"></a>
+            </h1>
+        </div>
+    </footer>
+
+
+</body>
+</html>

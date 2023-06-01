@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* 베르판 PJ 공통클래스/웹폰트 CSS - core.css */
+/* 웹폰트, 공용클래스 */
+
+/*********** 1. 웹폰트 : CDN ***********/
+/* 글씨체 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+/* 
+    font-family: 'Roboto', sans-serif;
+    font-family: 'EB Garamond', serif;
+*/
+
+/* 전체 글자크기 Root 셋팅! */
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: #333;
+}
+
+/******************** 2. 공통 클래스 ********************/
+
+/* 속박스 class */
+.ibx{
+    max-width: 1750px;
+    /* 최대가로크기 1200px이면
+    싸고 있는 박스가 이것보다 작아질 경우
+    auto로 자동전환되어 가로스크롤이 안생김! */
+    margin: 0 auto;
+}
+
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 밴더사명(크롬,사파리) 접두어 
+( 참고: -ms-(ie), -o-(오페라), -moz-(파이어폭스) */
+.scbar::-webkit-scrollbar{
+    /* 전체 스크롤바 크기변경 */
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: #555;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track{
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* IR클래스 */
+/* 배경이미지 설명클래스 (Image Replacement) */
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* 등장액션 플러그인용 클래스 */
+/* a요소는 트랜스폼이 적용되도록 display:inline-block으로 변경 */
+a.js-reveal{
+    display: inline-block;
+}
+/* 아래에서 위로 */
+.js-reveal {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity .7s ease-in, transform .7s ease-out;
+}
+  
+.js-reveal--hidden {
+    opacity: 0;
+    transform: translateY(200px);
+}
+
+/* 오른쪽에서 왼쪽으로 */
+.right.js-reveal {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1s ease-in, transform 1s ease-out;
+}
+  
+.right.js-reveal--hidden {
+    opacity: 0;
+    transform: translateX(300px);
+}
+
+/* 왼쪽에서 오른쪽으로 */
+.left.js-reveal {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1s ease-in, transform 1s ease-out;
+}
+  
+.left.js-reveal--hidden {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+  
+/* 세로로 펼쳐지기 */
+  .jr1.js-reveal {
+    opacity: 1;
+    transform: none;
+    overflow: hidden;
+    height: 100vh;
+    transition: .7s ease-out 1s;
+  }
+  
+  .jr1.js-reveal--hidden {
+    height: 0;
+  }
+
+/* 커버벗겨지며 보이기 */
+  .jr2.js-reveal {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    overflow: hidden;
+    
+  }
+  .jr2.js-reveal::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: darkblue;
+
+    transition: .7s ease-out 1.2s;
+  }
+  
+  .jr2.js-reveal--hidden::after {
+    height: 100%;
+  }
+

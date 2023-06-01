@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/* 베르판 PJ 페이지 temp CSS - about.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+
+/************ 1. 메인 영역 시작 *************/
+.about .about_imgbox{
+  width: 100%;
+  height: 60vh;
+}
+.about .about_imgbox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about .txtbox{
+  padding: 130px 20px;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+.about .txtbox h2{
+  font-size: 3.8rem;
+  margin-bottom: 25px;
+}
+.about .txtbox h2 span{
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.about .txtbox div{
+  font-size: 1.3rem;
+}
+.about .txtbox div p:first-child{
+  font-size: 1.8rem;
+}
+.about .txtbox div p+p{
+  margin: 30px 0 10px;
+}
+
+
+/************ 2. designer Section 시작 *************/
+.designer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5vw;
+  padding: 80px 150px;
+  color: #fff;
+  background-color: #bc8968;
+}
+.designer .imgbox{
+  width: 40%;
+}
+.designer .imgbox img{
+  width: 100%;
+  object-fit: cover;
+}
+.designer .txtbox{
+  width: 30%;
+}
+.designer .txtbox h2{
+  font-size: 4rem;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+.designer .txtbox h2 span{
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.designer .txtbox p{
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/************ 3. sketch Section 시작 *************/
+.sketch{
+  padding: min(20vw,100px) 0;
+}
+.sketch .sketchbox{
+  display: flex;
+  gap: 0 min(5vw,50px);
+  justify-content: center;
+}
+.sketch .sketchbox li{
+  width: min(20vw,400px);
+}
+.sketch .sketchbox li .simgbox{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.sketch .sketchbox li .simgbox img{
+  width: 100%;
+  object-fit: cover;
+  transition: 5s;
+}
+.sketch .sketchbox li .simgbox:hover img{
+  transform: scale(1.3);
+}
+.sketch .sketchbox li h3{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+
+
+/************ 4. Sustainability section 시작 *************/
+.sustainability{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5vw;
+  padding: 80px 150px;
+  color: #fff;
+  background-color: #18471d;
+}
+.sustainability .imgbox{
+  width: 40%;
+}
+.sustainability .imgbox img{
+  width: 100%;
+  object-fit: cover;
+}
+.sustainability .txtbox{
+  width: 30%;
+}
+.sustainability .txtbox h2{
+  font-size: 4rem;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+.sustainability .txtbox h2 span{
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.sustainability .txtbox p{
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+  /************ 2. designer Section 시작 *************/
+  .designer{
+    flex-direction: column;
+    padding: 80px 0;
+  }
+  .designer .txtbox,
+  .designer .imgbox{
+    width: 80%;
+  }
+  .designer .txtbox{
+    margin-top: 30px;
+  }
+
+  /************ 4. Sustainability section 시작 *************/
+  .sustainability{
+    flex-direction: column;
+    padding: 80px 0;
+  }
+  .sustainability .txtbox,
+  .sustainability .imgbox{
+    width: 80%;
+  }
+  .sustainability .txtbox{
+    margin-top: 30px;
+    order: 1;
+  }
+
+}
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+  /************ 1. 메인 영역 시작 *************/
+  .about .txtbox{
+    width: 80%;
+  }
+
+  /************ 3. sketch Section 시작 *************/
+  .sketch .sketchbox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sketch .sketchbox li{
+    width: min(50vw,400px);
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
