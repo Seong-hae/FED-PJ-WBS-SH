@@ -692,6 +692,7 @@ const imData = {
                         v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat].length"
                         v-if="$store.state.subcat!=='all'">
                         <div class="imgbox">
+                        <router-link :to="{name:'product',params:{cat:'Product'}}">
                             <img :src="
                             './subimg/'+
                             $route.params.cat.toLowerCase()+
@@ -706,6 +707,7 @@ const imData = {
                             $store.state.subcat+
                             '/back/item'+v+'.jpg'
                             " alt="조명이미지" class="down">
+                        </router-link>
                         </div>
                         <ul class="txtbox">
                             <li class="type">{{$route.params.cat}}</li>
@@ -719,6 +721,7 @@ const imData = {
                 v-for="v in $store.state.pdata[$route.params.cat.toLowerCase()]['all'].length" 
                 v-if="$store.state.subcat==='all'">
                     <div class="imgbox">
+                    <router-link :to="{name:'product',params:{cat:'Product'}}">
                         <img :src="
                         './subimg/'+
                         $route.params.cat.toLowerCase()+
@@ -733,6 +736,7 @@ const imData = {
                         $store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].mid+
                         '/back/item'+$store.state.pdata[$route.params.cat.toLowerCase()][$store.state.subcat][v-1].idx+'.jpg'
                         " alt="조명이미지" class="down">
+                    </router-link>
                     </div>
                     <ul class="txtbox">
                         <li class="type">{{$route.params.cat}}</li>
