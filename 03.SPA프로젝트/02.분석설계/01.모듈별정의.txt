@@ -1,0 +1,31 @@
+[ 모듈별 정의 : 구조정의/객체화/기능정의 ]
+
+[1] 캐릭터 모듈
+    - 모듈명 : News (JS/CSS/data)
+
+    (1) 구조정의 :
+        제목 + 스와이퍼모듈
+        -> 하위 스와이퍼모듈(이미지+이름)
+
+    (2) 객체화 :
+        {
+            idx : "",
+            newsrc:"",
+            newname:"",
+            newdate: "",
+            newstore: "",
+            newdesc: "",
+            alignment: "",
+        }
+        1) 인덱스번호 : idx
+        2) 썸네일 이미지경로 : newsrc
+        3) 뉴스이름 : newname
+        4) 뉴스날짜: : newdate
+        5) 뉴스장소: : newstore
+        6) 뉴스설명 이미지경로 : newdesc(백화점/전점/일부지점/온라인)
+        7) 뉴스분류 : alignment(event/trendy/food/issue)
+    
+
+    (3) 기능정의 : 
+        1) 뉴스 메뉴 스와이프 기능(스와이퍼)
+        2) 뉴스 메뉴 클릭시 캐릭터 상세페이지 이동(라우터사용)
