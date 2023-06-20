@@ -13,7 +13,7 @@ import { Link, Outlet } from "react-router-dom";
     
 **************************************************************/
 // svg 아이콘들 저작권자
-{/* <a href="https://www.flaticon.com/kr/free-icons/" title="붙다 아이콘">붙다 아이콘  제작자: Freepik - Flaticon</a>
+{/* <a href="https://www.flaticon.com/kr/free-icons/" title="가입하기 아이콘">가입하기 아이콘  제작자: Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/kr/free-icons/" title="사용자 아이콘">사용자 아이콘  제작자: Freepik - Flaticon</a> */}
 
 
@@ -75,12 +75,9 @@ const Layout = () => {
               </ul>
 
               <ul className="foot_down">
-                <li>자주하는질문</li>
-                <li>온라인상담실</li>
-                <li>상담실안내</li>
-                <li>분실물안내</li>
-                <li>가상계좌</li>
-                <li>공지사항</li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </footer>
         </>
