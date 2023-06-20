@@ -1,4 +1,8 @@
 // index.js는 public/index.html 페이지에 적용되는 컴포넌트다!
+
+
+
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {BrowserRouter, HashRouter, Routes, Route} from "react-router-dom";
@@ -14,7 +18,7 @@ export default function App(){
                     {/* 중요!!!:레이아웃 컴포넌트를 루트로 잡아준다!!! */} 
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Main />} />
-                    <Route path="news" element={<News />} />
+                    {/* <Route path="news" element={<News />} /> */}
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -1,4 +1,5 @@
 // 메인 레이아웃 컴포넌트
+import Logo from "./Logo";
 import "./css/layout.css";
 import { Link, Outlet } from "react-router-dom";
 
@@ -8,8 +9,15 @@ import { Link, Outlet } from "react-router-dom";
     -> to속성의 경로는 <Route path="/경로명"> 과 일치함!
 
     2. <Outlet />
-    -> 라우터 연결 컴포넌트 출력자리 컴포넌트
+    -> 라우터 연결 컴포넌트 출력자리 컴포넌
+    
 **************************************************************/
+// svg 아이콘들 저작권자
+{/* <a href="https://www.flaticon.com/kr/free-icons/" title="붙다 아이콘">붙다 아이콘  제작자: Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/kr/free-icons/" title="사용자 아이콘">사용자 아이콘  제작자: Freepik - Flaticon</a> */}
+
+
+
 
 const Layout = () => {
     return(
@@ -17,7 +25,10 @@ const Layout = () => {
             {/* 1. 상단영역 */}
             <header className="top">
 
-                <h1><img src="./images/svg/logo.svg" alt="logo" /></h1>
+                <Link to="/main">
+                    <Logo gb="top" tt={callMe} />
+                </Link>
+
                 {/* 네비게이션 파트 */}
                 <nav className="gnb">
                     <ul>
