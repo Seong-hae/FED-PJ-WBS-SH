@@ -319,7 +319,7 @@ function Member() {
         <div className="outbx">
             {/* 모듈코드 */}
             <section className="membx">
-                <h2 onClick={clearData}>Join Us</h2>
+                <h2 onClick={clearData}><img src="./images/svg/l-point.svg" alt="lottemember"/></h2>
                 <form method="post" action="process.php">
                     <ul>
                         <li>
@@ -395,7 +395,7 @@ function Member() {
                             <input
                                 type="password"
                                 maxLength="20"
-                                placeholder="Please enter your Confirm Password"
+                                placeholder="Please check the password"
                                 value={chkPwd}
                                 onChange={changeChkPwd}
                             />
@@ -435,7 +435,7 @@ function Member() {
                         </li>
                         <li>
                             {/* 5.이메일 */}
-                            <label></label>
+                            <label><img src="./images/svg/id.svg" alt="아이디"/></label>
                             <input
                                 type="text"
                                 maxLength="50"
