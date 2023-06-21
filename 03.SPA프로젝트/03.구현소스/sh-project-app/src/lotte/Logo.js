@@ -7,20 +7,16 @@ const Logo = (props) => {
     //객체형 스타일적용: 속성명이 틀리면 아예 출력되지 않는다!
     const mystyle = {
         top: {
-            width: "45px",
-            height: "45px",
-            marginRight: "30px",
-            borderRadius: "50%",
-            // outline:"3px solid lime"
+            width: "170px"
         },
         bottom: {
-            height: "80px",
+            width: "170px"
         },
     };
 
     let istyle = {
-        top: "45px",
-        bottom: "80px",
+        width: "100%",
+        objectFit: "cover"
     };
 
 
@@ -31,8 +27,9 @@ const Logo = (props) => {
     }; ////////////// nayana ///////////////
 
     return (
-        <h1 style={mystyle[props.gb]} onClick={()=>nayana('나야나!')}>
-            <img src="./images/svg/logo.svg" style={{ width: istyle[props.gb] }} />
+        <h1 style={mystyle[props.gb]} onClick={()=>nayana('나야나!')} className="logo">
+            {/* <img src={"./images/svg/logo.svg"} style={{ width: istyle[props.gb] }} /> */}
+            <img src={props.gb == "bottom" ? "./images/svg/logo-white.svg" : "./images/svg/logo.svg"} style={{ width: istyle[props.gb] }} />
         </h1>
     );
 }; //////////// Logo ////////////////

@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* Member 모듈용 CSS - member.css  */
+.outbx{
+    padding: 150px 25px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+/* 전체박스 */
+.membx{
+    width: min(700px,75vw);
+    min-height: 500px;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.membx h2{   
+    padding: 30px 15px;
+    font-size: 30px;
+    width: 30%;
+}
+.membx form{
+    width: 80%;
+}
+.membx li{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+.membx label{
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: 23px;
+}
+.membx label img{
+    width: 100%;
+    object-fit: cover;
+}
+.membx input{
+    width: 80%;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-indent: 2vw;
+}
+
+.membx .msg{
+    position: absolute;
+    /* left: 31%; */
+    width: 50%;
+    font-size: 14px;
+    /* outline: 1px dotted red; */
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.membx .sbtn{
+    width: 80%;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.membx .sbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.membx ul li:last-child{
+    text-align: center;
+}
+
+
+
+/* 1000px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1000px) {
+
+    .membx{
+        flex-direction: column;
+    }
+    .membx h2,
+    .membx form{
+        width: 100%;
+    }
+    .membx h2{
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+    .membx li{
+        width: 100%;
+        position: relative;
+        text-align: left;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+    .membx label {
+        left: 30px;
+    }
+    .membx input {
+        width: 100%;
+        text-indent: 40px;
+    }
+    .membx .sbtn {
+        width: 100%;
+    }
+
+
+
+}
+
+
