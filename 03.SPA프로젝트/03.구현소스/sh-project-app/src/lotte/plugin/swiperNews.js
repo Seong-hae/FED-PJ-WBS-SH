@@ -26,7 +26,7 @@ export default function SwiperNews(props) {
 
     // 라우터 전달값을 받기위한 useLocation 생성하기!
     const loc = useLocation();
-    // 3. 캐릭터명세
+    // 뉴스 슬라이드 제목
     let newname = loc.state.newname;
     newname = newname.split("^");
 
