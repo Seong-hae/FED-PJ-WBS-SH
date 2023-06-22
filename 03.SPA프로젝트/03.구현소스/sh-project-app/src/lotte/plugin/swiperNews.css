@@ -44,55 +44,145 @@
     user-select: none;
     /* outline: 1px solid red; */
     position: relative;
+    transition: .5s;
   }
   .swiper-slide:nth-child(3n){
     border-radius: 50%;
     overflow: hidden;
   }
 
-  .swinbx .newstxt{
-    width: 100%;
+  .swinbx::after{
+    content: "";
     position: absolute;
-    bottom: 50%;
     left: 0;
-    border: 1px solid #000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient( to bottom, #ffff0035, #00a2ff76);
+    transition: .5s;
   }
-  .swinbx .newstxt h3{}
+  .swinbx:hover .newstxt,
+  .swinbx:hover::after{
+    opacity: 1;
+  }
+  .swinbx .newstxt{
+    padding-top: min(10vw,160px);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+  }
+  .swinbx .newstxt .store{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .swinbx .newstxt h3{
+    font-size: min(8vw,25px);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
   .swinbx .newstxt h3 span{
     display: block;
+  }
+  .swinbx .newstxt .read{
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+  }
+  .swinbx .newstxt .read::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s;
+  }
+  .swinbx:hover .newstxt .read::before{
+    width: 100%;
+  }
+
+  /* 돌아가는 원형글씨 박스구역*/
+  .morebox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .morebox .more{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+  }
+  .morebox:hover .arrow{
+    transform: scale(.2);
+    transition: .3s;
+  }
+  .morebox .arrow{
+    position: absolute;
+    left: -23%;
+    top: 20px;
+    transform: scale(.1);
+    width: auto;
+    transition: .3s;
+  }
+  
+  @keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+      }
   }
   
   
   /* 기존 스와이퍼 디자인 변경 */
   .swiper-button-prev, .swiper-button-next{
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    box-shadow: 0 0 10px #000;
+    width: 50px;
+    height: 50px;
   }
   
   .swiper-button-next{
-    transform: scale(.8) translateX(15px);
+    background-image: url(../img/btn-right.svg);
+    background-size: cover;
   }
   
   .swiper-button-prev{
-    transform: scale(.8) translateX(-15px);
+    background-image: url(../img/btn-left.svg);
+    background-size: cover;
   }
 
-  
+
+  /* 기존화살표 버튼 없애기 */
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: '';
+  }
   /* 슬라이드 끝에서 버튼 숨김 */
   .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{    
     display: none;
   }
 
 
-  @media screen and (max-width:1200px) {
+
+
+
+  /* 1000px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width:1000px) {
     
-  /* 동영상타이틀 */
-  .cattit h3{
-    font-size: 20px;
-    margin-top: 10px;
+    /* 타이틀박스 */
+    .tit{
+      padding: 0 20px;
+    }
   }
-  }
-  
+

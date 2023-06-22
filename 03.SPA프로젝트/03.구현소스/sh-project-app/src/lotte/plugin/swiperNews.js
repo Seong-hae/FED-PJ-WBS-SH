@@ -1,5 +1,4 @@
 
-import { useLocation } from "react-router-dom";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,11 +23,6 @@ export default function SwiperNews(props) {
     const ndt = news_data;
     console.log(ndt);
 
-    // 라우터 전달값을 받기위한 useLocation 생성하기!
-    const loc = useLocation();
-    // 뉴스 슬라이드 제목
-    let newname = loc.state.newname;
-    newname = newname.split("^");
 
 
 
@@ -61,6 +55,7 @@ export default function SwiperNews(props) {
                             newname:v.newname,
                             newdate:v.newdate,
                             newdesc:v.newdesc,
+                            newstore:v.newstore
                             }}>
                             <section className="swinbx">
                                 {/* 뉴스 이미지영역 */}
@@ -68,23 +63,24 @@ export default function SwiperNews(props) {
                                     <img src={v.newsrc} alt={v.newname} />
                                 </div>
                                 {/* 뉴스 텍스트영역 */}
-                                {
-                                    
-                                        <div className="newstxt">
-                                            <h3>
-                                                <span>{v.newname.split('^')[0]}</span>
-                                                {v.newname.split('^')[1]}
-                                            </h3>
-                                        </div>
-                                    
-                                }
+                                <div className="newstxt">
+                                    <div className="store">{v.newstore}</div>
+                                    <h3>
+                                        <span>{v.newname.split('^')[0]}</span>
+                                        {v.newname.split('^')[1]}
+                                    </h3>
+                                    <div className="read">Read more</div>
+                                </div>
                             </section>
                         </Link>
                         
                     </SwiperSlide>
                 ))}
                 <SwiperSlide>
-                    고고고
+                    <div className="morebox">
+                        <img src="./images/svg/more-more.svg" alt="more" className="more"/>
+                        <img src="./images/svg/more-arrow.svg" alt="arrow" className="arrow"/>
+                    </div>
                 </SwiperSlide>
             </Swiper>
         </>
