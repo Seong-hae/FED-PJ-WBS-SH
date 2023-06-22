@@ -6,8 +6,6 @@
   
   .swiper {
     width: 100%;
-    padding: 10px;
-    margin: 20px 0;
     box-sizing: border-box;
   }
   
@@ -32,41 +30,36 @@
 
   /* 타이틀박스 */
   .tit{    
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 40px;
-    /* background: url(../../../public/images/dcm1.jpg); */
+    font-family: 'Cinzel', serif;
+    font-size: min(130px,20vw);
+    font-weight: 200;
+    padding-left: 80px;
   }
   
   /* 컨텐츠 박스 */
   .swinbx{
     width: 100%;
-    aspect-ratio: 1 / 1.1;
+    aspect-ratio: 1;
     cursor: pointer;
     user-select: none;
     /* outline: 1px solid red; */
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.553);
+    position: relative;
+  }
+  .swiper-slide:nth-child(3n){
+    border-radius: 50%;
+    overflow: hidden;
   }
 
-  /* 비디오이미지박스 */
-  .catimg{
-    vertical-align: top;
-  }
-  .catimg img{
+  .swinbx .newstxt{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    border: 1px solid #000;
   }
-
-  /* 타이틀박스 */
-  .cattit{ 
-    font-family: 'Roboto Condensed', sans-serif;
-    padding: 15px;
-    aspect-ratio: 2/1;
-  }
-  /* 동영상타이틀 */
-  .cattit h3{
-    font-size: 22px;
-    margin-top: 15px;
+  .swinbx .newstxt h3{}
+  .swinbx .newstxt h3 span{
+    display: block;
   }
   
   

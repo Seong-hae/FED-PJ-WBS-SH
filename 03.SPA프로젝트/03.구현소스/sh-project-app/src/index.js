@@ -7,6 +7,7 @@ import Layout from "./lotte/Layout";
 import "./index.css";
 import Member from "./lotte/Member";
 import LogIn from "./lotte/LogIn";
+import News from "./lotte/News"
 
 
 export default function App(){
@@ -16,9 +17,9 @@ export default function App(){
                     {/* 중요!!!:레이아웃 컴포넌트를 루트로 잡아준다!!! */} 
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Main />} />
-                    {/* <Route path="news" element={<News />} /> */}
                     <Route path="mem" element={<Member />} />
                     <Route path="login" element={<LogIn />} />
+                    <Route path="news" element={<News />} />
                 </Route>
             </Routes>
         </BrowserRouter>
