@@ -144,7 +144,7 @@ const Layout = () => {
                 {/* PC버전 - 네비게이션 파트 */}
                 <nav className="pcmenu">
 
-                    <Link to="/main">
+                    <Link to="/">
                         <Logo gb="top" tt={callMe} />
                     </Link>
 

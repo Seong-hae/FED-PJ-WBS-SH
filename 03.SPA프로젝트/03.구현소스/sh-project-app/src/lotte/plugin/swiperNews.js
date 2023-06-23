@@ -23,9 +23,6 @@ export default function SwiperNews(props) {
     const ndt = news_data;
     console.log(ndt);
 
-
-
-
     return (
         <>
             <Swiper
@@ -51,7 +48,7 @@ export default function SwiperNews(props) {
                 className="mySwiper">
                 {ndt.map((v, i) => (
                     <SwiperSlide key={i}>
-                        <Link to="/" state={{
+                        <Link to="/newsdetail" state={{
                             newname:v.newname,
                             newdate:v.newdate,
                             newdesc:v.newdesc,
@@ -77,10 +74,12 @@ export default function SwiperNews(props) {
                     </SwiperSlide>
                 ))}
                 <SwiperSlide>
-                    <div className="morebox">
-                        <img src="./images/svg/more-more.svg" alt="more" className="more"/>
-                        <img src="./images/svg/more-arrow.svg" alt="arrow" className="arrow"/>
-                    </div>
+                    <Link to="/news">
+                        <div className="morebox">
+                            <img src="./images/svg/more-more.svg" alt="more" className="more"/>
+                            <img src="./images/svg/more-arrow.svg" alt="arrow" className="arrow"/>
+                        </div>
+                    </Link>
                 </SwiperSlide>
             </Swiper>
         </>

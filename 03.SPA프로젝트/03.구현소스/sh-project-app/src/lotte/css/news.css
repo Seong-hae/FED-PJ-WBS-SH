@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* News 모듈용 CSS - news.css  */
+
+.news_sec{
+    padding: 200px 20px;
+}
+.news_sec .shoptit{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+.news_sec .shoptit span{
+    display: block;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.news_sec .shoplist{
+    display: flex;
+    justify-content: center;
+    gap: 20px 15px;
+    flex-wrap: wrap;
+}
+.news_sec .shoplist li{
+    padding: 10px 15px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+    .news_sec{
+        padding: 140px 20px;
+    }
+
+    .news_sec .shoptit{
+        font-size: 50px;
+    }
+    .news_sec .shoptit span{
+        font-size: 15px;
+    }
+
+    .news_sec .descbx .desc_txt{
+        padding: 30px;
+    }
+    .news_sec .descbx .desc_txt h3{
+        font-size: 25px;
+    }
+
+}

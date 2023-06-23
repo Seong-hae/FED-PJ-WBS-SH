@@ -11,6 +11,7 @@ const news_data = [
         newstore: "백화점 전점",
         newdesc: "./images/news/news1_1.jpeg",
         alignment: "event",
+        alpa : "q"
     },
     {
         idx : "2",
@@ -22,6 +23,7 @@ const news_data = [
         newstore: "백화점 전점",
         newdesc: "./images/news/news2_1.jpeg",
         alignment: "food",
+        alpa : "w"
     },
     {
         idx : "3",
@@ -33,6 +35,7 @@ const news_data = [
         newstore: "백화점",
         newdesc: "./images/news/news3_1.jpeg",
         alignment: "issue",
+        alpa : "e"
     },
     {
         idx : "4",
@@ -44,6 +47,7 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news4_1.jpeg",
         alignment: "food",
+        alpa : "w"
     },
     {
         idx : "5",
@@ -55,6 +59,7 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news5_1.jpeg",
         alignment: "issue",
+        alpa : "e"
     },
     {
         idx : "6",
@@ -66,6 +71,7 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news6_1.jpeg",
         alignment: "trendy",
+        alpa : "r"
     },
     {
         idx : "7",
@@ -78,6 +84,7 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news7_1.jpeg",
         alignment: "food",
+        alpa : "w"
     },
     {
         idx : "8",
@@ -89,6 +96,7 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news8_1.jpeg",
         alignment: "trendy",
+        alpa : "r"
     },
     {
         idx : "9",
@@ -100,6 +108,7 @@ const news_data = [
         newstore: "백화점",
         newdesc: "./images/news/news9_1.jpeg",
         alignment: "food",
+        alpa : "w"
     },
     
     

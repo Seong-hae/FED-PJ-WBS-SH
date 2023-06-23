@@ -119,9 +119,9 @@
     height: 100%;
   }
   .morebox .more{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 55px;
     animation: rotate_image 10s linear infinite;
     transform-origin: 50% 50%;
   }
@@ -131,8 +131,8 @@
   }
   .morebox .arrow{
     position: absolute;
-    left: -23%;
-    top: 20px;
+    left: -32%;
+    top: 5px;
     transform: scale(.1);
     width: auto;
     transition: .3s;

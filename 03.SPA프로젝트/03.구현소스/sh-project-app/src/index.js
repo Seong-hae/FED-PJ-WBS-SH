@@ -8,6 +8,11 @@ import "./index.css";
 import Member from "./lotte/Member";
 import LogIn from "./lotte/LogIn";
 import News from "./lotte/News"
+import NewsDetail from "./lotte/NewsDetail";
+import Gallery from "./lotte/Gallery";
+import Culture from "./lotte/Culture";
+import Magazine from "./lotte/Magazine";
+import Service from "./lotte/Service";
 
 
 export default function App(){
@@ -20,6 +25,11 @@ export default function App(){
                     <Route path="mem" element={<Member />} />
                     <Route path="login" element={<LogIn />} />
                     <Route path="news" element={<News />} />
+                    <Route path="gallery" element={<Gallery />} />
+                    <Route path="culture" element={<Culture />} />
+                    <Route path="magazine" element={<Magazine />} />
+                    <Route path="service" element={<Service />} />
+                    <Route path="newsdetail" element={<NewsDetail />} />
                 </Route>
             </Routes>
         </BrowserRouter>
