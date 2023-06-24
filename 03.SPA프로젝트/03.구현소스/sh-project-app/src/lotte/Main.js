@@ -1,5 +1,7 @@
 // 롯데 메인 페이지 컴포넌트
 import NewsSwipe from "./modules/NewsSwipe";
+import Gallery from "./modules/Parallax";
+import { ParallaxProvider } from 'react-scroll-parallax';
 import "./css/main.css";
 
 const Main = () => {
@@ -34,35 +36,45 @@ const Main = () => {
 
                 <ul className="hot_cont">
                     <li>
-                        청량한 여름의 시작
+                        청량한 여름의 시작 &nbsp;
                         <span className="iconbox">
                             <img src="./images/keyword1.png" alt="얼음" />
                             <img src="./images/keyword2.png" alt="에어컨" />
                         </span>
-                        <span>&#35;계절가전</span>
-                        <span>&#35;여름침구</span>
+                        <span className="hashtag">&#35;계절가전</span>
+                        <span className="hashtag">&#35;여름침구</span>
                     </li>
                     <li>
-                        낭만적인 Summer Vacation
-                        <span className="iconbox">
-                            <span>&#35;바캉스아이템</span>
-                            <span>&#35;휴가룩</span>
-                            <img src="./images/keyword3.png" alt="파라솔" />
-                            <img src="./images/keyword4.png" alt="원피스" />
-                        </span>
+                        낭만적인 Summer Vacation &nbsp;
+                            <span className="hashtag">&#35;바캉스아이템</span>
+                            <span className="hashtag">&#35;휴가룩</span>
+                            <span className="iconbox">
+                                <img src="./images/keyword3.png" alt="파라솔" />
+                                <img src="./images/keyword4.png" alt="원피스" />
+                            </span>
                     </li>
                     <li>
-                        햇살보다 반짝이는 Styling
+                        햇살보다 반짝이는 Styling &nbsp;
                         <span className="iconbox">
                             <img src="./images/keyword5.png" alt="태양" />
                             <img src="./images/keyword6.png" alt="화장품" />
                         </span>
-                        <span>&#35;서머코스메틱</span>
-                        <span>&#35;스몰럭셔리</span>
+                        <span className="hashtag">&#35;서머코스메틱</span>
+                        <span className="hashtag">&#35;스몰럭셔리</span>
                     </li>
                 </ul>
             </section>
 
+
+            {/* 4. 쇼핑 갤러리 영역 */}
+            <section className="galbox">
+                <h2 className="tit">Culture</h2>
+
+                <ParallaxProvider>
+                    <Gallery />
+                </ParallaxProvider>
+
+            </section>
 
 
 

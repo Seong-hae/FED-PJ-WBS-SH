@@ -30,45 +30,29 @@ const News = () => {
         console.log(e)
         let keyword = e;
         // 첫번째li부터 q  w e r 
-        if(keyword == 'q'){
-            let newList = ndt.filter(v=>{
-                if(v.alpa.indexOf(keyword) !== -1 && 
-                v.alignment === "event")
-                return true
-            })
-            setNewndt(newList)
-        }
-        if(keyword == 'w'){
-            let newList = ndt.filter(v=>{
-                if(v.alpa.indexOf(keyword) !== -1 && 
-                v.alignment === "food")
-                return true
-            })
-            setNewndt(newList)
-        }
-        if(keyword == 'e'){
-            let newList = ndt.filter(v=>{
-                if(v.alpa.indexOf(keyword) !== -1 && 
-                v.alignment === "trendy")
-                return true
-            })
-            setNewndt(newList)
-        }
-        if(keyword == 'r'){
-            let newList = ndt.filter(v=>{
-                if(v.alpa.indexOf(keyword) !== -1 && 
-                v.alignment === "issue")
-                return true
-            })
-            setNewndt(newList)
-
-        }
         
-        console.log(newndt)
+        let result = ndt.filter((value)=>
+        value.alignment == keyword
+    )
 
+        console.log(result[0].newdate)
 
-
-
+        let a = `
+        <div className="newsbox" >
+                        <div className="nbx_img">
+                            {/* <img src=${result[0].newsrc} /> */}
+                        </div>
+                        <div className="nbx_txt">
+                            <h3>
+                                {/* <span>${result[0].newname.split('^')[0]}</span> */}
+                                {/* ${result[0].newname.split('^')[1]} */}
+                            </h3>
+                            {/* <div className="store">${result[0].newdesc}</div> */}
+                            {/* <div className="date">${result[0].newdate}</div> */}
+                        </div>
+                    </div>
+        `
+        $('.asd').html(a)
 
 
 
@@ -78,6 +62,7 @@ const News = () => {
 
     return(
         <>
+        
             <section className="subpage news_sec">
             {/* 1. 쇼핑정보 페이지 제목 */}
             <h2 className="shoptit">
@@ -86,20 +71,18 @@ const News = () => {
             </h2>
 
             <ul className="shoplist">
-                <li  onClick={()=>{sch('q')}}>쇼핑이 즐거운 사은행사</li>
-                <li   onClick={()=>{sch('w')}}>&#91;pop-up&#93; 잠실만의 트렌디 쇼핑</li>
-                <li  onClick={()=>{sch('e')}}>맛있고 행복한 쇼핑 Food AVENUE</li>
-                <li  onClick={()=>{sch('r')}}>&#91;FASHION&#93; 미리준비하는 바캉스룩</li>
+                <li  onClick={()=>{sch('event')}}>쇼핑이 즐거운 사은행사</li>
+                <li   onClick={()=>{sch('food')}}>&#91;pop-up&#93; 잠실만의 트렌디 쇼핑</li>
+                <li  onClick={()=>{sch('trendy')}}>맛있고 행복한 쇼핑 Food AVENUE</li>
+                <li  onClick={()=>{sch('issue')}}>&#91;FASHION&#93; 미리준비하는 바캉스룩</li>
             </ul>
 
             {/* 2. 분류별 쇼핑뉴스 나열 */}
 
-            <div>
-                {
-                    ndt[aa].newname
-                }
-            </div>
 
+            <div className="asd">
+
+            </div>
 
                     <Link to="/newsdetail" >
                     <div className="newsbox" >
@@ -115,6 +98,9 @@ const News = () => {
                             {/* <div className="date">{v.newdate}</div> */}
                         </div>
                     </div>
+                </Link>
+                <Link to="/main">
+                    <div className="asd"></div>
                 </Link>
                 
             </section>
