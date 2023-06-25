@@ -113,7 +113,7 @@ const Layout = () => {
                     const menuBox = document.querySelector(".momenu");
                     
                     // 3. 변경내용 : 화면에 보이기
-                    menuBox.style.top = "-50vh";
+                    menuBox.style.top = "-500px";
                     
                 } /////////////////// menuView 함수 ///////////////
     

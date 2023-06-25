@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* Parallax 모듈용 CSS - Parallax.css  */
+.gal_paral{
+    position: absolute;
+}
+.gal_paral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+.gal_paral .gal_leftbx{}
+.gal_paral .gal_rightbx{}
+.gal_paral ul li{
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+
+}
+.gal_paral .gal_imgbx{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.gal_paral .gal_imgbx img{
+    width: 100%;
+    object-fit: cover;
+}
+.gal_paral .gal_txtbx{
+    
+}
+.gal_paral .gal_txtbx h3{
+    font-size: 16px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.gal_paral .gal_txtbx .gal_store{
+    margin: 10px 0;
+    font-size: 13px;
+}
+.gal_paral .gal_txtbx .gal_period{
+    font-size: 13px;
+}

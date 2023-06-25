@@ -44,7 +44,7 @@ const gallery_data = [
         galname: `권오상 AIR MASS : 바람이 다니는 길 展`,
         galperiod: `5.12(금) ~ 7.16(일)`,
         galdate: `매일 10:30 ~ 19:00`,
-        galstore: "롯데백화점 잠실점 에비뉴엘 6F 아트홀 (서울 송파구 올림픽로 300)",
+        galstore: "롯데백화점 잠실점 에비뉴엘 6F 아트홀",
         galauthor: "권오상",
     },
     {
@@ -53,7 +53,7 @@ const gallery_data = [
         galname: `롯데갤러리 광주 신진 큐레이터 공모 수상 전시 - 보물찾기: 빼앗긴 호기심을 찾아서`,
         galperiod: `3.28(화) ~ 6.27(화)`,
         galdate: `평일/주말 : 10:30~20:00`,
-        galstore: "광주 동구 독립로 268 롯데백화점 광주점 11F 롯데갤러리",
+        galstore: "롯데백화점 광주점 11F 롯데갤러리",
         galauthor: "권윤지 김은경 박성수 임송은 임수범",
     },
     

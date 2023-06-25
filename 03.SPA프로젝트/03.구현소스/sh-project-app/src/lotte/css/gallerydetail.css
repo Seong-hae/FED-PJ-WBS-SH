@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* NewsDetail 모듈용 CSS - newsdetail.css  */
+.news_detail{
+    padding: 200px 20px;
+}
+/* 상세정보박스 */
+.news_detail .shoptit{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+.news_detail .shoptit span{
+    display: block;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* 정보박스 텍스트영역 */
+.news_detail .descbx{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.news_detail .descbx .desc_txt{
+    padding: 50px;
+}
+.news_detail .descbx .desc_txt h3{
+    font-size: 35px;
+    font-weight: 500;
+}
+.news_detail .descbx .desc_txt h3 span{
+    display: block;
+    margin-bottom: 10px;
+}
+.news_detail .descbx .desc_txt .store{
+    margin: 40px 0 10px;
+    font-size: 16px;
+}
+.news_detail .descbx .desc_txt .date{
+    font-size: 16px;
+}
+
+
+
+
+
+/* ********************************************************** */
+
+/* 1000px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1000px) {
+
+    /* 정보박스 텍스트영역 */
+    .news_detail .descbx{
+        width: 85%;
+    }
+
+}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+    .news_detail{
+        padding: 140px 20px;
+    }
+
+    .news_detail .shoptit{
+        font-size: 50px;
+    }
+    .news_detail .shoptit span{
+        font-size: 15px;
+    }
+
+    .news_detail .descbx .desc_txt{
+        padding: 30px;
+    }
+    .news_detail .descbx .desc_txt h3{
+        font-size: 25px;
+    }
+
+}

@@ -141,11 +141,11 @@ main.cont{
         display: block;
         position: absolute;
         z-index: 9;
-        top: -50vh;
+        top: -500px;
         left: 0;
         background-color: #fff;
         width: 100%;
-        height: 50vh;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

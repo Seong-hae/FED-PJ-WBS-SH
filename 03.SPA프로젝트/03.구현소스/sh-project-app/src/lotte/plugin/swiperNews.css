@@ -87,6 +87,7 @@
     font-size: min(8vw,25px);
     font-weight: 500;
     margin-bottom: 20px;
+    word-break: keep-all;
   }
   .swinbx .newstxt h3 span{
     display: block;

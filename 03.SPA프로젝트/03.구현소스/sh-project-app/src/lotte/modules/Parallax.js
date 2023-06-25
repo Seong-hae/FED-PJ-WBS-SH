@@ -4,6 +4,7 @@ import "../css/parallax.css";
 import gallery_data from "../data/gallery";
 import { Parallax } from 'react-scroll-parallax';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // 제이쿼리 로드구역 함수 /////////
 function jqFn() {
@@ -35,8 +36,58 @@ function Gallery(props) {
     // propt.tit - 모듈타이틀
     return (
         <>
+        <div className="gal_paral">
+          {copy1.map((v, i) => (
+          <ul className="gal_leftbox" key={i}>
+            <Link to="/gallerydetail" state={{
+                galname:v.galname,
+                galsrc:v.galsrc,
+                galperiod:v.galperiod,
+                galdate:v.galdate,
+                galstore:v.galstore,
+                galauthor:v.galauthor,
+                }}>
+            <li>
+                
+                <div className="gal_imgbx">
+                <img src={v.galsrc} alt={v.galname} />
+                </div>
+                <div className="gal_txtbx">
+                    <h3>{v.galname}</h3>
+                    <div className="gal_store">{v.galstore}</div>
+                    <div className="gal_period">{v.galperiod}</div>
+                </div>
+            </li>
+            </Link>
+          </ul>
+            ))}
 
+        {copy2.map((v, i) => (
+          <ul className="gal_leftbox" key={i}>
+            <Link to="/gallerydetail" state={{
+                galname:v.galname,
+                galsrc:v.galsrc,
+                galperiod:v.galperiod,
+                galdate:v.galdate,
+                galstore:v.galstore,
+                galauthor:v.galauthor,
+                }}>
+            <li>
+                
+                <div className="gal_imgbx">
+                <img src={v.galsrc} alt={v.galname} />
+                </div>
+                <div className="gal_txtbx">
+                    <h3>{v.galname}</h3>
+                    <div className="gal_store">{v.galstore}</div>
+                    <div className="gal_period">{v.galperiod}</div>
+                </div>
+            </li>
+            </Link>
+          </ul>
+            ))}
 
+        </div>
            
         </>
     );

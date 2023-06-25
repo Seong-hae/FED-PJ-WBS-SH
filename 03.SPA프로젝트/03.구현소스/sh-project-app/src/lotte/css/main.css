@@ -48,6 +48,7 @@
     padding: 80px 40px;
     border-top: 1px solid #ccc;
     display: flex;
+    gap: 0 40px;
  }
  .hotbox .hot_tit{
     width: 50%;
@@ -65,10 +66,15 @@
 
  .hotbox .hot_cont li{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: colume;
     align-items: center;
     font-size: 18px;
     letter-spacing: 1px;
+    white-space: nowrap;
+ }
+ .hotbox .hot_cont span{
+   white-space: nowrap;
  }
  .hotbox .hot_cont .iconbox img{
     width: 50px;
@@ -86,15 +92,45 @@
   /********************* 4. 쇼핑 갤러리 영역 *********************/
   .galbox{
     background-color: hsl(277, 81%, 55%);
-    height: 100vh;
+    height: 150vh;
+    overflow: hidden;
     position: relative;
   }
   .galbox .tit{
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 250px;
+    font-size: min(20vw,250px);
     color: #fff;
     font-family: 'Cinzel', serif;
     font-weight: 500;
   }
+
+
+
+
+
+/********************************************************************************/
+  /* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+
+   .hotbox{
+      gap: 60px 0;
+      flex-wrap: wrap;
+   }
+   .hotbox .hot_tit{
+      width: 100%;
+   }
+
+}
+
+
+
+  /* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+
+   .hotbox .hot_cont li{
+      font-size: 14px;
+   }
+
+}
