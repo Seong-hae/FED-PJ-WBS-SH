@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* NewsDetail 모듈용 CSS - newsdetail.css  */
-.gal_detail{
+.cul_detail{
     padding: 200px 20px;
 }
 /* 상세정보박스 */
-.gal_detail .galtit{
+.cul_detail .cultit{
     text-align: center;
     font-family: 'Cinzel', serif;
     font-size: 70px;
@@ -12,7 +12,7 @@
     letter-spacing: 3px;
     margin-bottom: 100px;
 }
-.gal_detail .galtit span{
+.cul_detail .cultit span{
     display: block;
     letter-spacing: 2px;
     font-size: 18px;
@@ -23,36 +23,36 @@
 }
 
 /* 정보박스 텍스트영역 */
-.gal_detail .descbx{
+.cul_detail .descbx{
     width: 50%;
     margin: 0 auto;
     border: 1px solid #ccc;
 }
-.gal_detail .descbx .desc_txt{
+.cul_detail .descbx .desc_txt{
     padding: 50px;
 }
-.gal_detail .descbx .desc_txt h3{
+.cul_detail .descbx .desc_txt h3{
     font-size: 35px;
     font-weight: 500;
     margin-bottom: 50px;
     word-break: keep-all;
 }
-.gal_detail .descbx .desc_txt .desc_cont span{
+.cul_detail .descbx .desc_txt .desc_cont span{
     display: inline-block;
     margin-right: 15px;
     color: #ababab;
 }
-.gal_detail .descbx .desc_txt .desc_cont{
+.cul_detail .descbx .desc_txt .desc_cont{
     margin: 20px 0;
     font-size: 18px;
 }
 
 /* 정보박스 이미지영역 */
-.gal_detail .descbx .desc_img{
+.cul_detail .descbx .desc_img{
     width: 100%;
     border-top: 1px solid #ccc;
 }
-.gal_detail .descbx .desc_img img{
+.cul_detail .descbx .desc_img img{
     width: 100%;
     object-fit: cover;
 }
@@ -67,7 +67,7 @@
 @media screen and (max-width: 1000px) {
 
     /* 정보박스 텍스트영역 */
-    .gal_detail .descbx{
+    .cul_detail .descbx{
         width: 85%;
     }
 
@@ -78,24 +78,24 @@
 /* 500px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 500px) {
 
-    .gal_detail{
+    .cul_detail{
         padding: 140px 20px;
     }
 
-    .gal_detail .galtit{
+    .cul_detail .cultit{
         font-size: 50px;
     }
-    .gal_detail .galtit span{
+    .cul_detail .cultit span{
         font-size: 15px;
     }
 
-    .gal_detail .descbx .desc_txt{
+    .cul_detail .descbx .desc_txt{
         padding: 30px;
     }
-    .gal_detail .descbx .desc_txt h3{
+    .cul_detail .descbx .desc_txt h3{
         font-size: 25px;
     }
-    .gal_detail .descbx .desc_txt .desc_cont{
+    .cul_detail .descbx .desc_txt .desc_cont{
         font-size: 14px;
     }
 

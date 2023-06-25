@@ -32,20 +32,36 @@ function GalleryDetail(props) {
     return (
         <>
             {/* 상세정보 박스 */}
-            <div className="news_detail subpage">
+            <div className="gal_detail subpage">
 
-                <h2 className="shoptit">
-                    #Shop Now
+                <h2 className="galtit">
+                    #Gallery Now
                     <span>지금 새로운 소식이 궁금하다면?</span>
                 </h2>
 
                 <div className="descbx">
                     <div className="desc_txt">
-                        <h3>
+                        <h3 className="desc_tit">
                             {galname}
                         </h3>
-                        <div className="store">{galstore}</div>
-                        <div className="date">{galdate}</div>
+                        <div className="desc_cont">
+                            <span>기간 </span>
+                            {galperiod}</div>
+                        <div className="desc_cont">
+                            <span>시간 </span>
+                            {galdate}
+                            </div>
+                        <div className="desc_cont">
+                            <span>장소 </span>
+                            {galstore}
+                            </div>
+                        <div className="desc_cont">
+                            <span>작가 </span>
+                            {galauthor}
+                            </div>
+                    </div>
+                    <div className="desc_img">
+                        <img src={galsrc} alt={galname} />
                     </div>
                 </div>
             </div>

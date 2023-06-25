@@ -37,8 +37,10 @@ function Gallery(props) {
     return (
         <>
         <div className="gal_paral">
+        <Parallax speed={-60}>
+          <ul className="gal_leftbox" >
           {copy1.map((v, i) => (
-          <ul className="gal_leftbox" key={i}>
+            <li key={i}>
             <Link to="/gallerydetail" state={{
                 galname:v.galname,
                 galsrc:v.galsrc,
@@ -47,7 +49,6 @@ function Gallery(props) {
                 galstore:v.galstore,
                 galauthor:v.galauthor,
                 }}>
-            <li>
                 
                 <div className="gal_imgbx">
                 <img src={v.galsrc} alt={v.galname} />
@@ -57,13 +58,16 @@ function Gallery(props) {
                     <div className="gal_store">{v.galstore}</div>
                     <div className="gal_period">{v.galperiod}</div>
                 </div>
-            </li>
             </Link>
-          </ul>
+            </li>
             ))}
+          </ul>
+          </Parallax>
 
-        {copy2.map((v, i) => (
-          <ul className="gal_leftbox" key={i}>
+          <Parallax speed={60}>
+          <ul className="gal_leftbox" >
+          {copy2.map((v, i) => (
+            <li key={i}>
             <Link to="/gallerydetail" state={{
                 galname:v.galname,
                 galsrc:v.galsrc,
@@ -72,7 +76,6 @@ function Gallery(props) {
                 galstore:v.galstore,
                 galauthor:v.galauthor,
                 }}>
-            <li>
                 
                 <div className="gal_imgbx">
                 <img src={v.galsrc} alt={v.galname} />
@@ -82,10 +85,11 @@ function Gallery(props) {
                     <div className="gal_store">{v.galstore}</div>
                     <div className="gal_period">{v.galperiod}</div>
                 </div>
-            </li>
             </Link>
-          </ul>
+            </li>
             ))}
+          </ul>
+          </Parallax>
 
         </div>
            

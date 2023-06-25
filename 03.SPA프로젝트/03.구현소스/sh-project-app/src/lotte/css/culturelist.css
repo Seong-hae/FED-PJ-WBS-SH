@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CultureList 모듈용 CSS - culturelist.css  */
+.culturebox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+.culturebox li{
+  width: 23%;
+}
+.culturebox li:hover .cul_imgbx img{
+  transform: scale(1.1);
+  transition: .5s;
+}
+.culturebox li+li{
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+  
+}
+.culturebox li .cul_imgbx{
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.culturebox li .cul_imgbx img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+.culturebox li .cul_txtbx{
+  padding: 20px 0;
+}
+.culturebox li .cul_txtbx h3{
+  font-size: 20px;
+  word-break: keep-all;
+}
+.culturebox li .cul_txtbx div{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+
+
+/********************************************************************************/
+  /* 1000px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 1000px) {
+
+    .culturebox{
+      flex-wrap: wrap;
+    }
+    .culturebox li{
+      width: 47%;
+      margin-bottom: 30px;
+    }
+    .culturebox li+li{
+      border-left: none;
+      padding-left: 0;
+
+    }
+
+  }
+
+
+  /* 600px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 600px) {
+
+    .culturebox{
+      justify-content: center;
+    }
+    .culturebox li{
+      width: 95%;
+      margin-bottom: 30px;
+    }
+  }
+
+  /* 500px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 500px) {
+
+    .culturebox li .cul_txtbx h3{
+      font-size: 18px;
+      }
+      .culturebox li .cul_txtbx div{
+      font-size: 13px;
+      }
+
+  }

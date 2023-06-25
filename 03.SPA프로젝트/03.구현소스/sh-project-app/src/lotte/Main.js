@@ -1,8 +1,10 @@
 // 롯데 메인 페이지 컴포넌트
 import NewsSwipe from "./modules/NewsSwipe";
 import Gallery from "./modules/Parallax";
+import CultureList from "./modules/CultureList";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import "./css/main.css";
+import { Link } from "react-router-dom";
 
 const Main = () => {
     return (
@@ -73,6 +75,21 @@ const Main = () => {
                 <ParallaxProvider>
                     <Gallery />
                 </ParallaxProvider>
+            </section>
+
+
+            {/* 5. 문화센터 영역 */}
+            <section className="culbox">
+                <div className="culbox_top">
+                    <h2 className="tit">Lifestyle LAB</h2>
+                    <Link to="/culture">
+                        <div className="morebtn">ALL CONTENTS</div>
+                    </Link>  
+                </div>
+
+                <div className="culbox_bottom">
+                    <CultureList/>
+                </div>
 
             </section>
 

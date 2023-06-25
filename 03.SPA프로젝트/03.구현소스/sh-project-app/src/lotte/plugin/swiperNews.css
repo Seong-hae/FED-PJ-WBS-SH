@@ -30,6 +30,7 @@
 
   /* 타이틀박스 */
   .tit{    
+    margin-top: 20px;
     font-family: 'Cinzel', serif;
     font-size: min(130px,20vw);
     font-weight: 200;

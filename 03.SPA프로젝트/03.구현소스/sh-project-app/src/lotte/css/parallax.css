@@ -2,30 +2,29 @@
 /* Parallax 모듈용 CSS - Parallax.css  */
 .gal_paral{
     position: absolute;
+    top: 0;
+    right: 12vw;
+    display: flex;
+    gap: 0 20px;
 }
 .gal_paral ul{
     display: flex;
     flex-direction: column;
     gap: 20px 0;
 }
-.gal_paral .gal_leftbx{}
-.gal_paral .gal_rightbx{}
 .gal_paral ul li{
     width: 300px;
     padding: 20px;
     background-color: #fff;
-
 }
 .gal_paral .gal_imgbx{
     width: 100%;
     margin-bottom: 20px;
+    aspect-ratio: 300/350;
 }
 .gal_paral .gal_imgbx img{
     width: 100%;
     object-fit: cover;
-}
-.gal_paral .gal_txtbx{
-    
 }
 .gal_paral .gal_txtbx h3{
     font-size: 16px;
@@ -38,7 +37,56 @@
 .gal_paral .gal_txtbx .gal_store{
     margin: 10px 0;
     font-size: 13px;
+    word-break: keep-all;
 }
 .gal_paral .gal_txtbx .gal_period{
     font-size: 13px;
 }
+
+
+
+/********************************************************************************/
+  /* 1000px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 1000px) {
+
+    .gal_paral ul li{
+        width: 220px;
+    }
+
+  }
+
+
+  /* 800px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 800px) {
+
+    .gal_paral{
+        right: 5vw;
+        
+    }
+    .gal_paral ul li{
+        width: 180px;
+        padding: 15px;
+    }
+  }
+
+  /* 500px 사이즈 이하 미디어쿼리 시작 */
+  @media screen and (max-width: 500px) {
+
+    .gal_paral{
+        right: 0;
+    }
+    .gal_paral ul li{
+        width: 150px;
+        padding: 10px;
+    }
+    .gal_paral .gal_txtbx h3{
+        font-size: 14px;
+    }
+    .gal_paral .gal_txtbx .gal_store{
+        font-size: 11px;
+    }
+    .gal_paral .gal_txtbx .gal_period{
+        font-size: 11px;
+    }
+
+  }
