@@ -28,7 +28,7 @@ function jqFn() {
             console.log("여기니?")
             $("body").css({
                 backgroundColor : "#000",
-                transition: ".3s"
+                transition: ".5s"
             })
 
             cultxt.css({
