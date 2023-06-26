@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: var(--swiper-theme-color);
+  color: #fff;
 }
 
 .magazine_slide .autoplay-progress svg {
@@ -47,7 +47,7 @@
   width: 100%;
   height: 100%;
   stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
+  stroke: #fff;
   fill: none;
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
@@ -101,6 +101,7 @@
 .magbx:hover .magtxt .read::after{
   width: 100%;
 }
+
 
 
 /********************************************************************************/

@@ -84,6 +84,7 @@ main.cont{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid #cccccc53;
 }
 .info .foot_up{
     display: flex;

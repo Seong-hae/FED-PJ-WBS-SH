@@ -3,6 +3,7 @@ import NewsSwipe from "./modules/NewsSwipe";
 import MagazineSwipe from "./modules/MagazineSwipe";
 import Gallery from "./modules/Parallax";
 import CultureList from "./modules/CultureList";
+import  insta_data  from "./data/insta";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import "./css/main.css";
 import { Link } from "react-router-dom";
@@ -14,17 +15,19 @@ import $ from "jquery";
 // 제이쿼리 로드구역 함수 /////////
 function jqFn() {
 
+
+    /******************* 배경화면 색깔 변경함수 *******************/
     $(window).on("scroll",function(){
         console.log("라랄")
 
         console.log('있니?',$('.culbox').is('.culturebox'))
         let windowH = $(window).scrollTop();
         let cultxt = $(".cul_txtbx");
-        let 어쩌구 = $(".culbox").offset().top
-        let 저쩌구 = $(".culbox").innerHeight()/3
-        let 어쩌저쩌 = 어쩌구 + 저쩌구
+        let culbox = $(".culbox").offset().top
+        let culboxH = $(".culbox").innerHeight()/3
+        let culPlus = culbox + culboxH
 
-        if( windowH >= 어쩌저쩌 ){
+        if( windowH >= culPlus ){
             console.log("여기니?")
             $("body").css({
                 backgroundColor : "#000",
@@ -47,8 +50,8 @@ function jqFn() {
             })
         }
         
-        console.log(windowH,어쩌저쩌,"라랄")
-    })
+        console.log(windowH,culPlus,"라랄")
+    }) ///////////////////// scroll /////////////////
     
 } ////////////// jQFn ///////////
 
@@ -151,6 +154,36 @@ const Main = () => {
                 </div>
             </section>
 
+
+
+            {/* 7. 롯데인스타 영역 */}
+            <section className="instabox">
+                <h2 className="tit">
+                    <span>Follow Instagaram</span>
+                    @Lotteshopping
+                </h2>
+
+                <Link to="https://www.instagram.com/lotteshopping/" className="insban">
+                    <ul className="insban_top insbanbox">
+                        {insta_data.map((v, i) => (
+                            <li key={i}><img src={v.inssrc} alt="instaimage" /></li>
+                        ))}
+                        {insta_data.map((v, i) => (
+                            <li key={i}><img src={v.inssrc} alt="instaimage" /></li>
+                        ))}
+                    </ul>
+                    <ul className="insban_bottom insbanbox">
+                        {insta_data.map((v, i) => (
+                            <li key={i}><img src={v.inssrc} alt="instaimage" /></li>
+                        ))}
+                        {insta_data.map((v, i) => (
+                            <li key={i}><img src={v.inssrc} alt="instaimage" /></li>
+                        ))}
+                    </ul>
+                </Link>
+
+
+            </section>
 
 
             {jqFn()}

@@ -175,6 +175,75 @@
       padding: 80px 40px;
   }
 
+  /********************* 7. 롯데인스타 영역 *********************/
+  .instabox{
+      padding: 150px 0;
+  }
+  .instabox .tit{
+      padding: 20px;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      margin-bottom: 60px;
+      color: #fff;
+      font-size: 60px;
+  }
+  .instabox .tit span{
+      display: block;
+      margin-bottom: 20px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 35px;
+  }
+
+  .instabox .insban{
+      display: block;
+      cursor: pointer;
+      overflow: hidden;
+  }
+  .instabox .insban .insbanbox{
+      display: flex;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      width: 6120px;
+      
+  }
+  .instabox .insbanbox li{
+      flex-shrink: 0;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      margin-left: 20px;
+      animation-play-state: running;
+      box-sizing: border-box;
+  }
+  .instabox .insbanbox li img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .instabox .insban_top{
+      animation: eventmovetop 40s linear infinite;
+  }
+  .instabox .insban_bottom{
+      animation: eventmovebottom 40s linear infinite;
+  }
+
+   /* 흐르는 이미지박스 키프레임 */
+   @keyframes eventmovetop {
+      0% {
+         transform: translateX(0);
+      }
+      100% {
+         transform: translateX(-50%);
+      }
+   }
+   @keyframes eventmovebottom {
+      0% {
+         transform: translateX(-50%);
+      }
+      100% {
+         transform: translateX(0);
+      }
+   }
 
 
 
@@ -226,6 +295,15 @@
       width: 70%;
    }
 
+
+   /************** 7. 인스타 영역 ****************/
+   .instabox .tit{
+      font-size: 40px;
+   }
+   .instabox .tit span{
+      font-size: 20px;
+   }
+
 }
 
 
@@ -240,6 +318,22 @@
    /************ 5. 문화센터 영역 ***********/
    .culbox .morebtn{
       font-size: 12px;
+   }
+
+   /************ 6. 매거진 영역 ***********/
+   .magazinebox {
+      padding: 80px 0;
+   }
+
+   /************** 7. 인스타 영역 ****************/
+   .instabox{
+      padding: 80px 0;
+   }
+   .instabox .tit{
+      font-size: 33px;
+   }
+   .instabox .tit span{
+      font-size: 18px;
    }
 
 }

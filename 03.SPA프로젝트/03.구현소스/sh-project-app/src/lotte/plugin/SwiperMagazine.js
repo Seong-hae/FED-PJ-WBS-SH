@@ -40,10 +40,10 @@ export default function SwiperNewsprops() {
                 // spaceBetween={20}
                 // navigation={true}
                 loop={true}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 modules={[Autoplay]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 // 스와이퍼 사이즈별 슬라이드수 변경!
@@ -62,6 +62,24 @@ export default function SwiperNewsprops() {
                     // },
                 }}
                 className="mySwiper magazine_slide">
+                    <SwiperSlide>
+                    <Link to="/magazine">
+                        <section className="magbx">
+                            {/* 매거진 이미지영역 */}
+                            <div className="magimg">
+                                <img src="./images/magazine/magazine_left.jpg" alt="magazineimage" />
+                            </div>
+                            {/* 매거진 텍스트영역 */}
+                            <div className="magtxt">
+                                <h3>
+                                    <span>Jun. 2023</span>
+                                    DEAR MY PLANET
+                                </h3>
+                                <button className="read">Read more</button>
+                            </div>
+                        </section>
+                    </Link>
+                </SwiperSlide>
                 {mdt.map((v, i) => (
                     <SwiperSlide key={i}>
                         <Link to="/magazinedetail" 
@@ -91,13 +109,7 @@ export default function SwiperNewsprops() {
                         
                     </SwiperSlide>
                 ))}
-                <SwiperSlide>
-                    <Link to="/magazine">
-                        <div className="morebox">
-                            랄라랄
-                        </div>
-                    </Link>
-                </SwiperSlide>
+                
 
                 <div className="autoplay-progress" slot="container-end">
                     <svg viewBox="0 0 48 48" ref={progressCircle}>
