@@ -1,7 +1,8 @@
 ///  NewSwipe 모듈 - NewSwipe.js
 import $ from "jquery";
 import "../css/parallax.css";
-import gallery_data from "../data/gallery";
+// import gallery_data from "../data/gallery";
+import { gallery_data } from "../data/gallery";
 import { Parallax } from 'react-scroll-parallax';
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,11 +13,11 @@ function jqFn() {
 } ////////////// jQFn ///////////
 
 function Gallery(props) {
-
+    console.log(gallery_data)
     // 유스스테이트로 원본데이터를 가져오고
     const [by, setBy] = useState(gallery_data)
     // 카피본을 만들어서 유즈스테이트 데이터를가져오고
-    let copy = [...by.gallery_data]
+    let copy = [...by]
     // 카피본의 데이터를 바꿔준다 내맘대로 하고싶은대로
     let copy1;
     copy1 = [copy[0],copy[1],copy[2]]

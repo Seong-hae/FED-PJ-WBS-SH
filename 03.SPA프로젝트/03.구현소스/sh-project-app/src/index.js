@@ -16,6 +16,7 @@ import Service from "./lotte/Service";
 import HotKeyword from "./lotte/HotKeyword";
 import GalleryDetail from "./lotte/GalleryDetail";
 import CultureDetail from "./lotte/CultureDetail";
+import MagazineDetail from "./lotte/MagazineDetail";
 
 
 export default function App(){
@@ -36,6 +37,7 @@ export default function App(){
                     <Route path="hotkeyword" element={<HotKeyword />} />
                     <Route path="gallerydetail" element={<GalleryDetail />} />
                     <Route path="culturedetail" element={<CultureDetail />} />
+                    <Route path="magazinedetail" element={<MagazineDetail />} />
                 </Route>
             </Routes>
         </BrowserRouter>

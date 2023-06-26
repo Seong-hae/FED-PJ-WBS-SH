@@ -51,25 +51,22 @@ const culture_data = [
       culprice: "10,000",
   },
   
-];
+]
 
 
 
-// const culture_product_data = [
-//   {
-//       idx : "1",
-//       gprosrc:"./images/gallery/gallery_product1.png",
-//       gproname: `지비지 인 월드`,
-//       gproauthor: "지비지",
-//       gproprice: `18,000,000원`,
-//       gproexplanation: `
-      
-//       `
-//   },
-
-// ]
+const culture_product_data = [
+  {
+      idx : "1",
+      gprosrc:"./images/gallery/gallery_product1.png",
+      gproname: `지비지 인 월드`,
+      gproauthor: "지비지",
+      gproprice: `18,000,000원`,
+      gproexplanation: ``
+  }
+]
 
 
 
 
-export default culture_data;
+export { culture_data, culture_product_data}

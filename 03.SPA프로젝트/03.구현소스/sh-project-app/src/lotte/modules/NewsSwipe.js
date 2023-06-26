@@ -1,6 +1,5 @@
 ///  NewSwipe 모듈 - NewSwipe.js
 import $ from "jquery";
-import "../css/newsswipe.css";
 import SwiperNews from "../plugin/SwiperNews";
 
 // 제이쿼리 로드구역 함수 /////////

@@ -1,9 +1,10 @@
 // 롯데백화점 쇼핑뉴스 페이지 컴포넌트
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/news.css";
 /* 제이쿼리넣기 */
 import $ from "jquery";
+
+
 
 // 데이터 가져오기
 import news_data from "./data/news";
@@ -12,7 +13,22 @@ import { Link } from "react-router-dom";
 
 // 제이쿼리 로드구역 함수 /////////
 function jqFn() {
-    $(() => {}); //////// jQB ///////////
+    $(() => {
+        $('.shoplist li').on('click',function(){
+            console.log($(this))
+            $('.shoplist li').css({
+                backgroundColor : 'white',
+                color : 'black'
+            })
+            $(this).css({
+                transition : '.3s',
+                backgroundColor : '#333',
+                color : 'white'
+                
+            })
+        })
+
+    }); //////// jQB ///////////
 } ////////////// jQFn ///////////
 
 
@@ -22,43 +38,20 @@ const News = () => {
     // 데이터 셋팅
     const ndt = news_data;
     // console.log(ndt);
-    const [newndt , setNewndt] = useState(ndt)
-    const [aa,setAa] = useState(0);
 
-
-    const sch = (e) => {
-        console.log(e)
-        let keyword = e;
-        // 첫번째li부터 q  w e r 
-        
-        let result = ndt.filter((value)=>
-        value.alignment == keyword
-    )
-
-        console.log(result[0].newdate)
-
-        let a = `
-        <div className="newsbox" >
-                        <div className="nbx_img">
-                            {/* <img src=${result[0].newsrc} /> */}
-                        </div>
-                        <div className="nbx_txt">
-                            <h3>
-                                {/* <span>${result[0].newname.split('^')[0]}</span> */}
-                                {/* ${result[0].newname.split('^')[1]} */}
-                            </h3>
-                            {/* <div className="store">${result[0].newdesc}</div> */}
-                            {/* <div className="date">${result[0].newdate}</div> */}
-                        </div>
-                    </div>
-        `
-        $('.asd').html(a)
-
-
-
-    }
-
+    let [num,setNum] = useState('event') 
+    let [ui, setUi] = useState(ndt)
+    console.log('ui',ui)
+    useEffect(()=>{
+        let copy = [...ui]
+                console.log("복사본",ui)
+                copy =ndt.filter(x => x.alignment == num)
+                setUi(copy)
+                console.log("바뀐거",ui)
+    },[num])   // num이 바뀔때마다 안에있는거 실행
     
+    
+
 
     return(
         <>
@@ -71,39 +64,44 @@ const News = () => {
             </h2>
 
             <ul className="shoplist">
-                <li  onClick={()=>{sch('event')}}>쇼핑이 즐거운 사은행사</li>
-                <li   onClick={()=>{sch('food')}}>&#91;pop-up&#93; 잠실만의 트렌디 쇼핑</li>
-                <li  onClick={()=>{sch('trendy')}}>맛있고 행복한 쇼핑 Food AVENUE</li>
-                <li  onClick={()=>{sch('issue')}}>&#91;FASHION&#93; 미리준비하는 바캉스룩</li>
+                <li onClick={()=>{setNum('event')}}>쇼핑이 즐거운 사은행사</li>
+                <li onClick={()=>{setNum('trendy')}}>&#91;pop-up&#93; 잠실만의 트렌디 쇼핑</li>
+                <li onClick={()=>{setNum('food')}}>맛있고 행복한 쇼핑 Food AVENUE</li>
+                <li onClick={()=>{setNum('issue')}}>&#91;FASHION&#93; 미리준비하는 바캉스룩</li>
             </ul>
 
             {/* 2. 분류별 쇼핑뉴스 나열 */}
 
+                <div className="news_bottom">
 
-            <div className="asd">
-
-            </div>
-
-                    <Link to="/newsdetail" >
-                    <div className="newsbox" >
-                        <div className="nbx_img">
-                            {/* <img src={v.newsrc} alt={v.newname} /> */}
-                        </div>
-                        <div className="nbx_txt">
-                            <h3>
-                                {/* <span>{v.newname.split('^')[0]}</span> */}
-                                {/* {v.newname.split('^')[1]} */}
-                            </h3>
-                            {/* <div className="store">{v.newstore}</div> */}
-                            {/* <div className="date">{v.newdate}</div> */}
-                        </div>
-                    </div>
-                </Link>
-                <Link to="/main">
-                    <div className="asd"></div>
-                </Link>
-                
+                    {
+                        ui.map((v,i)=>
+                                <Link to="/newsdetail" key={i}
+                                state={{
+                                    newname:v.newname,
+                                    newdate:v.newdate,
+                                    newdesc:v.newdesc,
+                                    newstore:v.newstore
+                                    }}>
+                                <div className="newsbox" >
+                                    <div className="nbx_img">
+                                        <img src={v.newsrc} alt={v.newname} />
+                                    </div>
+                                    <div className="nbx_txt">
+                                        <h3>
+                                            <span>{v.newname.split('^')[0]}</span>
+                                            {v.newname.split('^')[1]}
+                                        </h3>
+                                        <div className="store">{v.newstore}</div>
+                                        <div className="date">{v.newdate}</div>
+                                    </div>
+                                </div>
+                            </Link>
+                        )
+                    }
+                </div>
             </section>
+            {jqFn()}
         </>
     );
 

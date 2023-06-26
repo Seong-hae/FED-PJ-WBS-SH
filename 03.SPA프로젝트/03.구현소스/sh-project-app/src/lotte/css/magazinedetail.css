@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* NewsDetail 모듈용 CSS - newsdetail.css  */
+.mag_detail{
+    padding: 200px 20px;
+}
+/* 상세정보박스 */
+.mag_detail .magtit{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+.mag_detail .magtit span{
+    display: block;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* 정보박스 텍스트영역 */
+.mag_detail .descbx{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.mag_detail .descbx .desc_txt{
+    padding: 50px;
+}
+.mag_detail .descbx .desc_txt h3{
+    font-size: 35px;
+    font-weight: 500;
+    word-break: keep-all;
+}
+.mag_detail .descbx .desc_txt h3 span{
+    display: block;
+    margin-right: 15px;
+    color: #bd834c;
+    font-size: 20px;
+    font-weight: 600;
+}
+.mag_detail .descbx .desc_txt .mag_subtit{
+    margin: 20px 0 40px;
+    font-size: 16px;
+    word-break: keep-all;
+}
+.mag_detail .descbx .desc_txt .mag_editor{
+    font-size: 16px;  
+}   
+.mag_detail .descbx .desc_txt .mag_editor span{
+    color: rgb(197, 197, 197);
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 정보박스 이미지영역 */
+.mag_detail .descbx .desc_img{
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+.mag_detail .descbx .desc_img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.mag_detail .descbx p{
+    padding: 30px;
+    text-indent: 5px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.mag_detail .before{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 40px;
+    transition: .3s;
+}
+.mag_detail .before:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+
+
+/* ********************************************************** */
+
+/* 1000px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1000px) {
+
+    /* 정보박스 텍스트영역 */
+    .mag_detail .descbx{
+        width: 85%;
+    }
+
+}
+
+
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+
+    .mag_detail{
+        padding: 140px 20px;
+    }
+
+    .mag_detail .magtit{
+        font-size: 50px;
+    }
+    .mag_detail .magtit span{
+        font-size: 15px;
+    }
+
+    .mag_detail .descbx .desc_txt{
+        padding: 30px;
+    }
+    .mag_detail .descbx .desc_txt h3{
+        font-size: 25px;
+    }
+    .mag_detail .descbx .desc_txt h3 span{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .mag_detail .descbx .desc_txt .mag_subtit{
+        margin: 30px 0 40px;
+        font-size: 14px;
+    }
+    .mag_detail .descbx .desc_txt .mag_editor{
+        font-size: 14px;
+    }  
+    .mag_detail .descbx p{
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}

@@ -11,7 +11,6 @@ const news_data = [
         newstore: "백화점 전점",
         newdesc: "./images/news/news1_1.jpeg",
         alignment: "event",
-        alpa : "q"
     },
     {
         idx : "2",
@@ -22,8 +21,7 @@ const news_data = [
         newdate: `6.14(금) ~ 12.31(일)`,
         newstore: "백화점 전점",
         newdesc: "./images/news/news2_1.jpeg",
-        alignment: "food",
-        alpa : "w"
+        alignment: "event",
     },
     {
         idx : "3",
@@ -34,8 +32,7 @@ const news_data = [
         newdate: `6.8(목) ~ 6.21(수)`,
         newstore: "백화점",
         newdesc: "./images/news/news3_1.jpeg",
-        alignment: "issue",
-        alpa : "e"
+        alignment: "trendy",
     },
     {
         idx : "4",
@@ -47,7 +44,6 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news4_1.jpeg",
         alignment: "food",
-        alpa : "w"
     },
     {
         idx : "5",
@@ -58,8 +54,7 @@ const news_data = [
         newdate: `6.5(월) ~ 6.29(목)`,
         newstore: "일부지점",
         newdesc: "./images/news/news5_1.jpeg",
-        alignment: "issue",
-        alpa : "e"
+        alignment: "trendy",
     },
     {
         idx : "6",
@@ -70,8 +65,7 @@ const news_data = [
         newdate: `6.14(수) ~ 6.25(일)`,
         newstore: "일부지점",
         newdesc: "./images/news/news6_1.jpeg",
-        alignment: "trendy",
-        alpa : "r"
+        alignment: "issue",
     },
     {
         idx : "7",
@@ -84,7 +78,6 @@ const news_data = [
         newstore: "일부지점",
         newdesc: "./images/news/news7_1.jpeg",
         alignment: "food",
-        alpa : "w"
     },
     {
         idx : "8",
@@ -95,8 +88,7 @@ const news_data = [
         newdate: `6.16(금) ~ 6.29(목)`,
         newstore: "일부지점",
         newdesc: "./images/news/news8_1.jpeg",
-        alignment: "trendy",
-        alpa : "r"
+        alignment: "issue",
     },
     {
         idx : "9",
@@ -108,7 +100,6 @@ const news_data = [
         newstore: "백화점",
         newdesc: "./images/news/news9_1.jpeg",
         alignment: "food",
-        alpa : "w"
     },
     
     

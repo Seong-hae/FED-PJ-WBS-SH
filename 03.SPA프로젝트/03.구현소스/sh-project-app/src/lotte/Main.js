@@ -1,10 +1,58 @@
 // 롯데 메인 페이지 컴포넌트
 import NewsSwipe from "./modules/NewsSwipe";
+import MagazineSwipe from "./modules/MagazineSwipe";
 import Gallery from "./modules/Parallax";
 import CultureList from "./modules/CultureList";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import "./css/main.css";
 import { Link } from "react-router-dom";
+import $ from "jquery";
+
+
+
+
+// 제이쿼리 로드구역 함수 /////////
+function jqFn() {
+
+    $(window).on("scroll",function(){
+        console.log("라랄")
+
+        console.log('있니?',$('.culbox').is('.culturebox'))
+        let windowH = $(window).scrollTop();
+        let cultxt = $(".cul_txtbx");
+        let 어쩌구 = $(".culbox").offset().top
+        let 저쩌구 = $(".culbox").innerHeight()/3
+        let 어쩌저쩌 = 어쩌구 + 저쩌구
+
+        if( windowH >= 어쩌저쩌 ){
+            console.log("여기니?")
+            $("body").css({
+                backgroundColor : "#000",
+                transition: ".3s"
+            })
+
+            cultxt.css({
+                color : "#fff"
+            })
+        }
+        else{
+            console.log("여기니?")
+            $("body").css({
+                backgroundColor : "#fff",
+                transition: ".3s"
+            })
+
+            cultxt.css({
+                color : "#000"
+            })
+        }
+        
+        console.log(windowH,어쩌저쩌,"라랄")
+    })
+    
+} ////////////// jQFn ///////////
+
+
 
 const Main = () => {
     return (
@@ -94,7 +142,18 @@ const Main = () => {
             </section>
 
 
+            {/* 6. 매거진 영역 */}
+            <section className="magazinebox">
+                <h2 className="tit">Magazine</h2>
 
+                <div className="mgslide_box">
+                    <MagazineSwipe />
+                </div>
+            </section>
+
+
+
+            {jqFn()}
         </>
     );
 }; /////////// Main //////////////

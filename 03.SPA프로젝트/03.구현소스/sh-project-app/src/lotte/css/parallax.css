@@ -3,7 +3,7 @@
 .gal_paral{
     position: absolute;
     top: 0;
-    right: 12vw;
+    right: 8vw;
     display: flex;
     gap: 0 20px;
 }

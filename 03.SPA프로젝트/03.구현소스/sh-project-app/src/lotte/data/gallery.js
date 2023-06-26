@@ -98,4 +98,4 @@ const gallery_product_data = [
 
 
 
-export default {gallery_data, gallery_product_data};
+export {gallery_data, gallery_product_data};

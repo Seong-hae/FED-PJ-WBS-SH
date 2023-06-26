@@ -1,7 +1,8 @@
 ///  CultureList 모듈 - CultureList.js
 import $ from "jquery";
 import "../css/culturelist.css";
-import culture_data from "../data/culture";
+// import culture_data from "../data/culture";
+import { culture_data } from "../data/culture";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

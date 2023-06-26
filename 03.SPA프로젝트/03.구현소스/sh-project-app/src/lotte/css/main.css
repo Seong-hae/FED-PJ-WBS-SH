@@ -42,6 +42,17 @@
 }
 
 
+ /********************* 2. 쇼핑 뉴스 영역 *********************/
+ .newswbox{
+   /* max-width: 1320px; */
+   /* margin: 0 auto; */
+   padding: 120px 0;
+   }
+
+
+
+
+
  /********************* 3. 쇼핑 핫키워드 영역 *********************/
  .hotbox{
     box-sizing: border-box;
@@ -100,16 +111,17 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: min(20vw,300px);
+    font-size: min(20vw,450px);
     color: #fff;
     font-family: 'Cinzel', serif;
     font-weight: 500;
+    padding-left: 0;
   }
 
 
   /********************* 5. 문화센터 영역 *********************/
   .culbox{
-      padding: 120px 40px;
+      padding: 160px 40px;
   }
   .culbox .culbox_top{
       margin-bottom: 40px;
@@ -118,6 +130,7 @@
       align-items: flex-end;
   }
   .culbox .tit{
+      font-family: 'Cinzel', serif;
       padding: 0 20px;
       font-size: 120px;
       font-weight: 400;
@@ -136,6 +149,32 @@
       background-color: #000;
       color: #fff;
   }
+
+
+  /********************* 6. 매거진 영역 *********************/
+  .magazinebox{
+      padding: 120px 0;
+      /* background-color: #000; */
+  }
+  .magazinebox .tit{
+      font-family: 'Cinzel', serif;
+      font-size: min(14vw,120px);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: -60px;
+      color: #fff;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+  }
+  .magazinebox .mgslide_box{
+      width: 50%;
+      margin: 0 auto;
+      background-color: #8a2c44;
+      /* background-color: #000; */
+      padding: 80px 40px;
+  }
+
 
 
 
@@ -179,6 +218,12 @@
    /********* 3. 쇼핑 핫키워드 영역 ********/
    .hotbox .hot_cont li{
       font-size: 14px;
+   }
+
+   /************** 6. 매거진 영역 ***********/
+   .magazinebox .mgslide_box{
+      padding: 80px 30px 30px; 
+      width: 70%;
    }
 
 }

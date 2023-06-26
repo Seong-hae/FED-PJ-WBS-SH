@@ -45,10 +45,11 @@ export default function SwiperNews(props) {
                         slidesPerView: 4,
                     },
                 }}
-                className="mySwiper">
+                className="mySwiper news_slide">
                 {ndt.map((v, i) => (
                     <SwiperSlide key={i}>
-                        <Link to="/newsdetail" state={{
+                        <Link to="/newsdetail" 
+                        state={{
                             newname:v.newname,
                             newdate:v.newdate,
                             newdesc:v.newdesc,
