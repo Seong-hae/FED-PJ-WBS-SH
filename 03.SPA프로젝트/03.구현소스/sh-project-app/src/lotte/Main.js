@@ -62,10 +62,10 @@ function jqFn() {
     let sldnum = 0;
 
     const rotateSld = () => {
-        stg.eq(sldnum).addClass("on").css({zIndex:1});
+        stg.eq(sldnum).addClass("on");
         setTimeout(()=>{
-            stg.eq(sldnum?0:1).addClass("on").css({zIndex:1});
-            setTimeout(()=>stg.eq(sldnum).removeClass("on").css({zIndex:1})
+            stg.eq(sldnum?0:1).addClass("on");
+            setTimeout(()=>stg.eq(sldnum).removeClass("on")
             ,1000);
             
         },

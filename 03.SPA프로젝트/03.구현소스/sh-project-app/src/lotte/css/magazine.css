@@ -13,6 +13,7 @@
 }
 .magazine_sec .videobox video{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .magazine_sec .vbx_text{
@@ -42,4 +43,20 @@
     border-radius: 25px;
     position: absolute;
     right: 0;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(204, 204, 204, 0.71);
+}
+.Bar{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: red;
+    transition: .2s linear;
 }

@@ -36,6 +36,7 @@
 }
 .main_intro .slidebox .slidelist.on span{
    animation: intAni 1s ease-in-out forwards;
+   z-index: 1;
 }
 
 /* .main_intro .slidebox .slidelist:first-child span{
