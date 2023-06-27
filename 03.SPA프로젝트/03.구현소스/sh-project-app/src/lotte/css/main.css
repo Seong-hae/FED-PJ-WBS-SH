@@ -48,14 +48,9 @@
    z-index: 1;
 }
 .main_intro .slidebox .slidelist.on span{
-<<<<<<< Updated upstream
    opacity: 1;
    height: 100%;
    z-index: 1;
-=======
-   animation: intAni 1s ease-in-out forwards;
-   /* z-index: 1; */
->>>>>>> Stashed changes
 }
 .main_intro .slidebox .slidelist.on span img{
    opacity: 1;

@@ -1,4 +1,4 @@
-///  NewSwipe 모듈 - NewSwipe.js
+///  Gallery 모듈 - Gallery.js
 import $ from "jquery";
 import "../css/parallax.css";
 // import gallery_data from "../data/gallery";
