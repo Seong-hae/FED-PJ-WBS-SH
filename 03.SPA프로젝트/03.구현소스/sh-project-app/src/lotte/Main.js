@@ -8,6 +8,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import "./css/main.css";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import { useEffect } from "react";
 
 
 
@@ -20,9 +21,13 @@ function jqFn() {
     $(window).on("scroll",function(){
         console.log("라랄")
 
-        console.log('있니?',$('.culbox').is('.culturebox'))
+        // console.log('있니?',$('.culbox').is('.culturebox'))
         let windowH = $(window).scrollTop();
         let cultxt = $(".cul_txtbx");
+        if(!document.querySelector(".culbox")){ 
+            $("body").css({backgroundColor:"transparent"});
+            return;
+        }
         let culbox = $(".culbox").offset().top
         let culboxH = $(".culbox").innerHeight()/3
         let culPlus = culbox + culboxH
@@ -52,25 +57,51 @@ function jqFn() {
         
         console.log(windowH,culPlus,"라랄")
     }) ///////////////////// scroll /////////////////
+
+    let stg = $(".slidelist");
+    let sldnum = 0;
+
+    const rotateSld = () => {
+        stg.eq(sldnum).addClass("on").css({zIndex:1});
+        setTimeout(()=>{
+            stg.eq(sldnum?0:1).addClass("on").css({zIndex:1});
+            setTimeout(()=>stg.eq(sldnum).removeClass("on").css({zIndex:1})
+            ,1000);
+            
+        },
+        4000);
+
+        setTimeout(()=>sldnum=sldnum?0:1,
+        6000);
+        
+
+
+    }; ///////// rotateSld ////////////
+
+    rotateSld();
+
+    setInterval(rotateSld,6100)
     
 } ////////////// jQFn ///////////
 
 
-
 const Main = () => {
+
+    useEffect(jqFn,[]);
+
     return (
         <>
             {/* 1. 메인 인트로 슬라이드 */}
             <section className="main_intro">
                 <ul className="slidebox">
                     <li className="slidelist">
-                        <img src="./images/main_slide1.jpg" alt="mainimg" className="sl_bottom" />
-                        <img src="./images/main_slide1_top.jpg" alt="mainimg" className="sl_top"/>
+                        <span className="sl_bottom"><img src="./images/main_slide1.jpg" alt="mainimg"  /></span>
+                        <span className="sl_top"><img src="./images/main_slide1.jpg" alt="mainimg" /></span>
                         <h2 className="main_tit">Dear, my planet</h2>
                     </li>
                     <li className="slidelist">
-                        <img src="./images/main_slide2.jpg" alt="mainimg"className="sl_bottom"/>
-                        <img src="./images/main_slide2_top.jpg" alt="mainimg" className="sl_top"/>
+                        <span className="sl_bottom"><img src="./images/main_slide2.jpg" alt="mainimg"/></span>
+                        <span className="sl_top"><img src="./images/main_slide2.jpg" alt="mainimg" /></span>
                         <h2 className="main_tit">Surprice Week</h2>
                     </li>
                 </ul>

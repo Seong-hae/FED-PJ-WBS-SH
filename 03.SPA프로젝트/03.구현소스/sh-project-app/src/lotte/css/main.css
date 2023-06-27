@@ -18,26 +18,65 @@
     border: 1px solid #000;
     overflow: hidden;
 }
-.main_intro .slidebox .slidelist{
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+.main_intro .slidebox .slidelist{    
+   width: 100%;
+   position: absolute;
+   height: 100%;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   overflow: hidden;
 }
-.main_intro .slidebox .slidelist img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.main_intro .slidebox .slidelist span{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 0;
+   overflow: hidden;
 }
-.main_intro .slidebox .slidelist .sl_bottom{
-    width: 100%;
+.main_intro .slidebox .slidelist.on span{
+   animation: intAni 1s ease-in-out forwards;
+}
+
+/* .main_intro .slidebox .slidelist:first-child span{
+   animation: intAni 1s ease-in-out 2s forwards;
+}
+.main_intro .slidebox .slidelist:last-child span{
+   animation: intAni 1s ease-in-out 4s forwards;
+} */
+@keyframes intAni {
+   to{
+      height: 100%;
+   }
+}
+.main_intro .slidebox .slidelist span img{
+   position: absolute;
+   top: 100%;
+   left: -100%;
+    width: 300%;
+    /* height: 150%; */
     object-fit: cover;
 }
+.main_intro .slidebox .slidelist.on span img{
+   animation: intAniImg 1s ease-in-out forwards;
+}
+/* .main_intro .slidebox .slidelist:first-child span img{
+   animation: intAniImg 1s ease-in-out 2s forwards;
+}
+.main_intro .slidebox .slidelist:last-child span img{
+   animation: intAniImg 1s ease-in-out 4s forwards;
+} */
+@keyframes intAniImg {
+   to{
+      top: -55%;
+   }
+}
+/* .main_intro .slidebox .slidelist .sl_bottom{
+
+} */
 .main_intro .slidebox .slidelist .sl_top{
-    width: 60%;
-    object-fit: cover;
+    transform: scale(.8);
+    overflow: hidden;
    
 }
 
