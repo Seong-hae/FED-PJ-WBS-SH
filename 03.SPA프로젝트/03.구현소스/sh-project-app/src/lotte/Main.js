@@ -64,9 +64,15 @@ function jqFn() {
     // const rotateSld = () => {
     //     stg.eq(sldnum).addClass("on");
     //     setTimeout(()=>{
+<<<<<<< Updated upstream
     //         stg.eq(sldnum?0:1).addClass("on");
     //         setTimeout(()=>stg.eq(sldnum).removeClass("on")
     //         ,1000);
+=======
+    //         setTimeout(()=>stg.eq(sldnum).removeClass("on")
+    //         ,1000);
+    //         stg.eq(sldnum?0:1).addClass("on");
+>>>>>>> Stashed changes
             
     //     },
     //     4000);
@@ -77,6 +83,7 @@ function jqFn() {
 
 
     // }; ///////// rotateSld ////////////
+<<<<<<< Updated upstream
 
     // rotateSld();
 
@@ -110,6 +117,32 @@ function t1(){
 setInterval(t1,6700)
 
 
+=======
+
+    // rotateSld();
+
+    stg.eq(sldnum).addClass("on");
+
+    function t1(){
+        sldnum=sldnum?0:1
+        stg.eq(sldnum).addClass("on");
+
+        setTimeout(()=>{
+            sldnum=sldnum?0:1
+            stg.eq(sldnum).addClass("on");
+            sldnum=sldnum?0:1
+            stg.eq(sldnum).removeClass("on")
+        },3000)
+        
+        setTimeout(()=>{
+            sldnum=sldnum?0:1
+            stg.eq(sldnum).removeClass("on")
+        },7000);
+    }
+
+    // setInterval(t1,7000)
+    
+>>>>>>> Stashed changes
 } ////////////// jQFn ///////////
 
 
