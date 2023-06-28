@@ -5,7 +5,7 @@ import $ from "jquery";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import magazine_data from "./data/magazine";
+import { magazine_art_data} from "./data/magazine";
 import MagazineParallax from "./modules/Parallax_magazine";
 import { Parallax } from 'react-scroll-parallax';
 
@@ -77,6 +77,8 @@ const Magazine = () => {
     // 로딩후 호출!
     useEffect(jqFn, []);
 
+    const martdt = magazine_art_data;
+
     return (
         <>
             <section className="subpage magazine_sec">
@@ -118,7 +120,7 @@ const Magazine = () => {
                         <ParallaxProvider>
                         <Parallax speed={-10}>
                         <div className="l_imgbx">
-                            <img src="../images/magazine/magazine_left.jpg" alt="magazine"></img>
+                            <img src="./images/magazine/magazine_left.jpg" alt="magazine"></img>
                         </div>
 
                         <div className="l_txtbx">
@@ -176,8 +178,40 @@ const Magazine = () => {
                 </section>
 
 
-                {/* 4. 매거진 야채영상 박스영역 */}
-                <section className="videobox">
+                {/* 4. 매거진 아트 박스영역 */}
+                <section className="martbox">
+
+                {
+                    martdt.map((v,i)=>
+                    <Link to="/magazinedetail" key={i}
+                    state={{
+                            magname:v.magname,
+                            magsrc:v.magsrc,
+                            magsrc2:v.magsrc2,
+                            magpro:v.magpro,
+                            mageditor:v.mageditor,
+                            magcont:v.magcont,
+                        }}>
+                        <div className="artbx">
+
+                            <div className="imgbx">
+                                <img src={v.magsrc} alt={v.magname} />
+                            </div>
+
+                            <div className="txtbx">
+
+                                <h2>
+                                    <span>{v.magname.split('^')[0]}</span>
+                                    {v.magname.split('^')[1]}
+                                </h2>
+
+                                <p>{v.magpro}</p>
+                            </div>
+
+                        </div>
+                    </Link>
+                    )}
+
 
                 </section>
                 

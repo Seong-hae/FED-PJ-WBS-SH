@@ -57,6 +57,22 @@
     object-fit: cover;
 }
 
+.cul_detail .before{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 40px;
+    transition: .3s;
+}
+.cul_detail .before:hover{
+    color: #fff;
+    background-color: #000;
+}
+
 
 
 

@@ -77,6 +77,10 @@ function CultureDetail(props) {
                         <img src={culsrc2} alt={culname} />
                     </div>
                 </div>
+
+                <Link to="/culture" >
+                    <button className="before">All CONTENTS</button>
+                </Link>
             </div>
         </>
     );

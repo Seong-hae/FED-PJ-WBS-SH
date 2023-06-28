@@ -1,4 +1,4 @@
-
+// 쇼핑정보영역 스와이프 플러그인
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

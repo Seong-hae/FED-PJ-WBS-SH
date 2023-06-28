@@ -57,13 +57,53 @@ const culture_data = [
 
 const culture_product_data = [
   {
-      idx : "1",
-      gprosrc:"./images/gallery/gallery_product1.png",
-      gproname: `지비지 인 월드`,
-      gproauthor: "지비지",
-      gproprice: `18,000,000원`,
-      gproexplanation: ``
-  }
+    idx : "1",
+    culsrc:"./images/culture/culture5.jpg",
+    culsrc2:"./images/culture/culture5_desc.jpg",
+    culname: `전신순환 다이어트 필라테스`,
+    culpro: `신체 정렬을 도와 체형을 교정하여 건강하고 아름다운 삶을 만듭니다.`,
+    culperiod: `2023.06.28 ~ 2023.08.30`,
+    culdate: `(수) 19:10~20:00`,
+    culstore: "본점",
+    culauthor: "진예원 강사",
+    culprice: "150,000원",
+  },
+  {
+    idx : "2",
+    culsrc:"./images/culture/culture6.jpg",
+    culsrc2:"./images/culture/culture6_desc.jpg",
+    culname: `임산부 밸리 댄스, 6주`,
+    culpro: `*대상 : 16주이상부터 가능`,
+    culperiod: `2023.07.18 ~ 2023.08.29`,
+    culdate: `(화) 12:00~12:40`,
+    culstore: "대전점",
+    culauthor: "연선 강사",
+    culprice: "60,000원",
+  },
+  {
+    idx : "3",
+    culsrc:"./images/culture/culture7.jpg",
+    culsrc2:"./images/culture/culture7_desc.jpg",
+    culname: `생활공작소와 함께하는 지구생각 채식한입 비건 샌드위치`,
+    culpro: `채식 한입이 알려주는 초간단 비건 오픈 샌드위치와 비건 소스`,
+    culperiod: `2023.06.26 ~ 2023.06.26`,
+    culdate: `(월) 14:00~15:30`,
+    culstore: "동탄점",
+    culauthor: "서란 강사",
+    culprice: "20,000원",
+  },
+  {
+    idx : "4",
+    culsrc:"./images/culture/culture8.jpg",
+    culsrc2:"./images/culture/culture8_desc.jpg",
+    culname: `[8주]여행 프랑스어`,
+    culpro: `아니끄의 여행 프랑스어`,
+    culperiod: `2023.07.04 ~ 2023.08.29`,
+    culdate: `(화) 13:00~14:00`,
+    culstore: "광복점",
+    culauthor: "배상은 강사",
+    culprice: "66,700원",
+  },
 ]
 
 

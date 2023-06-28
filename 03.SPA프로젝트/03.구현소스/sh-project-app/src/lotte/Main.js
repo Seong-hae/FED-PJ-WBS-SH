@@ -85,33 +85,51 @@ function jqFn() {
 
 
     
-    // let sldnum = 1;
-    // let znum =1
-    // sldnum=sldnum?0:1
-    // function t1(){
-    //     znum++
-    //     // setTimeout(()=>{
-    //         stg.eq(sldnum).addClass("on")
-    //     // },2000)
+    let sldnum = 0;
+    stg.eq(sldnum).addClass("on")
 
-    //     setTimeout(() => {
-    //         sldnum=sldnum?0:1
-    //         stg.eq(sldnum).removeClass("on")
-    //     },3800);
+    function t1(){
+        sldnum = 1
+        stg.eq(sldnum).addClass("on")
+        
+        setTimeout(() => {
+            sldnum=0
+            stg.eq(sldnum).removeClass("on")
+            
+        },1000);
+        setTimeout(()=>{
+            sldnum =1
+            stg.eq(sldnum).addClass("on2")
+        },1600)
+
+        setTimeout(()=>{
+            sldnum =0
+            stg.eq(sldnum).addClass("on")
+        },3000)
+
+        setTimeout(()=>{
+            sldnum =1
+            stg.eq(sldnum).removeClass("on")
+        },3600)
+
+        setTimeout(()=>{
+            sldnum =1
+            stg.eq(sldnum).removeClass("on2")
+        },4200)
+
+        clearInterval(t1)
+    }
+
+    setInterval(t1,5200)
+
+    // function test(){
+    //     stg.addClass("on")
 
     //     setTimeout(()=>{
     //         stg.eq(sldnum).addClass("on")
-    //     },5600);
-
-    //     setTimeout(() => {
-    //         sldnum=sldnum?0:1
-    //         stg.eq(sldnum).removeClass("on")
-    //     },6700);
-
-    //     clearInterval(t1)
+    //     },2000)
     // }
-
-    // setInterval(t1,6700)
+    // test()
 
 
 

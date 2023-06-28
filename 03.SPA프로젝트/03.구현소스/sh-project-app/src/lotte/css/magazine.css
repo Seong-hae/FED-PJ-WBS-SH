@@ -74,6 +74,7 @@
 /* 매거진 리스트 박스영역 */
 .mlistbox{
     display: flex;
+    justify-content: center;
     padding: 200px 0 150px;
     overflow: hidden;
 }
@@ -156,17 +157,118 @@
 }
 
 
+/* 4. 매거진 아트 박스 영역 */
+.martbox{
+    display: flex;
+    padding: 200px 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.martbox .artbx{
+    padding: 90px 90px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+.martbox .artbx:hover .imgbx img{
+    transform: scale(1.1);
+}
+.martbox a:last-child .artbx{
+    border-left: none;
+}
+.martbox .artbx .imgbx{
+    width: 100%;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.martbox .artbx .imgbx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+.martbox .artbx .txtbx{
+    text-align: center;
+}
+.martbox .artbx .txtbx h2{
+    font-size: 35px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    font-weight: 400;
+}
+.martbox .artbx .txtbx h2 span{
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #acacac;
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.martbox .artbx .txtbx p{
+    font-weight: 16px;
+    word-break: keep-all;
+}
+
+
 
 
 
 /* ********************************************************** */
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
+
+    /* 매거진 리스트 박스영역 */
+    .mlistbox .mbx{
+        padding: 50px 50px;
+    }
+
+    /* 4. 매거진 아트 박스 영역 */
+    .martbox{
+        padding: 200px 70px;
+    }
+    .martbox .artbx{
+        padding: 40px 40px;
+    }
+
+
+
+
+}
 
 /* 1000px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1000px) {
 
-    /* 매거진 비디오박스 영역 */
+    /* 1.매거진 비디오박스 영역 */
     .magazine_sec .vbx_text h2{
         font-size: 48px;
+    }
+
+    /* 매거진 리스트 박스영역 */
+    .mlistbox{
+        flex-direction: column;
+    }
+    .mlistbox .mbx{
+        width: 100%;
+    }
+    .mlistbox .mbox_left{
+        padding: 100px 40px 200px;
+        border-right: none;
+    }
+    .mlistbox .mbox_right{
+        padding: 50px 40px;
+    }
+
+    /* 4. 매거진 아트 박스 영역 */
+    .martbox{
+        flex-wrap: wrap;
+    }
+    .martbox .artbx{
+        width: 100%;
+    }
+    .martbox a:last-child .artbx{
+        border-left: 1px solid #000;
+        border-top: none;
     }
 
 }
@@ -183,6 +285,17 @@
         width: 100%;
     }
 
+    /* 매거진 리스트 박스영역 */
+    .mlistbox {
+        padding: 100px 0 150px;
+    }
+    .mlistbox .mbox_left .l_txtbx h2 {
+        font-size: 20px;
+    }
+    .mlistbox .mbox_right{
+        padding: 50px 20px;
+    }
+
     /* 3. 매거진 야채영상 박스영역 */
     .magazine_sec .vtxt2 h2{
         margin-bottom: 16px;
@@ -192,6 +305,23 @@
     }
     .magazine_sec .vtxt2 p{
         font-size: 14px;
+    }
+
+    /* 4. 매거진 아트 박스 영역 */
+    .martbox{
+        padding: 130px 40px;
+    }
+    .martbox .artbx{
+        padding: 30px 30px;
+    }
+    .martbox .artbx .txtbx h2{
+        font-size: 25px;
+    }
+    .martbox .artbx .txtbx h2 span{
+        font-size: 12px;
+    }
+    .martbox .artbx .txtbx p{
+        font-weight: 13px;
     }
 
 }
