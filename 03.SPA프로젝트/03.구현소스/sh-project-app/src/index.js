@@ -18,6 +18,7 @@ import GalleryDetail from "./lotte/GalleryDetail";
 import CultureDetail from "./lotte/CultureDetail";
 import MagazineDetail from "./lotte/MagazineDetail";
 import MagazineArtDetail from "./lotte/MagazineArtDetail";
+import GalleryProductDetail from "./lotte/GalleryProductDetail";
 
 
 export default function App(){
@@ -37,6 +38,7 @@ export default function App(){
                     <Route path="newsdetail" element={<NewsDetail />} />
                     <Route path="hotkeyword" element={<HotKeyword />} />
                     <Route path="gallerydetail" element={<GalleryDetail />} />
+                    <Route path="galleryproductdetail" element={<GalleryProductDetail />} />
                     <Route path="culturedetail" element={<CultureDetail />} />
                     <Route path="magazinedetail" element={<MagazineDetail />} />
                     <Route path="magazineartdetail" element={<MagazineArtDetail />} />

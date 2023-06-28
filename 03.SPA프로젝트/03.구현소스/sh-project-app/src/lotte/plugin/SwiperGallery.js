@@ -10,21 +10,21 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-import "./SwiperCulture.css";
+import "./SwiperGallery.css";
 // import required modules
 import { Autoplay, EffectFade } from "swiper";
 
 // 데이터 가져오기
-import { culture_product_data } from "../data/culture";
+import { gallery_data } from "../data/gallery";
 
 
 
 
-export default function SwiperCulture(props) {
+export default function SwiperGallery(props) {
 
   // 데이터 셋팅
-  const cpdt = culture_product_data;
-  console.log(cpdt);
+  const galdt = gallery_data;
+  console.log(galdt);
 
 
   return (
@@ -47,28 +47,25 @@ export default function SwiperCulture(props) {
         // navigation={true}
         modules={[EffectFade, Autoplay]}
         className="mySwiper culture_slide cul_left_slide">
-        {cpdt.map((v, i) => (
+        {galdt.map((v, i) => (
         <SwiperSlide key={i} className="cullist cullist_left">
-          <Link to="/culturedetail" 
+          <Link to="/gallerydetail" 
           state={{
-              culsrc:v.culsrc,
-              culsrc2:v.culsrc2,
-              culname:v.culname,
-              culpro:v.culpro,
-              culperiod:v.culperiod,
-              culdate:v.culdate,
-              culstore:v.culstore,
-              culauthor:v.culauthor,
-              culprice:v.culprice,
+              galsrc:v.galsrc,
+              galname:v.galname,
+              galperiod:v.galperiod,
+              galdate:v.galdate,
+              galstore:v.galstore,
+              galauthor:v.galauthor,
               }}>
                 <section className="culnewbx">
                   {/* 신규강좌설명 영역 */}
                   <div className="leftbox">
-                    <h3>{v.culname}</h3>
-                    <div className="pro">{v.culpro}</div>
-                    <div className="store">{v.culstore}</div>
-                    <div className="period">{v.culperiod}</div>
-                    <div className="date">{v.culdate}</div>
+                    <h3>{v.galname}</h3>
+                    <div className="pro">작가 : {v.galauthor}</div>
+                    <div className="store">{v.galstore}</div>
+                    <div className="period">{v.galperiod}</div>
+                    <div className="date">{v.galdate}</div>
                     <button className="read">Read more</button>
 
                   </div>
@@ -94,23 +91,20 @@ export default function SwiperCulture(props) {
         // navigation={true}
         modules={[Autoplay]}
         className="mySwiper culture_slide cul_right_slide">
-        {cpdt.map((v, i) => (
+        {galdt.map((v, i) => (
         <SwiperSlide key={i} className="cullist cullist_right">
-          <Link to="/culturedetail" 
+          <Link to="/gallerydetail" 
           state={{
-              culsrc:v.culsrc,
-              culsrc2:v.culsrc2,
-              culname:v.culname,
-              culpro:v.culpro,
-              culperiod:v.culperiod,
-              culdate:v.culdate,
-              culstore:v.culstore,
-              culauthor:v.culauthor,
-              culprice:v.culprice,
+              galsrc:v.galsrc,
+              galname:v.galname,
+              galperiod:v.galperiod,
+              galdate:v.galdate,
+              galstore:v.galstore,
+              galauthor:v.galauthor,
               }}>
                 <section className="culnewbx">
                   <div className="rightbox">
-                    <img src={v.culsrc} alt={v.culname} />
+                    <img src={v.galsrc} alt={v.galname} />
                   </div>
                 </section>
           </Link>

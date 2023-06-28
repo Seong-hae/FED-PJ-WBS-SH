@@ -48,6 +48,10 @@ function NewsDetail(props) {
                         <img src={newdesc} alt={newname[1]}/>
                     </div>
                 </div>
+
+                <Link to="/news" >
+                    <button className="before">All CONTENTS</button>
+                </Link>
             </div>
         </>
     );

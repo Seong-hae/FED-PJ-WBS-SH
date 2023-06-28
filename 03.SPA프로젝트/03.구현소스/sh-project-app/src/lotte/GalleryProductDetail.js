@@ -3,12 +3,12 @@
 import { useLocation } from "react-router-dom";
 import "./css/gallerydetail.css";
 // 데이터 가져오기
-import gallery_data from "./data/gallery";
+import { gallery_product_data } from "./data/gallery";
 import { Link } from "react-router-dom";
 
 // 라우터 파라미터값 받아서 데이터 처리!
 
-function GalleryDetail(props) {
+function GalleryProductDetail(props) {
 
     // 라우터 전달값을 받기위한 useLocation 생성하기!
     const loc = useLocation();
@@ -16,18 +16,16 @@ function GalleryDetail(props) {
     // state.속성명 : 내가 라우터를 통해 보낸 속성값 받기
 
 
-    // 1. 갤러리 전시 사진
-    const galsrc = loc.state.galsrc;
-    // 2. 갤러리 전시 제목
-    const galname = loc.state.galname;
-    // 3. 갤러리 전시 기간
-    const galperiod = loc.state.galperiod;
-    // 4. 갤러리 전시 시간
-    const galdate = loc.state.galdate;
-    // 5. 갤러리 전시 행사장
-    const galstore = loc.state.galstore;
-    // 6. 갤러리 전시 작가
-    const galauthor = loc.state.galauthor;
+    // 1. 갤러리 상품 사진
+    const gprosrc = loc.state.gprosrc;
+    // 2. 갤러리 상품 제목
+    const gproname = loc.state.gproname;
+    // 3. 갤러리 상품 가격
+    const gproprice = loc.state.gproprice;
+    // 4. 갤러리 상품 작가
+    const gproauthor = loc.state.gproauthor;
+    // 5. 갤러리 상품 설명
+    const gproexplanation = loc.state.gproexplanation;
 
     return (
         <>
@@ -42,26 +40,21 @@ function GalleryDetail(props) {
                 <div className="descbx">
                     <div className="desc_txt">
                         <h3 className="desc_tit">
-                            {galname}
+                            {gproname}
                         </h3>
                         <div className="desc_cont">
-                            <span>기간 </span>
-                            {galperiod}</div>
-                        <div className="desc_cont">
-                            <span>시간 </span>
-                            {galdate}
-                            </div>
-                        <div className="desc_cont">
-                            <span>장소 </span>
-                            {galstore}
-                            </div>
-                        <div className="desc_cont">
                             <span>작가 </span>
-                            {galauthor}
+                            {gproauthor}</div>
+                        <div className="desc_cont">
+                            <span>가격 </span>
+                            {gproprice}
+                            </div>
+                        <div className="desc_cont">
+                            {gproexplanation}
                             </div>
                     </div>
                     <div className="desc_img">
-                        <img src={galsrc} alt={galname} />
+                        <img src={gprosrc} alt={gproname} />
                     </div>
                 </div>
 
@@ -71,6 +64,6 @@ function GalleryDetail(props) {
             </div>
         </>
     );
-} //////////// GalleryDetail ////////////////
+} //////////// GalleryProductDetail ////////////////
 
-export default GalleryDetail;
+export default GalleryProductDetail;

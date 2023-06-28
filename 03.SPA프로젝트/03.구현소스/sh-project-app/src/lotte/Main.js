@@ -245,7 +245,7 @@ const Main = () => {
                     @Lotteshopping
                 </h2>
 
-                <Link to="https://www.instagram.com/lotteshopping/" className="insban">
+                <Link to="https://www.instagram.com/lotteshopping/" target="_blank" className="insban">
                     <ul className="insban_top insbanbox">
                         {insta_data.map((v, i) => (
                             <li key={i}><img src={v.inssrc} alt="instaimage" /></li>

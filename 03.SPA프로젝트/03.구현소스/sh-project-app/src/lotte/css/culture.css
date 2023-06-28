@@ -36,12 +36,13 @@
     font-size: 120px;
     font-weight: 500;
     font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px #000;
 }
 
 
 /* 2. 문화센터 추천강좌 페이지  */
 .cul_recom{
-    padding: 200px 20px;
+    padding: 200px 20px 150px;
 }
 .cul_recom h2{
     text-align: center;
@@ -68,7 +69,7 @@
 .cul_new h2{
     color: #fff;
     text-align: center;
-    /* font-family: 'Cinzel', serif; */
+    font-family: 'Cinzel', serif;
     font-size: 70px;
     font-weight: 300;
     letter-spacing: 3px;
@@ -98,8 +99,23 @@
 
 
 /* *********************************************************** */
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+    .culture_sec .cul_main .txtbx h2{
+        font-size: 60px;
+    }
+
+}
+
 /* 500px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 500px) {
+
+    .culture_sec .cul_main .txtbx{
+        padding: 60px 20px;
+    }
+    .culture_sec .cul_main .txtbx h2{
+        font-size: 40px;
+    }
 
     .cul_recom{
         padding: 140px 20px;
@@ -109,6 +125,13 @@
         font-size: 50px;
     }
     .cul_recom h2 span{
+        font-size: 15px;
+    }
+
+    .cul_new h2{
+        font-size: 50px;
+    }
+    .cul_new h2 span{
         font-size: 15px;
     }
 }

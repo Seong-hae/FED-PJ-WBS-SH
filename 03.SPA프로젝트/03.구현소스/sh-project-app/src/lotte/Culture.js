@@ -99,7 +99,7 @@ const Culture = () => {
                 {/* 3. 문화센터 신규강좌 페이지 */}
                 <section className="cul_new">
 
-                    <h2># 신규강좌
+                    <h2># Culture New
                         <span>새롭게 개설된 강좌를 지금 확인해보세요</span>
                     </h2>
 

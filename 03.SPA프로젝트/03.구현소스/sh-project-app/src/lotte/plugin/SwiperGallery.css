@@ -1,4 +1,4 @@
-/* SwiperCulture 모듈 css */
+/* SwiperGallery 모듈 css */
 .swiperwrap{
   display: flex;
   border-top: 1px solid #cccccc53;
@@ -6,6 +6,7 @@
 .swiperwrap .culture_slide {
   height: 600px;
   border: 1px solid #000;
+  background-color: #000;
 }
 .swiperwrap .cul_left_slide{
   width: 55%;
