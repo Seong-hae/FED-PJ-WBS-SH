@@ -7,6 +7,10 @@ import NewsSwipe from "./modules/NewsSwipe";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 /* 제이쿼리넣기 */
 import $ from "jquery";
 
@@ -14,6 +18,8 @@ import $ from "jquery";
 function jqFn() {}
 
 const Gallery = () => {
+
+    AOS.init(); 
 
     const gpdt = gallery_product_data;
 
@@ -28,7 +34,7 @@ const Gallery = () => {
                     </div>
 
                     <div className="txtbx">
-                        <h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1500">
                             Premium<br />
                             Art Curator
                         </h2>

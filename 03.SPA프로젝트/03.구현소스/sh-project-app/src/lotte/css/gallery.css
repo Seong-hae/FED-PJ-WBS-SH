@@ -61,11 +61,16 @@
 .gal_product .gal_probx .gal_prolist .imgbx{
   /* width: 400px; */
   height: 500px;
+  overflow: hidden;
 }
 .gal_product .gal_probx .gal_prolist .imgbx img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: .3s;
+}
+.gal_product .gal_probx .gal_prolist:hover .imgbx img{
+  transform: scale(1.2);
 }
 .gal_product .gal_probx .gal_prolist .txtbx{
   height: 150px;

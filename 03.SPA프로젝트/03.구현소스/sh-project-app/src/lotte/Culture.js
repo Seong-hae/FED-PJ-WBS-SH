@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { culture_product_data } from "./data/culture";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 /* 제이쿼리넣기 */
 import $ from "jquery";
 
@@ -63,6 +66,8 @@ function jqFn() {
 
 const Culture = () => {
 
+    AOS.init(); 
+
     useEffect(jqFn,[]);
 
 
@@ -77,7 +82,7 @@ const Culture = () => {
                     </div>
 
                     <div className="txtbx">
-                        <h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1500">
                             Premium<br />
                             Lifestyle Curator
                         </h2>

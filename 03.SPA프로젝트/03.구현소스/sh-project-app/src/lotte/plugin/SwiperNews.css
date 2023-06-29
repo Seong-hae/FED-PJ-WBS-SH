@@ -115,29 +115,31 @@
   }
 
   /* 돌아가는 원형글씨 박스구역*/
-  .morebox{
+  .news_slide .morebox{
     position: relative;
     width: 100%;
     height: 100%;
   }
-  .morebox .more{
+  .news_slide .morebox .more{
     width: 100%;
     margin: 0 auto;
     margin-top: 55px;
     animation: rotate_image 10s linear infinite;
     transform-origin: 50% 50%;
   }
-  .morebox:hover .arrow{
+  .news_slide .morebox:hover .arrow{
     transform: scale(.2);
     transition: .3s;
   }
-  .morebox .arrow{
+  .news_slide .morebox .arrow{
     position: absolute;
-    left: -32%;
-    top: 5px;
+    left: -28%;
+    top: 3px;
     transform: scale(.1);
     width: auto;
     transition: .3s;
+    box-sizing: border-box;
+    padding: 10px;
   }
   
   @keyframes rotate_image{

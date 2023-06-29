@@ -17,7 +17,7 @@ function NewsSwipe(props) {
                 {/* 1. 스와이퍼 컴포넌트 */}
                 <SwiperNews />
                 {/* . 모듈타이틀 */}
-                <h2 className="tit">{props.tit}</h2>
+                    <h2 className="tit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >{props.tit}</h2>
             </section>
 
             {/* 빈루트를 만들고 JS로드함수포함 */}

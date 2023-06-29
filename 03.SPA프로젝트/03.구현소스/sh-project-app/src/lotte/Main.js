@@ -9,12 +9,31 @@ import "./css/main.css";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 
 // 제이쿼리 로드구역 함수 /////////
 function jqFn() {
+
+    /****************************************** 
+        메인 영역 - 스크롤시 이미지 사이즈 변경
+    ******************************************/
+        const SlideBox = document.querySelector(".slidebox ");
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                SlideBox.style=(
+                    'width: 100%; height: 100vh;'
+                );
+            } else {
+                SlideBox.style=(
+                    'width: 40%; height: 65vh;'
+                );
+            }
+        });
 
 
     /******************* 배경화면 색깔 변경함수 *******************/
@@ -96,7 +115,7 @@ function jqFn() {
             sldnum=0
             stg.eq(sldnum).removeClass("on")
             
-        },1000);
+        },1200);
         setTimeout(()=>{
             sldnum =1
             stg.eq(sldnum).addClass("on2")
@@ -105,7 +124,7 @@ function jqFn() {
         setTimeout(()=>{
             sldnum =0
             stg.eq(sldnum).addClass("on")
-        },3000)
+        },2600)
 
         setTimeout(()=>{
             sldnum =1
@@ -120,7 +139,7 @@ function jqFn() {
         clearInterval(t1)
     }
 
-    setInterval(t1,5200)
+    setInterval(t1,4800)
 
     // function test(){
     //     stg.addClass("on")
@@ -138,24 +157,27 @@ function jqFn() {
 
 const Main = () => {
 
+    AOS.init();
     useEffect(jqFn,[]);
 
     return (
         <>
             {/* 1. 메인 인트로 슬라이드 */}
             <section className="main_intro">
+
                 <ul className="slidebox">
                     <li className="slidelist">
                         <span className="sl_bottom"><img src="./images/main_slide1.jpg" alt="mainimg"  /></span>
                         <span className="sl_top"><img src="./images/main_slide1.jpg" alt="mainimg" /></span>
-                        <h2 className="main_tit">Dear, my planet</h2>
                     </li>
                     <li className="slidelist">
                         <span className="sl_bottom"><img src="./images/main_slide2.jpg" alt="mainimg"/></span>
                         <span className="sl_top"><img src="./images/main_slide2.jpg" alt="mainimg" /></span>
-                        <h2 className="main_tit">Surprice Week</h2>
                     </li>
                 </ul>
+
+                <h2 className="maintit" data-aos="fade-up" data-aos-duration="1000">LOTTE DEPARTMENT STORE</h2>
+                
             </section>
 
             {/* 2. 쇼핑뉴스 스와이프 모듈 */}
@@ -164,13 +186,13 @@ const Main = () => {
 
             {/* 3. 쇼핑 핫키워드 영역 */}
             <section className="hotbox">
-                <div className="hot_tit">
+                <div className="hot_tit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
                     <h2>&#35;Hot keyword</h2>
                     <p>지금 롯데백화점에서 가장 인기있는 키워드를 만나보세요</p>
                 </div>
 
                 <ul className="hot_cont">
-                    <li>
+                    <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
                         청량한 여름의 시작 &nbsp;
                         <span className="iconbox">
                             <img src="./images/keyword1.png" alt="얼음" />
@@ -179,7 +201,7 @@ const Main = () => {
                         <span className="hashtag">&#35;계절가전</span>
                         <span className="hashtag">&#35;여름침구</span>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1200">
                         낭만적인 Summer Vacation &nbsp;
                             <span className="hashtag">&#35;바캉스아이템</span>
                             <span className="hashtag">&#35;휴가룩</span>
@@ -188,7 +210,7 @@ const Main = () => {
                                 <img src="./images/keyword4.png" alt="원피스" />
                             </span>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1600">
                         햇살보다 반짝이는 Styling &nbsp;
                         <span className="iconbox">
                             <img src="./images/keyword5.png" alt="태양" />
@@ -214,7 +236,7 @@ const Main = () => {
             {/* 5. 문화센터 영역 */}
             <section className="culbox">
                 <div className="culbox_top">
-                    <h2 className="tit">Lifestyle LAB</h2>
+                    <h2 className="tit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Lifestyle LAB</h2>
                     <Link to="/culture">
                         <div className="morebtn">ALL CONTENTS</div>
                     </Link>  

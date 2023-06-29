@@ -22,10 +22,10 @@ const gnb_data = [
         txt: "매거진",
         link: "/magazine",
     },
-    {
-        txt: "고객서비스",
-        link: "/service",
-    },
+    // {
+    //     txt: "고객서비스",
+    //     link: "/service",
+    // },
 ];
 
 

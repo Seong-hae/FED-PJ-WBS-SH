@@ -5,7 +5,6 @@ import "./css/news.css";
 import $ from "jquery";
 
 
-
 // 데이터 가져오기
 import news_data from "./data/news";
 import { Link } from "react-router-dom";
@@ -35,6 +34,9 @@ function jqFn() {
 // ul>li{그안에 음...food나 무슨 값을 주면....어찍구...될..까 }
 
 const News = () => {
+
+
+    
     // 데이터 셋팅
     const ndt = news_data;
     // console.log(ndt);

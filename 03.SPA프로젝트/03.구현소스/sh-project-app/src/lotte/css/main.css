@@ -8,23 +8,38 @@
     height: 100vh;
     position: relative;
 }
+.main_intro .maintit{
+   position: absolute;
+   bottom: 60px;
+   padding: 0 40px;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-weight: 500;
+   font-size: 110px;
+   line-height: 1;
+   font-family: 'Cinzel', serif;
+   box-sizing: border-box;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.514);
+   color: #fff;
+}
 .main_intro .slidebox{
-    width: 70%;
+    width: 40%;
     height: 65vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #000;
     overflow: hidden;
+    transition: .7s;
 }
 .main_intro .slidebox .slidelist{    
    width: 100%;
    position: absolute;
    height: 100%;
    left: 50%;
-   /* bottom: 0; */
-   transform: translateX(-50%);
+   bottom: 50%;
+   transform: translate(-50%,50%);
    overflow: hidden;
    transition: 0.4s;
    z-index: 0;
@@ -54,27 +69,6 @@
    z-index: 0;
 }
 
-
-@keyframes testAni1 {
-   from{
-      opacity: 0;
-      height: 0%;
-      z-index: 0;
-   }
-   to{
-      opacity: 1;
-      height: 100%;
-      z-index: 1;
-   }
-}
-
-@keyframes intAni {
-   to{
-      height: 100%;
-      opacity: 1;
-      top: 0%;
-   }
-}
 .main_intro .slidebox .slidelist span img{
    position: absolute;
    bottom: 0%;
@@ -84,15 +78,7 @@
     object-fit: cover;
     transition: 0.8s;
 }
-@keyframes intAniImg {
-   to{
-      top: -55%;
-      opacity: 1;
-   }
-}
-/* .main_intro .slidebox .slidelist .sl_bottom{
 
-} */
 .main_intro .slidebox .slidelist .sl_top{
     transform: scale(.8);
     overflow: hidden;
@@ -104,7 +90,7 @@
  .newswbox{
    /* max-width: 1320px; */
    /* margin: 0 auto; */
-   padding: 120px 0;
+   padding: 200px 0;
    }
 
 
@@ -224,6 +210,7 @@
       width: 100%;
       position: relative;
       z-index: 1;
+      text-shadow: 2px 2px 5px #000;
   }
   .magazinebox .mgslide_box{
       width: 50%;
@@ -311,6 +298,14 @@
   /* 1200px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1200px) {
 
+   /********************* 1. 메인 인트로 슬라이드 *********************/
+   .main_intro .slidebox{
+      width: 70%;
+   }
+   .main_intro .maintit{
+      font-size: 50px;
+   }
+
    /********* 3. 쇼핑 핫키워드 영역 ********/
    .hotbox{
       gap: 60px 0;
@@ -367,6 +362,11 @@
 
   /* 500px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 500px) {
+
+   /********************* 1. 메인 인트로 슬라이드 *********************/
+   .main_intro .maintit{
+      font-size: 40px;
+   }
 
    /********* 4. 쇼핑 갤러리 영역 ********/
    .galbox{
