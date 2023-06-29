@@ -23,7 +23,7 @@ import GalleryProductDetail from "./lotte/GalleryProductDetail";
 
 export default function App(){
     return(
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                     {/* 중요!!!:레이아웃 컴포넌트를 루트로 잡아준다!!! */} 
                 <Route path="/" element={<Layout />}>
@@ -44,7 +44,7 @@ export default function App(){
                     <Route path="magazineartdetail" element={<MagazineArtDetail />} />
                 </Route>
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
 } //////////////// App 컴포넌트 //////////////////
 
