@@ -77,13 +77,17 @@ main.swiper1{
 }
 .swiper1 .swiper-wrapper .tbx{
   position: absolute;
+  box-sizing: border-box;
   left: 200px;
   top: 250px;
   width: 20vw;
   color: #fff;
   font-family: 'Kanit', sans-serif;
+  background-color: rgba(28, 28, 28, 0.749);
+  padding: 30px 30px;
+  word-break: keep-all;
 }
-.swiper1 .swiper-wrapper .tbg1{
+/* .swiper1 .swiper-wrapper .tbg1{
   top: 45vh;
   padding: 25px;
   width: 35vw;
@@ -94,14 +98,14 @@ main.swiper1{
   padding: 25px;
   width: 18vw;
   background-color: rgba(28, 28, 28, 0.601);
-}
+} */
 .swiper1 .swiper-wrapper .tbx h2{
   font-size: 4.2rem;
   line-height: 1.2;
   margin-bottom: 30px;
 }
 .swiper1 .swiper-wrapper .tbx p{
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 200;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -116,15 +120,15 @@ main.swiper1{
   height: 100%;
   padding: 8px 5px;
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 400;
   color: #a9d3ee;
-  border: 1px solid #ffffff4b;
+  border: 2px solid #ffffff4b;
   transition: .5s;
 }
 .swiper1 .swiper-wrapper .tbx .btn:hover a{
   color: #fff;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 /*이동버튼*/

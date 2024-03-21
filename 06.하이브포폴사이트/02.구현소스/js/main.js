@@ -91,7 +91,7 @@ function loadFn(){
         //자동 스크를링
         autoplay: {
             //시간 1000 이 1초
-            delay: 3500,
+            delay: 4000,
             disableOnInteraction: false,
         },
         // If we need pagination
