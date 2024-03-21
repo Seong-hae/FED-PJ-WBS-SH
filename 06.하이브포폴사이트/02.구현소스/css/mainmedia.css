@@ -47,7 +47,19 @@
 }
 /* 1400px 사이즈 이하 미디어쿼리 끝 */
 
-
+/* 1300px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1300px) {
+    .sun04 .explorelist .explore_text {
+      padding: 0 3vw;
+    }
+    .sun04 .explorelist .explore_text p{
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
 
 
 /* 1100px 사이즈 이하 미디어쿼리 시작 */
@@ -139,6 +151,24 @@
 
 }
 /* 1100px 사이즈 이하 미디어쿼리 끝 */
+
+
+/* 850px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 850px) {
+    .sun04 ul .explorelist a{
+      flex-direction: column;
+    }
+    .sun04 .explorelist .explore_img{
+      width: 100%;
+    }
+    .sun04 .explorelist .explore_text{
+      width: 100%;
+      margin: 3vh 0;
+    }
+  }
+
+
+
 
 
 /* 600px 사이즈 이하 미디어쿼리 시작 */
