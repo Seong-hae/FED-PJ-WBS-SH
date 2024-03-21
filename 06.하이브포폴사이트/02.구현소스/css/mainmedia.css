@@ -70,7 +70,7 @@
         display: none;
     }
     .ham {
-        display: block;
+        /* display: block; */
     }
     /* 햄버거버튼 클릭시 */
     .top.active{
