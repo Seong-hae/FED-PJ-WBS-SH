@@ -62,7 +62,8 @@
     }
     /* 햄버거버튼 클릭시 */
     .top.active{
-        background-color: #052a46;
+        /* background-color: #052a46; */
+        background-color: #ffffff;
     }
     .top.active .ham{
         z-index: 9999;
@@ -79,7 +80,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #052a46;
+        background-color: #ffffff;
         z-index: 99;
     }
     .top.active .gnb ul{
@@ -87,10 +88,13 @@
         text-align: center;
     }
     .top.active .gnb ul li{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 1px solid #f5ff00;
         width: 100%;
         margin: 0;
         padding: 10px 0;
+    }
+    .top.active .gnb ul li:first-child{
+        border-top: 1px solid #f5ff00;
     }
     .top.active .gnb ul li:last-child{
         display: none;
@@ -144,9 +148,9 @@
         height: 8vh;
     }
     h1.logo {
-        width: 250px;
+        /* width: 250px; */
         height: 45px;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .top.active .gnb{
         top: 8vh;

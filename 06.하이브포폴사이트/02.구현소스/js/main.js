@@ -23,12 +23,12 @@ function loadFn(){
         if (window.scrollY > 80) {
             document.querySelector('.top').classList.add("on");
             // document.querySelector('.active').classList.remove("on");
-            searchbx.style=('background-color: #506a7e;');
-            sicon.style=('background-color: #506a7e');
+            searchbx.style=('background-color: #ececec;');
+            sicon.style=('background-color: #333333');
         } else {
             document.querySelector('.top').classList.remove("on");
-            searchbx.style=('background-color: #575a5ecb;');
-            sicon.style=('background-color: #575a5ecb;');
+            searchbx.style=('background-color: #ececec;');
+            sicon.style=('background-color: #333333;');
         }
     });
     
