@@ -4,14 +4,23 @@
 
 /*********** 1. 웹폰트 : CDN ***********/
 /* Kanit, 체 */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;700;900&display=swap'); */
 /* 
     font-family: 'Kanit', sans-serif;
 */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* 전체 글자크기 Root 셋팅! */
 html{
+    font-family: 'NanumSquareNeo-Variable', sans-serif;;
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 /******************** 2. 공통 클래스 ********************/

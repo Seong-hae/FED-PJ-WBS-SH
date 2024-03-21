@@ -12,9 +12,10 @@
   width: 100%;
   transition: .3s;
   background-color: #ffffff;
+  box-shadow: 0px 2px 5px #6262627b;
 }
 .on{
-  background-color: #f5ff00;
+  background-color: #ffffffb8;
 }
 .topbx{
   display: flex;
@@ -46,12 +47,15 @@ nav.gnb ul{
 }
 .gnb ul li{
   margin: 0 10px;
+  
 }
 .gnb ul li a{
   line-height: 2;
   font-size: 1.8rem;
-  font-family: 'Kanit', sans-serif;
+  /* font-family: 'Kanit', sans-serif; */
+  font-weight: bold;
   color: #333333;
+  
 }
 /* 우측 상단영역에 아이콘 */
 .gnb img{
