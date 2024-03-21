@@ -220,6 +220,7 @@ main.swiper1{
 .sun04 .explorelist .explore_text p{
   font-size: min(2rem,3vw);
   font-weight: 200;
+  word-break: keep-all;
 
   /* m.naver.com -> 뉴스기사 레이아웃 참고
   display: -webkit-box;
